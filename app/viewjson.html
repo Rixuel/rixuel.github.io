@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>View JSON</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--script src="../js/jquery-1.12.4.min.js"></script-->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	
+	<script>
+		var resturl = "";
+		var jsonStr = ""; // To put data in		
+		
+		function viewJSON(){
+			resturl = document.getElementById("urlInput").value;
+			console.log(resturl);
+
+			$.ajax({
+				url: resturl,
+				type: "get",
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+					jsonStr = data;
+					$('#jsonbox').text(JSON.stringify(jsonStr, null, 4));
+				},
+				error: function(xhr, status, error) {
+					viewJSONP(resturl, 'jsonp');
+				}
+			});
+		}
+		
+		function viewJSONP(url, type){
+			$.ajax({
+				url: url,
+				type: "get",
+				dataType: type,
+				success: function(data){
+					console.log(data);
+					jsonStr = data;
+					$('#jsonbox').text(JSON.stringify(jsonStr, null, 4));
+				},
+				error: function(xhr, status, error) {
+					$('#jsonbox').text('An error occurred.\n' + status + '; ' + error);
+				}
+			});
+		}
+		
+		function runScript(e) {
+			if (e.keyCode == 13) viewJSON();
+		}
+	</script>
+	<style>
+		body {
+			background-color: #000;
+			color: #66DD00;
+		}
+		body,
+		code {
+			font-family: Consolas;
+		}
+		code {
+			color: #BBDDBB;
+		}
+		pre {
+			border-left: 4px solid #66DD00;
+			margin-left: 10px;
+			padding-left: 10px;
+		}
+		button,
+		input {
+			background-color: #000;
+			border: 1px solid #aabbcc;
+			border-radius: 6px;
+			color: #ccddee;
+			padding: 8px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>View JSON</h1>
+	Enter a JSON API link: <br>
+	<input type="text" id="urlInput" size="100" onkeypress="return runScript(event)"/>
+	<button onclick="viewJSON()">Click</button>
+	<pre><code id="jsonbox"></code></pre>
+</body>
+</html>

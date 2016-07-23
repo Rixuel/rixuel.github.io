@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bible</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Lord Rixuel" content="Read Bible Online, Bible online, free bible">
+	<!--link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="../js/jquery-1.12.4.min.js"></script-->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+	
+	<script>
+		var resturl = "";
+		var book = "";
+		var translation = "";
+		var chapter = 1;
+		var chapTotal = "";
+		var verse = "";
+		var jsonStr = ""; // To put data in		
+		
+		
+		function viewJSON(){
+			resturl = "http://bible-api.com/";
+			selectTrans();
+			resturl += book +" "+chapter+translation;
+			console.log(resturl);
+		
+			$.ajax({
+				url: resturl,
+				type: "get",
+				dataType: 'jsonp',
+				success: function(data){
+					console.log(data);
+					jsonStr = data;
+					$(function() {
+						$("#chapTitle").fadeIn(500);
+						$("#readbox").fadeIn(1000);
+					});
+					allVerses();
+				}
+			});		
+		}
+		
+		
+		function allVerses() {
+			//console.log(jsonStr.verses.length);
+			var length = jsonStr.verses.length;
+			var output = "";
+			for(var i=0; i<length; i++){
+				var chapter = jsonStr.verses[i].chapter;
+				var verse = jsonStr.verses[i].verse;
+				var text = jsonStr.verses[i].text;
+				
+				output += 
+					"<br><div class='col-xs-2'>"+
+					"<b>"+chapter+":"+verse+"</b> </div>" + 
+					"<div class='col-xs-10'>"+
+					text + "<br><br></div>";
+			}
+			output += "<br>";
+			$("#allVerses").html(output);
+		}
+		
+		
+		function selectBook() {
+			book = $("#selectBook").val();
+			$("#selectBook2").val($("#selectBook2 option:first").val());
+			$("#chapTitle").text($("#selectBook").val());
+			$('html, body').animate({ scrollTop: 0 }, 'fast');
+			chapter = 1;
+
+			switch(book) {
+				case "Genesis": chapTotal = 50; break;
+				case "Exodus": chapTotal = 38; break;
+				case "Leviticus": chapTotal = 27; break;
+				case "Numbers": chapTotal = 36; break;
+				case "Deuteronomy": chapTotal = 34; break;
+				case "Joshua": chapTotal = 24; break;
+				case "Judges": chapTotal = 21; break;
+				case "Ruth": chapTotal = 4; break;
+				case "1 Samuel": chapTotal = 31; break;
+				case "2 Samuel": chapTotal = 24; break;
+				case "1 Kings": chapTotal = 22; break;
+				case "2 Kings": chapTotal = 25; break;
+				case "1 Chronicles": chapTotal = 29; break;
+				case "2 Chronicles": chapTotal = 36; break;
+				case "Ezra": chapTotal = 10; break;
+				case "Nehemiah": chapTotal = 13; break;
+				case "Esther": chapTotal = 10; break;
+				case "Job": chapTotal = 42; break;
+				case "Psalms": chapTotal = 150; break;
+				case "Proverbs": chapTotal = 31; break;
+				case "Ecclesiastes": chapTotal = 12; break;
+				case "Song": chapTotal = 7; break;
+				case "Isaiah": chapTotal = 66; break;
+				case "Jeremiah": chapTotal = 52; break;
+				case "Lamentations": chapTotal = 5; break;
+				case "Ezekiel": chapTotal = 48; break;
+				case "Daniel": chapTotal = 12; break;
+				case "Hosea": chapTotal = 14; break;
+				case "Joel": chapTotal = 3; break;
+				case "Amos": chapTotal = 9; break;
+				case "Obadiah": chapTotal = 1; break;
+				case "Jonah": chapTotal = 4; break;
+				case "Micah": chapTotal = 7; break;
+				case "Nahum": chapTotal = 3; break;
+				case "Habakkuk": chapTotal = 3; break;
+				case "Zephaniah": chapTotal = 3; break;
+				case "Haggai": chapTotal = 2; break;
+				case "Zechariah": chapTotal = 14; break;
+				case "Malachi": chapTotal = 4; break;
+				default:
+					console.log("Nothing happen...");
+			}
+		}
+		function selectBook2() {
+			book = $("#selectBook2").val();
+			$("#selectBook").val($("#selectBook option:first").val());
+			$("#chapTitle").text($("#selectBook2").val());
+			$('html,body').animate({scrollTop:0}, 'slow');
+			chapter = 1;
+			
+			switch(book) {
+				case "Matthew": chapTotal = 28; break;
+				case "Mark": chapTotal = 16; break;
+				case "Luke": chapTotal = 24; break;
+				case "John": chapTotal = 21; break;
+				case "Acts": chapTotal = 28; break;
+				case "Roman": chapTotal = 16; break;
+				case "1 Corinthians": chapTotal = 16; break;
+				case "2 Corinthians": chapTotal = 13; break;
+				case "Galathians": chapTotal = 6; break;
+				case "Ephesians": chapTotal = 6; break;
+				case "Philippians": chapTotal = 4; break;
+				case "Colossians": chapTotal = 4; break;
+				case "1 Thessalonians": chapTotal = 5; break;
+				case "2 Thessalonians": chapTotal = 3; break;
+				case "1 Timothy": chapTotal = 6; break;
+				case "2 Timothy": chapTotal = 4; break;
+				case "Titus": chapTotal = 3; break;
+				case "Philemon": chapTotal = 1; break;
+				case "Hebrews": chapTotal = 13; break;
+				case "James": chapTotal = 5; break;
+				case "1 Peter": chapTotal = 5; break;
+				case "2 Peter": chapTotal = 3; break;
+				case "1 John": chapTotal = 5; break;
+				case "2 John": chapTotal = 1; break;
+				case "3 John": chapTotal = 1; break;
+				case "Jude": chapTotal = 1; break;
+				case "Revelation": chapTotal = 22; break;
+				default:
+					console.log("Nothing happen...");
+			}
+		}
+		
+		function updateChapLength() {
+			var select = document.getElementById('selectChap');
+			
+			// To clear selectChap when picking another chap.
+			$('#selectChap')
+				.find('option')
+				.remove()
+				.end()
+				.append('<option value="">Chapter</option>')
+				.val('none')
+			;
+			
+			// Add option to selectChap.
+			for(var i=1; i<=chapTotal; i++){
+				var opt = document.createElement('option');
+				opt.value = i;
+    			opt.innerHTML = i;
+				select.appendChild(opt);
+			}
+		}
+		
+		function getNewChap() {
+			chapter = $("#selectChap").val();
+			$('html,body').animate({scrollTop:0}, 'slow');
+			viewJSON();
+		}
+		
+		function selectTrans() {
+			translation = "?translation=" + $("#selectTrans").val();
+		}
+		
+	</script>
+	<style>
+		body {
+			background-color: #fff9dd;
+			font-family: "Ubuntu", Consolas, Arial, sans-serif;
+		}
+		
+		h1 {
+			font-family: Book Antiqua, Gothic Century;
+			font-size: 6em;
+			letter-spacing: 10px;
+		}
+		h1 a {
+			color: #000;
+		}
+		h1 a:hover,
+		h1 a:focus {
+			outline: none;
+			text-decoration: none;
+		}
+		
+		h2 #chapTitle {
+			font-size: 2em;
+			color: #997733;
+			letter-spacing: 10px;
+		}
+		
+		#chapTitle {
+			background-color: #dfd3bf;
+			display: none;
+			font-family: Book Antiqua, Gothic Century;
+			padding: 10px;
+			text-align: center;
+		}
+		
+		#readbox {
+			background-color: #fffDED;
+			border-left: 4px solid #edc;
+			border-right: 4px solid #edc;
+			display: none;
+			font-size: 16px;
+			max-width: 640px;
+		}		
+		
+		div b {
+			color: #aaa;
+		}
+		
+		.navbar {
+			border: 0px;
+			border-radius: 0px;
+			background-color: #443322;
+		}
+		nav.affix {
+			position: fixed;
+			top: 0;
+			width: 100%;
+			z-index:10;
+		}
+		.affix + .container-fluid {
+			padding-top: 80px;
+		}
+		
+		.navbar .navbar-brand {
+			display: none;
+		}
+		
+		@media (max-width: 1035px) {
+			.navbar .navbar-brand {
+				color: #FFFFAA;
+				display: block;
+			}
+			.navbar-header {
+				float: none;
+			}
+			.navbar-toggle {
+				display: block;
+			}
+			.navbar-collapse {
+				border-top: 1px solid transparent;
+				box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+				max-height: none;
+			}
+			.navbar-collapse.collapse {
+				display: none!important;
+			}
+			.navbar-nav {
+				float: none!important;
+				margin-top: 7.5px;
+			}
+			.collapse.in{
+				display:block !important;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-12">
+				<p>
+				<h1>
+					<a href="#" onclick="location.reload(true);">Bible</a> 
+					<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+				</h1>
+				<h2>Read the Bible online</h2>
+				<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Data from <a href="http://bible-api.com">Bible-Api.com</a> by <a href="https://timmorgan.org">Tim Morgan</a><br>
+				<span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> Web Page by <a href="https://twitter.com/Rixuel">Rixuel</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="235">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>  
+				</button>
+				<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Bible</a>
+			</div>
+
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-left">
+					<li>
+						<a>
+							<select id="selectBook" class="form-control" onchange="selectBook();viewJSON();updateChapLength();">
+								<option value="">Books of the Old Testament</option>
+								<option value="Genesis">Genesis</option>
+								<option value="Exodus">Exodus</option>
+								<option value="Leviticus">Leviticus</option>
+								<option value="Numbers">Numbers</option>
+								<option value="Deuteronomy">Deuteronomy</option>
+								<option value="Joshua">Joshua</option>
+								<option value="Judges">Judges</option>
+								<option value="Ruth">Ruth</option>
+								<option value="1 Samuel">1 Samuel</option>
+								<option value="2 Samuel">2 Samuel</option>
+								<option value="1 Kings">1 Kings</option>
+								<option value="2 Kings">2 Kings</option>
+								<option value="1 Chronicles">1 Chronicles</option>
+								<option value="2 Chronicles">2 Chronicles</option>
+								<option value="Ezra">Ezra</option>
+								<option value="Nehemiah">Nehemiah</option>
+								<option value="Esther">Esther</option>
+								<option value="Job">Job</option>
+								<option value="Psalms">Psalms</option>
+								<option value="Proverbs">Proverbs</option>
+								<option value="Ecclesiastes">Ecclesiastes</option>
+								<option value="Song">The Song of Solomon</option>
+								<option value="Isaiah">Isaiah</option>
+								<option value="Jeremiah">Jeremiah</option>
+								<option value="Lamentations">Lamentations</option>
+								<option value="Ezekiel">Ezekiel</option>
+								<option value="Daniel">Daniel</option>
+								<option value="Hosea">Hosea</option>
+								<option value="Joel">Joel</option>
+								<option value="Amos">Amos</option>
+								<option value="Obadiah">Obadiah</option>
+								<option value="Jonah">Jonah</option>
+								<option value="Micah">Micah</option>
+								<option value="Nahum">Nahum</option>
+								<option value="Habakkuk">Habakkuk</option>
+								<option value="Zephaniah">Zephaniah</option>
+								<option value="Haggai">Haggai</option>
+								<option value="Zechariah">Zechariah</option>
+								<option value="Malachi">Malachi</option>`
+							</select>
+						</a>
+					</li>
+
+					<li>
+						<a>
+							<select id="selectBook2" class="form-control" onchange="selectBook2();viewJSON();updateChapLength();">
+								<option value="">Books of the New Testament</option>
+								<option value="Matthew">Matthew</option>
+								<option value="Mark">Mark</option>
+								<option value="Luke">Luke</option>
+								<option value="John">John</option>
+								<option value="Acts">The Acts</option>
+								<option value="Roman">The Epistle to the Romans</option>
+								<option value="1 Corinthians">1 Corinthians</option>
+								<option value="2 Corinthians">2 Corinthians</option>
+								<option value="Galathians">Galathians</option>
+								<option value="Ephesians">Ephesians</option>
+								<option value="Philippians">Philippians</option>
+								<option value="Colossians">Colossians</option>
+								<option value="1 Thessalonians">1 Thessalonians</option>
+								<option value="2 Thessalonians">2 Thessalonians</option>
+								<option value="1 Timothy">1 Timothy</option>
+								<option value="2 Timothy">2 Timothy</option>
+								<option value="Titus">Titus</option>
+								<option value="Philemon">Philemon</option>
+								<option value="Hebrews">To the Hebrews</option>
+								<option value="James">The Epistle of James</option>
+								<option value="1 Peter">1 Peter</option>
+								<option value="2 Peter">2 Peter</option>
+								<option value="1 John">1 John</option>
+								<option value="2 John">2 John</option>
+								<option value="3 John">3 John</option>
+								<option value="Jude">Jude</option>
+								<option value="Revelation">Revelation</option>
+							</select>
+						</a>
+					</li>
+
+					<li>
+						<a>
+							<select id="selectChap" class="form-control" onchange="getNewChap()">
+								<option value="">Chapter</option>
+							</select>
+						</a>
+					</li>
+				</ul>
+
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a>
+							<select id="selectTrans" class="form-control" onchange="viewJSON()">
+								<option value="web" selected>World English Bible</option>
+								<option value="kjv">King James Version</option>
+								<option value="clementine">Clementine Latin Vulgate</option>
+								<option value="almeida">João Ferreira de Almeida</option>
+								<option value="rccv">Romanian Corrected Cornilescu Version</option>
+								<option value="cherokee">Cherokee New Testament</option>
+							</select>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	
+
+	<div class="container-fluid"></div>
+		<h2><div id="chapTitle"></div></h2>
+	</div>
+	
+	<div class="container" id="readbox">
+		<div id="allVerses"></div>
+	</div>
+	
+	<br>
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="js/bootstrap.min.js"></script-->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,53 +1,58 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<title>Rixuel Patrick - Loop Test</title>
-		<meta name="author" content="Lord Rixuel, Guardian Patrick">
-        <meta charset="utf-8">
-		
-        <link rel="stylesheet" type="text/css" href="../css/homestyle.css">
+<head>
+	<title>Rixuel Patrick - Loop Test</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Lord Rixuel, Guardian Patrick">
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/skeleton.css">
 
-		<script type="text/javascript" src="../js/datetime.js"></script>
-		<script type="text/javascript" src="../js/functions.js"></script>
-		
-    </head>
+	<script type="text/javascript" src="../js/datetime.js"></script>
+	<script type="text/javascript" src="../js/functions.js"></script>
+	
+	<link rel="icon" type="image/png" href="../images/favicon.png">
+	
+</head>
 
-    <body>
-	<!-- Topbar -->
-    <div class="topbar">
-        <div class="topbarinside">
-			<div id="left">
+<body>
+	
+	<div class="row" id="topbar">
+		<div class="container">
+			<div class="one-half column">
 				<span id="setDateTime"></span>
 				<script>date_time("setDateTime");</script>
 			</div>
-			<!-- Small message -->
-			<div id="right">
+			<div class="one-half column" id="toprightmsg" align="right">
 				<script>randomMsg();</script>
 			</div>
-			<div id="bottom"></div>
-        </div>
-    </div>
-    <!-- Fin Topbar -->
+		</div>
+	</div>
 	
 	
 	<!-- MAIN -->
-	<div id="wrapper">
+	<div class="container" id="wrapper">
 	
-		<a href="../index.html"><img src='../images/lordrixlogo.png' border='0'/></a><p>
+		<a href="../index.html"><img src='../images/lordrixlogo.png' border='0'/></a><br>
 		
-		<nav><ul>
-			<li><a href='../index.html'>Home</a></li><li>
-			<a href='../downloads.html'>Downloads</a></li>
-		</ul></nav>
+		<ul class='topnav'>
+			<li><a href='../index.html'>Home</a></li>
+			<li><a href='../downloads.html'>Downloads</a></li>
+			<li><a href='' id='MenuApp'>App</a></li>
+			<li class='icon'><a href='javascript:void(0);' onclick='menuToggle()'>&#9776;</a></li>
+		</ul>
+		<script>selectedMenu("MenuApp");</script>
 
-		<p>
 		
-		<div id="content">
+		
+		<div class="twelve columns" id="content">
 				
 			<h1>Loop Test Online</h1>
 			<font color="red"><b>Warning: </b>This page might cause HUGE LAG and FREEZE your browser! (SLOW LOADING)<br></font>
 			Another way to test your speed...<br>
-			Note: Execution time might depend on the Computer, the Browser and maybe the Internet Connection.
+			Note: Execution time might depend on the Computer, the Browser and maybe the Internet Connection.<br>
+			
+			<br>
 			
 			<script>
 				document.write('<h2>Looping TEST 1... O(n)</h2>');
@@ -143,12 +148,10 @@
     
 
 	<!-- COPYRIGHT -->
-	<footer>
-		<p>
-			<script>COPYRIGHT();</script>
-		</p>
-	</footer>
+	<div class="twelve columns" id="footer" align="center">
+		<script>COPYRIGHT();</script>
+	</div>
 	
-	</body>
+</body>
 	
 </html>

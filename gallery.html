@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rixuel Patrick - Gallery</title>
+	<meta charset="utf-8">
+	<meta name="Rixuel Patrick" content="Lord Rixuel, Guardian Patrick">
+	
+	<script type="text/javascript" src="js/adstuff.js"></script>
+	<script type="text/javascript" src="js/datetime.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+	<link rel="stylesheet" type="text/css" href="lightbox/lightbox.css">
+	<script src="lightbox/lightbox.js"></script>
+</head>
+
+<body>
+	<div class="row" id="topbar">
+		<div class="container">
+			<div class="one-half column">
+				<span id="setDateTime"></span>
+				<script>date_time("setDateTime");</script>
+			</div>
+			<div class="one-half column" id="toprightmsg" align="right">
+				<script>randomMsg();</script>
+			</div>
+		</div>
+	</div>
+
+	<!-- MAIN -->
+	<div class="container" id="wrapper">
+	
+		<a href="index.html" id="toplogo"><script>logo();</script></a><br>
+		<div id="menubar"><script>navbar();</script></div>
+	
+		
+		<div class="row">
+			<div class="twelve columns" id="content">
+				<h1>Gallery</h1>
+			</div>
+		</div>
+		
+	
+		<div class="row">
+			<div class="twelve columns" id="content">
+				<h2>Banners</h2>
+				- <a href="images/lordrixlogo.png" rel="lightbox" title="&copy; Lord Rixuel">LR Logo</a><br>
+				- <a href="images/lordrixlogo2.png" rel="lightbox" title="&copy; Lord Rixuel 2">LR Logo 2</a><br>
+				- <a href="images/lordrixlogo3.png" rel="lightbox" title="&copy; Lord Rixuel 3">LR Logo 3</a><br>
+				- <a href="images/lordrixlogo4.png" rel="lightbox" title="&copy; Lord Rixuel 4">LR Logo 4</a><br>
+				- <a href="images/alternalogo.png" rel="lightbox" title="&copy; Lord Rixuel">Alterna</a><br>
+				- <a href="images/terra.png" rel="lightbox" title="&copy; Lord Rixuel">Terra</a><br>
+			</div>
+		</div>
+
+	</div>
+	<!-- END MAIN -->
+	
+	
+	<!-- Ads/Logo/Random Stuff -->
+	<script type="text/javascript">
+		document.write("<center>" + adsbanners() + "</center>"); 
+	</script>
+
+	<!-- COPYRIGHT -->
+	<div class="twelve columns" id="footer" align="center">
+		<script>COPYRIGHT();</script>
+	</div>
+
+
+</body>
+</html>
