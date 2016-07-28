@@ -191,7 +191,7 @@ Defaults: {
 	y:100,
 	termDiv:'termDiv',
 	bgColor:'#181818',
-	frameColor:'#555555',
+	frameColor:'#000',
 	frameWidth:1,
 	rowHeight:15,
 	blinkDelay:500,

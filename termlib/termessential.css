@@ -1,5 +1,4 @@
 /* essential terminal styles */
-
 .term {
 	font-family: Consolas, courier, fixed,sans-serif;
 	font-size: 12px;
@@ -12,6 +11,9 @@
 }
 
 .termpos{
+	border: 0px solid #0f0;
+	border-left: 2px solid #000;
+	border-right: 2px solid #000;
 	line-height: 86%;
 	position: absolute;
 	margin-left:50%; /*Position of the term*/
@@ -23,7 +25,6 @@ a.termopen, a.termopen:link, a.termopen:visited {
 	font-size: 16px;
 	text-decoration: none;
 	color: #22CC00;
-	background: none;
 	padding: 10px 1px 10px 1px;
 }
 a.termopen:hover {
@@ -33,5 +34,10 @@ a.termopen:hover {
 }
 
 td {
-	padding: 1px 1px 1px 1px; /*top right down left*/
+	padding: 1px;
+	border-bottom: 0px;
+}
+
+table {
+  	margin-bottom: 0px;
 }
