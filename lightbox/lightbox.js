@@ -405,7 +405,7 @@ function initLightbox()
 	var objKeyboardMsg = document.createElement("div");
 	objKeyboardMsg.setAttribute('id','keyboardMsg');
 	var closeString = '';
-	closeString += '[<a href="#" onclick="hideLightbox(); return false;">Close (x)</a>]';
+	closeString += '[<a href="#" onclick="hideLightbox(); return false;"> X </a>]';
 	objKeyboardMsg.innerHTML = closeString;
 	objLightboxDetails.appendChild(objKeyboardMsg);
 

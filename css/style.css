@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
 body {
 	background-color: #000;
 	background-image: url("../images/background.png");
@@ -6,7 +9,7 @@ body {
 	background-attachment: fixed;
 	background-size: 100% auto;
 	color: #000;
-	font-family: Verdana, Sans-Serif, Lucida Sans Unicode, Lucida Console;
+	font-family: Verdana, Sans-Serif;
 	/* Font size defaut */
 	font-size: 1.0em;
 	/*top right down left*/
@@ -31,13 +34,14 @@ img {
 div h1 {
 	color: #66DD22;
 	letter-spacing: 4px;
+	font-family: 'Ubuntu';
 }
 div h2 {
 	color: #3388ee;
-	font-family: Tahoma, Lucida Console;
+	font-family: 'Ubuntu', Tahoma, Lucida Console;
 }
 div h3 {
-	font-family: Consolas, Helvetica, Lucida Console;
+	font-family: 'Ubuntu', Consolas, Helvetica, Lucida Console;
 	/*padding: 20px 0px 0px 0px;*/
 	/*top right down left*/
 }
@@ -50,7 +54,7 @@ hr {
 	/*background-image: url("../images/topbartile.png");*/
 	background-color: #212121;
 	color: #99ff00;
-	font-family: Verdana, Sans-Serif, Lucida Sans Unicode, Lucida Console;
+	font-family: 'Open Sans', Verdana, Sans-Serif, Lucida Console;
 	font-size: 0.8em;
 	padding: 6px 0;
 	/*top right down left*/
@@ -70,6 +74,7 @@ hr {
 	background-repeat: no-repeat, no-repeat;
 	/*background-color: #F8FaFc;*/
 	background-color: rgba(248, 250, 252, 0.85);
+	font-family: 'Open Sans', Verdana;
 	/*top right down left*/
 	margin: 30px auto 50px auto;
 	/*top right down left*/
@@ -77,15 +82,12 @@ hr {
 }
 #content {
 	border: 0px solid #00ff00;
-	font-family: Lucida Sans Unicode, Verdana, Sans-Serif, Arial, Lucida Console;
 }
 #contentLeft {
 	border: 0px solid #0000ff;
-	font-family: Lucida Sans Unicode, Verdana, Sans-Serif, Arial, Lucida Console;
 }
 #contentRight {
 	border: 0px solid #0000ff;
-	font-family: Lucida Sans Unicode, Verdana, Sans-Serif, Arial, Lucida Console;
 }
 .hideDescription {
 	border-radius: 0px 20px;
@@ -119,7 +121,7 @@ hr {
 #comment {
 	background-color: rgba(255, 250, 252, 0.85);
 	border-left: solid 10px #66DD22;
-	font-family: Lucida Console, Verdana, Sans-Serif, Arial;
+	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 1.0em;
 	/*top right down left*/
 	margin: 20px auto 20px auto;
@@ -139,8 +141,8 @@ hr {
 #comment h2 {
 	color: #3388ee;
 	font-family: Georgia, Consolas, Helvetica, Lucida Console;
-	font-size: 2.6em;
-	letter-spacing: 4px;
+	font-size: 2.4em;
+	letter-spacing: 3px;
 	/*top right down left*/
 	margin: 15px 0px 15px 0px;
 	text-align: left;
@@ -158,7 +160,7 @@ hr {
 #footer {
 	background: #212121;
 	color: #ffffff;
-	font-family: Verdana, Sans-Serif, Arial;
+	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 0.7em;
 	/*top right down left*/
 	margin: 50px auto 0px auto;
@@ -193,7 +195,7 @@ ul.topnav li a {
 	display: inline-block;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 12px 14px;
+	padding: 12px 13px;
 	text-decoration: none;
 	transition: 0.3s;
 	font-size: 15px;
