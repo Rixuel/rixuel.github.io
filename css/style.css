@@ -38,7 +38,8 @@ div h2 {
 }
 div h3 {
 	font-family: Consolas, Helvetica, Lucida Console;
-	/*padding: 20px 0px 0px 0px;*/ /*top right down left*/
+	/*padding: 20px 0px 0px 0px;*/
+	/*top right down left*/
 }
 hr {
 	border: 0;
@@ -165,56 +166,68 @@ hr {
 	text-align: center;
 }
 
-
 /* CSS for the responsive Menu Bar */
 
 
 /* Remove margins and padding from the list, and add a black background color */
+
 ul.topnav {
-    list-style-type: none;
-    margin: 10px 0px 10px 0px; /*top right down left*/
-    padding: 0;
-    overflow: hidden;
-    background-color: #212121;
+	list-style-type: none;
+	/*top right down left*/
+	margin: 10px 0px 10px 0px;
+	padding: 0;
+	overflow: hidden;
+	background-color: #212121;
 }
 
 /* Float the list items side by side */
-ul.topnav li {float: left; margin-bottom: 0rem;}
+
+ul.topnav li {
+	float: left;
+	margin-bottom: 0rem;
+}
 
 /* Style the links inside the list items */
+
 ul.topnav li a {
-    display: inline-block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 12px 14px;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 15px;
+	display: inline-block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 12px 14px;
+	text-decoration: none;
+	transition: 0.3s;
+	font-size: 15px;
 }
 
 /* Change background color of links on hover */
+
 ul.topnav li a:hover {
 	background-color: #50585F;
 	border-bottom: 4px solid #80ff00;
-	color:#80FF00;
+	color: #80FF00;
 	padding-bottom: 8px;
 	transition: 0s;
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {display: none;}
+
+ul.topnav li.icon {
+	display: none;
+}
 
 /* Add a right border to all list items, except the last item (last-child) */
+
 ul.topnav li {
-    border-right: 1px solid #000;
+	border-right: 1px solid #000;
 }
 ul.topnav li:last-child {
-    border-right: none;
+	border-right: none;
 }
 
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
 Show the list item that contains the link to open and close the topnav (li.icon).
 (:first-child) is ok. (: first-child) not ok.*/
+
 @media screen and (max-width:680px) {
 	ul.topnav li:not(:first-child) {
 		display: none;
@@ -230,6 +243,7 @@ Show the list item that contains the link to open and close the topnav (li.icon)
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens */
+
 @media screen and (max-width:680px) {
 	ul.topnav.responsive {
 		position: relative;
