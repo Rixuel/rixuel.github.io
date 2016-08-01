@@ -13,6 +13,9 @@ function setTextOutput() {
 
 function clearAll() {
 	"use strict";
+	// Clear values
+	textInput = "";
+	textOutput = "";
 	// Clear both textarea
 	document.getElementById("input").value = "";
 	document.getElementById("output").value = "";
@@ -25,7 +28,9 @@ function swap() {
 	textInput = textOutput;
 	textOutput = temp;
 	
-	clearAll();
+	// Clear both textarea
+	document.getElementById("input").value = "";
+	document.getElementById("output").value = "";
 	
 	// Set new swapped values
 	document.getElementById("input").value = textInput;
