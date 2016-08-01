@@ -11,13 +11,19 @@ function setTextOutput() {
 	document.getElementById("output").value = textOutput;
 }
 
-function clearAll() {
+function reset() {
 	"use strict";
 	// Clear values
 	textInput = "";
 	textOutput = "";
 	// Clear both textarea
 	document.getElementById("input").value = "";
+	document.getElementById("output").value = "";
+}
+
+function clearOutput() {
+	"use strict";
+	textOutput = "";
 	document.getElementById("output").value = "";
 }
 
