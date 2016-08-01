@@ -1,5 +1,5 @@
-var textInput;
-var textOutput;
+var textInput = "";
+var textOutput = "";
 
 function getTextInput() {
 	"use strict";
@@ -8,7 +8,28 @@ function getTextInput() {
 
 function setTextOutput() {
 	"use strict";
-	document.getElementById("output").innerHTML = textOutput;
+	document.getElementById("output").value = textOutput;
+}
+
+function clearAll() {
+	"use strict";
+	// Clear both textarea
+	document.getElementById("input").value = "";
+	document.getElementById("output").value = "";
+}
+
+function swap() {
+	"use strict";
+	// Swapping values
+	var temp = textInput;
+	textInput = textOutput;
+	textOutput = temp;
+	
+	clearAll();
+	
+	// Set new swapped values
+	document.getElementById("input").value = textInput;
+	document.getElementById("output").value = textOutput;
 }
 
 // Use of the encrypt algo here.

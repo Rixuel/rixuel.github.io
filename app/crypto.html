@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="js/md5.js"></script>
 	<script type="text/javascript" src="js/rc4.js"></script>
 	<script type="text/javascript" src="js/sha1.js"></script>
-	
+
 	<style>
 		body {
 			background-color: #000;
@@ -40,6 +40,7 @@
 			font-family: Consolas;
 			font-size: 1.0em;
 			padding: 4px;
+			resize: none;
 			width: 100%;
 			height: 120px;
 		}
@@ -69,8 +70,8 @@
 				Encryption:<br>
 				<button type="button" onclick="buttonAES()">AES</button>
 				<button type="button" onclick="buttonDES()">DES</button>
-				<button type="button" onclick="buttonMD5()">MD5</button>
 				<button type="button" onclick="buttonRC4()">RC4</button>
+				<button type="button" onclick="buttonMD5()">MD5</button>
 				<button type="button" onclick="buttonSHA1()">SHA 1</button>
 
 				<br>
@@ -79,7 +80,12 @@
 				<button type="button" onclick="dAES()">AES</button>
 				<button type="button" onclick="dDES()">DES</button>
 				<button type="button" onclick="buttonRC4()">RC4</button>
+				
 				<br>
+				
+				Options:<br>
+				<button type="button" onclick="clearAll()">Clear All</button>
+				<button type="button" onclick="swap()">Swap</button>
 			</div>
 
 			<div class="five columns">
@@ -89,8 +95,7 @@
 			</div>
 		</div>
 		<hr>
-		Webpage by Lord Rixuel.<br>
-		All other contents are copyrighted to their respective owners.<br>
+		Webpage by Lord Rixuel. All other contents are copyrighted to their respective owners.
 	</div>
 
 	<script type="text/javascript" src="js/crypto.js"></script>
