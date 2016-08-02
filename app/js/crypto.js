@@ -29,6 +29,7 @@ function clearOutput() {
 
 function swap() {
 	"use strict";
+	getTextInput();	
 	// Swapping values
 	var temp = textInput;
 	textInput = textOutput;
