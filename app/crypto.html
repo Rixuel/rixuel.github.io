@@ -6,10 +6,11 @@
 	<title>Crypto</title>
 	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<script type="text/javascript" src="js/aes.js"></script>
+	<script type="text/javascript" src="js/base64.js"></script>
 	<script type="text/javascript" src="js/des.js"></script>
-	<script type="text/javascript" src="js/md5.js"></script>
 	<script type="text/javascript" src="js/rc4.js"></script>
+	<script type="text/javascript" src="js/xor.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
 	<script type="text/javascript" src="js/sha1.js"></script>
 
 	<style>
@@ -45,6 +46,12 @@
 			height: 120px;
 		}
 		
+		#hash {
+			color: #AF6;
+			font-family: Consolas;
+			word-wrap: break-word;
+		}
+		
 		#output {
 			height: 260px;
 		}
@@ -68,18 +75,17 @@
 				<br>
 
 				Encryption:<br>
-				<button type="button" onclick="buttonAES()">AES</button>
+				<button type="button" onclick="buttonBase64()">Base64</button>
 				<button type="button" onclick="buttonDES()">DES</button>
 				<button type="button" onclick="buttonRC4()">RC4</button>
-				<button type="button" onclick="buttonMD5()">MD5</button>
-				<button type="button" onclick="buttonSHA1()">SHA 1</button>
-
+				<button type="button" onclick="buttonXOR()">XOR</button>
 				<br>
 
 				Decryption:<br>
-				<button type="button" onclick="dAES()">AES</button>
+				<button type="button" onclick="dBase64()">Base64</button>
 				<button type="button" onclick="dDES()">DES</button>
 				<button type="button" onclick="buttonRC4()">RC4</button>
+				<button type="button" onclick="buttonXOR()">XOR</button>
 				
 				<br>
 				
@@ -94,6 +100,11 @@
 				The Output:
 				<br>
 				<textarea id="output" readonly></textarea>
+				Check Input Hash: <br>
+				[ <a href="#/" onclick="buttonMD5()">MD5</a> | 
+				<a href="#/" onclick="buttonSHA1()">SHA1</a> | 
+				<a href="#/" onclick="clearHash()">Clear</a> ]
+				<div id="hash"></div>
 			</div>
 		</div>
 		<hr>

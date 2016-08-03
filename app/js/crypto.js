@@ -19,12 +19,18 @@ function reset() {
 	// Clear both textarea
 	document.getElementById("input").value = "";
 	document.getElementById("output").value = "";
+	document.getElementById("hash").innerHTML = "";
 }
 
 function clearOutput() {
 	"use strict";
 	textOutput = "";
 	document.getElementById("output").value = "";
+}
+
+function clearHash() {
+	"use strict";
+	document.getElementById("hash").innerHTML = "";
 }
 
 function swap() {
@@ -53,17 +59,17 @@ function buttonAES() {
 	setTextOutput();
 }
 
+function buttonBase64() {
+	"use strict";
+	getTextInput();
+	textOutput = Base64.encode(textInput);
+	setTextOutput();
+}
+
 function buttonDES() {
 	"use strict";
 	getTextInput();
 	textOutput = stringToHex(textInput);
-	setTextOutput();
-}
-
-function buttonMD5() {
-	"use strict";
-	getTextInput();
-	textOutput = md5(textInput);
 	setTextOutput();
 }
 
@@ -74,11 +80,29 @@ function buttonRC4() {
 	setTextOutput();
 }
 
+function buttonXOR() {
+	"use strict";
+	getTextInput();
+	textOutput = xorCrypt(textInput);
+	setTextOutput();
+}
+
+// Hash Functions
+
+function buttonMD5() {
+	"use strict";
+	getTextInput();
+	//textOutput = md5(textInput);
+	//setTextOutput();
+	document.getElementById("hash").innerHTML = md5(textInput);
+}
+
 function buttonSHA1() {
 	"use strict";
 	getTextInput();
-	textOutput = Sha1.hash(textInput);
-	setTextOutput();
+	//textOutput = Sha1.hash(textInput);
+	//setTextOutput();
+	document.getElementById("hash").innerHTML = Sha1.hash(textInput);
 }
 
 // Use of the decrypt algo here.
@@ -87,6 +111,13 @@ function dAES() {
 	"use strict";
 	getTextInput();
 	textOutput = AES.Base64.decode(textInput);
+	setTextOutput();
+}
+
+function dBase64() {
+	"use strict";
+	getTextInput();
+	textOutput = Base64.decode(textInput);
 	setTextOutput();
 }
 
