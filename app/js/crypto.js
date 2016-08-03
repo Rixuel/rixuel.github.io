@@ -87,6 +87,13 @@ function buttonXOR() {
 	setTextOutput();
 }
 
+function buttonShift() {
+	"use strict";
+	getTextInput();
+	textOutput = caesarShift(textInput, 1);
+	setTextOutput();
+}
+
 // Hash Functions
 
 function buttonMD5() {
@@ -125,6 +132,13 @@ function dDES() {
 	"use strict";
 	getTextInput();
 	textOutput = hexToString(textInput);
+	setTextOutput();
+}
+
+function dShift() {
+	"use strict";
+	getTextInput();
+	textOutput = caesarShift(textInput, -1);
 	setTextOutput();
 }
 
