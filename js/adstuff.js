@@ -11,5 +11,5 @@ function adsbanners() {
 
 				
 	index = Math.floor(Math.random() * ads.length);
-	return ads[index];
+	document.getElementById("adsfooter").innerHTML = ads[index];
 }
