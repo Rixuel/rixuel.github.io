@@ -21,7 +21,8 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 		// Add pointer-events: none; to #loader to be able to click on Edge and IE.
 		document.getElementById("loader").style.pointerEvents = 'none';
 	}, 4500);
+	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
-} else {
+} /*else {
 	document.getElementById("loader").remove();
-}
+}*/
