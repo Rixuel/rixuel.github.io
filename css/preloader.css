@@ -1,4 +1,4 @@
-#loader {
+.loader {
 	background-color: #010A12;
 	position: fixed;
 	top: 0;
@@ -7,6 +7,7 @@
 	right: 0;
 	z-index: 100;
 	text-align: center;
+	
 	-webkit-animation: cssAnimation 3s ease-in 3s forwards;
 	-moz-animation: cssAnimation 3s ease-in 3s forwards;
 	-o-animation: cssAnimation 3s ease-in 3s forwards;
@@ -22,8 +23,31 @@
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-#loader img {
-	/*border: 1px solid #0f0;*/
+/* Important for vertical center */
+.loader:before {
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.loader img {
+	vertical-align: middle;
+}
+
+/* Temporary Solution */
+@media screen and (max-width: 420px) { 
+   .loader img {
+	   height: 80%;
+	}
+	@media screen and (max-width: 370px) { 
+	   .loader img {
+		   height: 60%;
+		}
+	}
+}
+
+@media screen and (min-width: 800px) { 
+   #footer { display: block; } 
 }
 
 @keyframes cssAnimation {
