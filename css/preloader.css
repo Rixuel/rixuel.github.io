@@ -7,14 +7,14 @@
 	right: 0;
 	z-index: 100;
 	text-align: center;
-	/*
+	
 	-webkit-animation: cssAnimation 2s ease-in 3s forwards;
 	-moz-animation: cssAnimation 2s ease-in 3s forwards;
 	-o-animation: cssAnimation 2s ease-in 3s forwards;
 	animation: cssAnimation 2s ease-in 3s forwards;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
-	*/
+	
 	/* Disable highlight select */
 	-webkit-touch-callout: none; /* iOS Safari */
 	-webkit-user-select: none; /* Chrome/Safari/Opera */
@@ -71,7 +71,7 @@
 	100% { opacity: 0; }
 }
 
-#fadein2 {
+#fadein {
 	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 2s; /* Firefox < 16 */
 	-ms-animation: fadein 2s; /* Internet Explorer */
