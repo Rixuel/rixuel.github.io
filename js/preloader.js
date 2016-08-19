@@ -25,6 +25,8 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	setTimeout(function () {
 		"use strict";
 		document.body.style.overflow = 'visible';
+		// Add pointer-events: none; to #loader to be able to click on Edge and IE.
+		document.getElementById("loader").style.pointerEvents = 'none';
 	}, 4500);
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
