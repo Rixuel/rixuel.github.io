@@ -29,6 +29,6 @@ if ((prevsub == sub) && (prevdomain == domain)) {
 	setTimeout(function () {
 		"use strict";
 		document.body.style.overflow = 'visible';
-	}, 3500);
+	}, 4500);
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 }

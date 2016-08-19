@@ -8,10 +8,10 @@
 	z-index: 100;
 	text-align: center;
 	
-	-webkit-animation: cssAnimation 2s ease-in 2s forwards;
-	-moz-animation: cssAnimation 2s ease-in 2s forwards;
-	-o-animation: cssAnimation 2s ease-in 2s forwards;
-	animation: cssAnimation 2s ease-in 2s forwards;
+	-webkit-animation: cssAnimation 2s ease-in 3s forwards;
+	-moz-animation: cssAnimation 2s ease-in 3s forwards;
+	-o-animation: cssAnimation 2s ease-in 3s forwards;
+	animation: cssAnimation 2s ease-in 3s forwards;
 	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 	
