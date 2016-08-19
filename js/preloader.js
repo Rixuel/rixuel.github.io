@@ -8,11 +8,7 @@ var parts = full.split('.');
 var sub = parts[0];
 var domain = parts[1];
 
-if ((prevsub == sub) && (prevdomain == domain)) {
-	console.log("Previous URL and current URL matches!!!");
-	// Do nothing if the previous and current URL match
-} else {
-	console.log("Previous URL and current URL don't match...");
+if (!((prevsub == sub) && (prevdomain == domain))) {
 	// Show the preload screen
 	// Load the CSS file if previous and current URL don't match
 	var head = document.getElementsByTagName('head')[0];
