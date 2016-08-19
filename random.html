@@ -532,9 +532,10 @@
 					var domain = parts[1];
 					var type = parts[2];
 					
-					document.write("1: " + sub + "<br>");
-					document.write("1: " + domain + "<br>");
-					document.write("1: " + type + "<br>");
+					document.write("Full: " + full + "<br>");
+					document.write("Subdomain: " + sub + "<br>");
+					document.write("Domain: " + domain + "<br>");
+					document.write("Type: " + type + "<br>");
 					
 					var n = window.location.href.lastIndexOf('/');
 					var pageWithExt = window.location.href.substring(n+1);
