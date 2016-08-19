@@ -527,7 +527,15 @@
 					document.write("Last Index: " + window.location.href.lastIndexOf('/') + "<br>");
 					
 					var previousURL = document.referrer;
+					var prevParts = previousURL.split('.');
+					var prevsub = prevParts[0];
+					var prevdomain = prevParts[1];
+					var prevtype = prevParts[2];
+					
 					document.write("Previous URL: " + previousURL + "<br>");
+					document.write("Prev Subdomain: " + prevsub + "<br>");
+					document.write("Prev Domain: " + prevdomain + "<br>");
+					document.write("Prev Type: " + prevtype + "<br>");
 					
 					var full = window.location.host;
 					var parts = full.split('.');
