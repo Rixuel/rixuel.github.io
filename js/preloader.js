@@ -10,7 +10,7 @@ var sub = parts[0];
 var domain = parts[1];
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
-	// Show the preload screen pic
+	// Previous and Current URLs don't match. Show the preload screen pic
 	document.getElementById("loader").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
 	// Hidden stuff for milliseconds
@@ -22,4 +22,6 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 		document.getElementById("loader").style.pointerEvents = 'none';
 	}, 4500);
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
+} else {
+	document.getElementById("loader").remove();
 }
