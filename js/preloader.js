@@ -23,6 +23,7 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	}, 4500);
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
-} /*else {
-	document.getElementById("loader").remove();
-}*/
+} else {
+	//document.getElementById("loader").remove();
+	document.getElementById("loader")..removeAttribute("id");
+}
