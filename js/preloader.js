@@ -1,3 +1,4 @@
+// For comparing previous and current visited URLs
 var previousURL = document.referrer;
 var prevParts = previousURL.split('.');
 var prevsub = prevParts[0];
@@ -9,18 +10,10 @@ var sub = parts[0];
 var domain = parts[1];
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
-	// Show the preload screen
-	// Load the CSS file if previous and current URL don't match
-	var head = document.getElementsByTagName('head')[0];
-	var link = document.createElement('link');
-	link.rel = 'stylesheet';
-	link.type = 'text/css';
-	link.href = 'css/preloader.css';
-	link.media = 'all';
-	head.appendChild(link);
+	// Show the preload screen pic
 	document.getElementById("loader").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
-	// Hidden the scrollbar for milliseconds
+	// Hidden stuff for milliseconds
 	document.body.style.overflow = 'hidden';
 	setTimeout(function () {
 		"use strict";
