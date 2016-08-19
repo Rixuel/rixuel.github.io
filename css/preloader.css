@@ -1,4 +1,4 @@
-.loader {
+#loader {
 	background-color: #010A12;
 	position: fixed;
 	top: 0;
@@ -24,13 +24,13 @@
 }
 
 /* Important for vertical center */
-.loader:before {
+#loader:before {
 	content: ' ';
 	display: inline-block;
 	vertical-align: middle;
 	height: 100%;
 }
-.loader img {
+#loader img {
 	vertical-align: middle;
 }
 
