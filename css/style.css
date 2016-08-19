@@ -16,12 +16,12 @@ body {
 	margin: 0px 0px 0px 0px;
 }
 ::-moz-selection { /* Code for Firefox */
-    color: #6d0;
-    background: #000;
+    color: #60D;
+    background: #FFF;
 }
 ::selection {
-    color: #6d0;
-    background: #000;
+    color: #60D;
+    background: #FFF;
 }
 
 a:link,
