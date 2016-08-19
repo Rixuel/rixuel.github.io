@@ -1,13 +1,15 @@
 #loader {
 	background-color: #010A12;
 	color: #FFF;
+	display: table;
 	position: fixed;
+	
 	top: 0;
 	left: 0;
-	bottom: 0;
-	right: 0;
+	height: 100%;
+    width: 100%;
+
 	z-index: 100;
-	text-align: center;
 	
 	-webkit-animation: cssAnimation 2s ease-in 3s forwards;
 	-moz-animation: cssAnimation 2s ease-in 3s forwards;
@@ -24,55 +26,25 @@
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
 
-/* Important for vertical center */
-#loader:before {
-	content: ' ';
-	display: inline-block;
-	vertical-align: middle;
-	height: 100%;
-}
-#loader img {
-	vertical-align: middle;
-}
-
-/* Temporary Solution */
-@media screen and (max-width: 420px) { 
-   .loader img {
-	   height: 80%;
-	}
-	@media screen and (max-width: 370px) { 
-	   .loader img {
-		   height: 60%;
-		}
-	}
-}
-
-@media screen and (min-width: 800px) { 
-   #footer { display: block; } 
-}
-
 @keyframes cssAnimation {
-	to {
-		width: 0;
-		height: 0;
-		overflow: hidden;
-	}
+	to { overflow: hidden; }
 	/* Fade out */
 	0% { opacity: 1; }
 	100% { opacity: 0; }
 }
 @-webkit-keyframes cssAnimation {
-	to {
-		width: 0;
-		height: 0;
-		visibility: hidden;
-	}
+	to { visibility: hidden; }
 	/* Fade out */
 	0% { opacity: 1; }
 	100% { opacity: 0; }
 }
 
-#fadein {
+#loader #loadcont {
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+	height: 100vh;
+	
 	-webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
 	-moz-animation: fadein 2s; /* Firefox < 16 */
 	-ms-animation: fadein 2s; /* Internet Explorer */

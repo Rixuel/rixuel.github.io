@@ -11,7 +11,7 @@ var domain = parts[1];
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
 	// Previous and Current URLs don't match. Show the preload screen pic
-	document.getElementById("loader").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
+	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
 	// Hidden stuff for milliseconds
 	document.body.style.overflow = 'hidden';
