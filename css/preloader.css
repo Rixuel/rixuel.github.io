@@ -5,8 +5,8 @@
 	left: 0;
 	bottom: 0;
 	right: 0;
+	z-index: 100;
 	text-align: center;
-	z-index: 10;
 	-webkit-animation: cssAnimation 3s ease-in 3s forwards;
 	-moz-animation: cssAnimation 3s ease-in 3s forwards;
 	-o-animation: cssAnimation 3s ease-in 3s forwards;
@@ -21,6 +21,11 @@
 	-moz-user-select: none; /* Firefox */
 	-ms-user-select: none; /* Internet Explorer/Edge */
 }
+
+#loader img {
+	/*border: 1px solid #0f0;*/
+}
+
 @keyframes cssAnimation {
 	to {
 		width: 0;
