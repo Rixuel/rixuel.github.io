@@ -525,6 +525,17 @@
 				<script>
 					document.write("Page location is: " + window.location.href + "<br>");
 					document.write("Last Index: " + window.location.href.lastIndexOf('/') + "<br>");
+					
+					var full = window.location.host;
+					var parts = full.split('.');
+					var sub = parts[0];
+					var domain = parts[1];
+					var type = parts[2];
+					
+					document.write("1: " + sub + "<br>");
+					document.write("1: " + domain + "<br>");
+					document.write("1: " + type + "<br>");
+					
 					var n = window.location.href.lastIndexOf('/');
 					var pageWithExt = window.location.href.substring(n+1);
 					document.write("Substring: " + pageWithExt + "<br>");
