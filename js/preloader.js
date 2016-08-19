@@ -3,16 +3,10 @@ var prevParts = previousURL.split('.');
 var prevsub = prevParts[0];
 var prevdomain = prevParts[1];
 
-console.log("prev sub: " + prevsub);
-console.log("prev dom: " + prevdomain);
-
 var full = window.location.href;
 var parts = full.split('.');
 var sub = parts[0];
 var domain = parts[1];
-
-console.log("sub: " + sub);
-console.log("dom: " + domain);
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
 	// Show the preload screen
