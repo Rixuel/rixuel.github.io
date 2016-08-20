@@ -94,14 +94,14 @@ hr {
 	/*top right down left*/
 	padding: 10px;
 }
-#content {
-	border: 0px solid #00ff00;
+.content {
+	border: 1px solid #00ff00;
 }
-#contentLeft {
-	border: 0px solid #0000ff;
+.contentLeft {
+	border: 1px solid #0000ff;
 }
-#contentRight {
-	border: 0px solid #0000ff;
+.contentRight {
+	border: 1px solid #0000ff;
 }
 .hideDescription {
 	border-radius: 0px 20px;
