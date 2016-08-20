@@ -25,4 +25,6 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
 	document.getElementById("loader").remove();
+	var oChild=loader.children(0);	
+    loader.removeChild(oChild);
 }
