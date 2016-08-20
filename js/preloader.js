@@ -15,6 +15,8 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	
 	// Hidden stuff for milliseconds
 	document.body.style.overflow = 'hidden';
+	
+	// After some milliseconds, make stuff visible
 	setTimeout(function () {
 		"use strict";
 		document.body.style.overflow = 'visible';
