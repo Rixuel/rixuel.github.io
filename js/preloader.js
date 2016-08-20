@@ -26,6 +26,9 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 } else {
 	document.getElementById("loader").remove();
 
-	var element = document.getElementById("loader");
-	element.parentNode.removeChild(element);
+	remove("loader");
+}
+
+function remove(element) {
+    element.parentNode.removeChild(element);
 }
