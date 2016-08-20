@@ -9,7 +9,7 @@ var parts = full.split('.');
 var sub = parts[0];
 var domain = parts[1];
 
-if (!((prevsub === sub) && (prevdomain === domain))) {
+if (!((prevsub == sub) && (prevdomain == domain))) {
 	// Previous and Current URLs don't match. Show the preload screen pic
 	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
