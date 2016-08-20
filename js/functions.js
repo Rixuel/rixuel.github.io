@@ -99,7 +99,7 @@ function randomMsg() {
 	msg[2] = "Life shall live and Death shall die";
 	msg[3] = "Media + Army + Power = Ruler";
 	msg[4] = "Everything has its up and down";
-	msg[5] = "Have C+ in C++";
+	msg[5] = "Grade C+ in C++";
 	msg[6] = "Random messages here";
 	msg[7] = "Welcome to my website";
 	msg[8] = "Thank you for visiting";
