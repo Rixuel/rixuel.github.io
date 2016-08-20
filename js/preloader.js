@@ -14,14 +14,14 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
 	// Hidden stuff for milliseconds
-	document.body.style.overflow = 'hidden';
+	document.body.style.overflow = "hidden";
 	
 	// After some milliseconds, make stuff visible
 	setTimeout(function () {
 		"use strict";
-		document.body.style.overflow = 'visible';
+		document.body.style.overflow = "visible";
 		// Add pointer-events: none; to #loader to be able to click on Edge.
-		document.getElementById("loader").style.pointerEvents = 'none';
+		document.getElementById("loader").style.pointerEvents = "none";
 	}, 4500);
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
