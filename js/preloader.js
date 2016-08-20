@@ -25,5 +25,5 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
 	document.getElementById("loader").remove();
-	document.getElementById("loader").style.visibility = 'hidden';
+	document.getElementById("loader").innerHTML = "hidden";
 }
