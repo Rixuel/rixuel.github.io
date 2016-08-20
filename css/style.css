@@ -15,7 +15,7 @@ body {
 	/*top right down left*/
 	margin: 0px 0px 0px 0px;
 }
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
     color: #60D;
     background: #FFF;
 }
