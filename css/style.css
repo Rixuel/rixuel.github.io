@@ -171,6 +171,9 @@ hr {
 	margin: 10px 0px 10px 0px;
 	text-align: left;
 }
+#adsfooter {
+	text-align: center;
+}
 #footer {
 	background: #212121;
 	color: #ffffff;
