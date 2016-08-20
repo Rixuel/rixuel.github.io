@@ -17,21 +17,14 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.body.style.overflow = 'hidden';
 	
 	// After some milliseconds, make stuff visible
-	/*setTimeout(function () {
+	setTimeout(function () {
 		"use strict";
 		document.body.style.overflow = 'visible';
 		// Add pointer-events: none; to #loader to be able to click on Edge.
 		document.getElementById("loader").style.pointerEvents = 'none';
-	}, 4500);*/
+	}, 4500);
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
 	document.getElementById("loader").remove();
 }
-
-setTimeout(function () {
-    "use strict";
-    document.body.style.overflow = 'visible';
-    // Add pointer-events: none; to #loader to be able to click on Edge.
-    document.getElementById("loader").style.pointerEvents = 'none';
-}, 4500);
