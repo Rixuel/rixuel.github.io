@@ -10,13 +10,13 @@ var sub = parts[0];
 var domain = parts[1];
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
-    var head  = document.getElementsByTagName('head')[0];
+    /*var head  = document.getElementsByTagName('head')[0];
     var link  = document.createElement('link');
     link.rel  = 'stylesheet';
     link.type = 'text/css';
     link.href = 'css/preloader.css';
     link.media = 'all';
-    head.appendChild(link);
+    head.appendChild(link);*/
     
 	// Previous and Current URLs don't match. Show the preload screen pic
 	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
@@ -35,4 +35,5 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
 	document.getElementById("loader").remove();
+    document.getElementById("loader").style.display = "none";
 }
