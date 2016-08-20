@@ -25,10 +25,12 @@ if (!((prevsub == sub) && (prevdomain == domain))) {
 	}, 4500);
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
-} 
+} else {
 	document.getElementById("loader").remove();
-    setTimeout(function () {
-		"use strict";
-		// Add pointer-events: none; to #loader to be able to click on Edge.
-		document.getElementById("loader").style.pointerEvents = 'none';
-	}, 4500);
+}
+
+setTimeout(function () {
+    "use strict";
+    // Add pointer-events: none; to #loader to be able to click on Edge.
+    document.getElementById("loader").style.pointerEvents = 'none';
+}, 4500);
