@@ -28,3 +28,5 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 } else {
 	document.getElementById("loader").remove();
 }
+
+if (browserName=="Microsoft Internet Explorer") { document.write("<h1>Your html for IE</h1>") }
