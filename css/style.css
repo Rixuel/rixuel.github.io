@@ -95,13 +95,13 @@ hr {
 	padding: 10px;
 }
 .content {
-	border: 1px solid #00ff00;
+	border: 0px solid #00ff00;
 }
 .contentLeft {
-	border: 1px solid #0000ff;
+	border: 0px solid #0000ff;
 }
 .contentRight {
-	border: 1px solid #0000ff;
+	border: 0px solid #0000ff;
 }
 .hideDescription {
 	border-radius: 0px 20px;
