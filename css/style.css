@@ -8,7 +8,7 @@ body {
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: 100% auto;
-	color: #000;
+	color: #FFF;
 	font-family: Verdana, Sans-Serif;
 	/* Font size defaut */
 	font-size: 1.0em;
@@ -47,10 +47,10 @@ div h1 {
 }
 div h2 {
 	color: #3388ee;
-	font-family: 'Ubuntu', Tahoma, Lucida Console;
+	font-family: 'Ubuntu', Tahoma, "Lucida Console";
 }
 div h3 {
-	font-family: 'Ubuntu', Consolas, Helvetica, Lucida Console;
+	font-family: 'Ubuntu', Consolas, Helvetica, "Lucida Console";
 	/*padding: 20px 0px 0px 0px;*/
 	/*top right down left*/
 }
@@ -62,7 +62,7 @@ hr {
 #topbar {
 	background-color: #212121;
 	color: #99ff00;
-	font-family: 'Ubuntu', Verdana, Sans-Serif, Lucida Console;
+	font-family: 'Ubuntu', Verdana, Sans-Serif, "Lucida Console";
 	font-size: 0.9em;
 	padding: 6px 0;
 	/*top right down left*/
@@ -88,6 +88,7 @@ hr {
 	background-repeat: no-repeat, no-repeat;
 	/*background-color: #F8FaFc;*/
 	background-color: rgba(248, 250, 252, 0.85);
+	color: #000;
 	font-family: 'Open Sans', Verdana;
 	/*top right down left*/
 	margin: 30px auto 50px auto;
@@ -106,7 +107,7 @@ hr {
 .hideDescription {
 	border-radius: 0px 20px;
 	border-left: 3px solid #abadaf;
-	font-family: Lucida Console, Consolas, Verdana, Sans-Serif;
+	font-family: Consolas, Verdana, Sans-Serif;
 	font-size: 0.9em;
 	display: none;
 	/*top right down left*/
@@ -118,7 +119,7 @@ hr {
 	text-justify: inter-word;
 }
 #listdesc > a {
-	font-family: Consolas, Lucida Console, Arial;
+	font-family: Consolas, "Lucida Console", Arial;
 	font-size: 16px;
 	font-weight: bold;
 	cursor: pointer;
@@ -135,6 +136,7 @@ hr {
 .comment {
 	background-color: rgba(255, 250, 252, 0.85);
 	border-left: solid 10px #66DD22;
+	color: #000;
 	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 1.0em;
 	/*top right down left*/
@@ -147,14 +149,14 @@ hr {
 }
 .comment date {
 	color: #212121;
-	font-family: Consolas, Helvetica, Lucida Console;
+	font-family: Consolas, Helvetica, "Lucida Console";
 	font-size: 0.8em;
 	text-decoration: underline;
 	padding: 4px 0;
 }
 .comment h2 {
 	color: #3388ee;
-	font-family: Georgia, Consolas, Helvetica, Lucida Console;
+	font-family: Georgia, Consolas, Helvetica, "Lucida Console";
 	font-size: 2.4em;
 	letter-spacing: 3px;
 	/*top right down left*/
@@ -163,7 +165,7 @@ hr {
 }
 .comment h3 {
 	color: #223366;
-	font-family: Palatino Linotype, Consolas, Helvetica, Lucida Console;
+	font-family: "Palatino Linotype", Consolas, Helvetica, "Lucida Console";
 	font-size: 1.8em;
 	font-weight: bold;
 	letter-spacing: 2px;
