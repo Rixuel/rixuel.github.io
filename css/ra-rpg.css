@@ -1,0 +1,21 @@
+#astrology,
+#creatures,
+#edibles,
+#env {
+    display: inline-block;
+}
+
+#astrology span,
+#creatures span,
+#edibles span,
+#env span {
+    display: inherit;
+}
+
+#astrology i,
+#creatures i,
+#edibles i,
+#env i {
+    vertical-align: middle;
+}
+
