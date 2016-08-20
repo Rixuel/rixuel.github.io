@@ -9,7 +9,7 @@ var parts = full.split('.');
 var sub = parts[0];
 var domain = parts[1];
 
-if (!((prevsub == sub) && (prevdomain == domain))) {
+if (!((prevsub === sub) && (prevdomain === domain))) {
 	// Previous and Current URLs don't match. Show the preload screen pic
 	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
 	
@@ -17,12 +17,12 @@ if (!((prevsub == sub) && (prevdomain == domain))) {
 	document.body.style.overflow = 'hidden';
 	
 	// After some milliseconds, make stuff visible
-	setTimeout(function () {
+	/*setTimeout(function () {
 		"use strict";
 		document.body.style.overflow = 'visible';
 		// Add pointer-events: none; to #loader to be able to click on Edge.
 		document.getElementById("loader").style.pointerEvents = 'none';
-	}, 4500);
+	}, 4500);*/
 	
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
@@ -31,6 +31,7 @@ if (!((prevsub == sub) && (prevdomain == domain))) {
 
 setTimeout(function () {
     "use strict";
+    document.body.style.overflow = 'visible';
     // Add pointer-events: none; to #loader to be able to click on Edge.
     document.getElementById("loader").style.pointerEvents = 'none';
 }, 4500);
