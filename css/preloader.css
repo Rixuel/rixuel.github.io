@@ -27,13 +27,13 @@
 }
 
 @keyframes cssAnimation {
-	to { overflow: hidden; z-index: -100;}
+	to { overflow: hidden; }
 	/* Fade out */
 	0% { opacity: 1; }
 	100% { opacity: 0; }
 }
 @-webkit-keyframes cssAnimation {
-	to { visibility: hidden; z-index: -100;}
+	to { visibility: hidden; }
 	/* Fade out */
 	0% { opacity: 1; }
 	100% { opacity: 0; }
