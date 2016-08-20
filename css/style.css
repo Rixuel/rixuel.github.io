@@ -132,27 +132,27 @@ hr {
 	padding: 0px 2px 0px 2px;
 	width: 100%;
 }
-#comment {
+.comment {
 	background-color: rgba(255, 250, 252, 0.85);
 	border-left: solid 10px #66DD22;
 	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 1.0em;
 	/*top right down left*/
-	margin: 20px auto 20px auto;
+	margin: 20px auto 20px auto !important;
 	/*top right down left*/
-	padding: 5px 20px 20px 10px;
+	padding: 5px 20px 20px 10px !important;
 	text-align: justify;
 	/*Works for IE*/
 	text-justify: inter-word;
 }
-#comment date {
+.comment date {
 	color: #212121;
 	font-family: Consolas, Helvetica, Lucida Console;
 	font-size: 0.8em;
 	text-decoration: underline;
 	padding: 4px 0;
 }
-#comment h2 {
+.comment h2 {
 	color: #3388ee;
 	font-family: Georgia, Consolas, Helvetica, Lucida Console;
 	font-size: 2.4em;
@@ -161,7 +161,7 @@ hr {
 	margin: 15px 0px 15px 0px;
 	text-align: left;
 }
-#comment h3 {
+.comment h3 {
 	color: #223366;
 	font-family: Palatino Linotype, Consolas, Helvetica, Lucida Console;
 	font-size: 1.8em;
