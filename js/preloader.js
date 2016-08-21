@@ -1,13 +1,13 @@
 // For comparing previous and current visited URLs
-var previousURL = document.referrer;
-var prevParts = previousURL.split('.');
-var prevsub = prevParts[0];
-var prevdomain = prevParts[1];
+var previousURL = document.referrer,
+	prevParts = previousURL.split('.'),
+	prevsub = prevParts[0],
+	prevdomain = prevParts[1];
 
-var full = window.location.href;
-var parts = full.split('.');
-var sub = parts[0];
-var domain = parts[1];
+var full = window.location.href,
+	parts = full.split('.'),
+	sub = parts[0],
+	domain = parts[1];
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
 	// Previous and Current URLs don't match. Show the preload screen pic

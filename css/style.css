@@ -188,12 +188,11 @@ hr {
 	font-size: 0.8em;
 	/*top right down left*/
 	margin: 50px auto 0px auto;
-	padding: 14px 0;
+	padding: 14px 5px;
 	text-align: center;
 }
 
 /* CSS for the responsive Menu Bar */
-
 
 /* Remove margins and padding from the list, and add a black background color */
 
