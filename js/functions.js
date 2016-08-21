@@ -1,26 +1,17 @@
-function COPYRIGHT() {
-    "use strict";
-    var date, year, copyright;
-	date = new Date();
-	year = date.getFullYear();
-	
-    copyright = "&copy; 2014 - " + year + " Website and Design by Lord Rixuel. All other contents are copyrighted to their respective owners.";
-    document.getElementById("footer").innerHTML = copyright;
-}
+function COPYRIGHT(){"use strict";var date,year,copyright;date=new Date();year=date.getFullYear();
 
-function logo() {
-    "use strict";
-	var logoArr, index;
-    logoArr = [];
+	copyright="&copy; 2014 - "+year+" Website and Design by Lord Rixuel. All other contents are copyrighted to their respective owners.";
+document.getElementById("footer").innerHTML=copyright;}
 
-	logoArr[0] = "<img src='images/lordrixlogo.png' border='0'/>";
-	logoArr[1] = "<img src='images/lordrixlogo2.png' border='0'/>";
-	logoArr[2] = "<img src='images/lordrixlogo3.png' border='0'/>";
-	logoArr[3] = "<img src='images/lordrixlogo4.png' border='0'/>";
+function logo(){"use strict";var logoArr,index;logoArr=[];
 
-	index = Math.floor(Math.random() * logoArr.length);
-    document.getElementById("toplogo").innerHTML = logoArr[index];
-}
+	logoArr[0]="<img src='images/lordrixlogo.png' border='0'/>";
+	logoArr[1]="<img src='images/lordrixlogo2.png' border='0'/>";
+	logoArr[2]="<img src='images/lordrixlogo3.png' border='0'/>";
+	logoArr[3]="<img src='images/lordrixlogo4.png' border='0'/>";
+
+index=Math.floor(Math.random()*logoArr.length);
+document.getElementById("toplogo").innerHTML=logoArr[index];}
 
 // Style to underline the current menu choice.
 function selectedMenu(id) {
@@ -68,7 +59,6 @@ function checkPageWithMenu() {
 }
 function navbar() {
 	"use strict";
-    
 	var menubar =
 		"<ul class='topnav'>" +
         "<li><a href='index.html' id='MenuHome'>Home</a></li>" +
@@ -88,38 +78,32 @@ function menuToggle() {
 	document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
 }
 
+function randomMsg(){"use strict";var msg,index;msg=[];
 
-function randomMsg() {
-    "use strict";
-    var msg, index;
-	msg = [];
+	msg[0]="Once upon a time, the end";
+	msg[1]="Server Offline: 0 players";
+	msg[2]="Life shall live and Death shall die";
+	msg[3]="Media + Army + Power = Ruler";
+	msg[4]="Everything has its up and down";
+	msg[5]="Grade C+ in C++";
+	msg[6]="Random messages here";
+	msg[7]="Welcome to my website";
+	msg[8]="Thank you for visiting";
+	msg[9]="Just as planned!";
+	msg[10]="What is a man? A miserable little pile of secrets!";
+	msg[11]="Kamehameha!";
+	msg[12]="Kept you waiting huh?";
+	msg[13]="Arrogance is a sin";
+	msg[14]="Nothing is true, everything is permitted.";
+	msg[15]="♥ ♦ ♣ ♠";
+	msg[16]="Synergy: 1+1=3";
+	msg[17]="0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89";
+	msg[18]="██████████ Loading Hax 99%";
+	msg[19]="Be water my friend";
+	msg[20]="1+1 = 1+1";
 
-	msg[0] = "Once upon a time, the end";
-	msg[1] = "Server Offline: 0 players";
-	msg[2] = "Life shall live and Death shall die";
-	msg[3] = "Media + Army + Power = Ruler";
-	msg[4] = "Everything has its up and down";
-	msg[5] = "Grade C+ in C++";
-	msg[6] = "Random messages here";
-	msg[7] = "Welcome to my website";
-	msg[8] = "Thank you for visiting";
-	msg[9] = "Just as planned!";
-	msg[10] = "What is a man? A miserable little pile of secrets!";
-	msg[11] = "Kamehameha!";
-	msg[12] = "Kept you waiting huh?";
-	msg[13] = "Arrogance is a sin";
-	msg[14] = "Nothing is true, everything is permitted.";
-	msg[15] = "♥ ♦ ♣ ♠";
-	msg[16] = "Synergy: 1+1=3";
-	msg[17] = "0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89";
-	msg[18] = "██████████ Loading Hax 99%";
-	msg[19] = "Be water my friend";
-	msg[20] = "1+1 = 1+1";
-
-	
-	index = Math.floor(Math.random() * msg.length);
-    document.getElementById("toprightmsg").innerHTML = msg[index];
-}
+index=Math.floor(Math.random()*msg.length);
+document.getElementById("toprightmsg").innerHTML=msg[index];}
 
 function toggle_visibility(id) {
     "use strict";
@@ -131,10 +115,6 @@ function toggle_visibility(id) {
     }
 }
 
-
-//////////////////////////////////////////
-
-
 function easyGuessLogin() {
     "use strict";
 	document.getElementById("LoginMessage").innerHTML = "";
@@ -142,8 +122,7 @@ function easyGuessLogin() {
 	var oForm = document.forms.loginForm,
         login = oForm.elements.login.value,
         pass = oForm.elements.PassWord.value;
-	
-	
+
 	if ((login === null) || (login === "")) {
 		document.getElementById("LoginMessage").innerHTML = "Enter an Username!";
 	} else if ((pass === null) || (pass === "")) {
@@ -158,7 +137,5 @@ function easyGuessLogin() {
 			document.getElementById("LoginMessage").innerHTML = "Invalid Password!";
 		}
 	}
-	
 	return (false);
 }
-
