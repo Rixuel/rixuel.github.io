@@ -14,7 +14,7 @@
 	
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	
-	<link rel="stylesheet" type="text/css" href="css/preloader.css1">
+	<link rel="stylesheet" type="text/css" href="css/preloader.css">
     
     <link rel="stylesheet" href="css/rpg-awesome.min.css">
     <link rel="stylesheet" href="css/ra-rpg.css">
@@ -44,9 +44,9 @@
 		<div id="menubar"><script>navbar();</script></div>
 		
 		<div class="row">
-			
 			<div class="seven columns contentLeft">
-                <img src="images/frontcover.png"><br>                
+                <img src="images/frontcover.png"><br>             
+                <a href="app/crypto.html"><img src="images/cryptobanner.png"></a><br>             
 			</div>
 			
 			<div class="five columns contentRight">
@@ -62,38 +62,97 @@
 				</script>
 				<a class="twitter-timeline"  
 				href="https://twitter.com/Rixuel" 
-				height="357"
+				height="496"
 				data-widget-id="517539373844144128">Tweets by @Rixuel
 				</a>				
 			</div>
-			
 		</div>
-        
+	</div>
+	<!-- END MAIN -->
+	
+	<!-- RPG DAY -->
+	<div class="container comment">
         <div class="row">
             <div class="twelve columns">
                 <h1>What is your RPG day today?</h1>
-                <h3><a href="#/" onClick="genAll();">Check Now!</a></h3>
+				<button class="buttonGen" onClick="genAll();">
+					<span><i class='ra ra-overmind ra-2x'></i> Fortune Crystal Time!</span>
+				</button>
             </div>
         </div>
-        <p>
-            <h5>Environment:</h5>
-            <div id="env"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
-        </p>
-        <p>
-            <h5>Temporary Top 3 allies:</h5>
-            <div id="astrology"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
-        </p>
-        <p>
-            <h5>Creatures you will face:</h5>
-            <div id="creatures"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
-        </p>
-        <p>
-            <h5>Food and Drinks you will get:</h5>
-            <div id="edibles"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
-        </p>
+		<div class="row">
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Status</h5>
+					<div id="status"><span><i class='ra ra-uncertainty ra-5x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Zones</h5>
+					<div id="env"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Top 3 allies</h5>
+					<div id="astrology"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Top 3 pets</h5>
+					<div id="pets"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+		</div>
+	
+	
+
+		<div class="row">
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Arsenal</h5>
+					<div id="arsenal"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Skills</h5>
+					<div id="skills"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Creatures you will confront</h5>
+					<div id="creatures"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="three columns rpg-board">
+				<p>
+					<h5>Edibles you will get or use</h5>
+					<div id="edibles"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="six columns rpg-board">
+				<p>
+					<h5>Lucky Loots</h5>
+					<div id="luckyloots"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+			<div class="six columns rpg-board">
+				<p>
+					<h5>Unlucky Loots</h5>
+					<div id="unluckyloots"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
+				</p>
+			</div>
+		</div>
 
 	</div>
-	<!-- END MAIN -->
+	<!-- END RPG DAY -->
 	
 	
 	<!--
@@ -213,7 +272,7 @@
 	</div>
 	
 
-	<script type="text/javascript" src="js/preloader.js1"></script>
+	<script type="text/javascript" src="js/preloader.js"></script>
 	
 	<!-- Ads/Logo/Random Stuff -->
 	<div class="twelve columns" id="adsfooter">
