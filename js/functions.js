@@ -105,6 +105,17 @@ function randomMsg(){"use strict";var msg,index;msg=[];
 index=Math.floor(Math.random()*msg.length);
 document.getElementById("toprightmsg").innerHTML=msg[index];}
 
+function adsbanners(){"use strict";var ads,index;ads=[];
+
+	ads[0]= "<a href='#/'>"+
+			"<img src='images/alternalogo.png' border='0'/></a>";
+
+	ads[1]= "<a href='#/'>"+
+			"<img src='images/terra.png' border='0'/></a>";
+
+index=Math.floor(Math.random()*ads.length);
+document.getElementById("adsfooter").innerHTML=ads[index];}
+
 function toggle_visibility(id) {
     "use strict";
 	var e = document.getElementById(id);
