@@ -4,14 +4,15 @@
 	<title>Rixuel Patrick</title>
 	<meta charset="utf-8">
 	<meta name="Rixuel Patrick" content="Lord Rixuel, Guardian Patrick">
-	<script type="text/javascript" src="js/functions.js"></script>
+	<link rel="icon" type="image/png" href="images/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/skeleton.min.css">
-	<link rel="icon" type="image/png" href="images/favicon.png">
-	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/preloader.css">
 	<link rel="stylesheet" type="text/css" href="css/ra-rpg.css">
+	
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="js/functions.js"></script>
     <script src="js/ra-rpg.js"></script>
 
 	<script src="lightbox/lightbox.min.js"></script>
@@ -104,6 +105,30 @@
 				<button class="buttonGen" onClick="genAll();">
 					<span><i class='ra ra-overmind ra-2x'></i> Fortune Crystal Time!</span>
 				</button>
+				
+				<button class="buttonGen" onClick="showModal()">
+					<span><i class='ra ra-help ra-2x'></i></span>
+				</button>
+    
+				<div id="myModal" class="modal">
+					<div id="abc" class="modalContent">
+						<div class="modalHeader">
+							<span>
+								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+								Info
+							</span>
+							<a href="javascript:void(0)" class="close" onclick="closeModal()">X</a>
+						</div>
+						<div class="modalBody clear-close">
+							<p>
+							Just use your imagination :P
+							</p>
+							By: <a href="https://twitter.com/Rixuel">Rixuel</a><br>
+							Icons by: <a href="https://nagoshiashumari.github.io/Rpg-Awesome">RPG-Awesome</a>
+						</div>
+					</div>
+				</div>
+				
             </div>
         </div>
 		<div class="row">
