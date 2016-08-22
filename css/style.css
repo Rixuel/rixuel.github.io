@@ -11,21 +11,12 @@ body {
 	font-family: Verdana, Sans-Serif;
 	/* Font size defaut */
 	font-size: 1.0em;
-	/*top right down left*/
-	margin: 0px 0px 0px 0px;
+	margin: 0;
 }
-::-moz-selection {
-    color: #60D;
-    background: #FFF;
-}
-::selection {
-    color: #60D;
-    background: #FFF;
-}
+::-moz-selection{color: #60D;background: #FFF;}
+::selection {color: #60D;background: #FFF;}
 
-a:link,
-a:visited,
-a:active {
+a:link,a:visited,a:active {
 	text-decoration: none;
 	color: #4E6E8E;
 }
@@ -34,86 +25,63 @@ a:hover {
 	text-decoration: none;
 	text-shadow: 0px 0px 2px #80FF00;
 }
-img {
-	border: 0px solid;
-	max-width: 100%;
-	max-height: 100%;
+img {border:0;max-width:100%;max-height:100%;}
+
+div h1,div h2,div h3 {
+	font-family: 'Ubuntu', Tahoma, Helvetica, Arial;
 }
 div h1 {
 	color: #66DD22;
 	letter-spacing: 4px;
-	font-family: 'Ubuntu';
 }
 div h2 {
 	color: #3388ee;
-	font-family: 'Ubuntu', Tahoma, "Lucida Console";
 }
-div h3 {
-	font-family: 'Ubuntu', Consolas, Helvetica, "Lucida Console";
-}
+
 hr {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	border: 0; height: 1px;
+	background-image: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,1),rgba(0,0,0,0));
 }
+
 #topbar {
 	background-color: #212121;
-	color: #99ff00;
+	color: #9f0;
 	font-family: 'Ubuntu', Verdana, Sans-Serif, "Lucida Console";
 	font-size: 0.9em;
 	padding: 6px 0;
-	/*top right down left*/
-	margin: 0px auto 0px auto;
+	/*top down, right left*/
+	margin: 0px auto;
 }
-#topbar #toprightmsg {
-	text-align: right;
-}
+#topbar #toprightmsg{text-align:right;}
+@media screen and (max-width:820px){#topbar{font-size:0.65em;}}
+@media screen and (max-width:759px){#topbar #toprightmsg{text-align: left;}}
 
-@media screen and (max-width:820px) {
-	#topbar {
-		font-size: 0.65em;
-	}
-}
-@media screen and (max-width:759px) {
-	#topbar #toprightmsg {
-		text-align: left;
-	}
-}
 .wrapper {
-	background-image: url("../images/magiccirclesbg.png"), url("../images/backflow.png");
-	background-position: top left, top right;
-	background-repeat: no-repeat, no-repeat;
+	background-image: url("../images/magiccirclesbg.png"),url("../images/backflow.png");
+	background-position:top left,top right;background-repeat:no-repeat,no-repeat;
 }
 .wrapper,
 .wrapper2 {
-    /*background-color: #F8FaFc;*/
 	background-color: rgba(248, 250, 252, 0.85);
 	color: #000;
 	font-family: 'Open Sans', Verdana;
-	/*top right down left*/
-	margin: 30px auto 50px auto !important;
-	/*top right down left*/
+	/*top down, right left*/
+	margin: 30px auto !important;
 	padding: 10px !important;
 }
-.content {
-	border: 0px solid #00ff00;
-}
-.contentLeft {
-	border: 0px solid #0000ff;
-}
-.contentRight {
-	border: 0px solid #0000ff;
-}
+
+.checkcont{border: 0px solid #f00;}
+
 .hideDescription {
 	border-radius: 0px 20px;
 	border-left: 3px solid #abadaf;
 	font-family: Consolas, Verdana, Sans-Serif;
 	font-size: 0.9em;
 	display: none;
-	/*top right down left*/
-	padding: 4px 8px 4px 8px;
-	/*top right down left*/
-	margin: 0px 4px 0px 4px;
+	/*top down, right left*/
+	padding: 4px 8px;
+	/*top down, right left*/
+	margin: 0px 4px;
 	text-align: justify;
 	/*Works for IE*/
 	text-justify: inter-word;
@@ -130,8 +98,8 @@ hr {
 	color: #000;
 	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 1.0em;
-	/*top right down left*/
-	margin: 20px auto 20px auto !important;
+	/*top down, right left*/
+	margin: 20px auto !important;
 	/*top right down left*/
 	padding: 5px 20px 20px 10px !important;
 	text-align: justify;
@@ -146,12 +114,12 @@ hr {
 	padding: 4px 0;
 }
 .comment h2 {
-	color: #3388ee;
+	color: #38E;
 	font-family: Georgia, Consolas, Helvetica, "Lucida Console";
 	font-size: 2.2em;
 	letter-spacing: 2px;
-	/*top right down left*/
-	margin: 15px 0px 15px 0px;
+	/*top down, right left*/
+	margin: 15px 0px;
 	text-align: left;
 }
 .comment h3 {
@@ -160,29 +128,18 @@ hr {
 	font-size: 1.8em;
 	font-weight: bold;
 	letter-spacing: 1px;
-	/*top right down left*/
-	margin: 10px 0px 10px 0px;
+	/*top down, right left*/
+	margin: 10px 0px;
 	text-align: left;
 }
-.network {
-	background-color: #212121;
-	color: #FFF;
-    letter-spacing: 5px;
-	/*top right down left*/
-    margin-bottom: 10px;
-	padding: 10px;
-}
-@media screen and (max-width:825px) {
-	.network {
-        font-size: 10px;
-    }
-}
-#adsfooter {
-	text-align: center;
-}
+
+.network{background-color:#212121;color:#FFF;letter-spacing:5px;margin-bottom:10px;padding:10px;}
+@media screen and (max-width:825px){.network{font-size:10px;}}
+
+#adsfooter{margin-top:20px;text-align:center;}
 #footer {
 	background: #212121;
-	color: #ffffff;
+	color: #fff;
 	font-family: 'Ubuntu', Verdana, Sans-Serif, Arial;
 	font-size: 0.8em;
 	/*top right down left*/
@@ -194,25 +151,22 @@ hr {
 /* CSS for the responsive Menu Bar */
 
 /* Remove margins and padding from the list, and add a black background color */
-
 ul.topnav {
 	list-style-type: none;
-	/*top right down left*/
-	margin: 10px 0px 10px 0px;
+	/*top down, right left*/
+	margin: 10px 0px;
 	padding: 0;
 	overflow: hidden;
 	background-color: #212121;
 }
 
 /* Float the list items side by side */
-
 ul.topnav li {
 	float: left;
 	margin-bottom: 0rem;
 }
 
 /* Style the links inside the list items */
-
 ul.topnav li a {
 	display: inline-block;
 	color: #f2f2f2;
@@ -224,7 +178,6 @@ ul.topnav li a {
 }
 
 /* Change background color of links on hover */
-
 ul.topnav li a:hover {
 	background-color: #50585F;
 	border-bottom: 4px solid #80ff00;
@@ -234,13 +187,11 @@ ul.topnav li a:hover {
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-
 ul.topnav li.icon {
 	display: none;
 }
 
 /* Add a right border to all list items, except the last item (last-child) */
-
 ul.topnav li {
 	border-right: 1px solid #000;
 }
@@ -251,7 +202,6 @@ ul.topnav li:last-child {
 /* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
 Show the list item that contains the link to open and close the topnav (li.icon).
 (:first-child) is ok. (: first-child) not ok.*/
-
 @media screen and (max-width:680px) {
 	ul.topnav li:not(:first-child) {
 		display: none;
@@ -267,7 +217,6 @@ Show the list item that contains the link to open and close the topnav (li.icon)
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
 This class makes the topnav look good on small screens */
-
 @media screen and (max-width:680px) {
 	ul.topnav.responsive {
 		position: relative;
