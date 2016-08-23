@@ -176,6 +176,5 @@ function closeModal(id) {
 	"use strict";
 	// Show Body Scrollbar
 	//document.body.style.overflow = "visible";
-	//document.getElementById("myModal").style.display="none";
 	document.getElementById(id).style.display="none";
 }
