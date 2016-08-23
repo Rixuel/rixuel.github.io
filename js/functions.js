@@ -156,22 +156,26 @@ function easyGuessLogin() {
 	return (false);
 }
 
-function showModal() {
+function showModal(id) {
+	"use strict";
 	// Hide Body Scrollbar
 	//document.body.style.overflow = "hidden";
 	
-	document.getElementById("myModal").style.display="block";
+	document.getElementById(id).style.display="block";
+	
 	// When the user clicks anywhere outside of the modal, close it
-	var modal = document.getElementById("myModal");
+	var modal = document.getElementById(id);
 	window.onclick = function(event) {
 		if (event.target == modal) {
-			closeModal();
+			closeModal(id);
 		}
 	}
 	
 }
-function closeModal() {
+function closeModal(id) {
+	"use strict";
 	// Show Body Scrollbar
 	//document.body.style.overflow = "visible";
-	document.getElementById("myModal").style.display="none";
+	//document.getElementById("myModal").style.display="none";
+	document.getElementById(id).style.display="none";
 }
