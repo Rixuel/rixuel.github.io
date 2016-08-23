@@ -75,7 +75,6 @@ function checkPageWithMenu() {
     }
 }
 
-
 function randomMsg(){"use strict";var msg,index;msg=[];
 
 	msg[0]="Once upon a time, the end";
