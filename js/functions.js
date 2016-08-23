@@ -1,5 +1,4 @@
 function COPYRIGHT(){"use strict";var date,year,copyright;date=new Date();year=date.getFullYear();
-
 	copyright="&copy; 2014 - "+year+" Website and Design by Lord Rixuel. All other contents are copyrighted to their respective owners.";
 document.getElementById("footer").innerHTML=copyright;}
 
@@ -12,6 +11,24 @@ function logo(){"use strict";var logoArr,index;logoArr=[];
 
 index=Math.floor(Math.random()*logoArr.length);
 document.getElementById("toplogo").innerHTML=logoArr[index];}
+
+function navbar() {
+	"use strict";
+	var menubar =
+		"<ul class='topnav'>" +
+        "<li><a href='index.html' id='MenuHome'>Home</a></li>" +
+        "<li><a href='profile.html' id='MenuProfile'>Profile</a></li>" +
+        "<li><a href='gallery.html' id='MenuGallery'>Gallery</a></li>" +
+        "<li><a href='downloads.html' id='MenuDownloads'>Downloads</a></li>" +
+        "<li><a href='random.html' id='MenuRandom'>Random</a></li>" +
+        "<li><a href='links.html' id='MenuLinks'>Links</a></li>" +
+        "<li class='icon'><a href='javascript:void(0);' onclick='menuToggle()'>&#9776;</a></li>" +
+		"</ul>";
+    
+    document.getElementById("menubar").innerHTML = menubar;
+	checkPageWithMenu();
+}
+function menuToggle(){"use strict";document.getElementsByClassName("topnav")[0].classList.toggle("responsive");}
 
 // Style to underline the current menu choice.
 function selectedMenu(id) {
@@ -57,26 +74,7 @@ function checkPageWithMenu() {
         selectedMenu("MenuLinks");
     }
 }
-function navbar() {
-	"use strict";
-	var menubar =
-		"<ul class='topnav'>" +
-        "<li><a href='index.html' id='MenuHome'>Home</a></li>" +
-        "<li><a href='profile.html' id='MenuProfile'>Profile</a></li>" +
-        "<li><a href='gallery.html' id='MenuGallery'>Gallery</a></li>" +
-        "<li><a href='downloads.html' id='MenuDownloads'>Downloads</a></li>" +
-        "<li><a href='random.html' id='MenuRandom'>Random</a></li>" +
-        "<li><a href='links.html' id='MenuLinks'>Links</a></li>" +
-        "<li class='icon'><a href='javascript:void(0);' onclick='menuToggle()'>&#9776;</a></li>" +
-		"</ul>";
-    
-    document.getElementById("menubar").innerHTML = menubar;
-	checkPageWithMenu();
-}
-function menuToggle() {
-    "use strict";
-	document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
-}
+
 
 function randomMsg(){"use strict";var msg,index;msg=[];
 
