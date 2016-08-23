@@ -269,7 +269,7 @@ This class makes the topnav look good on small screens */
 	margin: 0;
 }
 .modal .modalHeader span {
-	color: #7788C9;
+	color: #4588C9;
 	letter-spacing: 4px;
 }
 .modal .modalHeader .close {
@@ -281,8 +281,8 @@ This class makes the topnav look good on small screens */
 
 .modal .modalBody {
 	background-color: #FFF;
-	border-top: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #cde;
+	border-bottom: 1px solid #cde;
 	color: #000;
 	position: static;
 	padding: 10px;
