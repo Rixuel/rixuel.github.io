@@ -158,10 +158,10 @@ function easyGuessLogin() {
 
 function showModal(id) {
 	"use strict";
+	document.getElementById(id).style.display="block";
+	
 	// Hide Body Scrollbar
 	//document.body.style.overflow = "hidden";
-	
-	document.getElementById(id).style.display="block";
 	
 	// When the user clicks anywhere outside of the modal, close it
 	var modal = document.getElementById(id);
