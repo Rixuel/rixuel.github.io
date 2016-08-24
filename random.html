@@ -386,7 +386,7 @@
 				</td>
 				<td valign="top" width="100%">
 					<center><h3>Check Western and Chinese Astrological Signs</h3></center>
-					<form name=zodiac>
+					<form name="zodiac" style="color:#000">
 					<table align="center" bgcolor="#aaff00" cellspacing="4">
 						<tr>
 							<td><b>Year</b></td>
@@ -518,7 +518,7 @@
 				
 				<script>
 					document.write("Page location is: " + window.location.href + "<br>");
-					document.write("Last Index: " + window.location.href.lastIndexOf('/') + "<br>");
+					document.write("Last Index: " + window.location.href.lastIndexOf('/') + "<br><br>");
 					
 					var previousURL = document.referrer;
 					var prevParts = previousURL.split('.');
@@ -529,7 +529,7 @@
 					document.write("Previous URL: " + previousURL + "<br>");
 					document.write("Prev Subdomain: " + prevsub + "<br>");
 					document.write("Prev Domain: " + prevdomain + "<br>");
-					document.write("Prev Type: " + prevtype + "<br>");
+					document.write("Prev Type: " + prevtype + "<br><br>");
 					
 					var full = window.location.href;
 					var parts = full.split('.');
@@ -537,10 +537,10 @@
 					var domain = parts[1];
 					var type = parts[2];
 					
-					document.write("Full: " + full + "<br>");
+					document.write("URL: " + full + "<br>");
 					document.write("Subdomain: " + sub + "<br>");
 					document.write("Domain: " + domain + "<br>");
-					document.write("Type: " + type + "<br>");
+					document.write("Type: " + type + "<br><br>");
 					
 					var n = window.location.href.lastIndexOf('/');
 					var pageWithExt = window.location.href.substring(n+1);
@@ -568,19 +568,7 @@
 						<INPUT onclick=resetit() type=button value="Submit Feedback">
 					</FORM>
 
-				</DIV>
-				
-				<p>
-				
-				<script type="text/javascript">
-					for(var row=0; row<1; row++){
-						for(var column=0; column<46; column++){
-							document.write("<input type=checkbox>"); 
-						}
-						document.write("<br>"); 
-					}
-				</script>
-				
+				</DIV>				
 				
 				<p>
 				

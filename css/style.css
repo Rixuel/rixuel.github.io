@@ -91,8 +91,8 @@ hr {
 	cursor: pointer;
 }
 .comment {
-	background-color: rgba(255, 250, 252, 0.85);
-	border-left: solid 10px #66DD22;
+	background-color: rgba(248, 250, 252, 0.85);
+	border-left: solid 10px #6D2;
 	color: #000;
 	font-family: 'Open Sans', Verdana, Sans-Serif, Arial;
 	font-size: 1.0em;
@@ -121,7 +121,7 @@ hr {
 	text-align: left;
 }
 .comment h3 {
-	color: #444;
+	color: #557;
 	font-family: "Palatino Linotype", Consolas, Helvetica, "Lucida Console";
 	font-size: 1.8em;
 	font-weight: bold;
