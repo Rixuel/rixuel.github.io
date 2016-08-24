@@ -113,14 +113,8 @@ function adsbanners(){"use strict";var ads,index;ads=[];
 index=Math.floor(Math.random()*ads.length);
 document.getElementById("adsfooter").innerHTML=ads[index];}
 
-function toggle_visibility(id) {
-    "use strict";
-	var e = document.getElementById(id);
-	if (e.style.display === 'block') {
-		e.style.display = 'none';
-    } else {
-		e.style.display = 'block';
-    }
+function toggle_visibility(id){"use strict";var e=document.getElementById(id);
+	if(e.style.display==="block"){e.style.display="none";}else{e.style.display="block";}
 }
 
 function date_time(id){"use strict";var date=new Date(),year=date.getFullYear(),month=date.getMonth(),d=date.getDate(),h=date.getHours(),m=date.getMinutes(),s=date.getSeconds(),day=date.getDay(),months=['January','February','March','April','May','June','July','August','September','October','November','December'],days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],result;if(h<10){h="0"+h;}if(m<10){m="0"+m;}if(s<10){s="0"+s;}
@@ -153,25 +147,9 @@ function easyGuessLogin() {
 	return (false);
 }
 
-function showModal(id) {
-	"use strict";
-	document.getElementById(id).style.display="block";
-	
-	// Hide Body Scrollbar
-	//document.body.style.overflow = "hidden";
-	
-	// When the user clicks anywhere outside of the modal, close it
-	var modal = document.getElementById(id);
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			closeModal(id);
-		}
-	}
-	
+function showModal(id){"use strict";document.getElementById(id).style.display="block";
+	//Click anywhere outside of the modal closes it
+	var modal=document.getElementById(id);
+	window.onclick=function(event) {if(event.target==modal){closeModal(id);}}
 }
-function closeModal(id) {
-	"use strict";
-	// Show Body Scrollbar
-	//document.body.style.overflow = "visible";
-	document.getElementById(id).style.display="none";
-}
+function closeModal(id){"use strict";document.getElementById(id).style.display="none";}
