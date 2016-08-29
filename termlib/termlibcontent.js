@@ -35,15 +35,6 @@ var alterna=[
 	' '
 ];
 
-var exfa=[
-	'%CS%+r Exfa Storm %-r%n',
-	'  A very mysterious lady who look up (more like stalking) at Rix.',
-	'  She claims to be powerful and says she knows all.',
-	'  By the way, she is full of herself. She is crazy too.',
-	'  She is too obsessed with money. AKA: Excala Storm',
-	' '
-];
-
 var rixuel=[
 	'%CS%+r Rixuel Patrick %-r%n',
 	'  The most awesome person ever!',
@@ -145,9 +136,6 @@ function termHandler() {
 			
 		case "ec": case "emilychristina": case "emily christina":
 			this.write(ec); break;
-			
-		case "exfa": case "excala":
-			this.write(exfa); break;
 			
 		case "exit": case "close": case "quit": case "logout":
 			this.close();
