@@ -11,8 +11,8 @@ body {
 	font-size: 1.0em;
 	margin: 0;
 }
-::-moz-selection{color:#60D;background:#FFF;}
-::selection{color:#60D;background:#FFF;}
+::-moz-selection{color:#D06;background:rgba(255,255,255,0.5);}
+::selection{color:#D06;background:rgba(255,255,255,0.5);}
 
 a:link,a:visited,a:active{color:#0E5E9E;text-decoration:none;}
 a:hover{color:#8F0;text-decoration:none;text-shadow: 0px 0px 2px #8F0;}
@@ -119,6 +119,7 @@ hr {border:0;height:1px;background-image: linear-gradient(to right,rgba(0,0,0,0)
 .note{color:#F00;font-size:10px;font-style:italic;}
 
 #adsfooter{margin-top:20px;text-align:center;}
+#donatebutton,#donatebutton input{padding:0;margin:0;vertical-align:middle;}
 #footer {
 	background: #212121;
 	color: #fff;
