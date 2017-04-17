@@ -11,11 +11,11 @@ var full = window.location.href,
 
 if (!((prevsub === sub) && (prevdomain === domain))) {
 	// Previous and Current URLs don't match. Show the preload screen pic
-	document.getElementById("loadcont").innerHTML = "<img src='images/rixuelbanner.png' id='fadein'>";
-	
+	document.getElementById("loadcont").innerHTML = "<img src='img/rixuelbanner.png' id='fadein'>";
+
 	// Hidden scroll for milliseconds
 	document.body.style.overflow = "hidden";
-	
+
 	// After some milliseconds, make stuff visible
 	setTimeout(function () {
 		"use strict";
@@ -23,7 +23,7 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 		// Add pointer-events: none; to #loader to be able to click on Edge.
 		document.getElementById("loader").style.pointerEvents = "none";
 	}, 4500);
-	
+
 	document.body.scrollTop = document.documentElement.scrollTop = 0;
 } else {
     document.getElementById("loader").style.display = "none";
