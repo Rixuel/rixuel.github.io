@@ -1,6 +1,6 @@
 body {
 	background-color: #000;
-	background-image: url("../images/background.png");
+	background-image: url("../img/background.png");
 	background-position: center top;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -38,7 +38,7 @@ hr {border:0;height:1px;background-image: linear-gradient(to right,rgba(0,0,0,0)
 @media screen and (max-width:759px){#topbar #toprightmsg{text-align: left;}}
 
 .wrapper {
-	background-image: url("../images/magiccirclesbg.png"),url("../images/backflow.png");
+	background-image: url("../img/magiccirclesbg.png"),url("../img/backflow.png");
 	background-position:top left,top right;background-repeat:no-repeat,no-repeat;
 }
 .wrapper,
@@ -182,7 +182,7 @@ ul.topnav li:last-child {
 	border-right: none;
 }
 
-/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). 
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home").
 Show the list item that contains the link to open and close the topnav (li.icon).
 (:first-child) is ok. (: first-child) not ok.*/
 @media screen and (max-width:680px) {
@@ -198,7 +198,7 @@ Show the list item that contains the link to open and close the topnav (li.icon)
 	}
 }
 
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. 
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
 This class makes the topnav look good on small screens */
 @media screen and (max-width:680px) {
 	ul.topnav.responsive {
