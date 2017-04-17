@@ -11,6 +11,13 @@ function setTextOutput() {
 	document.getElementById("output").value = textOutput;
 }
 
+function copySelectAll(id) {
+	"use strict";
+	var input = document.getElementById(id);
+	input.select();
+	document.execCommand('copy');
+}
+
 function reset() {
 	"use strict";
 	// Clear values
@@ -22,10 +29,9 @@ function reset() {
 	document.getElementById("hash").innerHTML = "";
 }
 
-function clearOutput() {
+function clearTextArea(id) {
 	"use strict";
-	textOutput = "";
-	document.getElementById("output").value = "";
+	document.getElementById(id).value = "";
 }
 
 function clearHash() {
@@ -35,16 +41,16 @@ function clearHash() {
 
 function swap() {
 	"use strict";
-	getTextInput();	
+	getTextInput();
 	// Swapping values
 	var temp = textInput;
 	textInput = textOutput;
 	textOutput = temp;
-	
+
 	// Clear both textarea
 	document.getElementById("input").value = "";
 	document.getElementById("output").value = "";
-	
+
 	// Set new swapped values
 	document.getElementById("input").value = textInput;
 	document.getElementById("output").value = textOutput;
@@ -141,4 +147,3 @@ function dShift() {
 	textOutput = caesarShift(textInput, -1);
 	setTextOutput();
 }
-

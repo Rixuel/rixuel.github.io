@@ -6,13 +6,6 @@
 	<title>Crypto</title>
 	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<script type="text/javascript" src="js/base64.js"></script>
-	<script type="text/javascript" src="js/des.js"></script>
-	<script type="text/javascript" src="js/rc4.js"></script>
-	<script type="text/javascript" src="js/xor.js"></script>
-	<script type="text/javascript" src="js/shift.js"></script>
-	<script type="text/javascript" src="js/md5.js"></script>
-	<script type="text/javascript" src="js/sha1.js"></script>
 
 	<style>
 		body {
@@ -20,7 +13,7 @@
 			color: #FFF;
 			font-family: 'Raleway', Arial;
 		}
-		
+
 		button {
 			color: #FFF;
 		}
@@ -29,11 +22,11 @@
 		button:focus {
 			color: #0f0;
 		}
-		
+
 		h1 {
 			color: #6D2;
 		}
-		
+
 		textarea {
 			background-color: #000;
 			border: 1px solid #DDD;
@@ -46,35 +39,36 @@
 			width: 100%;
 			height: 120px;
 		}
-		
+
 		#hash {
 			color: #AF6;
 			font-family: Consolas;
 			word-wrap: break-word;
 		}
-		
+
 		#output {
 			height: 260px;
 		}
-		
+
 		#donatebutton,#donatebutton input{padding:0;margin:0;vertical-align:middle;}
 	</style>
 </head>
 
 <body>
-	
+
 	<div class="container">
 		<div class="row">
-			<h1>Crypto</h1> 
+			<h1>Crypto</h1>
 			<h4>This is just for fun. Nothing serious.</h4>
 		</div>
-	
+
 		<div class="row">
 			<div class="seven columns">
 				Your Input (Plain text or Encrypted text):
 				<br>
 				<textarea id="input"></textarea>
-
+				<button type="button" onclick="copySelectAll('input')">Copy Select All</button>
+				<button type="button" onclick="clearTextArea('input')">Clear Input</button>
 				<br>
 
 				Encryption:<br>
@@ -92,11 +86,10 @@
 				<button type="button" onclick="buttonXOR()">XOR</button>
 				<button type="button" onclick="dShift()">Shift</button>
 				<br>
-				
+
 				Options:<br>
 				<button type="button" onclick="reset()">Reset</button>
 				<button type="button" onclick="location.reload(true)">Refresh</button>
-				<button type="button" onclick="clearOutput()">Clear Output</button>
 				<button type="button" onclick="swap()">Swap</button>
 			</div>
 
@@ -104,9 +97,12 @@
 				The Output:
 				<br>
 				<textarea id="output" readonly></textarea>
+				<button type="button" onclick="copySelectAll('output')">Copy Select All</button>
+				<button type="button" onclick="clearTextArea('output')">Clear Output</button>
+				<br>
 				Check Input Hash: <br>
-				[ <a href="#" onclick="buttonMD5(); return false">MD5</a> | 
-				<a href="#" onclick="buttonSHA1(); return false">SHA1</a> | 
+				[ <a href="#" onclick="buttonMD5(); return false">MD5</a> |
+				<a href="#" onclick="buttonSHA1(); return false">SHA1</a> |
 				<a href="#" onclick="clearHash(); return false">Clear</a> ]
 				<div id="hash"></div>
 			</div>
@@ -131,6 +127,13 @@
 		</div>
 	</div>
 
+	<script type="text/javascript" src="js/base64.js"></script>
+	<script type="text/javascript" src="js/des.js"></script>
+	<script type="text/javascript" src="js/rc4.js"></script>
+	<script type="text/javascript" src="js/xor.js"></script>
+	<script type="text/javascript" src="js/shift.js"></script>
+	<script type="text/javascript" src="js/md5.js"></script>
+	<script type="text/javascript" src="js/sha1.js"></script>
 	<script type="text/javascript" src="js/crypto.js"></script>
 </body>
 
