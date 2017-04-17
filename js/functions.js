@@ -12,10 +12,10 @@ function logo() {
     var logoArr, index;
     logoArr = [];
 
-    logoArr[0] = "<img src='images/lordrixlogo.png' border='0'/>";
-    logoArr[1] = "<img src='images/lordrixlogo2.png' border='0'/>";
-    logoArr[2] = "<img src='images/lordrixlogo3.png' border='0'/>";
-    logoArr[3] = "<img src='images/lordrixlogo4.png' border='0'/>";
+    logoArr[0] = "<img src='img/lordrixlogo.png' border='0'/>";
+    logoArr[1] = "<img src='img/lordrixlogo2.png' border='0'/>";
+    logoArr[2] = "<img src='img/lordrixlogo3.png' border='0'/>";
+    logoArr[3] = "<img src='img/lordrixlogo4.png' border='0'/>";
 
     index = Math.floor(Math.random() * logoArr.length);
     document.getElementById("toplogo").innerHTML = logoArr[index];
@@ -126,10 +126,10 @@ function adsbanners() {
     ads = [];
 
     ads[0] = "<a href='https://alternaland.github.io'>" +
-        "<img src='images/alternalogo.png' border='0'/></a>";
+        "<img src='img/alternalogo.png' border='0'/></a>";
 
     ads[1] = "<a href='https://alternaland.github.io'>" +
-        "<img src='images/terra.png' border='0'/></a>";
+        "<img src='img/terra.png' border='0'/></a>";
 
     index = Math.floor(Math.random() * ads.length);
     document.getElementById("adsfooter").innerHTML = ads[index];

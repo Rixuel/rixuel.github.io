@@ -4,13 +4,13 @@
 	<title>Rixuel Patrick - Random</title>
 	<meta charset="utf-8">
 	<meta name="Rixuel Patrick" content="Lord Rixuel, Guardian Patrick">
-	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/skeleton.min.css">
 	<link rel="stylesheet" type="text/css" href="lightbox/lightbox.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
-	
+
 	<script type="text/javascript" src="js/functions.js"></script>
 	<link rel="stylesheet" type="text/css" href="termlib/termessential.css">
 	<script type="text/javascript" src="termlib/termlib.js"></script>
@@ -84,14 +84,14 @@
 	}
 	// End LoveForm-->
 	</script>
-	
+
 	<script>
 	//Western & Chinese Astrological Sign Calculator- By Timothy Joko-Veltman
 	//Email: restlessperegrine@yahoo.com URL: http://openmind.digitalrice.com
 	//Visit JavaScript Kit (http://javascriptkit.com) for script
 
 	function signs() {
-		var start = 1901; 
+		var start = 1901;
 		var birthyear = document.zodiac.year.value, date=document.zodiac.date.value, month=document.zodiac.month.selectedIndex;
 
 		with (document.zodiac.sign){
@@ -120,7 +120,7 @@
 			if (month == 12 && date >=22 || month == 1 && date <=19) {value = "Capricorn";}
 			if (month == 12 && date > 31) {value = "No way!";}
 		}
-		
+
 		var x = (start - birthyear) % 12;
 		with (document.zodiac.csign){
 			if (x == 1 || x == -11) {value = "Rat";}
@@ -138,7 +138,7 @@
 		}
 	}
 	</script>
-	
+
 	<SCRIPT>
 	/*
 	By Michael Dillon  drevil_nz@hotmail.com
@@ -184,7 +184,7 @@
 			return false;
 		}
 	}
-	
+
 	function resetit(){
 		alert("Thanks for your feedback. You really are too nice.");
 		document.myform.mytext.value="";
@@ -193,29 +193,29 @@
 		x=Math.floor(Math.random()*themessage.length);
 	}
 	</SCRIPT>
-	
-	
+
+
 	<SCRIPT>
 	function randomChar() {
 		var min = 65;
 		var max = 90;
 		var letter = String.fromCharCode(Math.floor(Math.random() * (max - min + 1)) + min);
-		
+
 		return letter;
 	}
-	
+
 	function randomNum() {
 		var min = 0;
 		var max = 9;
 		var number = Math.floor(Math.random() * (max - min + 1)) + min;
-		
+
 		return number;
 	}
-		
+
 	function generateserial() {
 		// AA11-A1A1-AAA1-111A-1A1A
-		document.serialnumber.theSerial.value 
-		= 
+		document.serialnumber.theSerial.value
+		=
 		randomChar() + randomChar() + randomNum() + randomNum() + "-" +
 		randomChar() + randomNum() + randomChar() + randomNum() + "-" +
 		randomChar() + randomChar() + randomChar() + randomNum() + "-" +
@@ -223,65 +223,65 @@
 		randomNum() + randomChar() + randomNum() + randomChar();
 	}
 	</SCRIPT>
-	
+
 	<SCRIPT>
 	var firstname=[ "Aarav", "Adam", "Ai", "Akiyama",
-					"Alexander", "Aleksandar", "Ali", "Alysha", 
+					"Alexander", "Aleksandar", "Ali", "Alysha",
 					"Amelia", "Angelina",
-					"An", "Ananya", "Anastasia", "Anna", "Anya", "Aron", "Aya", 
+					"An", "Ananya", "Anastasia", "Anna", "Anya", "Aron", "Aya",
 					"Ben", "Brad", "Brooklyn",
-					"Camila", "Charlie", "Chia-hao", "Chloe", "Clarence", 
+					"Camila", "Charlie", "Chia-hao", "Chloe", "Clarence",
 					"Daniel", "Dylan",
 					"Eden", "Eliska", "Ella", "Ellen", "Emily", "Emma",
 					"Fatemeh", "Fatima", "Florencia", "Francesco",
 					"Gabriel", "Gabrielle", "George", "Grace",
 					"Hanna", "Harry", "Hiroto",
 					"Isabella",
-					"Jack", "Jackson", "Jacob", "James", "Jayden", "Jian", "Jing", "John", "Juan", 
+					"Jack", "Jackson", "Jacob", "James", "Jayden", "Jian", "Jing", "John", "Juan",
 					"Kyle", "Kyrie",
 					"Lara", "Lea", "Lena", "Liam", "Lina", "Lucie", "Luka",
 					"Manuel", "Maria", "Mario", "Mariam", "Mariana", "Marie", "Mark", "Mary", "Matthew", "Maxim",
-					"Mehdi", "Mia", "Miguel", "Min-jun", "Mohamed", 
+					"Mehdi", "Mia", "Miguel", "Min-jun", "Mohamed",
 					"Nathan", "Nikola", "Noa", "Noah", "Noam", "Noel",
-					"Olivia", 
-					"Patrick", "Paul", "Peter", 
-					"Renz", "Rimas", "Robert", "Ryan", 
+					"Olivia",
+					"Patrick", "Paul", "Peter",
+					"Renz", "Rimas", "Robert", "Ryan",
 					"Sem", "Shaimaa", "Sofia", "Somchai", "Sophia",
 					"William",
 					"Xyriel",
 					"Yanis", "Youssef", "Yuina",
 					"Zahra"];
-	
+
 	var lastName=[	"Al-Asadi", "Athanasiadis",
 					"Belmont", "Bernard", "Bianchi", "Bui",
 					"Campbell", "Chan", "Christina", "Cohen",
 					"Dimitrov",
-					"Elie", 
+					"Elie",
 					"Fernandez", "Ferrari", "Fisher",
 					"Gagnon", "Galli", "Garcia", "Gruber",
-					"Horvat", "Hoxha", "Huynh", 
+					"Horvat", "Hoxha", "Huynh",
 					"Ionescu", "Ivanov",
 					"Jabarkhil", "Jackson", "Janssens", "Johnson", "Jones", "Jovanovic",
 					"Kim", "Korhonen",
 					"Lee", "Lin", "Lopez",
-					"Martin", "Martinez", "Muller", 
+					"Martin", "Martinez", "Muller",
 					"Nielsen", "Ngo", "Nguyen",
-					"Osman", 
+					"Osman",
 					"Pham", "Popescu", "Putin",
 					"Rizzo", "Romero", "Roy", "Russell",
-					"Schmidt", "Schneider", "Smirnov", "Smith", 
+					"Schmidt", "Schneider", "Smirnov", "Smith",
 					"Taheri", "Taylor", "Tremblay",
 					"Wang", "White",
 					"Zein"];
-		
+
 	function namegenerator() {
-		document.namegenform.namegen.value 
-		= 
+		document.namegenform.namegen.value
+		=
 		firstname[Math.floor(Math.random() * firstname.length)] + " " +
 		lastName[Math.floor(Math.random() * lastName.length)];
 	}
 	</SCRIPT>
-	
+
 	<SCRIPT>
 	var classname=[	"Angel", "Archer", "Arch Knight", "Arch Lord", "Arch Mage", "Assassin",
 					"Bard", "Blader", "Bowman",
@@ -303,7 +303,7 @@
 					"Templar", "Thief",
 					"Vampire Hunter",
 					"Warlord", "Warrior", "Wizard", "Witch"];
-		
+
 	function classgenerator() {
 		document.classgenform.classgen.value = classname[Math.floor(Math.random() * classname.length)];
 	}
@@ -337,41 +337,41 @@
 
 	<!-- MAIN -->
 	<div class="container wrapper">
-	
+
 		<a href="index.html" id="toplogo"><script>logo();</script></a><br>
 		<div id="menubar"><script>navbar();</script></div>
-	
-		
+
+
 		<div class="row">
 			<div class="twelve columns checkcont">
 				<h1>Random</h1>
 			</div>
 		</div>
-		
-	
+
+
 		<div class="row">
 			<div class="twelve columns checkcont">
-				
-				
+
+
 				<a href="javascript:termOpen(1)" class="termopen">&gt; Open Terminal&nbsp;</a><p>
 				<div id="termDiv1" class="termpos"></div>
 
 				<p>
-				
+
 				<table cellpadding="0" cellspacing="0"><tr>
 				<td valign="top">
-				
+
 					<h2>wtf lol</h2>
-					<a href="images/alternalogo.png" rel="lightbox" title="testcaption2">TEST CLICK</a><br>
+					<a href="img/alternalogo.png" rel="lightbox" title="testcaption2">TEST CLICK</a><br>
 					<a href="keyboard.html">Keyboard</a>
-					
+
 					<table><tr><td>Column 1</td>
 						<td>Column 2</td>
 					</tr></table>
-					
+
 					<a href="random.html">Refresh</a><p>
 					<h2>Luv Form</h2>
-					
+
 					<form name=loveform>
 					<input value="" name="name1" type="text" size="20"
 					onKeydown="Javascript: if (event.keyCode==13)calc();"> +<br>
@@ -381,8 +381,8 @@
 					<p>
 					<input value="Calculate!" name="calculate" type="button" value="calculate" onclick="calc()">
 					</form>
-				
-				
+
+
 				</td>
 				<td valign="top" width="100%">
 					<center><h3>Check Western and Chinese Astrological Signs</h3></center>
@@ -427,138 +427,138 @@
 				</td>
 				</tr>
 				</table>
-				
+
 				<h1>Random Random</h1>
-				
-				<a href="images/alternalogo.png" rel="lightbox" title="Alterna">
+
+				<a href="img/alternalogo.png" rel="lightbox" title="Alterna">
 				[0]</a>
-				<a href="images/sedlady.png" rel="lightbox" title="">
+				<a href="img/sedlady.png" rel="lightbox" title="">
 				[0]</a>
-				<a href="images/lady2.png" rel="lightbox" title="">
+				<a href="img/lady2.png" rel="lightbox" title="">
 				[0]</a>
-				<a href="images/lady3.png" rel="lightbox" title="">
+				<a href="img/lady3.png" rel="lightbox" title="">
 				[0]</a>
-				<a href="images/lady4.png" rel="lightbox" title="">
+				<a href="img/lady4.png" rel="lightbox" title="">
 				[0]</a>
-				<a href="images/lady5.png" rel="lightbox" title="">
+				<a href="img/lady5.png" rel="lightbox" title="">
 				[0]</a>
-				<a href="images/lady6.png" rel="lightbox" title="">
+				<a href="img/lady6.png" rel="lightbox" title="">
 				[0]</a>
-						
+
 				<p>
-				
+
 
 
 				<h2>Useless Serial Number</h2>
 				<form name=serialnumber>
-					<input value="????-????-????-????-????" name="theSerial" type="text" size="37" onClick="theSerial.select()" 
+					<input value="????-????-????-????-????" name="theSerial" type="text" size="37" onClick="theSerial.select()"
 					onKeydown="Javascript: if (event.keyCode==13)generateserial();"
 					style="border: 1px solid #000000; text-align:center; font-family:Consolas, Arial;" readonly>
 					<input style='width:0px; visibility:hidden'>
-					
+
 					<input value="Generate!" type="button" onclick="generateserial()">
 					<input value="Select All" type="button" onClick="theSerial.select()">
 				</form>
 				</td>
-				
-				
-				
+
+
+
 				<h2>Name Generator</h2>
 				<form name=namegenform>
-					<input value="Firstname Lastname" name="namegen" type="text" size="37" onClick="namegen.select()" 
+					<input value="Firstname Lastname" name="namegen" type="text" size="37" onClick="namegen.select()"
 					onKeydown="Javascript: if (event.keyCode==13)namegenerator();"
 					style="border: 1px solid #000000; text-align:center; font-family:Consolas, Arial;" readonly>
 					<input style='width:0px; visibility:hidden'>
-					
+
 					<input value="Generate!" type="button" onclick="namegenerator()">
 					<input value="Select All" type="button" onClick="namegen.select()">
 				</form>
 				</td>
-				
-				
-				
+
+
+
 				<h2>Class Generator</h2>
 				<form name=classgenform>
-					<input value="Class" name="classgen" type="text" size="37" onClick="classgen.select()" 
+					<input value="Class" name="classgen" type="text" size="37" onClick="classgen.select()"
 					onKeydown="Javascript: if (event.keyCode==13)classgenerator();"
 					style="border: 1px solid #000000; text-align:center; font-family:Consolas, Arial;" readonly>
 					<input style='width:0px; visibility:hidden'>
-					
+
 					<input value="Generate!" type="button" onclick="classgenerator()">
 					<input value="Select All" type="button" onClick="classgen.select()">
 				</form>
-				
-				
+
+
 				<input value="Generate ALL" type="button" onClick="generateserial(); namegenerator(); classgenerator();">
 
-				
-				
+
+
 				<p>
-				
+
 				<table border=1>
 					<th>Id</th><th>Character</th>
 					<tr><td>1</td><td>ABCDE</td></tr>
 					<tr><td>2</td><td>Beta</td></tr>
 					<tr><td>3</td><td>CharInt</td></tr>
 				</table>
-				
+
 				<p>
-				
+
 				<script>
 					var ascii;
-					document.write("<h2>ASCII</h2>"); 
-					
+					document.write("<h2>ASCII</h2>");
+
 					for(var i=33; i<255; i++){
-						res = String.fromCharCode(i); 
-						document.write(res); 
+						res = String.fromCharCode(i);
+						document.write(res);
 					}
 				</script>
-				
+
 				<br><br>
-				
+
 				<script>
 					document.write("Page location is: " + window.location.href + "<br>");
 					document.write("Last Index: " + window.location.href.lastIndexOf('/') + "<br><br>");
-					
+
 					var previousURL = document.referrer;
 					var prevParts = previousURL.split('.');
 					var prevsub = prevParts[0];
 					var prevdomain = prevParts[1];
 					var prevtype = prevParts[2];
-					
+
 					document.write("Previous URL: " + previousURL + "<br>");
 					document.write("Prev Subdomain: " + prevsub + "<br>");
 					document.write("Prev Domain: " + prevdomain + "<br>");
 					document.write("Prev Type: " + prevtype + "<br><br>");
-					
+
 					var full = window.location.href;
 					var parts = full.split('.');
 					var sub = parts[0];
 					var domain = parts[1];
 					var type = parts[2];
-					
+
 					document.write("URL: " + full + "<br>");
 					document.write("Subdomain: " + sub + "<br>");
 					document.write("Domain: " + domain + "<br>");
 					document.write("Type: " + type + "<br><br>");
-					
+
 					var n = window.location.href.lastIndexOf('/');
 					var pageWithExt = window.location.href.substring(n+1);
 					document.write("Substring: " + pageWithExt + "<br>");
-					
+
 					document.write("Last Index: " + window.location.href.lastIndexOf('.') + "<br>");
 					var ndot = window.location.href.lastIndexOf('.');
 					var Ext = window.location.href.substring(ndot);
 					document.write("Substring: " + Ext + "<br>");
-					
+
 					var pageWithoutExt = pageWithExt.replace(Ext,"");
 					document.write("Result: " + pageWithoutExt + "<br>");
-					
+
 				</script>
-		
+
 				<p>
-				
-				
+
+
 				<DIV align=center>
 
 					<FORM name=myform>
@@ -568,11 +568,11 @@
 						<INPUT onclick=resetit() type=button value="Submit Feedback">
 					</FORM>
 
-				</DIV>				
-				
+				</DIV>
+
 				<p>
-				
-				
+
+
 				<!-- Search Google -->
 				<center>
 				<FORM method=GET action="http://www.google.com/search">
@@ -582,15 +582,15 @@
 				</FORM>
 				</center>
 				<!-- Search Google -->
-				
-				
+
+
 			</div>
 		</div>
 
 	</div>
 	<!-- END MAIN -->
-	
-	
+
+
 	<!-- Ads/Logo/Random Stuff -->
 	<div class="twelve columns" id="adsfooter"><script>adsbanners();</script></div>
 	<!-- COPYRIGHT -->
