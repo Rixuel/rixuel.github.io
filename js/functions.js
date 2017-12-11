@@ -31,6 +31,7 @@ function navbar() {
         "<li><a href='downloads.html' id='MenuDownloads'>Downloads</a></li>" +
         "<li><a href='random.html' id='MenuRandom'>Random</a></li>" +
         "<li><a href='links.html' id='MenuLinks'>Links</a></li>" +
+		"<li><a href='https://discord.gg/qhCsvqT' id='MenuLinks'><b>Discord</b></a></li>" +
         "<li class='icon'><a href='javascript:void(0);' onclick='menuToggle()'>&#9776;</a></li>" +
         "</ul>";
 
