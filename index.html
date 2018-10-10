@@ -102,9 +102,20 @@
                         <i class="fab fa-github fa-2x" aria-hidden="true" style="color:#FFF;"></i>
                     </a>
                 </div>
-				
+
 				<a class="twitter-timeline" data-height="563" data-theme="dark" data-link-color="#19CF86" href="https://twitter.com/Rixuel?ref_src=twsrc%5Etfw">Tweets by Rixuel</a>
-				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+				<script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+				event.preventDefault();
+				url = "https://twitter.com/Rixuel?ref_src=twsrc%5Etfw";
+				if (window.ga && ga.loaded) {
+					 ga('send', 'event', 'outbound', 'click', url, {
+					 'transport': 'beacon',
+					 'hitCallback': function() { document.location = url; }
+				   });
+				} else {
+					document.location = url;
+				}
+				</script>
 			</div>
 		</div>
 	</div>
