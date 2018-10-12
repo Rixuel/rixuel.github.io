@@ -14,14 +14,12 @@ if (!((prevsub === sub) && (prevdomain === domain))) {
 	document.getElementById("loadcont").innerHTML = "<img src='img/rixuelbanner.png' id='fadein'>";
 
 	// Hidden scroll for milliseconds
-	//document.body.style.overflow = "hidden";
-	document.body.style.setProperty("overflow", "hidden", "important");
+	document.documentElement.style.setProperty("overflow", "hidden", "important");
 
 	// After some milliseconds, make stuff visible
 	setTimeout(function () {
 		"use strict";
-		//document.body.style.overflow = "visible";
-		document.body.style.setProperty("overflow", "visible", "important");
+		document.documentElement.style.setProperty("overflow", "visible", "important");
 		// Add pointer-events: none; to #loader to be able to click on Edge.
 		document.getElementById("loader").style.pointerEvents = "none";
 	}, 3000);
