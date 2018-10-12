@@ -37,12 +37,11 @@ hr {border:0;height:1px;background-image: linear-gradient(to right,rgba(0,0,0,0)
 @media screen and (max-width:820px){#topbar{font-size:0.65em;}}
 @media screen and (max-width:759px){#topbar #toprightmsg{text-align: left;}}
 
-.wrapper {
+.background-deco {
 	background-image: url("../img/magiccirclesbg.png"),url("../img/backflow.png");
 	background-position:top left,top right;background-repeat:no-repeat,no-repeat;
 }
-.wrapper,
-.wrapper2 {
+.wrapper {
 	background-color: rgba(248, 250, 252, 0.85);
 	color: #000;
 	font-family: 'Open Sans', Verdana;
