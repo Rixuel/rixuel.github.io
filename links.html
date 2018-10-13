@@ -6,7 +6,8 @@
 	<meta name="Rixuel Neoliv" content="Lord Rixuel">
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/skeleton.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="lightbox/lightbox.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
@@ -15,23 +16,11 @@
 </head>
 
 <body>
-	<div id="topbar">
-		<div class="container">
-			<div class="six columns" id="setDateTime">
-				<script>date_time("setDateTime");</script>
-			</div>
-			<div class="six columns" id="toprightmsg">
-				<script>randomMsg();</script>
-			</div>
-		</div>
-	</div>
+	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
+	<div id="menubar"><script>navbar();</script></div>
 
 	<!-- MAIN -->
 	<div class="container wrapper background-deco">
-
-		<a href="index.html" id="toplogo"><script>logo();</script></a><br>
-		<div id="menubar"><script>navbar();</script></div>
-
 
 		<div class="row">
 			<div class="twelve columns checkcont">

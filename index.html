@@ -6,7 +6,8 @@
 	<meta name="Rixuel Neoliv" content="Lord Rixuel">
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/skeleton.min.css">
+	<!--link rel="stylesheet" type="text/css" href="css/skeleton.min.css"-->
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="css/preloader.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
 	<link rel="stylesheet" type="text/css" href="css/rpg-awesome.min.css">
@@ -19,44 +20,39 @@
 </head>
 <body>
 	<div id="loader"><span id="loadcont"></span></div>
-	<div id="topbar">
-		<div class="container">
-			<div class="six columns" id="setDateTime">
-				<script>date_time("setDateTime");</script>
-			</div>
-			<div class="six columns" id="toprightmsg">
-				<script>randomMsg();</script>
-			</div>
-		</div>
-	</div>
+	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
+	<div id="menubar"><script>navbar();</script></div>
 
 	<!-- MAIN -->
 	<div class="container wrapper background-deco">
+		<div class="columns">
+			<div class="container">
+				<div class="notification is-warning">
+					<b>Under contruction!</b> By the way, I'm tired x.x
+				</div>
+			</div>
+		</div>
 
-		<a href="index.html" id="toplogo"><script>logo();</script></a><br>
-		<div id="menubar"><script>navbar();</script></div>
+		<div class="columns">
+			<div class="column is-three-fifths checkcont">
+                <a href="javascript:void(0)" onclick="openBulmaModal('myModalWelcome')"><img src="img/frontcover.png"></a>
 
-		<div class="row">
-			<div class="seven columns checkcont">
-                <a href="javascript:void(0)" onclick="showModal('myModalWelcome')"><img src="img/frontcover.png"></a>
-
-				<div id="myModalWelcome" class="modal">
-					<div class="modalContent">
-						<div class="modalHeader">
-							<span>
-								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-								Hello
-							</span>
-							<a href="javascript:void(0)" class="close" onclick="closeModal('myModalWelcome')">X</a>
-						</div>
-						<div class="modalBody clear-close">
+				<div class="modal" id="myModalWelcome">
+					<div class="modal-background" onclick="closeBulmaModal('myModalWelcome')"></div>
+					<div class="modal-card">
+						<header class="modal-card-head">
+							<p class="modal-card-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Hello</p>
+							<button class="delete" aria-label="close" onclick="closeBulmaModal('myModalWelcome')"></button>
+						</header>
+						<section class="modal-card-body">
 							<p>
 							Hey, sup? Welcome to my website. I build it with code.
 							Nothing special so far. Just some web pages to mess with.
 							I try to avoid big web framework like AngularJS, Bootstrap and jQuery.
 							</p>
 							<a href="https://twitter.com/Rixuel">Rixuel</a><br>
-						</div>
+						</section>
+						<footer class="modal-card-foot"></footer>
 					</div>
 				</div>
 
@@ -81,8 +77,18 @@
 
 			</div>
 
-			<div class="five columns checkcont">
-                <div class="network">
+			<div class="column checkcont">
+				<div class="container">
+					<div class="notification is-info">
+					<div id="setDateTime">
+						<script>date_time("setDateTime");</script>
+					</div>
+					<div id="toprightmsg">
+						<script>randomMsg();</script>
+					</div>
+					</div>
+				</div>
+                <!--div class="network">
 					<a href="https://discord.gg/qhCsvqT">
 						<i class="fab fa-discord fa-2x" aria-hidden="true" style="color:#7289DA;"></i>
 					</a>
@@ -101,7 +107,7 @@
                     <a href="https://github.com/Rixuel">
                         <i class="fab fa-github fa-2x" aria-hidden="true" style="color:#FFF;"></i>
                     </a>
-                </div>
+                </div-->
 
 				<a class="twitter-timeline" data-height="563" data-theme="dark" data-link-color="#66DD22" href="https://twitter.com/Rixuel" data-widget-id="517539373844144128">[Tweets by Rixuel]</a>
 				<a href="https://twitter.com/Rixuel" class="twitter-follow-button" data-show-count="true" data-widget-id="517539373844144128">Follow @Rixuel</a>
@@ -112,52 +118,52 @@
 
 	<!-- RPG DAY -->
 	<div class="container wrapper">
-        <div class="row">
-            <div class="twelve columns">
+        <div class="columns">
+            <div class="column">
                 <h1>What is your RPG day today?</h1>
+                <h2>Checking right now!</h2>
 				<button class="buttonGen" onClick="genAll();">
 					<span><i class='ra ra-overmind ra-2x'></i> Fortune Crystal Time!</span>
 				</button>
 
-				<button class="buttonGen" onClick="showModal('myModal')">
+				<button class="buttonGen" onclick="openBulmaModal('RPGDayModal')">
 					<span><i class='ra ra-help ra-2x'></i></span>
 				</button>
 
-				<div id="myModal" class="modal">
-					<div class="modalContent">
-						<div class="modalHeader">
-							<span>
-								<i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-								Info
-							</span>
-							<a href="javascript:void(0)" class="close" onclick="closeModal('myModal')">X</a>
-						</div>
-						<div class="modalBody clear-close">
+				<div class="modal" id="RPGDayModal">
+					<div class="modal-background" onclick="closeBulmaModal('RPGDayModal')"></div>
+					<div class="modal-card">
+						<header class="modal-card-head">
+							<p class="modal-card-title"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Info</p>
+							<button class="delete" aria-label="close" onclick="closeBulmaModal('RPGDayModal')"></button>
+						</header>
+						<section class="modal-card-body">
 							<p>
 							Just use your imagination :P
 							</p>
 							By: <a href="https://twitter.com/Rixuel">Rixuel</a><br>
 							Icons by: <a href="https://nagoshiashumari.github.io/Rpg-Awesome">RPG-Awesome</a>
-						</div>
+						</section>
+						<footer class="modal-card-foot"></footer>
 					</div>
 				</div>
 
             </div>
         </div>
-		<div class="row">
-			<div class="three columns rpg-board">
+		<div class="columns">
+			<div class="column rpg-board">
                 <h5>Status</h5>
                 <div id="status"><span><i class='ra ra-uncertainty ra-5x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Zones</h5>
                 <div id="env"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Top 3 allies</h5>
                 <div id="astrology"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Top 3 pets</h5>
                 <div id="pets"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
@@ -165,31 +171,31 @@
 
 
 
-		<div class="row">
-			<div class="three columns rpg-board">
+		<div class="columns">
+			<div class="column rpg-board">
                 <h5>Arsenal</h5>
                 <div id="arsenal"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Skills</h5>
                 <div id="skills"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Creatures you will confront</h5>
                 <div id="creatures"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="three columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Edibles you will obtain</h5>
                 <div id="edibles"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="six columns rpg-board">
+		<div class="columns">
+			<div class="column rpg-board">
                 <h5>Lucky Loots</h5>
                 <div id="luckyloots"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
-			<div class="six columns rpg-board">
+			<div class="column rpg-board">
                 <h5>Unlucky Loots</h5>
                 <div id="unluckyloots"><span><i class='ra ra-uncertainty ra-2x'></i> ???</span></div>
 			</div>
@@ -201,7 +207,7 @@
 						">
 			<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 			<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-			Please support me? A small donation changes the world.
+			A small donation changes the world.
 		</form>
 	</div>
 	<!-- END RPG DAY -->
@@ -347,9 +353,9 @@
 	</div>
 
 	<!-- Ads/Logo/Random Stuff -->
-	<div class="twelve columns" id="adsfooter"><script>adsbanners();</script></div>
+	<div class="column is-full" id="adsfooter"><script>adsbanners();</script></div>
 	<!-- COPYRIGHT -->
-	<div class="twelve columns" id="footer"><script>COPYRIGHT();</script></div>
+	<div class="column is-full" id="footer"><script>COPYRIGHT();</script></div>
 
     <script type="text/javascript" src="js/preloader.min.js"></script>
     <script src="lightbox/lightbox.min.js"></script>

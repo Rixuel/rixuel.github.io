@@ -45,11 +45,13 @@ div h1, div h2, div h3 {
 
 div h1 {
     color: #66DD22;
+    font-size: 2.4em;
     letter-spacing: 4px;
 }
 
 div h2 {
     color: #3388ee;
+    font-size: 2.0em;
 }
 
 hr {
@@ -58,20 +60,24 @@ hr {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
-#topbar {
+.logo {
+    padding: 50px 0 50px 0;
+    text-align: center;
+}
+
+/*#topbar {
     background-color: #212121;
     color: #9f0;
     font-family: 'Ubuntu', Verdana, Sans-Serif, "Lucida Console";
     font-size: 0.9em;
     padding: 6px 0;
-    /*top down, right left*/
+    top down, right left
     margin: 0px auto;
 }
-
 #topbar #toprightmsg {
     text-align: right;
 }
-
+/*
 @media screen and (max-width:820px) {
     #topbar {
         font-size: 0.65em;
@@ -83,11 +89,19 @@ hr {
         text-align: left;
     }
 }
-
+*/
 .background-deco {
     background-image: url("../img/magiccirclesbg.png"), url("../img/backflow.png");
     background-position: top left, top right;
     background-repeat: no-repeat, no-repeat;
+}
+
+.container {
+    /*position: relative;*/
+    width: 100% !important;
+    max-width: 960px !important;
+    margin: 0 auto !important;
+    /*box-sizing: border-box;*/
 }
 
 .wrapper {
@@ -151,7 +165,7 @@ hr {
 .comment h2 {
     color: #38E;
     font-family: Georgia, Consolas, Helvetica, "Lucida Console";
-    font-size: 2.2em;
+    font-size: 1.8em;
     letter-spacing: 2px;
     /*top down, right left*/
     margin: 15px 0px;
@@ -161,14 +175,14 @@ hr {
 .comment h3 {
     color: #557;
     font-family: "Palatino Linotype", Consolas, Helvetica, "Lucida Console";
-    font-size: 1.8em;
+    font-size: 1.4em;
     font-weight: bold;
     letter-spacing: 1px;
     /*top down, right left*/
     margin: 10px 0px;
     text-align: left;
 }
-
+/*
 .network {
     background-color: #212121;
     color: #FFF;
@@ -182,8 +196,9 @@ hr {
         font-size: 10px;
     }
 }
-
+*/
 .note {
+    background-color: #212121 !important;
     color: #F00;
     font-size: 10px;
     font-style: italic;
@@ -211,25 +226,56 @@ hr {
     text-align: center;
 }
 
+/* Custom CSS for Bulma Menu Bar */
+.navbar, .navbar-dropdown, .navbar-start, .navbar-end {
+    background-color: #212121 !important;
+}
+
+.navbar .navbar-item,
+.navbar .navbar-link {
+    color: #FFF;
+}
+
+.navbar a.navbar-item:hover,
+.navbar .navbar-item a.navbar-link:hover,
+.navbar .navbar-item.has-dropdown:hover .navbar-link,
+.navbar .navbar-dropdown a.navbar-item:hover {
+    background-color: #424242;
+    color: #88FF00;
+    border-bottom: 4px solid #88FF00;
+    padding-bottom: 4px;
+    transition: 0.2s;
+}
+
+/* Dropdown caret color */
+.navbar .navbar-start .navbar-link::after, .navbar .navbar-end .navbar-link::after {
+    border-color: #FFF;
+}
+
+.navbar-divider {
+    background-color: #212121 !important;
+    height: 1px !important;
+}
+
 /* CSS for the responsive Menu Bar */
 /* Remove margins and padding from the list, and add a black background color */
-ul.topnav {
-    list-style-type: none;
+/*ul.topnav {
+    list-style-type: none;*/
     /*top down, right left*/
-    margin: 10px 0px;
+    /*margin: 10px 0px;
     padding: 0;
     overflow: hidden;
     background-color: #212121;
-}
+}*/
 
 /* Float the list items side by side */
-ul.topnav li {
+/*ul.topnav li {
     float: left;
     margin-bottom: 0rem;
-}
+}*/
 
 /* Style the links inside the list items */
-ul.topnav li a {
+/*ul.topnav li a {
     display: inline-block;
     color: #f2f2f2;
     text-align: center;
@@ -237,35 +283,39 @@ ul.topnav li a {
     text-decoration: none;
     transition: 0.3s;
     font-size: 15px;
-}
+}*/
 
 /* Change background color of links on hover */
-ul.topnav li a:hover {
+/*ul.topnav li a:hover {
     background-color: #50585F;
     border-bottom: 4px solid #80ff00;
     color: #80FF00;
     padding-bottom: 8px;
     transition: 0s;
-}
+}*/
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */
-ul.topnav li.icon {
+/*ul.topnav li.icon {
     display: none;
+}*/
+
+/* Add borders to all list items */
+/*ul.topnav li {
+    border-right: 1px solid #000;
 }
 
-/* Add a right border to all list items, except the last item (last-child) */
-ul.topnav li {
-    border-right: 1px solid #000;
+ul.topnav li:first-child {
+    border-left: 1px solid #000;
 }
 
 ul.topnav li:last-child {
     border-right: none;
-}
+}*/
 
 /* When the screen is less than 700 pixels wide, hide all list items, except for the first one ("Home").
 Show the list item that contains the link to open and close the topnav (li.icon).
 (:first-child) is ok. (: first-child) not ok.*/
-@media screen and (max-width:700px) {
+/*@media screen and (max-width:700px) {
     ul.topnav li:not(:first-child) {
         display: none;
     }
@@ -278,11 +328,11 @@ Show the list item that contains the link to open and close the topnav (li.icon)
     ul.topnav li {
         border-right: 0px solid #000;
     }
-}
+}*/
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon.
 This class makes the topnav look good on small screens */
-@media screen and (max-width:700px) {
+/*@media screen and (max-width:700px) {
     ul.topnav.responsive {
         position: relative;
     }
@@ -302,10 +352,10 @@ This class makes the topnav look good on small screens */
         display: block;
         text-align: left;
     }
-}
+}*/
 
 /* CSS for Modal */
-.modal {
+/*.modal {
     display: none;
     position: fixed;
     z-index: 2;
@@ -368,4 +418,4 @@ This class makes the topnav look good on small screens */
     padding: 10px;
     margin: 0;
     text-align: right;
-}
+}*/
