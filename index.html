@@ -19,17 +19,16 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
-	<div id="loader"><span id="loadcont"></span></div>
+	<!--div id="loader"><span id="loadcont"></span></div-->
 	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
 	<div id="menubar"><script>navbar();</script></div>
 
 	<!-- MAIN -->
-	<div class="container wrapper background-deco">
+	<div class="container wrapper">
+
 		<div class="columns">
-			<div class="container">
-				<div class="notification is-warning">
-					<b>Under contruction!</b> By the way, I'm tired x.x
-				</div>
+			<div class="column section-page checkcont">
+				Hello! Here a random message: "<span id="randomMessages"><script>randomMsg();</script></span>"
 			</div>
 		</div>
 
@@ -80,12 +79,9 @@
 			<div class="column checkcont">
 				<div class="container">
 					<div class="notification is-info">
-					<div id="setDateTime">
-						<script>date_time("setDateTime");</script>
-					</div>
-					<div id="toprightmsg">
-						<script>randomMsg();</script>
-					</div>
+						<div id="setDateTime">
+							<script>date_time("setDateTime");</script>
+						</div>
 					</div>
 				</div>
                 <!--div class="network">
@@ -109,7 +105,7 @@
                     </a>
                 </div-->
 
-				<a class="twitter-timeline" data-height="563" data-theme="dark" data-link-color="#66DD22" href="https://twitter.com/Rixuel" data-widget-id="517539373844144128">[Tweets by Rixuel]</a>
+				<a class="twitter-timeline" data-height="560" data-theme="dark" data-link-color="#66DD22" href="https://twitter.com/Rixuel" data-widget-id="517539373844144128">[Tweets by Rixuel]</a>
 				<a href="https://twitter.com/Rixuel" class="twitter-follow-button" data-show-count="true" data-widget-id="517539373844144128">Follow @Rixuel</a>
 			</div>
 		</div>
@@ -117,7 +113,7 @@
 	<!-- END MAIN -->
 
 	<!-- RPG DAY -->
-	<div class="container wrapper">
+	<div class="container wrapper background-deco">
         <div class="columns">
             <div class="column">
                 <h1>What is your RPG day today?</h1>

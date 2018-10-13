@@ -167,9 +167,19 @@ function randomMsg() {
     msg[18] = "██████████ Loading Hax 99%";
     msg[19] = "Be water my friend";
     msg[20] = "1+1 = 1+1";
+    msg[21] = "UNLIMITED BLADE WORKS!!!";
+    msg[22] = "Fake news!";
+    msg[23] = "Ka ka ka ka kachi daze";
+    msg[24] = "Zasshu!!";
+    msg[25] = "Time Alter, Double Accel!";
+    msg[26] = "People Die If They Are Killed";
+    msg[27] = "Bang! Bang! Bang! Pull my devil trigger!";
+    msg[28] = "Die monster! You don't belong in this world!";
+    msg[29] = "GRIFFITH!!!!!!!!!!!!";
+    msg[30] = "This is the difference between your and my eye-level";
 
     index = Math.floor(Math.random() * msg.length);
-    document.getElementById("toprightmsg").innerHTML = msg[index];
+    document.getElementById("randomMessages").innerHTML = msg[index];
 }
 
 function adsbanners() {

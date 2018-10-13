@@ -65,6 +65,8 @@ hr {
     text-align: center;
 }
 
+
+
 /*#topbar {
     background-color: #212121;
     color: #9f0;
@@ -91,9 +93,12 @@ hr {
 }
 */
 .background-deco {
-    background-image: url("../img/magiccirclesbg.png"), url("../img/backflow.png");
+    /*background-image: url("../img/magiccirclesbg.png"), url("../img/backflow.png");
     background-position: top left, top right;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat, no-repeat;*/
+    background-image: url("../img/backflow.png");
+    background-position: top right;
+    background-repeat: no-repeat;
 }
 
 .container {
@@ -137,6 +142,10 @@ hr {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+#randomMessages {
+    color: #FF0;
 }
 
 .comment {
@@ -198,7 +207,7 @@ hr {
 }
 */
 .note {
-    background-color: #212121 !important;
+    background-color: #FAFAFA !important;
     color: #F00;
     font-size: 10px;
     font-style: italic;
@@ -206,6 +215,7 @@ hr {
 
 .section-page {
     background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,20,128,0.3));
+    color: #FFF;
     margin: 2px;
 }
 
@@ -241,7 +251,7 @@ hr {
     color: #FFF;
 }
 
-.navbar a.navbar-item:hover,
+.navbar .navbar-start a.navbar-item:hover,
 .navbar .navbar-item a.navbar-link:hover,
 .navbar .navbar-item.has-dropdown:hover .navbar-link,
 .navbar .navbar-dropdown a.navbar-item:hover {
