@@ -204,6 +204,11 @@ hr {
     font-style: italic;
 }
 
+.section-page {
+    background-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,20,128,0.3));
+    margin: 2px;
+}
+
 #adsfooter {
     margin-top: 20px;
     text-align: center;

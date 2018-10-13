@@ -325,32 +325,22 @@
 
 
 
-	<div id="topbar">
-		<div class="container">
-			<div class="six columns" id="setDateTime">
-				<script>date_time("setDateTime");</script>
-			</div>
-			<div class="six columns" id="toprightmsg">
-				<script>randomMsg();</script>
-			</div>
-		</div>
-	</div>
 
 	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
 	<div id="menubar"><script>navbar();</script></div>
 
 	<!-- MAIN -->
-	<div class="container wrapper background-deco">
+	<div class="container wrapper">
 
-		<div class="row">
-			<div class="twelve columns checkcont">
+		<div class="columns">
+			<div class="column section-page checkcont">
 				<h1>Random</h1>
 			</div>
 		</div>
 
 
-		<div class="row">
-			<div class="twelve columns checkcont">
+		<div class="columns">
+			<div class="column checkcont">
 
 
 				<a href="javascript:termOpen(1)" class="termopen">&gt; Open Terminal&nbsp;</a><p>
@@ -563,7 +553,7 @@
 
 					<FORM name=myform>
 						<h2>Have a feedback? Type in here:</h2>
-						<TEXTAREA onkeypress="return changer()" name=mytext rows=10 wrap=virtual cols=60></TEXTAREA>
+						<TEXTAREA onkeypress="return changer()" name=mytext columnss=10 wrap=virtual cols=60></TEXTAREA>
 						<p>
 						<INPUT onclick=resetit() type=button value="Submit Feedback">
 					</FORM>
@@ -592,9 +582,9 @@
 
 
 	<!-- Ads/Logo/Random Stuff -->
-	<div class="twelve columns" id="adsfooter"><script>adsbanners();</script></div>
+	<div class="column" id="adsfooter"><script>adsbanners();</script></div>
 	<!-- COPYRIGHT -->
-	<div class="twelve columns" id="footer"><script>COPYRIGHT();</script></div>
+	<div class="column" id="footer"><script>COPYRIGHT();</script></div>
 
     <script src="lightbox/lightbox.min.js"></script>
 </body>
