@@ -18,9 +18,10 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
-	<div id="loader"><span id="loadcont"></span></div>
+	<!--div id="loader"><span id="loadcont"></span></div-->
 	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
 	<div id="menubar"><script>navbar();</script></div>
+	<div id="TriggerBulmaCardModal"></div>
 
 	<!-- MAIN -->
 	<div class="container wrapper">
@@ -33,7 +34,15 @@
 
 		<div class="columns">
 			<div class="column is-three-fifths checkcont">
-                <a href="javascript:void(0)" onclick="openBulmaModal('myModalWelcome')"><img src="img/frontcover.png"></a>
+				<a href="javascript:void(0)" onclick="BulmaCardModal('myModalWelcome', 'Hello', myModalWelcomeContent, '')"><img src="img/frontcover.png"></a>
+				<script>
+					var myModalWelcomeContent =
+					"Hey, sup? Welcome to my website. I build it with code. No CMS used.<br>" +
+					"Nothing special so far. Just some web pages to mess with.<br>" +
+					"Twitter: <a href='https://twitter.com/Rixuel'>Rixuel</a>";
+				</script>
+
+                <!--a href="javascript:void(0)" onclick="openBulmaModal('myModalWelcome')"><img src="img/frontcover.png"></a>
 
 				<div class="modal" id="myModalWelcome">
 					<div class="modal-background" onclick="closeBulmaModal('myModalWelcome')"></div>
@@ -52,7 +61,7 @@
 						</section>
 						<footer class="modal-card-foot"></footer>
 					</div>
-				</div>
+				</div-->
 
 				<br>
 				<a href="https://discord.gg/qhCsvqT"><img src="img/alternalandbanner.png"></a>
@@ -120,9 +129,34 @@
 					<span><i class='ra ra-overmind ra-2x'></i> Fortune Crystal Time!</span>
 				</button>
 
-				<button class="buttonGen" onclick="openBulmaModal('RPGDayModal')">
+				<button class="buttonGen" onclick="BulmaCardModal('RPGDayModal', 'Info', RPGDayModalContent, '')">
 					<span><i class='ra ra-help ra-2x'></i></span>
 				</button>
+				<script>
+					var RPGDayModalContent =
+					"<p>Just use your imagination :P</p>" +
+					"By: <a href='https://twitter.com/Rixuel'>Rixuel</a><br>" +
+					"Icons by: <a href='https://nagoshiashumari.github.io/Rpg-Awesome'>RPG-Awesome</a>";
+				</script>
+
+				<!--button class="buttonGen" onclick="openBulmaModal('RPGDayModal')">
+					<span><i class='ra ra-help ra-2x'></i></span>
+				</button>
+
+				<button class="buttonGen" onclick="BulmaCardModal('abc', 'TITLE TEST', 'content<p>test</p>', 'foter')">
+					<span>TESTING</span>
+				</button>
+
+
+				<button class="buttonGen" onclick="BulmaCardModal('abcde', 'TITLE abcde', text, 'pieds')">
+					<span>TESTING2</span>
+				</button>
+
+				<script>
+					var text =
+					"oading" +
+					"<br>test";
+				</script>
 
 				<div class="modal" id="RPGDayModal">
 					<div class="modal-background" onclick="closeBulmaModal('RPGDayModal')"></div>
@@ -140,7 +174,7 @@
 						</section>
 						<footer class="modal-card-foot"></footer>
 					</div>
-				</div>
+				</div-->
 
             </div>
         </div>
@@ -352,7 +386,6 @@
 	<div class="column is-full" id="footer"><script>COPYRIGHT();</script></div>
 
     <script type="text/javascript" src="js/preloader.min.js"></script>
-    <script src="lightbox/lightbox.min.js"></script>
 	<script src="js/ra-rpg.js"></script>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>

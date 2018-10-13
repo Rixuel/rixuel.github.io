@@ -289,3 +289,33 @@ function closeBulmaModal(id) {
     "use strict";
     document.getElementById(id).classList.remove('is-active');
 }
+
+function BulmaCardModal(id, title, content, footer) {
+    "use strict";
+
+    var bulmamodal =
+    "<div class='modal' id='"+id+"'>" +
+        "<div class='modal-background' onclick='closeBulmaModal(&quot;"+id+"&quot;)'></div>" +
+        "<div class='modal-card'>" +
+            "<header class='modal-card-head'>" +
+                "<p class='modal-card-title'><i class='fa fa-exclamation-triangle' aria-hidden='true'></i> " +
+                title +
+                "</p>" +
+                "<button class='delete' aria-label='close' onclick='closeBulmaModal(&quot;"+id+"&quot;)'></button>" +
+            "</header>" +
+            "<section class='modal-card-body'>" +
+                content +
+            "</section>" +
+            "<footer class='modal-card-foot'>" +
+                footer +
+            "</footer>" +
+        "</div>" +
+    "</div>";
+
+    document.getElementById("TriggerBulmaCardModal").innerHTML = bulmamodal;
+    openBulmaModal(id);
+}
+
+function trig(text) {
+    console.log("trigger: " + text);
+}
