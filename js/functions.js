@@ -102,7 +102,7 @@ function selectedMenu(id) {
     Style.color = "#80ff00";
     Style.textShadow = "0 0 4px #80FF00";
     Style.borderBottom = "4px solid #80ff00";
-    Style.paddingBottom = "8px";
+    Style.paddingBottom = "4px";
 }
 
 function checkPageWithMenu() {
