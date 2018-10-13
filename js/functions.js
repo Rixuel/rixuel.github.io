@@ -260,24 +260,6 @@ function easyGuessLogin() {
     }
     return (false);
 }
-/*
-function showModal(id) {
-    "use strict";
-    document.getElementById(id).style.display = "block";
-    //Click anywhere outside of the modal closes it
-    var modal = document.getElementById(id);
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            closeModal(id);
-        }
-    }
-}
-
-function closeModal(id) {
-    "use strict";
-    document.getElementById(id).style.display = "none";
-}
-*/
 
 /* Bulma CSS modal code */
 function openBulmaModal(id) {
