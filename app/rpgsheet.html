@@ -6,7 +6,7 @@
 	<meta name="author" content="Lord Rixuel, Guardian Patrick">
 	<link rel="icon" type="image/png" href="../img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/skeleton.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/bulma.min.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="../js/functions.js"></script>
@@ -39,6 +39,10 @@
 			background-color: #FFF9e0;
 			border-radius: 0px 0px 20px 20px;
 			padding: 16px;
+		}
+
+		td {
+			padding-right: 16px;
 		}
 
 		name {
@@ -556,34 +560,16 @@
 	</script>
 	<!-- END OF SCRIPT -->
 
-
-	<div id="topbar">
-		<div class="container">
-			<div class="one-half column" id="setDateTime">
-				<script>date_time("setDateTime");</script>
-			</div>
-			<div class="one-half column" id="toprightmsg">
-				<script>randomMsg();</script>
-			</div>
-		</div>
-	</div>
-
+	<center><a href="#"><img src='../img/alternalogo.png'/></a></center>
 
 	<!-- MAIN -->
 	<div class="container wrapper">
+		<a href="../index.html">Home</a> |
+		<a href="../projects.html">Projects</a> |
+		<a>RPG Sheet</a>
 
-		<center><a href="#"><img src='../img/alternalogo.png'/></a></center>
-
-		<ul class='topnav'>
-			<li><a href='../index.html'>Home</a></li>
-			<li><a href='../downloads.html'>Downloads</a></li>
-			<li><a href='' id='MenuApp'>App</a></li>
-			<li class='icon'><a href='javascript:void(0);' onclick='menuToggle()'>&#9776;</a></li>
-		</ul>
-		<script>selectedMenu("MenuApp");</script>
-
-		<div class="row">
-			<div class="twelve columns" id="content">
+		<div class="columns">
+			<div class="column" id="content">
 				<h1>RPG Sheet</h1>
 				<p>
 					For pure entertainment. Nothing serious. Just a fantasy RPG sheet. <br>
@@ -605,15 +591,15 @@
 		<form name=rpgsheet method=post>
 
 			<!-- BASIC INFORMATION -->
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Basic Character Information</h4>
 				</div>
 			</div>
 
 			<fieldset>
-				<div class="row">
-					<div class="four columns" id="content">
+				<div class="columns">
+					<div class="column is-one-third" id="content">
 						<label for="Name">Name</label>
 						<input type="text" name="Name" value="Nikita Doe" /><br>
 						<div id="errName"></div>
@@ -638,7 +624,7 @@
 						<div id="errRace"></div>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="Level">Level</label>
 						<input type="text" name="Level" maxlength="4"
 						onkeypress="return isNumberKey(event)" onClick="Level.select();" value="0"><br>
@@ -649,7 +635,7 @@
 						<label for="Title">Title</label> <input type="text" name="Title"><br>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="Guild">Guild</label>
 						<input type="text" name="Guild"
 						onkeypress="return noSymbols(event)"><br>
@@ -679,15 +665,15 @@
 			<br>
 
 			<!-- STATS -->
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Stats</h4>
 				</div>
 			</div>
 
 			<fieldset>
-				<div class="row">
-					<div class="four columns" id="content">
+				<div class="columns">
+					<div class="column is-one-third" id="content">
 						<label for="HP">HP</label>
 						<input type="text" name="HP"
 						onkeypress="return isNumberKey(event)" onClick="HP.select()" value="100"><br>
@@ -714,7 +700,7 @@
 						<div id="errMoveSpeed"></div>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="Accu">Accuracy</label>
 						<input type="text" name="Accu"
 						onkeypress="return isNumberKey(event)" onClick="Accu.select()" value="1"><br>
@@ -751,7 +737,7 @@
 						<div id="errDodge"></div>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="STR">STR</label>
 						<input type="text" name="STR"
 						onkeypress="return isNumberKey(event)" onClick="STR.select()" value="0"><br>
@@ -789,15 +775,15 @@
 
 
 			<!-- EQUIPMENTS -->
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Equipments</h4>
 				</div>
 			</div>
 
 			<fieldset>
-				<div class="row">
-					<div class="six columns" id="content">
+				<div class="columns">
+					<div class="column" id="content">
 						<label for="Head">Head</label>
 						<input type="text" name="Head" value="Headband"><br>
 						<label for="Body">Body</label>
@@ -818,7 +804,7 @@
 						<input type="text" name="Shield" value="Mini Shield"><br>
 					</div>
 
-					<div class="six columns" id="content">
+					<div class="column" id="content">
 						<label for="Necklace">Necklace</label> <input type="text" name="Necklace" value="Normal Necklace"><br>
 						<label for="Ringx4">Ring x4</label>
 						<input type="text" name="Ring" value="Bronze Ring"> <input type="text" name="Ring2" value="Silver Ring"><br>
@@ -834,15 +820,15 @@
 
 
 			<!-- APTITUDES -->
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Aptitudes</h4>
 				</div>
 			</div>
 
 			<fieldset>
-				<div class="row">
-					<div class="six columns" id="content">
+				<div class="columns">
+					<div class="column" id="content">
 						<label for="Skills">Skills</label>
 						<input type="text" name="s1" value="Punch"><br>
 						<input type="text" name="s2" value="Kick"><br>
@@ -851,7 +837,7 @@
 						<input type="text" name="s5" value="Slice"><br>
 					</div>
 
-					<div class="six columns" id="content">
+					<div class="column" id="content">
 						<label for="Spells">Magic/Spells</label>
 						<input type="text" name="m1" value="Magic"><br>
 						<input type="text" name="m2" value="Spell"><br>
@@ -861,8 +847,8 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="four columns" id="content">
+				<div class="columns">
+					<div class="column is-one-third" id="content">
 						<label for="">Physical Condition</label>
 						<select name="Physical">
 							<option value="Dying">Dying</option>
@@ -873,7 +859,7 @@
 						</select><br>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="">Mental Condition</label>
 						<select name="Mental">
 							<option value="Insane">Insane</option>
@@ -884,7 +870,7 @@
 						</select><br>
 					</div>
 
-					<div class="four columns" id="content">
+					<div class="column" id="content">
 						<label for="">Social Condition</label>
 						<select name="Social">
 							<option value="Anti-Social">Anti-Social</option>
@@ -899,8 +885,8 @@
 			<!-- APTITUDES END -->
 
 			<!-- CHAR ID GEN -->
-				<div class="row">
-					<div class="twelve columns" id="content">
+				<div class="columns">
+					<div class="column" id="content">
 						<script>
 							function randomChar() {
 								var min = 65;
@@ -942,22 +928,22 @@
 			</fieldset>
 			<!-- CHAR ID GEN END -->
 
-			<div class="row">
-				<div class="twelve columns" id="content" align="center">
+			<div class="columns">
+				<div class="column" id="content" align="center">
 					<button type="button" onClick="submitRPGsheet(); combatGraph(); hpmpratioGraph(); statsGraph();" class="button-primary">Submit</button>
 				</div>
 			</div>
 
 			<hr>
 
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Summary</h4>
 				</div>
 			</div>
 
-			<div class="row" id="rpgsheetheader">
-				<div class="six columns">
+			<div class="columns" id="rpgsheetheader">
+				<div class="column">
 					<name>Name</name><br>
 					&lt;<guild>Guild</guild>&gt;<br>
 					Level <level>0</level> <theclass>Class</theclass><br>
@@ -966,8 +952,8 @@
 				</div>
 			</div>
 
-			<div class="row" id="rpgsheet">
-				<div class="four columns">
+			<div class="columns" id="rpgsheet">
+				<div class="column is-one-third">
 					<h5>Information</h5>
 					HP: <hp>100</hp> (+<hpregen>1</hpregen>)<br>
 					MP: <mp>100</mp> (+<mpregen>1</mpregen>)<br>
@@ -983,7 +969,7 @@
 					Social: <social></social><br>
 					<p>
 				</div>
-				<div class="four columns">
+				<div class="column">
 					<table class="u-full-width">
 						<thead>
 							<tr>
@@ -1034,7 +1020,7 @@
 					</table>
 				</div>
 
-				<div class="four columns">
+				<div class="column">
 					<table class="u-full-width">
 						<thead>
 							<tr>
@@ -1072,8 +1058,8 @@
 				</div>
 			</div>
 
-			<div class="row" id="rpgsheet">
-				<div class="six columns">
+			<div class="columns" id="rpgsheet">
+				<div class="column">
 					<h5>Gears</h5>
 					Head: <thehead></thehead><br>
 					Body: <thebody></thebody><br>
@@ -1086,7 +1072,7 @@
 					Shield: <shield></shield><br>
 				</div>
 
-				<div class="six columns">
+				<div class="column">
 					<h5>Accessories</h5>
 					Necklace: <necklace></necklace><br>
 					Ring 1: <ring></ring><br>
@@ -1100,8 +1086,8 @@
 				</div>
 			</div>
 
-			<div class="row" id="rpgsheetfooter">
-				<div class="six columns">
+			<div class="columns" id="rpgsheetfooter">
+				<div class="column">
 					<h5>Skills</h5>
 					1: <s1></s1><br>
 					2: <s2></s2><br>
@@ -1109,7 +1095,7 @@
 					4: <s4></s4><br>
 					5: <s5></s5><br>
 				</div>
-				<div class="six columns">
+				<div class="column">
 					<h5>Magic/Spells</h5>
 					1: <m1></m1><br>
 					2: <m2></m2><br>
@@ -1122,14 +1108,14 @@
 
 			<p>
 
-			<div class="row">
-				<div class="twelve columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<h4>Graphes</h4>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="four columns" id="content">
+			<div class="columns">
+				<div class="column is-one-third" id="content">
 
 					<h5>Combat graph</h5>
 					<canvas id="combatGraph"></canvas>
@@ -1236,7 +1222,7 @@
 
 				</div>
 
-				<div class="eight columns" id="content">
+				<div class="column is-two-thirds" id="content">
 					<h5>Stats graph</h5>
 					<canvas id="statsGraph"></canvas>
 
@@ -1288,12 +1274,12 @@
 
 			<p>
 
-			<div class="row">
-				<div class="six columns" id="content">
+			<div class="columns">
+				<div class="column" id="content">
 					<button type="reset">Reset</button>
 				</div>
 
-				<div class="six columns" id="content">
+				<div class="column" id="content">
 					<button type="button" onClick="submitRPGsheet(); combatGraph(); hpmpratioGraph(); statsGraph();" class="button-primary">Submit</button>
 				</div>
 			</div>
@@ -1305,7 +1291,7 @@
 
 
 	<!-- COPYRIGHT -->
-	<div class="twelve columns" id="footer"><script>COPYRIGHT();</script></div>
+	<div class="column" id="footer"><script>COPYRIGHT();</script></div>
 
 </body>
 
