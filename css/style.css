@@ -272,6 +272,12 @@ hr {
     height: 1px !important;
 }
 
+/* CSS for Bulma Image Modal */
+.bulma-img-modal-center {
+    border: 0px solid #0F0;
+    text-align: center;
+}
+
 /* CSS for the responsive Menu Bar */
 /* Remove margins and padding from the list, and add a black background color */
 /*ul.topnav {

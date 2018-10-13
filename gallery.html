@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
 	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
-	<link rel="stylesheet" type="text/css" href="lightbox/lightbox.css">
 
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
 
@@ -18,6 +17,7 @@
 <body>
 	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
 	<div id="menubar"><script>navbar();</script></div>
+	<div id="TriggerBulmaImgModal"></div>
 
 	<!-- MAIN -->
 	<div class="container wrapper background-deco">
@@ -32,32 +32,32 @@
 		<div class="columns">
 			<div class="column checkcont">
 				<h2>Banners</h2>
-				- <a href="img/lordrixlogo.png" rel="lightbox" title="&copy; Lord Rixuel">LR Logo</a><br>
-				- <a href="img/lordrixlogo2.png" rel="lightbox" title="&copy; Lord Rixuel 2">LR Logo 2</a><br>
-				- <a href="img/lordrixlogo3.png" rel="lightbox" title="&copy; Lord Rixuel 3">LR Logo 3</a><br>
-				- <a href="img/lordrixlogo4.png" rel="lightbox" title="&copy; Lord Rixuel 4">LR Logo 4</a><br>
-				- <a href="img/alternalogo.png" rel="lightbox" title="&copy; Lord Rixuel">Alterna</a><br>
-				- <a href="img/terra.png" rel="lightbox" title="&copy; Lord Rixuel">Terra</a><br>
+				- <a onclick="BulmaImgModal('img/lordrixlogo.png')">LR Logo</a><br>
+				- <a onclick="BulmaImgModal('img/lordrixlogo2.png')">LR Logo 2</a><br>
+				- <a onclick="BulmaImgModal('img/lordrixlogo3.png')">LR Logo 3</a><br>
+				- <a onclick="BulmaImgModal('img/lordrixlogo4.png')">LR Logo 4</a><br>
+				- <a onclick="BulmaImgModal('img/alternalogo.png')">Alterna</a><br>
+				- <a onclick="BulmaImgModal('img/terra.png')">Terra</a><br>
 				<br>
 
 				<h2>Misc</h2>
 				<h5>Creative Commons (CC) licenses</h5>
-				<a href="img/cc-by.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by.png')">
 					<img src="img/cc-by.png">
 				</a>
-				<a href="img/cc-by-sa.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by-sa.png')">
 					<img src="img/cc-by-sa.png">
 				</a>
-				<a href="img/cc-by-nd.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by-nd.png')">
 					<img src="img/cc-by-nd.png">
 				</a>
-				<a href="img/cc-by-nc.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by-nc.png')">
 					<img src="img/cc-by-nc.png">
 				</a>
-				<a href="img/cc-by-nc-nd.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by-nc-nd.png')">
 					<img src="img/cc-by-nc-nd.png">
 				</a>
-				<a href="img/cc-by-nc-sa.png" rel="lightbox">
+				<a onclick="BulmaImgModal('img/cc-by-nc-sa.png')">
 					<img src="img/cc-by-nc-sa.png">
 				</a>
 				<br>
@@ -73,7 +73,5 @@
 	<div class="column" id="adsfooter"><script>adsbanners();</script></div>
 	<!-- COPYRIGHT -->
 	<div class="column" id="footer"><script>COPYRIGHT();</script></div>
-
-    <script src="lightbox/lightbox.min.js"></script>
 </body>
 </html>

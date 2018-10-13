@@ -316,6 +316,20 @@ function BulmaCardModal(id, title, content, footer) {
     openBulmaModal(id);
 }
 
+function BulmaImgModal(url) {
+    "use strict";
+
+    var bulmaimgmodal =
+    "<div class='modal' id='imgmodal'><div class='modal-background' onclick='closeBulmaModal(&quot;imgmodal&quot;)'></div>" +
+        "<div class='modal-content'>" +
+            "<p class='bulma-img-modal-center'><img src='"+url+"'></p>" +
+        "</div><button class='modal-close is-large' aria-label='close' onclick='closeBulmaModal(&quot;imgmodal&quot;)'></button>" +
+    "</div>";
+
+    document.getElementById("TriggerBulmaImgModal").innerHTML = bulmaimgmodal;
+    openBulmaModal('imgmodal');
+}
+
 function trig(text) {
     console.log("trigger: " + text);
 }
