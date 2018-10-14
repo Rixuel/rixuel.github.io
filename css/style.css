@@ -126,6 +126,10 @@ hr {
     color: #FF0;
 }
 
+#setDateTime {
+    font-size: 0.8em;
+}
+
 .comment {
     background-color: rgba(248, 250, 252, 0.85);
     border-left: solid 10px #6D2;
