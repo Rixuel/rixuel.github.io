@@ -12,11 +12,9 @@ function logo() {
     var logoArr, index;
     logoArr = [];
 
-    logoArr[0] = "<img src='img/lordrixlogo2.png' border='0'/>";
-    logoArr[1] = "<img src='img/lordrixlogo4.png' border='0'/>";
-    logoArr[2] = "<img src='img/logo-citadelvania.png' border='0'/>";
-    logoArr[3] = "<img src='img/logo-lord-rixuel.png' border='0'/>";
-    logoArr[4] = "<img src='img/logo-rixuel-fantasy.png' border='0'/>";
+    logoArr[0] = "<img src='img/logo-citadelvania.png'/>";
+    logoArr[1] = "<img src='img/logo-lord-rixuel.png'/>";
+    logoArr[2] = "<img src='img/logo-rixuel-fantasy.png'/>";
 
     index = Math.floor(Math.random() * logoArr.length);
     document.getElementById("toplogo").innerHTML = logoArr[index];
