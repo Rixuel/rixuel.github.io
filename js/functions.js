@@ -16,6 +16,8 @@ function logo() {
     logoArr[1] = "<img src='img/logo-lord-rixuel.png'/>";
     logoArr[2] = "<img src='img/logo-rixuel-fantasy.png'/>";
     logoArr[3] = "<img src='img/logo-rixuel-creed.png'/>";
+    logoArr[4] = "<img src='img/logo-damn-rixuel.png'/>";
+    logoArr[5] = "<img src='img/logo-rixuel-stay-dark.png'/>";
 
     index = Math.floor(Math.random() * logoArr.length);
     document.getElementById("toplogo").innerHTML = logoArr[index];
