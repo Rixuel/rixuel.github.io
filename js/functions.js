@@ -69,6 +69,7 @@ function navbar() {
                         "<div class='navbar-dropdown'>" +
                             "<a class='navbar-item' href='app/crypto.html'>Crypto</a>" +
                             "<a class='navbar-item' href='app/bible.html'>Read Bible Online</a>" +
+                            "<a class='navbar-item' href='app/sortlist.html'>Sort the List</a>" +
                             "<a class='navbar-item' href='app/viewjson.html'>View JSON</a>" +
                             "<hr class='navbar-divider'>" +
                             "<a class='navbar-item' href='downloads.html'>More...</a>" +

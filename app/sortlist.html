@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Sort List</title>
+	<link rel="stylesheet" type="text/css" href="css/skeleton.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<style>
+		body {
+			background-color: #000;
+			color: #FFF;
+			font-family: 'Raleway', Arial;
+		}
+
+		button {
+			color: #FFF;
+		}
+
+		button:hover,
+		button:focus {
+			color: #0f0;
+		}
+
+		h1 {
+			color: #6D2;
+		}
+
+		textarea {
+			background-color: #000;
+			border: 1px solid #DDD;
+			border-radius: 5px;
+			color: #AF6;
+			font-family: Consolas;
+			font-size: 1.0em;
+			padding: 4px;
+			resize: none;
+			width: 100%;
+			height: 120px;
+		}
+
+		#hash {
+			color: #AF6;
+			font-family: Consolas;
+			word-wrap: break-word;
+		}
+
+		#input, #output {
+			height: 260px;
+		}
+
+		#donatebutton,#donatebutton input{padding:0;margin:0;vertical-align:middle;}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="row">
+			<h1>Sort the List</h1>
+			<h4>Just a small utility tool</h4>
+			<h6>Note: It sorts words, not numbers!</h6>
+		</div>
+
+		<div class="row">
+			<div class="eight columns">
+				<h5>Input</h5>
+				<p>
+					<textarea id="input"></textarea>
+					<button type="button" onclick="ascOrderSort('input')">Ascending Order</button>
+					<button type="button" onclick="descOrderSort('input')">Descending Order</button>
+					<button type="button" onclick="copySelectAll('input')">Copy</button>
+					<button type="button" onclick="clearTextArea('input')">Clear</button>
+				</p>
+			</div>
+			<div class="four columns">
+				<h5>Input Stats</h5>
+				<hr>
+				<p>
+					Number of lines: <span id="numberOfLinesInput">0</span><br>
+					Output length: <span id="outputLengthInput">0</span><br>
+				<p>
+				<p>
+					MD5: <br>
+					<span id="md5Input">---</span><br>
+					SHA1: <br>
+					<span id="sha1Input">---</span><br>
+				</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="eight columns">
+				<h5>Output</h5>
+				<p>
+					<textarea id="output" readonly></textarea>
+					<button type="button" onclick="copySelectAll('output')">Copy</button>
+					<button type="button" onclick="clearTextArea('output')">Clear</button>
+					<button type="button" onclick="reset()">Reset</button>
+
+				</p>
+			</div>
+
+			<div class="four columns">
+				<h5>Output Stats</h5>
+				<hr>
+				<p>
+					Order: <span id="order"></span><br>
+					Number of lines: <span id="numberOfLines">0</span><br>
+					Output length: <span id="outputLength">0</span><br>
+				<p>
+				<p>
+					MD5: <br>
+					<span id="md5">---</span><br>
+					SHA1: <br>
+					<span id="sha1">---</span><br>
+				</p>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="two columns">
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="donatebutton">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----">
+					<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+					<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+				</form>
+			</div>
+
+			<div class="ten columns">
+				<p>
+				Webpage by Lord Rixuel. All other contents are copyrighted to their respective owners.
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/md5.js"></script>
+	<script type="text/javascript" src="js/sha1.js"></script>
+	<script type="text/javascript" src="js/sortlist.js"></script>
+</body>
+
+</html>
