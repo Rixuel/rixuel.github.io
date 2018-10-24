@@ -39,20 +39,20 @@ function clearHash() {
 	document.getElementById("hash").innerHTML = "";
 }
 
-function sortRules(a, b) {
-	// return -1 is swap to left, 0 unchanged, 1 swap to right
-	//console.log("[1]: " + a + "\n");
-	//console.log("[2]: " + b + "\n");
+function naturalCompare(a, b) {
+    var ax = [], bx = [];
 
-	if (a.toLowerCase() < b.toLowerCase()) {
-		return -1;
-	}
+    a.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { ax.push([$1 || Infinity, $2 || ""]) });
+    b.replace(/(\d+)|(\D+)/g, function(_, $1, $2) { bx.push([$1 || Infinity, $2 || ""]) });
 
-	if (a.toLowerCase() > b.toLowerCase()) {
-		return 1;
-	}
+    while(ax.length && bx.length) {
+        var an = ax.shift();
+        var bn = bx.shift();
+        var nn = (an[0] - bn[0]) || an[1].localeCompare(bn[1]);
+        if(nn) return nn;
+    }
 
-	return 0;
+    return ax.length - bx.length;
 }
 
 function inputStats() {
@@ -87,7 +87,7 @@ function ascOrderSort(id) {
 	// Put every line for every array index
 	arrayInput = textInput.split('\n');
 	// Ascending Sorting
-	arrayInput.sort(sortRules);
+	arrayInput.sort(naturalCompare);
 	//console.log(arrayInput.sort(sortRules));
 	textOutput = arrayInput.filter(v=>v!='').join("\n").toString();
 	setTextOutput();
@@ -102,7 +102,7 @@ function descOrderSort(id) {
 	// Put every line for every array index
 	arrayInput = textInput.split('\n');
 	// Descending Sorting
-	arrayInput.sort(sortRules).reverse();
+	arrayInput.sort(naturalCompare).reverse();
 	// console.log(arrayInput.sort(sortRules).reverse());
 	textOutput = arrayInput.filter(v=>v!='').join("\n").toString();
 	setTextOutput();
