@@ -22,6 +22,15 @@
 	"Drop": [{
         "Item": "",
         "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
     }],
 	"Shard": [{
         "Name": "",
@@ -61,6 +70,12 @@
     }, {
         "Item": "Halite",
         "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Cerulean Splash",
@@ -144,6 +159,9 @@
     }, {
         "Item": "Monster Bird Tear",
         "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Gale Crawler",
@@ -186,6 +204,9 @@
     }, {
         "Item": "Alkahest",
         "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Summon Ghost",

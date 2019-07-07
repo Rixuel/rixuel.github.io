@@ -29,7 +29,12 @@ function getJSON() {
 				if (data[i].id == searchWord ||
 					data[i].Name.toLowerCase() == searchWord.toLowerCase() ||
 					data[i].Shard[0].Name.toLowerCase() == searchWord.toLowerCase() ||
-					data[i].Shard[0].Type.toLowerCase() == searchWord.toLowerCase()){
+					data[i].Shard[0].Type.toLowerCase() == searchWord.toLowerCase() ||
+					data[i].Drop[0].Item.toLowerCase() == searchWord.toLowerCase() ||
+					data[i].Drop[1].Item.toLowerCase() == searchWord.toLowerCase() ||
+					data[i].Drop[2].Item.toLowerCase() == searchWord.toLowerCase() ||
+					data[i].Drop[3].Item.toLowerCase() == searchWord.toLowerCase()) {
+
 					// Search one or multiple results
 					dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
 					dataResult += "LV: " + data[i].Stats[0].LV + " | EXP: " + data[i].Stats[0].EXP + " | HP: " + data[i].Stats[0].HP + "<br>";
