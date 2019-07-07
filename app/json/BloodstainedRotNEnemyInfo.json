@@ -1,0 +1,243 @@
+[{
+	"id": 1,
+	"Name": "Morte",
+	"Stats": [{
+		"LV": 4,
+		"EXP": 1,
+		"HP": 24
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Galleon Minerva",
+		"Arvantville",
+		"Entrance"
+	],
+	"Description": "A lesser demon that must draw form and sentience from other sources."
+}, {
+	"id": 2,
+	"Name": "Seama",
+	"Stats": [{
+		"LV": 5,
+		"EXP": 5,
+		"HP": 27
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 25,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Writhing Limb",
+        "Rate": 12.00
+    }, {
+        "Item": "Halite",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Cerulean Splash",
+        "Rate": 3.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva"
+	],
+	"Description": "A pelagic multiped that occasionally leaves the sea to torment the land."
+}, {
+	"id": 3,
+	"Name": "Cannon Morte",
+	"Stats": [{
+		"LV": 5,
+		"EXP": 14,
+		"HP": 28
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "SP Rounds x3",
+        "Rate": 10.00
+    }, {
+        "Item": "Cannon Scrap",
+        "Rate": 12.00
+    }, {
+        "Item": "HP Rounds x3",
+        "Rate": 3.00
+    }, {
+        "Item": "Elm",
+        "Rate": 4.00
+    }],
+	"Shard": [{
+        "Name": "Flame Cannon",
+        "Rate": 2.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Galleon Minerva"
+	],
+	"Description": "A morte that has possessed a cannon and gained the ability to hurl fire."
+}, {
+	"id": 4,
+	"Name": "Aello",
+	"Stats": [{
+		"LV": 6,
+		"EXP": 17,
+		"HP": 30
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Tomato",
+        "Rate": 8.00
+    }, {
+        "Item": "Lemon",
+        "Rate": 4.00
+    }, {
+        "Item": "Monster Bird Tear",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Gale Crawler",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva",
+		"Arvantville",
+		"Entrance"
+	],
+	"Description": "A half-bird creature that can raise winds with its wings."
+}, {
+	"id": 5,
+	"Name": "Ghost",
+	"Stats": [{
+		"LV": 6,
+		"EXP": 23,
+		"HP": 28
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": 15,
+		"Strike": 15,
+		"Fire": 15,
+		"Ice": -50,
+		"Thunder": -50,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Ectoplasm",
+        "Rate": 10.00
+    }, {
+        "Item": "Ether",
+        "Rate": 6.00
+    }, {
+        "Item": "Alkahest",
+        "Rate": 12.00
+    }],
+	"Shard": [{
+        "Name": "Summon Ghost",
+        "Rate": 2.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva",
+		"Entrance"
+	],
+	"Description": "An apparition that slows the movement of whomever it touches."
+}, {
+	"id": 6,
+	"Name": "Dullahammer",
+	"Stats": [{
+		"LV": 7,
+		"EXP": 33,
+		"HP": 62
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -50,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Sea Urchin",
+        "Rate": 8.00
+    }, {
+        "Item": "Bronze",
+        "Rate": 12.00
+    }, {
+        "Item": "Dullahammer Helm",
+        "Rate": 3.00
+    }, {
+        "Item": "Iron",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Head Flail",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva"
+	],
+	"Description": "An undead knight that wields his own head as a weapon."
+}]
