@@ -18,7 +18,7 @@ function getJSON() {
 
 	$.ajax({
 		url: "../app/json/BloodstainedRotNEnemyInfo.json",
-		type: "post",
+		type: "get",
 		dataType: 'json',
 		mimeType: "application/json",
 		success: function(data){
