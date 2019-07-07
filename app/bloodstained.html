@@ -4,13 +4,23 @@
 	<title>Bloodstained Ritual of the Night - Enemy Info</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bulma.css">
 	<script src="js/jquery-3.4.1.min.js"></script>
 
 	<style>
+	body {
+		background-color: #000;
+	}
 	img {
 	    border: 0;
 	    max-width: 100%;
 	    max-height: 100%;
+	}
+	hr {
+		border: 2px solid #000;
+	}
+	.AAA {
+		background-color: #00ff00;
 	}
 	.logo {
 		text-align: center;
@@ -21,7 +31,7 @@
 		width: 700px;
 	}
 	.searchbar {
-		background-color: #000;
+		background-color: #121416;
 		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
@@ -31,30 +41,41 @@
 		width: 1080px;
 	}
 	#searchBar {
-		border: 1px solid #dadbdc;
-		font-size: 18px;
-		padding: 8px;
+		background-color: #110000;
+		border: 2px solid #dd0022;
+		color: #ff0000;
+		font-size: 1.2em;
+		padding: 10px;
 		width: 600px;
 	}
 	#searchButton {
-		border: 1px solid #dadbdc;
-		font-size: 18px;
-		padding: 8px;
-		margin-left: 0px;
-		width: 10%;
+		background-color: #110000;
+		border: 2px solid #dd0022;
+		color: #ff0000;
+		font-size: 1.2em;
+		padding: 10px;
+	}
+	#searchButton:hover {
+		background-color: #990000;
+		color: #ff2266;
 	}
 	.content {
-		background-color: #f0f2f4;
+		background-color: #121416;
+		color: #FFFFFF;
 		font-family: Arial;
-		font-size: 1.2em;
+		font-size: 1.0em;
 		margin-left: auto;
 		margin-right: auto;
 		padding: 10px;
 		width: 1080px;
 	}
+	.content h1 {
+		color: #FF0000;
+	}
 
 	.footer {
-		border-top: 1px solid #000;
+		background-color: #000;
+		border-top: 1px solid #dd0022;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
@@ -71,13 +92,13 @@
 	</div>
 
 	<div class="searchbar">
-		<input type="text" id="searchBar" placeholder="Search by ID, name, item, shard, shard type..." autofocus>
+		<input type="text" id="searchBar" placeholder="Search enemies by ID, name, item, shard, shard type..." autofocus>
 		<button type="submit" id="searchButton" onclick="searchInput();getJSON();">Find</button>
+		<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
 	</div>
 
 	<div class="content">
 		<div id="result"></div>
-
 	</div>
 
 	<div class="footer">
