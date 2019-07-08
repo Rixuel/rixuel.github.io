@@ -5521,8 +5521,8 @@
 	"id": 128,
 	"Name": "IGA",
 	"Stats": [{
-		"LV": 66,
-		"EXP": 10000,
+		"LV": 71,
+		"EXP": 10765,
 		"HP": 10000
 	}],
 	"Resist": [{
@@ -5559,5 +5559,5 @@
 	"Area": [
 		"Hall of Termination"
 	],
-	"Description": "The best of the best! (Do you guys have his original description? lol)"
+	"Description": "He was told there was no future... But he knew they were wrong."
 }]
