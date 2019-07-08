@@ -65,17 +65,17 @@
 		"Petrification": 50
 	}],
 	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
         "Item": "Writhing Limb",
         "Rate": 12.00
     }, {
+        "Item": "",
+        "Rate": 0
+    }, {
         "Item": "Halite",
         "Rate": 5.00
-    }, {
-        "Item": "",
-        "Rate": 0
-    }, {
-        "Item": "",
-        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Cerulean Splash",
@@ -154,14 +154,14 @@
         "Item": "Tomato",
         "Rate": 8.00
     }, {
+        "Item": "",
+        "Rate": 0
+    }, {
         "Item": "Lemon",
         "Rate": 4.00
     }, {
         "Item": "Monster Bird Tear",
         "Rate": 8.00
-    }, {
-        "Item": "",
-        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Gale Crawler",
@@ -199,14 +199,14 @@
         "Item": "Ectoplasm",
         "Rate": 10.00
     }, {
+        "Item": "",
+        "Rate": 0
+    }, {
         "Item": "Ether",
         "Rate": 6.00
     }, {
         "Item": "Alkahest",
         "Rate": 12.00
-    }, {
-        "Item": "",
-        "Rate": 0
     }],
 	"Shard": [{
         "Name": "Summon Ghost",
@@ -261,4 +261,5305 @@
 		"Galleon Minerva"
 	],
 	"Description": "An undead knight that wields his own head as a weapon."
+}, {
+	"id": 7,
+	"Name": "Giant Rat",
+	"Stats": [{
+		"LV": 7,
+		"EXP": 28,
+		"HP": 33
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Cheese",
+        "Rate": 12.00
+    }, {
+        "Item": "Rat Tail",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Rat Teeth",
+        "Rate": 4.00
+    }],
+	"Shard": [{
+        "Name": "Summon Rat",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Arvantville"
+	],
+	"Description": "A monstrous rodent attended by a retinue of smaller rats."
+}, {
+	"id": 8,
+	"Name": "Bone Morte",
+	"Stats": [{
+		"LV": 8,
+		"EXP": 42,
+		"HP": 50
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Melting Bone",
+        "Rate": 15.00
+    }, {
+        "Item": "Stone Mask",
+        "Rate": 4.00
+    }, {
+        "Item": "Melting Skull",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Bone Toss",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Arvantville",
+		"Entrance"
+	],
+	"Description": "A morte that has possessed a human, destroying its flesh in the process."
+}, {
+	"id": 9,
+	"Name": "Bat",
+	"Stats": [{
+		"LV": 7,
+		"EXP": 3,
+		"HP": 7
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Small Webbing",
+        "Rate": 15.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Bat Fang",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Bat",
+        "Rate": 3.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Arvantville",
+		"Entrance",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A bat, but really evil."
+}, {
+	"id": 10,
+	"Name": "Gieremund",
+	"Stats": [{
+		"LV": 8,
+		"EXP": 63,
+		"HP": 71
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Houndskin",
+        "Rate": 10.00
+    }, {
+        "Item": "Ulfberht Sword",
+        "Rate": 1.00
+    }, {
+        "Item": "Demon Dog Fang",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Gieremund",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Entrance",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A jet black wolf whose hunger is insatiable."
+}, {
+	"id": 11,
+	"Name": "Blood Grinder Knight",
+	"Stats": [{
+		"LV": 9,
+		"EXP": 92,
+		"HP": 100
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Scale Armor",
+        "Rate": 4.00
+    }, {
+        "Item": "Iron",
+        "Rate": 10.00
+    }, {
+        "Item": "Spiral Sword",
+        "Rate": 2.00
+    }, {
+        "Item": "Steel",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Heretical Grinder",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Entrance",
+		"Garden of Silence"
+	],
+	"Description": "A demon knight who deftly wields his spinning blade."
+}, {
+	"id": 12,
+	"Name": "Sabnock",
+	"Stats": [{
+		"LV": 10,
+		"EXP": 99,
+		"HP": 111
+	}],
+	"Resist": [{
+		"Slash": -20,
+		"Thrust": -20,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Long Sword",
+        "Rate": 8.00
+    }, {
+        "Item": "Lion Mane",
+        "Rate": 12.00
+    }, {
+        "Item": "Obsidian",
+        "Rate": 5.00
+    }, {
+        "Item": "Steel",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Sword Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Entrance"
+	],
+	"Description": "A toughened, leonine warrior demon."
+}, {
+	"id": 13,
+	"Name": "Moco Weed",
+	"Stats": [{
+		"LV": 9,
+		"EXP": 44,
+		"HP": 49
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 20,
+		"Light": 20,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Moco Oil",
+        "Rate": 12.00
+    }, {
+        "Item": "Cotton",
+        "Rate": 8.00
+    }, {
+        "Item": "Fey Leaf",
+        "Rate": 6.00
+    }, {
+        "Item": "Moco Leek",
+        "Rate": 12.00
+    }],
+	"Shard": [{
+        "Name": "Flytrap",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Garden of Silence"
+	],
+	"Description": "Predatory grass that snaps at anyone foolish enough to tread on it."
+}, {
+	"id": 14,
+	"Name": "Toad",
+	"Stats": [{
+		"LV": 10,
+		"EXP": 36,
+		"HP": 32
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Toad Eye",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Toad Heart",
+        "Rate": 2.00
+    }],
+	"Shard": [{
+        "Name": "Release Toad",
+        "Rate": 3.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Garden of Silence",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A savage amphibian that feasts on human flesh."
+}, {
+	"id": 15,
+	"Name": "Plume Parma",
+	"Stats": [{
+		"LV": 10,
+		"EXP": 47,
+		"HP": 55
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Plume Pork",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Pork Cutlet",
+        "Rate": 1.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon Plume Parma",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Garden of Silence"
+	],
+	"Description": "A floating, pig-like creature with a carnivorous bent."
+}, {
+	"id": 16,
+	"Name": "Barbatos",
+	"Stats": [{
+		"LV": 11,
+		"EXP": 64,
+		"HP": 78
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": 10,
+		"Strike": 0,
+		"Fire": -10,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "HP Rounds x3",
+        "Rate": 12.00
+    }, {
+        "Item": "Dreadful Rag",
+        "Rate": 12.00
+    }, {
+        "Item": "AP Rounds x5",
+        "Rate": 3.00
+    }, {
+        "Item": "Hemp",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "True Arrow",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Entrance",
+		"Garden of Silence"
+	],
+	"Description": "A fearsome marksman who never misses his quarry."
+}, {
+	"id": 17,
+	"Name": "Carabosse",
+	"Stats": [{
+		"LV": 11,
+		"EXP": 50,
+		"HP": 61
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Faerie Medicine",
+        "Rate": 8.00
+    }, {
+        "Item": "Faerie Dust",
+        "Rate": 10.00
+    }, {
+        "Item": "Faerie Elixir",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Carabosse",
+        "Rate": 4.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Garden of Silence"
+	],
+	"Description": "A jealous, evil faerie who dispenses curses."
+}, {
+	"id": 18,
+	"Name": "Simian",
+	"Stats": [{
+		"LV": 12,
+		"EXP": 45,
+		"HP": 50
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": -10,
+		"Strike": 10,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Ring",
+        "Rate": 10.00
+    }, {
+        "Item": "Monster Blood",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Monster Fur",
+        "Rate": 3.00
+    }],
+	"Shard": [{
+        "Name": "Summon Simian",
+        "Rate": 3.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Garden of Silence",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A murderous ape with no concept of mercy."
+}, {
+	"id": 19,
+	"Name": "Zagan",
+	"Stats": [{
+		"LV": 13,
+		"EXP": 98,
+		"HP": 118
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": -10,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Beast Beef",
+        "Rate": 8.00
+    }, {
+        "Item": "Monster Horn",
+        "Rate": 12.00
+    }, {
+        "Item": "Rennet",
+        "Rate": 15.00
+    }, {
+        "Item": "Beast Milk",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Alchemic Bounty",
+        "Rate": 2.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Garden of Silence"
+	],
+	"Description": "A demon who has assumed the form of a cow."
+}, {
+	"id": 20,
+	"Name": "Poltergeist",
+	"Stats": [{
+		"LV": 14,
+		"EXP": 72,
+		"HP": 88
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Alkahest",
+        "Rate": 10.00
+    }, {
+        "Item": "Oak",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Welcome Company",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva",
+		"Dian Cecht Cathedral",
+		"Towers of Twin Dragons",
+		"Livre Ex Machina"
+	],
+	"Description": "A portrait that has come to life. It seeks new subjects for its canvas."
+}, {
+	"id": 21,
+	"Name": "Ordog",
+	"Stats": [{
+		"LV": 13,
+		"EXP": 72,
+		"HP": 93
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Curry Powder",
+        "Rate": 3.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Acid Jet",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Garden of Silence",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A fiery hellhound composed of rotting flesh."
+}, {
+	"id": 22,
+	"Name": "Gargoyle",
+	"Stats": [{
+		"LV": 12,
+		"EXP": 57,
+		"HP": 66
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": -50,
+		"Strike": -50,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Stonethaw",
+        "Rate": 10.00
+    }, {
+        "Item": "Gargoyle Stone",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Obsidian",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Petra Ray",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Garden of Silence",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A stone statue that sorcery has brought to life."
+}, {
+	"id": 23,
+	"Name": "Killer Barber",
+	"Stats": [{
+		"LV": 13,
+		"EXP": 66,
+		"HP": 82
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sharp Razor",
+        "Rate": 10.00
+    }, {
+        "Item": "Rhava Bural",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Dagger Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A murderous barber turned demonic. He's seeking pretty women to scissor."
+}, {
+	"id": 24,
+	"Name": "Demon",
+	"Stats": [{
+		"LV": 13,
+		"EXP": 80,
+		"HP": 93
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sinister Fang",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sinister Heart",
+        "Rate": 4.00
+    }],
+	"Shard": [{
+        "Name": "Augment INT",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Livre Ex Machina",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A denizen of the demon realm. Practices sorcery."
+}, {
+	"id": 25,
+	"Name": "Buer",
+	"Stats": [{
+		"LV": 14,
+		"EXP": 60,
+		"HP": 77
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Leonine Pelt",
+        "Rate": 10.00
+    }, {
+        "Item": "Cocoa",
+        "Rate": 2.00
+    }, {
+        "Item": "Monster Fang",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Buer",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Bridge of Evil",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A leonine demon with five legs."
+}, {
+	"id": 26,
+	"Name": "Nyabon",
+	"Stats": [{
+		"LV": 15,
+		"EXP": 123,
+		"HP": 152
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": 15,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Cat Ears",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Riga Storaema",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Entrance",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
+}, {
+	"id": 27,
+	"Name": "Scythe Mite",
+	"Stats": [{
+		"LV": 14,
+		"EXP": 47,
+		"HP": 44
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": -50,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Mithridate",
+        "Rate": 10.00
+    }, {
+        "Item": "Grotesque Shell",
+        "Rate": 6.00
+    }, {
+        "Item": "Poison",
+        "Rate": 5.00
+    }, {
+        "Item": "Vespine Stinger",
+        "Rate": 3.00
+    }],
+	"Shard": [{
+        "Name": "Summon Insect",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Towers of Twin Dragons"
+	],
+	"Description": "A giant bug with an unquenchable thirst for blood."
+}, {
+	"id": 28,
+	"Name": "Dullahammer Head",
+	"Stats": [{
+		"LV": 15,
+		"EXP": 45,
+		"HP": 1
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Dullahammer Helm",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Dullahammer Helm",
+        "Rate": 2.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Towers of Twin Dragons"
+	],
+	"Description": "A dullahammer head that lives on as a separate, vengeful entity."
+}, {
+	"id": 29,
+	"Name": "Buer Armor",
+	"Stats": [{
+		"LV": 16,
+		"EXP": 109,
+		"HP": 130
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Iron Breastplate",
+        "Rate": 8.00
+    }, {
+        "Item": "Steel",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Ruby",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Buer",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Garden of Silence",
+		"Towers of Twin Dragons",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A demonic knight that uses buers as throwing weapons."
+}, {
+	"id": 30,
+	"Name": "Wolfman",
+	"Stats": [{
+		"LV": 17,
+		"EXP": 147,
+		"HP": 173
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": -10,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Wool",
+        "Rate": 12.00
+    }, {
+        "Item": "Sinister Pelt",
+        "Rate": 12.00
+    }, {
+        "Item": "Wolf Hood",
+        "Rate": 6.00
+    }, {
+        "Item": "Lycan Claw",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Beast Guardian",
+        "Rate": 5.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Towers of Twin Dragons"
+	],
+	"Description": "A monster whose lupine hunger for human flesh awakens at the full moon."
+}, {
+	"id": 31,
+	"Name": "Thunder Elemental",
+	"Stats": [{
+		"LV": 16,
+		"EXP": 60,
+		"HP": 50
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 75,
+		"Light": 0,
+		"Darkness": -50,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Emerald",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Resist Thunder",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Livre Ex Machina"
+	],
+	"Description": "A magical manifestation of thunder birthed by wicked means."
+}, {
+	"id": 32,
+	"Name": "Carriage Morte",
+	"Stats": [{
+		"LV": 17,
+		"EXP": 130,
+		"HP": 155
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Iron",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Oak",
+        "Rate": 4.00
+    }],
+	"Shard": [{
+        "Name": "Firearm Expertise",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Bridge of Evil"
+	],
+	"Description": "A morte that has seized a gun carriage and acquired mobility."
+}, {
+	"id": 33,
+	"Name": "Dantalion",
+	"Stats": [{
+		"LV": 17,
+		"EXP": 68,
+		"HP": 71
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Strange Leather",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Tome Scrap",
+        "Rate": 6.00
+    }],
+	"Shard": [{
+        "Name": "Dantalion",
+        "Rate": 4.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Livre Ex Machina"
+	],
+	"Description": "A demon who inhabits a book."
+}, {
+	"id": 34,
+	"Name": "Rul'sha",
+	"Stats": [{
+		"LV": 18,
+		"EXP": 136,
+		"HP": 164
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Lemon",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Flame Whip",
+        "Rate": 4.00
+    }, {
+        "Item": "Ruby",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Sacred Shade",
+        "Rate": 4.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Livre Ex Machina"
+	],
+	"Description": "A lovely winged demoness who gives blessings to those she favors."
+}, {
+	"id": 35,
+	"Name": "Decarabia",
+	"Stats": [{
+		"LV": 19,
+		"EXP": 111,
+		"HP": 137
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Durable Leather",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Circular Ripper",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A demon who presides over the stars. Well versed in gemstones."
+}, {
+	"id": 36,
+	"Name": "Shovel Armor",
+	"Stats": [{
+		"LV": 20,
+		"EXP": 135,
+		"HP": 163
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": 15,
+		"Strike": -50,
+		"Fire": 15,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Shovel",
+        "Rate": 6.00
+    }, {
+        "Item": "Steel",
+        "Rate": 10.00
+    }, {
+        "Item": "Ex Shovel Armor",
+        "Rate": 3.00
+    }, {
+        "Item": "Sapphire",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Shovel Armor",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A demon knight who skillfully wields his shovel."
+}, {
+	"id": 37,
+	"Name": "Malediction",
+	"Stats": [{
+		"LV": 19,
+		"EXP": 57,
+		"HP": 1
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Stonethaw",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Harpe",
+        "Rate": 3.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Petrification",
+        "Rate": 2.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Livre Ex Machina"
+	],
+	"Description": "A dullahammer head that has gained the power to turn prey to stone."
+}, {
+	"id": 38,
+	"Name": "Celaeno",
+	"Stats": [{
+		"LV": 20,
+		"EXP": 95,
+		"HP": 111
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Strawberry",
+        "Rate": 10.00
+    }, {
+        "Item": "Thunderbird Plume",
+        "Rate": 8.00
+    }, {
+        "Item": "G-Bone Steak",
+        "Rate": 5.00
+    }, {
+        "Item": "Monster Bird Hair",
+        "Rate": 6.00
+    }],
+	"Shard": [{
+        "Name": "Teps Oceus",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Towers of Twin Dragons",
+		"Bridge of Evil"
+	],
+	"Description": "A half-bird creature with power over thunderclouds."
+}, {
+	"id": 39,
+	"Name": "Shield Outsider",
+	"Stats": [{
+		"LV": 21,
+		"EXP": 147,
+		"HP": 171
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Melting Bone",
+        "Rate": 12.00
+    }, {
+        "Item": "Silver",
+        "Rate": 10.00
+    }, {
+        "Item": "Steel Breastplate",
+        "Rate": 4.00
+    }, {
+        "Item": "Sinister Skull",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Directed Shield",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Towers of Twin Dragons"
+	],
+	"Description": "A defender of the castle whose shield is among the demon realm's finest."
+}, {
+	"id": 40,
+	"Name": "Puppy",
+	"Stats": [{
+		"LV": 24,
+		"EXP": 178,
+		"HP": 220
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sinister Fang",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Damascus",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Resist Strike",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Bridge of Evil",
+		"Underground Sorcery Lab"
+	],
+	"Description": "The reanimated head of a hound that perished inside the castle."
+}, {
+	"id": 41,
+	"Name": "Lili",
+	"Stats": [{
+		"LV": 20,
+		"EXP": 99,
+		"HP": 127
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Lili Ears",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Lili Tail",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Bunnymorphosis",
+        "Rate": 4.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Bridge of Evil"
+	],
+	"Description": "A half-rabbit demon who has lopped off many a head."
+}, {
+	"id": 42,
+	"Name": "Assassin",
+	"Stats": [{
+		"LV": 23,
+		"EXP": 113,
+		"HP": 146
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Assassin's Vest",
+        "Rate": 5.00
+    }, {
+        "Item": "Durable Rag",
+        "Rate": 8.00
+    }, {
+        "Item": "Assassin's Ring",
+        "Rate": 3.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Flying Dagger",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Bridge of Evil"
+	],
+	"Description": "An assassin turned monster."
+}, {
+	"id": 43,
+	"Name": "Dragon",
+	"Stats": [{
+		"LV": 27,
+		"EXP": 473,
+		"HP": 453
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": -25,
+		"Strike": 15,
+		"Fire": 15,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Dragon Egg",
+        "Rate": 5.00
+    }, {
+        "Item": "Dragon Scale",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Dragon Talons",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Draconic Rage",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Inferno Cave"
+	],
+	"Description": "A monster known for its extraordinary battle prowess."
+}, {
+	"id": 44,
+	"Name": "Kunekune",
+	"Stats": [{
+		"LV": 71,
+		"EXP": 3578,
+		"HP": 1943
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 50,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Platinum",
+        "Rate": 15.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Curses",
+        "Rate": 12.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Bridge of Evil"
+	],
+	"Description": "An eldritch creature that inflicts a fatal curse on whomever it detects."
+}, {
+	"id": 45,
+	"Name": "Poison Toad",
+	"Stats": [{
+		"LV": 18,
+		"EXP": 54,
+		"HP": 54
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Mithridate",
+        "Rate": 8.00
+    }, {
+        "Item": "Toad Heart",
+        "Rate": 8.00
+    }, {
+        "Item": "Poison",
+        "Rate": 4.00
+    }, {
+        "Item": "Sinister Eye",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Resist Poison",
+        "Rate": 3.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Towers of Twin Dragons",
+		"Underground Sorcery Lab",
+		"Forbidden Underground Waterway",
+		"Hidden Desert"
+	],
+	"Description": "An amphibian that secretes a deadly poison through its skin."
+}, {
+	"id": 46,
+	"Name": "Sidhe",
+	"Stats": [{
+		"LV": 19,
+		"EXP": 91,
+		"HP": 106
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Vespine Stinger",
+        "Rate": 8.00
+    }, {
+        "Item": "Stinger",
+        "Rate": 4.00
+    }, {
+        "Item": "Faerie Wing",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Healing",
+        "Rate": 4.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Underground Sorcery Lab"
+	],
+	"Description": "A wicked faerie who spirits away children."
+}, {
+	"id": 47,
+	"Name": "Bomber Morte",
+	"Stats": [{
+		"LV": 23,
+		"EXP": 150,
+		"HP": 187
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Gunpowder",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Bolide Blast",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Underground Sorcery Lab"
+	],
+	"Description": "A morte that has fused with a bomb. Keep away from open flames."
+}, {
+	"id": 48,
+	"Name": "Mimic",
+	"Stats": [{
+		"LV": 24,
+		"EXP": 234,
+		"HP": 273
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Grotesque Shell",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Damascus",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Money is Power",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Underground Sorcery Lab"
+	],
+	"Description": "A predator that disguises itself as a treasure chest."
+}, {
+	"id": 49,
+	"Name": "Light Elemental",
+	"Stats": [{
+		"LV": 27,
+		"EXP": 95,
+		"HP": 85
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 75,
+		"Darkness": -75,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Obsidian",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Diamond",
+        "Rate": 0.50
+    }],
+	"Shard": [{
+        "Name": "Resist Light",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A magical manifestation of light birthed by wicked means."
+}, {
+	"id": 50,
+	"Name": "Ocypete",
+	"Stats": [{
+		"LV": 28,
+		"EXP": 123,
+		"HP": 156
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Apple",
+        "Rate": 8.00
+    }, {
+        "Item": "Monster Bird Tear",
+        "Rate": 15.00
+    }, {
+        "Item": "G-Bone Steak",
+        "Rate": 5.00
+    }, {
+        "Item": "Flight Feather",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Optimizer",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A half-bird creature that carries off human prey in the blink of an eye."
+}, {
+	"id": 51,
+	"Name": "Cyhyraeth",
+	"Stats": [{
+		"LV": 29,
+		"EXP": 197,
+		"HP": 242
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": 15,
+		"Strike": 15,
+		"Fire": -25,
+		"Ice": 25,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 50,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sinister Rag",
+        "Rate": 8.00
+    }, {
+        "Item": "Cursed Ring",
+        "Rate": 4.00
+    }, {
+        "Item": "Witch's Tears",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Death Cry",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Entrance",
+		"Garden of Silence",
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A demon with a chilling death cry."
+}, {
+	"id": 52,
+	"Name": "Chair Mimic",
+	"Stats": [{
+		"LV": 26,
+		"EXP": 82,
+		"HP": 82
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Walnut",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Chair Remnants",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Chair",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A creature that poses as a chair and spirits unwitting sitters elsewhere."
+}, {
+	"id": 53,
+	"Name": "Leraje",
+	"Stats": [{
+		"LV": 27,
+		"EXP": 132,
+		"HP": 172
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Gunpowder",
+        "Rate": 10.00
+    }, {
+        "Item": "Sinister Rag",
+        "Rate": 12.00
+    }, {
+        "Item": "Toradar",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Chaser Arrow",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Livre Ex Machina"
+	],
+	"Description": "A demon skilled at archery."
+}, {
+	"id": 54,
+	"Name": "Bloodbringer",
+	"Stats": [{
+		"LV": 27,
+		"EXP": 102,
+		"HP": 114
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": -25,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 50,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Silver",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Sword Fragment",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Bloodbringer",
+        "Rate": 4.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Entrance",
+		"Dian Cecht Cathedral",
+		"Hall of Termination"
+	],
+	"Description": "A demon who inhabits a sword and has put countless criminals to death."
+}, {
+	"id": 55,
+	"Name": "Lance Armor",
+	"Stats": [{
+		"LV": 28,
+		"EXP": 160,
+		"HP": 202
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": 15,
+		"Strike": -50,
+		"Fire": 15,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Partisan",
+        "Rate": 8.00
+    }, {
+        "Item": "Silver",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Damascus",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Spear Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Livre Ex Machina"
+	],
+	"Description": "An argent, lance-wielding knight."
+}, {
+	"id": 56,
+	"Name": "Tamako-Death",
+	"Stats": [{
+		"LV": 29,
+		"EXP": 205,
+		"HP": 266
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Silver Tiara",
+        "Rate": 8.00
+    }, {
+        "Item": "Strawberry",
+        "Rate": 12.00
+    }, {
+        "Item": "Smoothie",
+        "Rate": 4.00
+    }, {
+        "Item": "Queen's Tears",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Upbeat Heat",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Livre Ex Machina"
+	],
+	"Description": "A battle-of-the-bands guitarist who melts faces, both literally and figuratively."
+}, {
+	"id": 57,
+	"Name": "Triwheel Buer",
+	"Stats": [{
+		"LV": 29,
+		"EXP": 227,
+		"HP": 297
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Buer",
+        "Rate": 4.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Hall of Termination"
+	],
+	"Description": "A three-wheeled chariot created through demon experimentation."
+}, {
+	"id": 58,
+	"Name": "Gamigin",
+	"Stats": [{
+		"LV": 29,
+		"EXP": 163,
+		"HP": 210
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Wool",
+        "Rate": 10.00
+    }, {
+        "Item": "Hellhorse Hoof",
+        "Rate": 8.00
+    }, {
+        "Item": "Unicorn Ring",
+        "Rate": 2.00
+    }, {
+        "Item": "Hellhorse Mane",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Kick Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Hall of Termination"
+	],
+	"Description": "A demon in horse form who meddles with the souls of the dead."
+}, {
+	"id": 59,
+	"Name": "Titania",
+	"Stats": [{
+		"LV": 29,
+		"EXP": 125,
+		"HP": 162
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Faerie Dust",
+        "Rate": 8.00
+    }, {
+        "Item": "Ribbon",
+        "Rate": 4.00
+    }, {
+        "Item": "Vespine Wing",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Augment MND",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Hall of Termination"
+	],
+	"Description": "A vespine faerie with dire poison in her sting."
+}, {
+	"id": 60,
+	"Name": "Axe Outsider",
+	"Stats": [{
+		"LV": 30,
+		"EXP": 224,
+		"HP": 275
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Platinum",
+        "Rate": 5.00
+    }, {
+        "Item": "Damascus",
+        "Rate": 12.00
+    }, {
+        "Item": "Berdiche",
+        "Rate": 4.00
+    }, {
+        "Item": "Mithril",
+        "Rate": 10.00
+    }],
+	"Shard": [{
+        "Name": "Throwing Axe",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Hall of Termination",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A toughened knight in armor who wields a magically modified axe."
+}, {
+	"id": 61,
+	"Name": "Scylla",
+	"Stats": [{
+		"LV": 30,
+		"EXP": 110,
+		"HP": 127
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Clam",
+        "Rate": 8.00
+    }, {
+        "Item": "Aquatic Blood",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Slash",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A water monster with the head and torso of a beautiful woman."
+}, {
+	"id": 62,
+	"Name": "Forneus",
+	"Stats": [{
+		"LV": 30,
+		"EXP": 110,
+		"HP": 127
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 25,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Forneus Filet",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Va Ischa",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A demon fish that survived the age of myth."
+}, {
+	"id": 63,
+	"Name": "Deeseama",
+	"Stats": [{
+		"LV": 30,
+		"EXP": 99,
+		"HP": 110
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": 0,
+		"Ice": 50,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Aquatic Filet",
+        "Rate": 8.00
+    }, {
+        "Item": "Aquatic Blood",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Slimy Leather",
+        "Rate": 4.00
+    }],
+	"Shard": [{
+        "Name": "Aqua Stream",
+        "Rate": 10.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A monster that hails from the aphotic reaches of the ocean."
+}, {
+	"id": 64,
+	"Name": "Water Leaper",
+	"Stats": [{
+		"LV": 31,
+		"EXP": 97,
+		"HP": 98
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Toad Heart",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Toad Webbing",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Summon Water Leaper",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway",
+		"Hidden Desert"
+	],
+	"Description": "An amphibious monster with wings and a serpent's tail. Also called \"Llamhigyn Y Dwr.\""
+}, {
+	"id": 65,
+	"Name": "Glashtyn",
+	"Stats": [{
+		"LV": 31,
+		"EXP": 170,
+		"HP": 224
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": 0,
+		"Ice": 25,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Water Horse Hoof",
+        "Rate": 10.00
+    }, {
+        "Item": "Ayamur",
+        "Rate": 4.00
+    }, {
+        "Item": "Water Horse Mane",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Amphibian Speed",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A monster that drags victims into the water. Often called a \"water horse.\""
+}, {
+	"id": 66,
+	"Name": "Seeker",
+	"Stats": [{
+		"LV": 31,
+		"EXP": 97,
+		"HP": 98
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": -50,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Eye",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Detective's Eye",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A fiend that moves from wall to wall, training its evil gaze on passersby."
+}, {
+	"id": 67,
+	"Name": "Archdemon",
+	"Stats": [{
+		"LV": 32,
+		"EXP": 191,
+		"HP": 231
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Demon Fang",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Heart",
+        "Rate": 4.00
+    }, {
+        "Item": "Demon Tail",
+        "Rate": 12.00
+    }],
+	"Shard": [{
+        "Name": "Words of Wisdom",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral",
+		"Hall of Termination",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A member of the demon nobility. Proficient in sorcery."
+}, {
+	"id": 68,
+	"Name": "Amy",
+	"Stats": [{
+		"LV": 33,
+		"EXP": 103,
+		"HP": 79
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 20,
+		"Fire": 20,
+		"Ice": -50,
+		"Thunder": -50,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Alkahest x2",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Ectoplasm",
+        "Rate": 10.00
+    }],
+	"Shard": [{
+        "Name": "Lethargy",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "A flame kindled by ill intent."
+}, {
+	"id": 69,
+	"Name": "Allocer",
+	"Stats": [{
+		"LV": 33,
+		"EXP": 122,
+		"HP": 139
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Wool",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Silk",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Augment CON",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "A leonine demon with eyes that burn red as hellfire."
+}, {
+	"id": 70,
+	"Name": "Vul'sha",
+	"Stats": [{
+		"LV": 34,
+		"EXP": 184,
+		"HP": 246
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Flame Whip",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Ambrosia",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Tis Raiff",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "A lovely demoness who is fond of slaughter."
+}, {
+	"id": 71,
+	"Name": "Living Fossil",
+	"Stats": [{
+		"LV": 37,
+		"EXP": 640,
+		"HP": 623
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 50,
+		"Strike": -50,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 50,
+		"Poison": 100,
+		"Curses": 75,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Crystal",
+        "Rate": 8.00
+    }, {
+        "Item": "Dragon Bone",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Resist Thrust",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "Dragon bones imbued with false life by dark means."
+}, {
+	"id": 72,
+	"Name": "Rocky",
+	"Stats": [{
+		"LV": 35,
+		"EXP": 248,
+		"HP": 322
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Demon Fang",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Silk",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Strike",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "The reanimated head of a hound that perished inside the castle."
+}, {
+	"id": 73,
+	"Name": "Dark Elemental",
+	"Stats": [{
+		"LV": 36,
+		"EXP": 119,
+		"HP": 114
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -75,
+		"Darkness": 75,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Diamond",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Dark Matter",
+        "Rate": 1.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Darkness",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Secret Sorcery Lab"
+	],
+	"Description": "A magical manifestation of darkness birthed by wicked means."
+}, {
+	"id": 74,
+	"Name": "Lamashtu",
+	"Stats": [{
+		"LV": 37,
+		"EXP": 195,
+		"HP": 268
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Queen's Tears",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Beast Killer",
+        "Rate": 4.00
+    }, {
+        "Item": "Queen's Tail",
+        "Rate": 10.00
+    }],
+	"Shard": [{
+        "Name": "Whip Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Secret Sorcery Lab"
+	],
+	"Description": "A malevolent goddess proficient with the lash."
+}, {
+	"id": 75,
+	"Name": "Macaron",
+	"Stats": [{
+		"LV": 38,
+		"EXP": 353,
+		"HP": 435
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "Cat Ears",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Pelt",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Toxic Storm",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Underground Sorcery Lab",
+		"Secret Sorcery Lab",
+		"Forbidden Underground Waterway"
+	],
+	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
+}, {
+	"id": 76,
+	"Name": "Blood Bug",
+	"Stats": [{
+		"LV": 36,
+		"EXP": 124,
+		"HP": 152
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": -50,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 50
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Grotesque Shell",
+        "Rate": 10.00
+    }, {
+        "Item": "Poison Kukri",
+        "Rate": 4.00
+    }, {
+        "Item": "Inhuman Carapace",
+        "Rate": 5.00
+    }],
+	"Shard": [{
+        "Name": "Red Remembrance",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Inferno Cave"
+	],
+	"Description": "A baleful insect with a jet black shell."
+}, {
+	"id": 77,
+	"Name": "Fire Elemental",
+	"Stats": [{
+		"LV": 37,
+		"EXP": 163,
+		"HP": 207
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": 75,
+		"Ice": -75,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Ruby",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Bixbite",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Resist Fire",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Inferno Cave"
+	],
+	"Description": "A magical manifestation of the fire birthed by wicked means."
+}, {
+	"id": 78,
+	"Name": "Volcano Morte",
+	"Stats": [{
+		"LV": 37,
+		"EXP": 195,
+		"HP": 268
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 50,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Demon Bone",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Flame Mail",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Flamethrower",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Inferno Cave"
+	],
+	"Description": "A powerful morte that has drawn power from lava."
+}, {
+	"id": 79,
+	"Name": "Hellhound",
+	"Stats": [{
+		"LV": 38,
+		"EXP": 200,
+		"HP": 275
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": 0,
+		"Ice": -50,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Claw",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon Hellhound",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Inferno Cave"
+	],
+	"Description": "A mad, murderous dog mantled in flame."
+}, {
+	"id": 80,
+	"Name": "Zepar",
+	"Stats": [{
+		"LV": 38,
+		"EXP": 268,
+		"HP": 349
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Platinum",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Areadbhar",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Inferno Cave",
+		"Hidden Desert"
+	],
+	"Description": "A lance-wielding demon knight clad in crimson armor."
+}, {
+	"id": 81,
+	"Name": "Deathtrap",
+	"Stats": [{
+		"LV": 38,
+		"EXP": 359,
+		"HP": 435
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Mahogany",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Cypress",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Augment LCK",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Inferno Cave",
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A predator that disguises itself as a particularly enticing treasure chest."
+}, {
+	"id": 82,
+	"Name": "Gusion",
+	"Stats": [{
+		"LV": 38,
+		"EXP": 133,
+		"HP": 161
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Red Bean",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Pelt",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Pickpocket",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Underground Sorcery Lab",
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A demon who takes the form of an ape."
+}, {
+	"id": 83,
+	"Name": "Gaap",
+	"Stats": [{
+		"LV": 39,
+		"EXP": 213,
+		"HP": 282
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Demon Wing",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Horn",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Augment STR",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A hideous, one-eyed demon."
+}, {
+	"id": 84,
+	"Name": "Haagenti",
+	"Stats": [{
+		"LV": 39,
+		"EXP": 271,
+		"HP": 359
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 25,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Rennet",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Bovine Plume",
+        "Rate": 6.00
+    }, {
+        "Item": "Flying Beef",
+        "Rate": 1.00
+    }],
+	"Shard": [{
+        "Name": "Petra Breath",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A winged, golden demon prized for its exquisitely flavorful meat."
+}, {
+	"id": 85,
+	"Name": "Kamikaze",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 512,
+		"HP": 560
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 10
+	}],
+	"Drop": [{
+        "Item": "Silk",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Dojigiri",
+        "Rate": 4.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Tornado Slicer",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
+}, {
+	"id": 86,
+	"Name": "Ninja",
+	"Stats": [{
+		"LV": 39,
+		"EXP": 215,
+		"HP": 282
+	}],
+	"Resist": [{
+		"Slash": -20,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Shinobi Garb",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Crimsonite",
+        "Rate": 4.00
+    }, {
+        "Item": "Eastern Fabric",
+        "Rate": 10.00
+    }],
+	"Shard": [{
+        "Name": "Shuriken",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "An assassin from the Orient turned monster."
+}, {
+	"id": 87,
+	"Name": "Giant Moco",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 206,
+		"HP": 290
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -50,
+		"Ice": 0,
+		"Thunder": 25,
+		"Light": 25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 75,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Moco Leek x4",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Fell Leaf",
+        "Rate": 8.00
+    }, {
+        "Item": "Moco Oil x4",
+        "Rate": 12.00
+    }],
+	"Shard": [{
+        "Name": "Flytrap",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "Predatory grass made immense through arcane experimentation."
+}, {
+	"id": 88,
+	"Name": "Giant Bat",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 136,
+		"HP": 169
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Demon Fang",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Wing",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon Bat",
+        "Rate": 5.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "An evil bat made immense through arcane experimentation."
+}, {
+	"id": 89,
+	"Name": "Giant Toad",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 165,
+		"HP": 223
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Demon Eye",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Demon Heart",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Release Toad",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A savage amphibian made immense through arcane experimentation."
+}, {
+	"id": 90,
+	"Name": "Giant Cannon",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 376,
+		"HP": 458
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Gunpowder x5",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Cypress",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Flame Cannon",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A gigantic demon cannon, as you'd expect from the name."
+}, {
+	"id": 91,
+	"Name": "Giant Morte",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 276,
+		"HP": 368
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A mass of lesser demons who seem to believe less can be more."
+}, {
+	"id": 92,
+	"Name": "Giant Buer",
+	"Stats": [{
+		"LV": 41,
+		"EXP": 380,
+		"HP": 471
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Cashmere",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Buer",
+        "Rate": 5.00,
+        "Type": "Familiar"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A buer made immense through untold sorcery."
+}, {
+	"id": 93,
+	"Name": "Chariot Buer",
+	"Stats": [{
+		"LV": 40,
+		"EXP": 280,
+		"HP": 368
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Firearm Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A new and improved demon chariot."
+}, {
+	"id": 94,
+	"Name": "Marbas",
+	"Stats": [{
+		"LV": 42,
+		"EXP": 537,
+		"HP": 588
+	}],
+	"Resist": [{
+		"Slash": -20,
+		"Thrust": -20,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Lion's Lord's Mane",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Fiend Fang",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Drain",
+        "Rate": 5.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A leonine demon with the power to heal."
+}, {
+	"id": 95,
+	"Name": "Silver Wolfman",
+	"Stats": [{
+		"LV": 41,
+		"EXP": 529,
+		"HP": 574
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": -10,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Fiend Pelt",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Fiend Fang",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Feral Claws",
+        "Rate": 5.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A wolfman with a coat of breathtaking silver."
+}, {
+	"id": 96,
+	"Name": "Abyssal Guardian",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 2929,
+		"HP": 1568
+	}],
+	"Resist": [{
+		"Slash": 15,
+		"Thrust": -25,
+		"Strike": 15,
+		"Fire": 15,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -50,
+		"Darkness": 50,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Dragon Heart",
+        "Rate": 5.00
+    }, {
+        "Item": "Dragon Egg x2",
+        "Rate": 10.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Dragon's Wrath",
+        "Rate": 8.00
+    }],
+	"Shard": [{
+        "Name": "Void Ray",
+        "Rate": 6.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Livre Ex Machina",
+		"Den of Behemoths"
+	],
+	"Description": "A jet black dragon that brings death to all before it."
+}, {
+	"id": 97,
+	"Name": "Harrier",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 237,
+		"HP": 319
+	}],
+	"Resist": [{
+		"Slash": -25,
+		"Thrust": -25,
+		"Strike": 20,
+		"Fire": -25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Accelerator",
+        "Rate": 100.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A man in constant search of one faster than himself."
+}, {
+	"id": 98,
+	"Name": "Ice Elemental",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 252,
+		"HP": 319
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 75,
+		"Thunder": -75,
+		"Light": 0,
+		"Darkness": -50,
+		"Poison": 100,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Diamond",
+        "Rate": 6.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Alexandrite",
+        "Rate": 2.00
+    }, {
+        "Item": "Sapphire",
+        "Rate": 12.00
+    }],
+	"Shard": [{
+        "Name": "Resist Ice",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A magical manifestation of ice birthed by wicked means."
+}, {
+	"id": 99,
+	"Name": "Tracer",
+	"Stats": [{
+		"LV": 45,
+		"EXP": 248,
+		"HP": 326
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -50,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": -50,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "Fiend Eye",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon Tracer",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A fiend that lurks in walls"
+}, {
+	"id": 100,
+	"Name": "Gusion Cannon",
+	"Stats": [{
+		"LV": 46,
+		"EXP": 438,
+		"HP": 527
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 20,
+		"Strike": -25,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 75
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Cypress",
+        "Rate": 2.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Firearm Expertise",
+        "Rate": 4.00,
+        "Type": "Passive"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A demon cannon that fires other demons."
+}, {
+	"id": 101,
+	"Name": "G Axe Outsider",
+	"Stats": [{
+		"LV": 47,
+		"EXP": 605,
+		"HP": 659
+	}],
+	"Resist": [{
+		"Slash": 20,
+		"Thrust": 20,
+		"Strike": -50,
+		"Fire": 20,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": -25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "Fiend Skull",
+        "Rate": 5.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Orichalcum",
+        "Rate": 2.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Axe Strike",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A toughened knight in armor who skillfully wields an enormous axe."
+}, {
+	"id": 102,
+	"Name": "Demon Lord",
+	"Stats": [{
+		"LV": 48,
+		"EXP": 1941,
+		"HP": 1308
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -25,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Fiend Heart",
+        "Rate": 2.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Fald Ciu",
+        "Rate": 5.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A member of demon royalty. Commands unfathomable sorcery."
+}, {
+	"id": 103,
+	"Name": "Eight Bit Zombie",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 166,
+		"HP": 186
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": -25,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon 8-bit Zombie",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"8-bit Nightmare"
+	],
+	"Description": "A zombie who has been banished to another dimension inside a book"
+}, {
+	"id": 104,
+	"Name": "Eight Bit Ghost",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 199,
+		"HP": 246
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": 25,
+		"Fire": 25,
+		"Ice": -50,
+		"Thunder": -50,
+		"Light": -50,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Summon 8-bit Ghost",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"8-bit Nightmare"
+	],
+	"Description": "A ghost who has been banished to another dimension inside a book."
+}, {
+	"id": 105,
+	"Name": "Eight Bit Skull",
+	"Stats": [{
+		"LV": 44,
+		"EXP": 252,
+		"HP": 319
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": -50,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 25,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "8-bit Fire Ball",
+        "Rate": 4.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"8-bit Nightmare"
+	],
+	"Description": "A skull from a dark void that was sealed in a tome."
+}, {
+	"id": 106,
+	"Name": "Eight Bit Overlord",
+	"Stats": [{
+		"LV": 55,
+		"EXP": 5532,
+		"HP": 6660
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "8-bit Nightmare",
+        "Rate": 8.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "8-bit Flame",
+        "Rate": 4.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"8-bit Nightmare"
+	],
+	"Description": "A demon overlord who has been banished to another dimension inside a book."
+}, {
+	"id": 107,
+	"Name": "Master Carpenter",
+	"Stats": [{
+		"LV": 54,
+		"EXP": 4349,
+		"HP": 6666
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Imbrued Bone",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Chisel Barrage",
+        "Rate": 15.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "A demon carpenter gifted at summoning."
+}, {
+	"id": 108,
+	"Name": "Revenant",
+	"Stats": [{
+		"LV": 54,
+		"EXP": 4349,
+		"HP": 6666
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 25,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Imbrued Skull",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Ruinous Rood",
+        "Rate": 12.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Garden of Silence"
+	],
+	"Description": "A brave demon warrior who possesses skill with the whip."
+}, {
+	"id": 109,
+	"Name": "Millionaire's Bane",
+	"Stats": [{
+		"LV": 54,
+		"EXP": 4349,
+		"HP": 6666
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": -25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "Imbrued Fang",
+        "Rate": 12.00
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Jackpot",
+        "Rate": 12.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Hall of Termination"
+	],
+	"Description": "The spirit of a greedy people awaiting either destruction or salvation."
+}, {
+	"id": 110,
+	"Name": "Vepar",
+	"Stats": [{
+		"LV": 8,
+		"EXP": 760,
+		"HP": 600
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -25,
+		"Light": -25,
+		"Darkness": 20,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Thrashing Tentacle",
+        "Rate": 100.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Galleon Minerva"
+	],
+	"Description": "A sea-demon feared for hailing storms and casting ships into the abyss."
+}, {
+	"id": 111,
+	"Name": "Zangetsu",
+	"Stats": [{
+		"LV": 16,
+		"EXP": 1572,
+		"HP": 1000
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 80,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Entrance"
+	],
+	"Description": "A demonslayer from the Far East who crossed the sea in search of revenge."
+}, {
+	"id": 112,
+	"Name": "Craftwork",
+	"Stats": [{
+		"LV": 18,
+		"EXP": 1775,
+		"HP": 1200
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -50,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 25,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Craftwork",
+        "Rate": 100.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral"
+	],
+	"Description": "Stained glass imbued with regret and with wrath after being broken time and again."
+}, {
+	"id": 113,
+	"Name": "Andrealphus",
+	"Stats": [{
+		"LV": 20,
+		"EXP": 1978,
+		"HP": 1500
+	}],
+	"Resist": [{
+		"Slash": 10,
+		"Thrust": -25,
+		"Strike": -50,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": -50,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Double Jump",
+        "Rate": 100.00,
+        "Type": "Skill"
+    }],
+	"Area": [
+		"Livre Ex Machina"
+	],
+	"Description": "A demon with a stunning, peacock-like panoply of feathers."
+}, {
+	"id": 114,
+	"Name": "Valac",
+	"Stats": [{
+		"LV": 24,
+		"EXP": 2384,
+		"HP": 2500
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": -20,
+		"Strike": 20,
+		"Fire": 20,
+		"Ice": -20,
+		"Thunder": 0,
+		"Light": -20,
+		"Darkness": 20,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Inferno Breath",
+        "Rate": 100.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Towers of Twin Dragons"
+	],
+	"Description": "A twin-headed, demon drake who rules over the tower."
+}, {
+	"id": 115,
+	"Name": "Glutton Train",
+	"Stats": [{
+		"LV": 25,
+		"EXP": 2486,
+		"HP": 2200
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": -20,
+		"Fire": 25,
+		"Ice": -25,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Hammer Knuckle",
+        "Rate": 100.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Bridge of Evil"
+	],
+	"Description": "A demon that fused with a train's engine, causing it to run amok."
+}, {
+	"id": 116,
+	"Name": "Bathin",
+	"Stats": [{
+		"LV": 27,
+		"EXP": 2689,
+		"HP": 2400
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": -25,
+		"Thunder": 50,
+		"Light": 25,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Reflector Ray",
+        "Rate": 100.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Underground Sorcery Lab"
+	],
+	"Description": "A demon with the ability to reflect like light."
+}, {
+	"id": 117,
+	"Name": "Gebel",
+	"Stats": [{
+		"LV": 30,
+		"EXP": 2994,
+		"HP": 2800
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 50,
+		"Light": 0,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"",
+		"",
+		""
+	],
+	"Description": "A man who was offered to hell but managed to survive. Miriam's friend."
+}, {
+	"id": 118,
+	"Name": "Bloodless",
+	"Stats": [{
+		"LV": 35,
+		"EXP": 3501,
+		"HP": 3200
+	}],
+	"Resist": [{
+		"Slash": -10,
+		"Thrust": -25,
+		"Strike": 25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": -25,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Blood Steal",
+        "Rate": 100.00,
+        "Type": "Conjure"
+    }],
+	"Area": [
+		"Dian Cecht Cathedral"
+	],
+	"Description": "A vampire who can manipulate blood. She bathes thrice a day without fail."
+}, {
+	"id": 119,
+	"Name": "Alfred",
+	"Stats": [{
+		"LV": 400,
+		"EXP": 4009,
+		"HP": 3500
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 25,
+		"Ice": 25,
+		"Thunder": 25,
+		"Light": 50,
+		"Darkness": 25,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Hidden Desert"
+	],
+	"Description": "A grey-bearded alchemist who had a hand in the demon summoning ritual."
+}, {
+	"id": 120,
+	"Name": "Doppelganger",
+	"Stats": [{
+		"LV": 43,
+		"EXP": 4313,
+		"HP": 4000
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 80,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Shadow Tracer",
+        "Rate": 100.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Secret Sorcery Lab"
+	],
+	"Description": "A demon that assumes the form of whatever it intends to kill."
+}, {
+	"id": 121,
+	"Name": "Orobas",
+	"Stats": [{
+		"LV": 45,
+		"EXP": 4516,
+		"HP": 4500
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 50,
+		"Strike": -50,
+		"Fire": -25,
+		"Ice": 25,
+		"Thunder": 0,
+		"Light": -50,
+		"Darkness": 50,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Invert",
+        "Rate": 100.00,
+        "Type": "Skill"
+    }],
+	"Area": [
+		"Inferno Cave"
+	],
+	"Description": "A demon who can alter gravity's pull on himself. Half-man, half-stallion."
+}, {
+	"id": 122,
+	"Name": "Zangetsu",
+	"Stats": [{
+		"LV": 50,
+		"EXP": 5024,
+		"HP": 5963
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": 25,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 25,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 80,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Oriental Sorcery Lab"
+	],
+	"Description": "The strongest demonslayer who crossed the sea in search of revenge."
+}, {
+	"id": 123,
+	"Name": "Valefar",
+	"Stats": [{
+		"LV": 45,
+		"EXP": 4516,
+		"HP": 3000
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": 25,
+		"Fire": 25,
+		"Ice": 25,
+		"Thunder": 25,
+		"Light": -25,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 50,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Gold Bullet",
+        "Rate": 100.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Den of Behemoths"
+	],
+	"Description": "A demon who draws power from coin. His fortune has waned of late."
+}, {
+	"id": 124,
+	"Name": "Gremory",
+	"Stats": [{
+		"LV": 49,
+		"EXP": 4955,
+		"HP": 6666
+	}],
+	"Resist": [{
+		"Slash": 40,
+		"Thrust": 40,
+		"Strike": 40,
+		"Fire": 25,
+		"Ice": 25,
+		"Thunder": 25,
+		"Light": -25,
+		"Darkness": 50,
+		"Poison": 0,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Dimension Shift",
+        "Rate": 100.00,
+        "Type": "Directional"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A demoness of half-human, half-beast form. She presides over the moon."
+}, {
+	"id": 125,
+	"Name": "Dominique",
+	"Stats": [{
+		"LV": 47,
+		"EXP": 4719,
+		"HP": 4989
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": 25,
+		"Fire": 50,
+		"Ice": 50,
+		"Thunder": 50,
+		"Light": 75,
+		"Darkness": -25,
+		"Poison": 0,
+		"Curses": 80,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A fool who believed demonic power would aller her to transcend God."
+}, {
+	"id": 126,
+	"Name": "Bael",
+	"Stats": [{
+		"LV": 60,
+		"EXP": 0,
+		"HP": 4444
+	}],
+	"Resist": [{
+		"Slash": 100,
+		"Thrust": 100,
+		"Strike": 100,
+		"Fire": 100,
+		"Ice": 100,
+		"Thunder": 100,
+		"Light": 100,
+		"Darkness": 100,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "King of Kings, and high ruler over all demonkind."
+}, {
+	"id": 127,
+	"Name": "Orlok Dracule",
+	"Stats": [{
+		"LV": 71,
+		"EXP": 10765,
+		"HP": 10000
+	}],
+	"Resist": [{
+		"Slash": 25,
+		"Thrust": 25,
+		"Strike": 25,
+		"Fire": 25,
+		"Ice": 25,
+		"Thunder": 25,
+		"Light": -25,
+		"Darkness": 50,
+		"Poison": 100,
+		"Curses": 100,
+		"Petrification": 100
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "Standstill",
+        "Rate": 100.00,
+        "Type": "Manipulative"
+    }],
+	"Area": [
+		"Glacial Tomb"
+	],
+	"Description": "A vampire who presides over the library. He can manipulate time."
+}, {
+	"id": 128,
+	"Name": "That IGA boss",
+	"Stats": [{
+		"LV": 0,
+		"EXP": 0,
+		"HP": 0
+	}],
+	"Resist": [{
+		"Slash": 0,
+		"Thrust": 0,
+		"Strike": 0,
+		"Fire": 0,
+		"Ice": 0,
+		"Thunder": 0,
+		"Light": 0,
+		"Darkness": 0,
+		"Poison": 0,
+		"Curses": 0,
+		"Petrification": 0
+	}],
+	"Drop": [{
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }, {
+        "Item": "",
+        "Rate": 0
+    }],
+	"Shard": [{
+        "Name": "",
+        "Rate": 0,
+        "Type": ""
+    }],
+	"Area": [
+		"Hall of Termination"
+	],
+	"Description": "(lol Do you guys have his info and stats???)"
 }]
