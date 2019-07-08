@@ -25,12 +25,11 @@ function getJSON() {
 		success: function(data){
 
 			for (var i=0; i<data.length; i++) {
-
-				if (searchWord == "") {
-					document.getElementById("result").innerHTML = "Enter something";
+				if (searchWord == "" || searchWord == " ") {
+					document.getElementById("result").innerHTML = "";
 				} else if (data[i].id == searchWord ||
-					data[i].Name.toLowerCase() == searchWord.toLowerCase() ||
-					data[i].Shard[0].Name.toLowerCase() == searchWord.toLowerCase() ||
+					data[i].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
+					data[i].Shard[0].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
 					data[i].Shard[0].Type.toLowerCase() == searchWord.toLowerCase() ||
 					data[i].Drop[0].Item.toLowerCase().includes(searchWord.toLowerCase()) ||
 					data[i].Drop[1].Item.toLowerCase().includes(searchWord.toLowerCase()) ||
@@ -74,12 +73,9 @@ function getJSON() {
 						dataResult += "</div>";
 					dataResult += "</div>";
 					dataResult += data[i].Description + "<hr>";
-
-					document.getElementById("result").innerHTML = dataResult;
 				}
-
 			}
-
+			document.getElementById("result").innerHTML = dataResult;
 		}
 	});
 }
@@ -96,22 +92,22 @@ function showAll() {
 
 			for (var i=0; i<data.length; i++) {
 				dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
-				dataResult += "LV: " + data[i].Stats[0].LV + " | EXP: " + data[i].Stats[0].EXP + " | HP: " + data[i].Stats[0].HP + "<br>";
+				dataResult += "<img style='vertical-align:middle' src='img/stat-lv.png'> " + data[i].Stats[0].LV + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-exp.png'> " + data[i].Stats[0].EXP + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-hp.png'> " + data[i].Stats[0].HP + "<br>";
 
 				dataResult += "<div class='columns'>";
 					dataResult += "<div class='column is-half'>";
 					dataResult += "<br><b>Resist: </b><br>";
-					dataResult += "- Slash: " + data[i].Resist[0].Slash + "<br>";
-					dataResult += "- Thrust: " + data[i].Resist[0].Thrust + "<br>";
-					dataResult += "- Strike: " + data[i].Resist[0].Strike + "<br>";
-					dataResult += "- Fire: " + data[i].Resist[0].Fire + "<br>";
-					dataResult += "- Ice: " + data[i].Resist[0].Ice + "<br>";
-					dataResult += "- Thunder: " + data[i].Resist[0].Thunder + "<br>";
-					dataResult += "- Light: " + data[i].Resist[0].Light + "<br>";
-					dataResult += "- Darkness: " + data[i].Resist[0].Darkness + "<br>";
-					dataResult += "- Poison: " + data[i].Resist[0].Poison + "<br>";
-					dataResult += "- Curses: " + data[i].Resist[0].Curses + "<br>";
-					dataResult += "- Petrification: " + data[i].Resist[0].Petrification + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-slash.png'> - Slash: " + data[i].Resist[0].Slash + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-thrust.png'> - Thrust: " + data[i].Resist[0].Thrust + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-strike.png'> - Strike: " + data[i].Resist[0].Strike + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-fire.png'> - Fire: " + data[i].Resist[0].Fire + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-ice.png'> - Ice: " + data[i].Resist[0].Ice + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-thunder.png'> - Thunder: " + data[i].Resist[0].Thunder + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-light.png'> - Light: " + data[i].Resist[0].Light + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-darkness.png'> - Darkness: " + data[i].Resist[0].Darkness + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-poison.png'> - Poison: " + data[i].Resist[0].Poison + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-curses.png'> - Curses: " + data[i].Resist[0].Curses + "<br>";
+					dataResult += "<img style='vertical-align:middle' src='img/res-petrification.png'> - Petrification: " + data[i].Resist[0].Petrification + "<br>";
 					dataResult += "</div>";
 
 					dataResult += "<div class='column'>";
@@ -131,10 +127,8 @@ function showAll() {
 					dataResult += "</div>";
 				dataResult += "</div>";
 				dataResult += data[i].Description + "<hr>";
-
-				document.getElementById("result").innerHTML = dataResult;
 			}
-
+			document.getElementById("result").innerHTML = dataResult;
 		}
 	});
 }
