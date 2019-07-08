@@ -31,11 +31,11 @@ function getJSON() {
 					data[i].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
 					data[i].Shard[0].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
 					data[i].Shard[0].Type.toLowerCase() == searchWord.toLowerCase() ||
-					data[i].Drop[0].Item.toLowerCase().includes(searchWord.toLowerCase()) ||
-					data[i].Drop[1].Item.toLowerCase().includes(searchWord.toLowerCase()) ||
-					data[i].Drop[2].Item.toLowerCase().includes(searchWord.toLowerCase()) ||
-					data[i].Drop[3].Item.toLowerCase().includes(searchWord.toLowerCase())) {
-
+					(data[i].Drop[0].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ||
+					(data[i].Drop[1].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ||
+					(data[i].Drop[2].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ||
+					(data[i].Drop[3].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ) {
+					
 					// Search one or multiple results
 					dataResult += "<div class='content'>"
 					dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
