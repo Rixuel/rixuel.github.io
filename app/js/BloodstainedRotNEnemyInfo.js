@@ -26,7 +26,7 @@ function getJSON() {
 
 			for (var i=0; i<data.length; i++) {
 				if (searchWord == "" || searchWord == " ") {
-					document.getElementById("result").innerHTML = "";
+					// Do nothing
 				} else if (data[i].id == searchWord ||
 					data[i].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
 					data[i].Shard[0].Name.toLowerCase().includes(searchWord.toLowerCase()) ||
