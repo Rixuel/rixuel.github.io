@@ -21,6 +21,7 @@
 	}
 	hr {
 		border: 2px solid #000;
+		margin-bottom: 8px;
 	}
 	.AAA {
 		background-color: #00ff00;
@@ -39,7 +40,7 @@
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
-		margin-bottom: 10px;
+		margin-bottom: 20px;
 		padding: 10px;
 		width: 1080px;
 	}
@@ -82,13 +83,29 @@
 	}
 
 	.footer {
-		background-color: #777;
+		background-color: #121416;
 		border-top: 1px solid #da0c3c;
+		color: #FFFFFF;
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 10px;
 		padding: 10px;
 		width: 1080px;
+	}
+
+	.footer a {
+		color: #FFF;
+	}
+
+	.footer a:hover {
+		color: #da0c3c;
+	}
+
+	.footer h1 {
+		border-bottom: 1px solid #da0c3c;
+		color: #da0c3c;
+		font-family: "Didact Gothic", Consolas, Arial;
+		font-size: 1.4em;
 	}
 	</style>
 </head>
@@ -104,12 +121,32 @@
 		<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
 	</div>
 
-	<div class="content">
-		<div id="result"></div>
-	</div>
+	<div id="result"></div>
 
-	<div class="footer">
-		Footer Stuff
+
+	<div class="columns footer">
+		<div class="column">
+			<h1>Official Links</h1>
+			<ul>
+				<li>- <a href="https://playbloodstained.com">Bloodstained</a></li>
+				<li>- <a href="https://bloodstained.forums.net/">Bloodstained Forums</a></li>
+			</ul>
+		</div>
+		<div class="column">
+			<h1>Bloodstained Social Network</h1>
+			<ul>
+				<li>- <a href="https://www.facebook.com/bloodstainedrotn">Facebook Group</a></li>
+				<li>- <a href="https://www.youtube.com/BloodstainedRitualoftheNight">YouTube</a></li>
+				<li>- <a href="https://twitter.com/SwordOrWhip">Twitter</a></li>
+				<li>- <a href="https://www.reddit.com/r/Bloodstained">Reddit</a></li>
+			</ul>
+		</div>
+		<div class="column">
+			<h1>Code by Rixuel</h1>
+			Found an error? Let me know:<br>
+			Discord: Rixuel#4336<br>
+			Twitter: Rixuel<br>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/BloodstainedRotNEnemyInfo.js"></script>

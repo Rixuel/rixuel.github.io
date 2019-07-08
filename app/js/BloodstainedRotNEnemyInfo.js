@@ -37,6 +37,7 @@ function getJSON() {
 					data[i].Drop[3].Item.toLowerCase().includes(searchWord.toLowerCase())) {
 
 					// Search one or multiple results
+					dataResult += "<div class='content'>"
 					dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
 					dataResult += "<img style='vertical-align:middle' src='img/stat-lv.png'> " + data[i].Stats[0].LV + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-exp.png'> " + data[i].Stats[0].EXP + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-hp.png'> " + data[i].Stats[0].HP + "<br>";
 
@@ -72,7 +73,8 @@ function getJSON() {
 						}
 						dataResult += "</div>";
 					dataResult += "</div>";
-					dataResult += data[i].Description + "<hr>";
+					dataResult += "<hr>" + data[i].Description;
+					dataResult += "</div>"
 				}
 			}
 			document.getElementById("result").innerHTML = dataResult;
@@ -91,6 +93,7 @@ function showAll() {
 		success: function(data){
 
 			for (var i=0; i<data.length; i++) {
+				dataResult += "<div class='content'>"
 				dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
 				dataResult += "<img style='vertical-align:middle' src='img/stat-lv.png'> " + data[i].Stats[0].LV + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-exp.png'> " + data[i].Stats[0].EXP + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-hp.png'> " + data[i].Stats[0].HP + "<br>";
 
@@ -126,7 +129,8 @@ function showAll() {
 					}
 					dataResult += "</div>";
 				dataResult += "</div>";
-				dataResult += data[i].Description + "<hr>";
+				dataResult += "<hr>" + data[i].Description;
+				dataResult += "</div>"
 			}
 			document.getElementById("result").innerHTML = dataResult;
 		}
