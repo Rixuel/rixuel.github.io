@@ -28,13 +28,14 @@ hr {
 }
 .searchbar {
 	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
 	text-align: center;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 20px;
-	padding: 10px;
-	width: 900px;
+	padding: 0px;
+	max-width: 900px;
 }
 #searchInput {
 	background-color: #39000e;
@@ -43,7 +44,7 @@ hr {
 	font-family: "Raleway", Arial;
 	font-size: 1.2em;
 	padding: 10px;
-	width: 600px;
+	width: 100%;
 }
 #searchButton {
 	background-color: #39000e;
@@ -52,6 +53,7 @@ hr {
 	font-family: "Raleway", Arial;
 	font-size: 1.2em;
 	padding: 10px;
+	width: 100%;
 }
 #searchButton:hover {
 	background-color: #990000;
@@ -59,12 +61,13 @@ hr {
 }
 .content {
 	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
 	color: #FFFFFF;
 	font-size: 1.0em;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 20px;
-	width: 900px;
+	max-width: 900px;
 }
 .content h1 {
 	color: #da0c3c;
@@ -77,12 +80,13 @@ hr {
 .footer {
 	background-color: rgba(18, 20, 22, 0.80);
 	border-top: 1px solid #da0c3c;
+	/*border: 2px solid #0cda3c;*/
 	color: #FFFFFF;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 50px;
 	padding: 10px;
-	width: 900px;
+	max-width: 900px;
 }
 
 .footer a {

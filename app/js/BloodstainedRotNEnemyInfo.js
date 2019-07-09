@@ -1,6 +1,6 @@
 var JSONurl = "../app/json/BloodstainedRotNEnemyInfo.json";
 var searchWord = "";
-var searchBarInput = document.getElementById("searchBar");
+var searchBarInput = document.getElementById("searchInput");
 searchBarInput.addEventListener("keyup", function(event) {
 	if (event.keyCode === 13) {
 		event.preventDefault();
@@ -9,7 +9,7 @@ searchBarInput.addEventListener("keyup", function(event) {
 });
 
 function searchInput() {
-	searchWord = document.getElementById("searchBar").value;
+	searchWord = document.getElementById("searchInput").value;
 	//console.log("searchWord: " + searchWord);
 	$('#result').html("");
 }
@@ -35,7 +35,7 @@ function getJSON() {
 					(data[i].Drop[1].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ||
 					(data[i].Drop[2].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ||
 					(data[i].Drop[3].Item.toLowerCase().includes(searchWord.toLowerCase()) && !/^\d+$/.test(searchWord)) ) {
-					
+
 					// Search one or multiple results
 					dataResult += "<div class='content'>"
 					dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
