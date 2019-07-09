@@ -20,7 +20,7 @@
 		<img src="img/Bloodstained-logo.png">
 	</div>
 
-	<div class="columns searchbar">
+	<!--div class="columns searchbar">
 		<div class="column">
 			<input type="text" id="searchInput" placeholder="Search enemies by ID, name, item, shard, shard type..." autofocus>
 		</div>
@@ -28,6 +28,11 @@
 			<button type="submit" id="searchButton" onclick="searchInput();getJSON();">Find</button>
 			<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
 		</div>
+	</div-->
+	<div class="searchbar">
+		<input type="text" id="searchInput" placeholder="Search enemies by ID, name, item, shard, shard type..." autofocus>
+		<button type="submit" id="searchButton" onclick="searchInput();getJSON();">Find</button>
+		<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
 	</div>
 
 	<div id="result"></div>
