@@ -6,6 +6,19 @@ html, body {
 	background-attachment: fixed;
 	font-family: "Raleway", Arial;
 }
+@media only screen and (max-width: 960px) {
+	.searchbar {
+		margin-top: 80px !important;
+	}
+	.logo {
+		width: 600px !important;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.searchbar {
+		margin-top: 160px !important;
+	}
+}
 img {
 	border: 0;
 	max-width: 100%;
@@ -15,9 +28,7 @@ hr {
 	border: 2px solid #000;
 	margin-bottom: 8px;
 }
-.AAA {
-	background-color: #00ff00;
-}
+
 .logo {
 	text-align: center;
 	margin-left: auto;
