@@ -9,113 +9,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" type="image/png" href="img/favicon.png">
 	<link rel="stylesheet" type="text/css" href="css/bulma.css">
+	<link rel="stylesheet" href="css/bloodstained.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 	<script src="js/jquery-3.4.1.min.js"></script>
-
-	<style>
-	html, body {
-		background-color: #000;
-		background-image: url("img/bloodstainedbackground.gif");
-	    background-position: right top;
-	    background-repeat: no-repeat;
-	    background-attachment: fixed;
-		font-family: "Raleway", Arial;
-	}
-	img {
-	    border: 0;
-	    max-width: 100%;
-	    max-height: 100%;
-	}
-	hr {
-		border: 2px solid #000;
-		margin-bottom: 8px;
-	}
-	.AAA {
-		background-color: #00ff00;
-	}
-	.logo {
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		max-width: 100%;
-	    max-height: 100%;
-		width: 700px;
-	}
-	.searchbar {
-		background-color: rgba(18, 20, 22, 0.80);
-		text-align: center;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 10px;
-		margin-bottom: 20px;
-		padding: 10px;
-		width: 900px;
-	}
-	#searchBar {
-		background-color: #39000e;
-		border: 2px solid #da0c3c;
-		color: #ff0000;
-		font-family: "Didact Gothic", Arial;
-		font-size: 1.2em;
-		padding: 10px;
-		width: 600px;
-	}
-	#searchButton {
-		background-color: #39000e;
-		border: 2px solid #da0c3c;
-		color: #ff0000;
-		font-family: "Didact Gothic", Arial;
-		font-size: 1.2em;
-		padding: 10px;
-	}
-	#searchButton:hover {
-		background-color: #990000;
-		color: #ff2266;
-	}
-	.content {
-		background-color: rgba(18, 20, 22, 0.80);
-		color: #FFFFFF;
-		font-size: 1.0em;
-		margin-left: auto;
-		margin-right: auto;
-		padding: 20px;
-		width: 900px;
-	}
-	.content h1 {
-		color: #da0c3c;
-		font-family: "Didact Gothic", Consolas, Arial;
-	}
-	.statsNum {
-		color: #0f0;
-	}
-
-	.footer {
-		background-color: rgba(18, 20, 22, 0.80);
-		border-top: 1px solid #da0c3c;
-		color: #FFFFFF;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 50px;
-		padding: 10px;
-		width: 900px;
-	}
-
-	.footer a {
-		color: #FFF;
-	}
-
-	.footer a:hover {
-		color: #da0c3c;
-	}
-
-	.footer h1 {
-		border-bottom: 1px solid #da0c3c;
-		color: #da0c3c;
-		font-family: "Didact Gothic", Consolas, Arial;
-		font-size: 1.4em;
-	}
-	</style>
 </head>
 
 <body>
@@ -123,10 +20,14 @@
 		<img src="img/Bloodstained-logo.png">
 	</div>
 
-	<div class="searchbar">
-		<input type="text" id="searchBar" placeholder="Search enemies by ID, name, item, shard, shard type..." autofocus>
-		<button type="submit" id="searchButton" onclick="searchInput();getJSON();">Find</button>
-		<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
+	<div class="columns searchbar">
+		<div class="column">
+			<input type="text" id="searchInput" placeholder="Search enemies by ID, name, item, shard, shard type..." autofocus>
+		</div>
+		<div class="column">
+			<button type="submit" id="searchButton" onclick="searchInput();getJSON();">Find</button>
+			<button type="submit" id="searchButton" onclick="showAll();">Show All</button>
+		</div>
 	</div>
 
 	<div id="result"></div>
