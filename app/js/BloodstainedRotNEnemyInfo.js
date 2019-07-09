@@ -94,7 +94,7 @@ function showAll() {
 
 			for (var i=0; i<data.length; i++) {
 				dataResult += "<div class='content'>"
-				dataResult += "<h1><b>" + data[i].Name + " (</b>ID: " + data[i].id + ")</h1>";
+				dataResult += "<h1><b>" + data[i].Name + " (</b>ID:&nbsp;" + data[i].id + ")</h1>";
 				dataResult += "<img style='vertical-align:middle' src='img/stat-lv.png'> " + data[i].Stats[0].LV + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-exp.png'> " + data[i].Stats[0].EXP + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-hp.png'> " + data[i].Stats[0].HP + "<br>";
 
 				dataResult += "<div class='columns'>";
