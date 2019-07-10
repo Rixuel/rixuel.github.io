@@ -66,7 +66,7 @@ function getJSON() {
 		dataType: 'json',
 		mimeType: "application/json",
 		success: function(data){
-			for (var i=0; i<data.length; i++) {
+			for (var i=0, len=data.length; i<len; i++) {
 				if (searchWord == "" || searchWord == " ") {
 					// Do nothing
 				} else if (data[i].id == searchWord ||
@@ -96,7 +96,7 @@ function showAll() {
 		dataType: 'json',
 		mimeType: "application/json",
 		success: function(data){
-			for (var i=0; i<data.length; i++) {
+			for (var i=0, len=data.length; i<len; i++) {
 				dataResult += templateInfo(data, i);
 			}
 			document.getElementById("result").innerHTML = dataResult;
