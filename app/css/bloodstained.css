@@ -84,6 +84,10 @@ hr {
 	color: #da0c3c;
 	font-family: "Lora", Consolas, Arial;
 }
+.content .otherID {
+	color: #da0c3c;
+	font-family: Consolas, Arial;
+}
 .statsNum {
 	color: #0f0;
 }

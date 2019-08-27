@@ -1,7 +1,7 @@
 [{
 	"id": 1,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3003",
+	"enemyID": "N3003",
 	"Name": "Morte",
 	"Stats": [{
 		"LV": 4,
@@ -47,8 +47,8 @@
 	"Description": "A lesser demon that must draw form and sentience from other sources."
 }, {
 	"id": 2,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3006",
+	"enemyID": "N3006",
 	"Name": "Seama",
 	"Stats": [{
 		"LV": 5,
@@ -92,8 +92,8 @@
 	"Description": "A pelagic multiped that occasionally leaves the sea to torment the land."
 }, {
 	"id": 3,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3005",
+	"enemyID": "N3005",
 	"Name": "Cannon Morte",
 	"Stats": [{
 		"LV": 5,
@@ -137,8 +137,8 @@
 	"Description": "A morte that has possessed a cannon and gained the ability to hurl fire."
 }, {
 	"id": 4,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3007",
+	"enemyID": "N3007",
 	"Name": "Aello",
 	"Stats": [{
 		"LV": 6,
@@ -184,8 +184,8 @@
 	"Description": "A half-bird creature that can raise winds with its wings."
 }, {
 	"id": 5,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3014",
+	"enemyID": "N3013",
 	"Name": "Ghost",
 	"Stats": [{
 		"LV": 6,
@@ -230,8 +230,8 @@
 	"Description": "An apparition that slows the movement of whomever it touches."
 }, {
 	"id": 6,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3015",
+	"enemyID": "N3015",
 	"Name": "Dullahammer",
 	"Stats": [{
 		"LV": 7,
@@ -275,8 +275,8 @@
 	"Description": "An undead knight that wields his own head as a weapon."
 }, {
 	"id": 7,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3051",
+	"enemyID": "N3051",
 	"Name": "Giant Rat",
 	"Stats": [{
 		"LV": 7,
@@ -320,8 +320,8 @@
 	"Description": "A monstrous rodent attended by a retinue of smaller rats."
 }, {
 	"id": 8,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3004",
+	"enemyID": "N3004",
 	"Name": "Bone Morte",
 	"Stats": [{
 		"LV": 8,
@@ -366,8 +366,8 @@
 	"Description": "A morte that has possessed a human, destroying its flesh in the process."
 }, {
 	"id": 9,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3029",
+	"enemyID": "N3029",
 	"Name": "Bat",
 	"Stats": [{
 		"LV": 7,
@@ -413,8 +413,8 @@
 	"Description": "A bat, but really evil."
 }, {
 	"id": 10,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3073",
+	"enemyID": "N3073",
 	"Name": "Gieremund",
 	"Stats": [{
 		"LV": 8,
@@ -459,8 +459,8 @@
 	"Description": "A jet black wolf whose hunger is insatiable."
 }, {
 	"id": 11,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3105",
+	"enemyID": "N3105",
 	"Name": "Blood Grinder Knight",
 	"Stats": [{
 		"LV": 9,
@@ -505,8 +505,8 @@
 	"Description": "A demon knight who deftly wields his spinning blade."
 }, {
 	"id": 12,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3080",
+	"enemyID": "N3080",
 	"Name": "Sabnock",
 	"Stats": [{
 		"LV": 10,
@@ -550,8 +550,8 @@
 	"Description": "A toughened, leonine warrior demon."
 }, {
 	"id": 13,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3066",
+	"enemyID": "N3066",
 	"Name": "Moco Weed",
 	"Stats": [{
 		"LV": 9,
@@ -595,8 +595,8 @@
 	"Description": "Predatory grass that snaps at anyone foolish enough to tread on it."
 }, {
 	"id": 14,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3042",
+	"enemyID": "N3042",
 	"Name": "Toad",
 	"Stats": [{
 		"LV": 10,
@@ -641,8 +641,8 @@
 	"Description": "A savage amphibian that feasts on human flesh."
 }, {
 	"id": 15,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3065",
+	"enemyID": "N3065",
 	"Name": "Plume Parma",
 	"Stats": [{
 		"LV": 10,
@@ -686,8 +686,8 @@
 	"Description": "A floating, pig-like creature with a carnivorous bent."
 }, {
 	"id": 16,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3011",
+	"enemyID": "N3011",
 	"Name": "Barbatos",
 	"Stats": [{
 		"LV": 11,
@@ -732,8 +732,8 @@
 	"Description": "A fearsome marksman who never misses his quarry."
 }, {
 	"id": 17,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3091",
+	"enemyID": "N3091",
 	"Name": "Carabosse",
 	"Stats": [{
 		"LV": 11,
@@ -777,8 +777,8 @@
 	"Description": "A jealous, evil faerie who dispenses curses."
 }, {
 	"id": 18,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3034",
+	"enemyID": "N3034",
 	"Name": "Simian",
 	"Stats": [{
 		"LV": 12,
@@ -823,8 +823,8 @@
 	"Description": "A murderous ape with no concept of mercy."
 }, {
 	"id": 19,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3075",
+	"enemyID": "N3075",
 	"Name": "Zagan",
 	"Stats": [{
 		"LV": 13,
@@ -868,8 +868,8 @@
 	"Description": "A demon who has assumed the form of a cow."
 }, {
 	"id": 20,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3100",
+	"enemyID": "N3100",
 	"Name": "Poltergeist",
 	"Stats": [{
 		"LV": 14,
@@ -916,8 +916,8 @@
 	"Description": "A portrait that has come to life. It seeks new subjects for its canvas."
 }, {
 	"id": 21,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3104",
+	"enemyID": "N3104",
 	"Name": "Ordog",
 	"Stats": [{
 		"LV": 13,
@@ -962,8 +962,8 @@
 	"Description": "A fiery hellhound composed of rotting flesh."
 }, {
 	"id": 22,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3053",
+	"enemyID": "N3053",
 	"Name": "Gargoyle",
 	"Stats": [{
 		"LV": 12,
@@ -1008,8 +1008,8 @@
 	"Description": "A stone statue that sorcery has brought to life."
 }, {
 	"id": 23,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3079",
+	"enemyID": "N3079",
 	"Name": "Killer Barber",
 	"Stats": [{
 		"LV": 13,
@@ -1053,8 +1053,8 @@
 	"Description": "A murderous barber turned demonic. He's seeking pretty women to scissor."
 }, {
 	"id": 24,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3055",
+	"enemyID": "N3055",
 	"Name": "Demon",
 	"Stats": [{
 		"LV": 13,
@@ -1100,8 +1100,8 @@
 	"Description": "A denizen of the demon realm. Practices sorcery."
 }, {
 	"id": 25,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3001",
+	"enemyID": "N3001",
 	"Name": "Buer",
 	"Stats": [{
 		"LV": 14,
@@ -1147,8 +1147,8 @@
 	"Description": "A leonine demon with five legs."
 }, {
 	"id": 26,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3116",
+	"enemyID": "N3116",
 	"Name": "Nyabon",
 	"Stats": [{
 		"LV": 15,
@@ -1193,8 +1193,8 @@
 	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
 }, {
 	"id": 27,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3082",
+	"enemyID": "N3082",
 	"Name": "Scythe Mite",
 	"Stats": [{
 		"LV": 14,
@@ -1238,8 +1238,8 @@
 	"Description": "A giant bug with an unquenchable thirst for blood."
 }, {
 	"id": 28,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3090",
+	"enemyID": "N3090",
 	"Name": "Dullahammer Head",
 	"Stats": [{
 		"LV": 15,
@@ -1284,8 +1284,8 @@
 	"Description": "A dullahammer head that lives on as a separate, vengeful entity."
 }, {
 	"id": 29,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3084",
+	"enemyID": "N3084",
 	"Name": "Buer Armor",
 	"Stats": [{
 		"LV": 16,
@@ -1331,8 +1331,8 @@
 	"Description": "A demonic knight that uses buers as throwing weapons."
 }, {
 	"id": 30,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2002",
+	"enemyID": "N2002",
 	"Name": "Wolfman",
 	"Stats": [{
 		"LV": 17,
@@ -1376,8 +1376,8 @@
 	"Description": "A monster whose lupine hunger for human flesh awakens at the full moon."
 }, {
 	"id": 31,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3033",
+	"enemyID": "N3033",
 	"Name": "Thunder Elemental",
 	"Stats": [{
 		"LV": 16,
@@ -1421,8 +1421,8 @@
 	"Description": "A magical manifestation of thunder birthed by wicked means."
 }, {
 	"id": 32,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3017",
+	"enemyID": "N3017",
 	"Name": "Carriage Morte",
 	"Stats": [{
 		"LV": 17,
@@ -1467,8 +1467,8 @@
 	"Description": "A morte that has seized a gun carriage and acquired mobility."
 }, {
 	"id": 33,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3063",
+	"enemyID": "N3063",
 	"Name": "Dantalion",
 	"Stats": [{
 		"LV": 17,
@@ -1512,8 +1512,8 @@
 	"Description": "A demon who inhabits a book."
 }, {
 	"id": 34,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3103",
+	"enemyID": "N3103",
 	"Name": "Rul'sha",
 	"Stats": [{
 		"LV": 18,
@@ -1557,8 +1557,8 @@
 	"Description": "A lovely winged demoness who gives blessings to those she favors."
 }, {
 	"id": 35,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3064",
+	"enemyID": "N3064",
 	"Name": "Decarabia",
 	"Stats": [{
 		"LV": 19,
@@ -1602,8 +1602,8 @@
 	"Description": "A demon who presides over the stars. Well versed in gemstones."
 }, {
 	"id": 36,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3010",
+	"enemyID": "N3010",
 	"Name": "Shovel Armor",
 	"Stats": [{
 		"LV": 20,
@@ -1647,8 +1647,8 @@
 	"Description": "A demon knight who skillfully wields his shovel."
 }, {
 	"id": 37,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3099",
+	"enemyID": "N3099",
 	"Name": "Malediction",
 	"Stats": [{
 		"LV": 19,
@@ -1693,8 +1693,8 @@
 	"Description": "A dullahammer head that has gained the power to turn prey to stone."
 }, {
 	"id": 38,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3008",
+	"enemyID": "N3008",
 	"Name": "Celaeno",
 	"Stats": [{
 		"LV": 20,
@@ -1739,8 +1739,8 @@
 	"Description": "A half-bird creature with power over thunderclouds."
 }, {
 	"id": 39,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3111",
+	"enemyID": "N3111",
 	"Name": "Shield Outsider",
 	"Stats": [{
 		"LV": 21,
@@ -1785,8 +1785,8 @@
 	"Description": "A defender of the castle whose shield is among the demon realm's finest."
 }, {
 	"id": 40,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3114",
+	"enemyID": "N3114",
 	"Name": "Puppy",
 	"Stats": [{
 		"LV": 24,
@@ -1831,8 +1831,8 @@
 	"Description": "The reanimated head of a hound that perished inside the castle."
 }, {
 	"id": 41,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3058",
+	"enemyID": "N3058",
 	"Name": "Lili",
 	"Stats": [{
 		"LV": 20,
@@ -1876,8 +1876,8 @@
 	"Description": "A half-rabbit demon who has lopped off many a head."
 }, {
 	"id": 42,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3019",
+	"enemyID": "N3019",
 	"Name": "Assassin",
 	"Stats": [{
 		"LV": 23,
@@ -1921,8 +1921,8 @@
 	"Description": "An assassin turned monster."
 }, {
 	"id": 43,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2009",
+	"enemyID": "N2009",
 	"Name": "Dragon",
 	"Stats": [{
 		"LV": 27,
@@ -1967,8 +1967,8 @@
 	"Description": "A monster known for its extraordinary battle prowess."
 }, {
 	"id": 44,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3025",
+	"enemyID": "N3025",
 	"Name": "Kunekune",
 	"Stats": [{
 		"LV": 71,
@@ -2012,8 +2012,8 @@
 	"Description": "An eldritch creature that inflicts a fatal curse on whomever it detects."
 }, {
 	"id": 45,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3043",
+	"enemyID": "N3043",
 	"Name": "Poison Toad",
 	"Stats": [{
 		"LV": 18,
@@ -2060,8 +2060,8 @@
 	"Description": "An amphibian that secretes a deadly poison through its skin."
 }, {
 	"id": 46,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3092",
+	"enemyID": "N3092",
 	"Name": "Sidhe",
 	"Stats": [{
 		"LV": 19,
@@ -2105,8 +2105,8 @@
 	"Description": "A wicked faerie who spirits away children."
 }, {
 	"id": 47,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3024",
+	"enemyID": "N3024",
 	"Name": "Bomber Morte",
 	"Stats": [{
 		"LV": 23,
@@ -2150,8 +2150,8 @@
 	"Description": "A morte that has fused with a bomb. Keep away from open flames."
 }, {
 	"id": 48,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3070",
+	"enemyID": "N3070",
 	"Name": "Mimic",
 	"Stats": [{
 		"LV": 24,
@@ -2196,8 +2196,8 @@
 	"Description": "A predator that disguises itself as a treasure chest."
 }, {
 	"id": 49,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3102",
+	"enemyID": "N3102",
 	"Name": "Light Elemental",
 	"Stats": [{
 		"LV": 27,
@@ -2241,8 +2241,8 @@
 	"Description": "A magical manifestation of light birthed by wicked means."
 }, {
 	"id": 50,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3009",
+	"enemyID": "N3009",
 	"Name": "Ocypete",
 	"Stats": [{
 		"LV": 28,
@@ -2286,8 +2286,8 @@
 	"Description": "A half-bird creature that carries off human prey in the blink of an eye."
 }, {
 	"id": 51,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3087",
+	"enemyID": "N3087",
 	"Name": "Cyhyraeth",
 	"Stats": [{
 		"LV": 29,
@@ -2333,8 +2333,8 @@
 	"Description": "A demon with a chilling death cry."
 }, {
 	"id": 52,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3072",
+	"enemyID": "N3072",
 	"Name": "Chair Mimic",
 	"Stats": [{
 		"LV": 26,
@@ -2379,8 +2379,8 @@
 	"Description": "A creature that poses as a chair and spirits unwitting sitters elsewhere."
 }, {
 	"id": 53,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3012",
+	"enemyID": "N3012",
 	"Name": "Leraje",
 	"Stats": [{
 		"LV": 27,
@@ -2425,8 +2425,8 @@
 	"Description": "A demon skilled at archery."
 }, {
 	"id": 54,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3052",
+	"enemyID": "N3052",
 	"Name": "Bloodbringer",
 	"Stats": [{
 		"LV": 27,
@@ -2472,8 +2472,8 @@
 	"Description": "A demon who inhabits a sword and has put countless criminals to death."
 }, {
 	"id": 55,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3085",
+	"enemyID": "N3085",
 	"Name": "Lance Armor",
 	"Stats": [{
 		"LV": 28,
@@ -2518,8 +2518,8 @@
 	"Description": "An argent, lance-wielding knight."
 }, {
 	"id": 56,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3109",
+	"enemyID": "N3109",
 	"Name": "Tamako-Death",
 	"Stats": [{
 		"LV": 29,
@@ -2563,8 +2563,8 @@
 	"Description": "A battle-of-the-bands guitarist who melts faces, both literally and figuratively."
 }, {
 	"id": 57,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3109",
+	"enemyID": "N3037",
 	"Name": "Triwheel Buer",
 	"Stats": [{
 		"LV": 29,
@@ -2609,8 +2609,8 @@
 	"Description": "A three-wheeled chariot created through demon experimentation."
 }, {
 	"id": 58,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3077",
+	"enemyID": "N3077",
 	"Name": "Gamigin",
 	"Stats": [{
 		"LV": 29,
@@ -2655,8 +2655,8 @@
 	"Description": "A demon in horse form who meddles with the souls of the dead."
 }, {
 	"id": 59,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3093",
+	"enemyID": "N3093",
 	"Name": "Titania",
 	"Stats": [{
 		"LV": 29,
@@ -2701,8 +2701,8 @@
 	"Description": "A vespine faerie with dire poison in her sting."
 }, {
 	"id": 60,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3110",
+	"enemyID": "N3110",
 	"Name": "Axe Outsider",
 	"Stats": [{
 		"LV": 30,
@@ -2748,8 +2748,8 @@
 	"Description": "A toughened knight in armor who wields a magically modified axe."
 }, {
 	"id": 61,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3098",
+	"enemyID": "N3098",
 	"Name": "Scylla",
 	"Stats": [{
 		"LV": 30,
@@ -2793,8 +2793,8 @@
 	"Description": "A water monster with the head and torso of a beautiful woman."
 }, {
 	"id": 62,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3078",
+	"enemyID": "N3078",
 	"Name": "Forneus",
 	"Stats": [{
 		"LV": 30,
@@ -2838,8 +2838,8 @@
 	"Description": "A demon fish that survived the age of myth."
 }, {
 	"id": 63,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3022",
+	"enemyID": "N3022",
 	"Name": "Deeseama",
 	"Stats": [{
 		"LV": 30,
@@ -2883,8 +2883,8 @@
 	"Description": "A monster that hails from the aphotic reaches of the ocean."
 }, {
 	"id": 64,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3044",
+	"enemyID": "N3044",
 	"Name": "Water Leaper",
 	"Stats": [{
 		"LV": 31,
@@ -2929,8 +2929,8 @@
 	"Description": "An amphibious monster with wings and a serpent's tail. Also called \"Llamhigyn Y Dwr.\""
 }, {
 	"id": 65,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3076",
+	"enemyID": "N3076",
 	"Name": "Glashtyn",
 	"Stats": [{
 		"LV": 31,
@@ -2974,8 +2974,8 @@
 	"Description": "A monster that drags victims into the water. Often called a \"water horse.\""
 }, {
 	"id": 66,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3089",
+	"enemyID": "N3089",
 	"Name": "Seeker",
 	"Stats": [{
 		"LV": 31,
@@ -3019,8 +3019,8 @@
 	"Description": "A fiend that moves from wall to wall, training its evil gaze on passersby."
 }, {
 	"id": 67,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3056",
+	"enemyID": "N3056",
 	"Name": "Archdemon",
 	"Stats": [{
 		"LV": 32,
@@ -3066,8 +3066,8 @@
 	"Description": "A member of the demon nobility. Proficient in sorcery."
 }, {
 	"id": 68,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3014",
+	"enemyID": "N3014",
 	"Name": "Amy",
 	"Stats": [{
 		"LV": 33,
@@ -3111,8 +3111,8 @@
 	"Description": "A flame kindled by ill intent."
 }, {
 	"id": 69,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3002",
+	"enemyID": "N3002",
 	"Name": "Allocer",
 	"Stats": [{
 		"LV": 33,
@@ -3156,8 +3156,8 @@
 	"Description": "A leonine demon with eyes that burn red as hellfire."
 }, {
 	"id": 70,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3112",
+	"enemyID": "N3112",
 	"Name": "Vul'sha",
 	"Stats": [{
 		"LV": 34,
@@ -3201,8 +3201,8 @@
 	"Description": "A lovely demoness who is fond of slaughter."
 }, {
 	"id": 71,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2010",
+	"enemyID": "N2010",
 	"Name": "Living Fossil",
 	"Stats": [{
 		"LV": 37,
@@ -3246,8 +3246,8 @@
 	"Description": "Dragon bones imbued with false life by dark means."
 }, {
 	"id": 72,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3115",
+	"enemyID": "N3115",
 	"Name": "Rocky",
 	"Stats": [{
 		"LV": 35,
@@ -3291,8 +3291,8 @@
 	"Description": "The reanimated head of a hound that perished inside the castle."
 }, {
 	"id": 73,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3101",
+	"enemyID": "N3101",
 	"Name": "Dark Elemental",
 	"Stats": [{
 		"LV": 36,
@@ -3336,8 +3336,8 @@
 	"Description": "A magical manifestation of darkness birthed by wicked means."
 }, {
 	"id": 74,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3059",
+	"enemyID": "N3059",
 	"Name": "Lamashtu",
 	"Stats": [{
 		"LV": 37,
@@ -3381,8 +3381,8 @@
 	"Description": "A malevolent goddess proficient with the lash."
 }, {
 	"id": 75,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3113",
+	"enemyID": "N3113",
 	"Name": "Macaron",
 	"Stats": [{
 		"LV": 38,
@@ -3428,8 +3428,8 @@
 	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
 }, {
 	"id": 76,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3083",
+	"enemyID": "N3083",
 	"Name": "Blood Bug",
 	"Stats": [{
 		"LV": 36,
@@ -3473,8 +3473,8 @@
 	"Description": "A baleful insect with a jet black shell."
 }, {
 	"id": 77,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3032",
+	"enemyID": "N3032",
 	"Name": "Fire Elemental",
 	"Stats": [{
 		"LV": 37,
@@ -3518,8 +3518,8 @@
 	"Description": "A magical manifestation of the fire birthed by wicked means."
 }, {
 	"id": 78,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3119",
+	"enemyID": "N3119",
 	"Name": "Volcano Morte",
 	"Stats": [{
 		"LV": 37,
@@ -3563,8 +3563,8 @@
 	"Description": "A powerful morte that has drawn power from lava."
 }, {
 	"id": 79,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3123",
+	"enemyID": "N3123",
 	"Name": "Hellhound",
 	"Stats": [{
 		"LV": 38,
@@ -3608,8 +3608,8 @@
 	"Description": "A mad, murderous dog mantled in flame."
 }, {
 	"id": 80,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3086",
+	"enemyID": "N3086",
 	"Name": "Zepar",
 	"Stats": [{
 		"LV": 38,
@@ -3654,8 +3654,8 @@
 	"Description": "A lance-wielding demon knight clad in crimson armor."
 }, {
 	"id": 81,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3071",
+	"enemyID": "N3071",
 	"Name": "Deathtrap",
 	"Stats": [{
 		"LV": 38,
@@ -3700,8 +3700,8 @@
 	"Description": "A predator that disguises itself as a particularly enticing treasure chest."
 }, {
 	"id": 82,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3018",
+	"enemyID": "N3018",
 	"Name": "Gusion",
 	"Stats": [{
 		"LV": 38,
@@ -3747,8 +3747,8 @@
 	"Description": "A demon who takes the form of an ape."
 }, {
 	"id": 83,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3054",
+	"enemyID": "N3054",
 	"Name": "Gaap",
 	"Stats": [{
 		"LV": 39,
@@ -3792,8 +3792,8 @@
 	"Description": "A hideous, one-eyed demon."
 }, {
 	"id": 84,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3074",
+	"enemyID": "N3074",
 	"Name": "Haagenti",
 	"Stats": [{
 		"LV": 39,
@@ -3837,8 +3837,8 @@
 	"Description": "A winged, golden demon prized for its exquisitely flavorful meat."
 }, {
 	"id": 85,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3117",
+	"enemyID": "N3117",
 	"Name": "Kamikaze",
 	"Stats": [{
 		"LV": 40,
@@ -3882,8 +3882,8 @@
 	"Description": "A reanimated cat that perished inside the castle and has a grudge to settle."
 }, {
 	"id": 86,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3020",
+	"enemyID": "N3020",
 	"Name": "Ninja",
 	"Stats": [{
 		"LV": 39,
@@ -3927,8 +3927,8 @@
 	"Description": "An assassin from the Orient turned monster."
 }, {
 	"id": 87,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3067",
+	"enemyID": "N3067",
 	"Name": "Giant Moco",
 	"Stats": [{
 		"LV": 40,
@@ -3972,8 +3972,8 @@
 	"Description": "Predatory grass made immense through arcane experimentation."
 }, {
 	"id": 88,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3030",
+	"enemyID": "N3030",
 	"Name": "Giant Bat",
 	"Stats": [{
 		"LV": 40,
@@ -4018,7 +4018,7 @@
 }, {
 	"id": 89,
 	"folderID": "",
-	"enemyID": "",
+	"enemyID": "N3045",
 	"Name": "Giant Toad",
 	"Stats": [{
 		"LV": 40,
@@ -4063,7 +4063,7 @@
 }, {
 	"id": 90,
 	"folderID": "",
-	"enemyID": "",
+	"enemyID": "N3016",
 	"Name": "Giant Cannon",
 	"Stats": [{
 		"LV": 40,
@@ -4108,7 +4108,7 @@
 }, {
 	"id": 91,
 	"folderID": "",
-	"enemyID": "",
+	"enemyID": "N3026",
 	"Name": "Giant Morte",
 	"Stats": [{
 		"LV": 40,
@@ -4152,8 +4152,8 @@
 	"Description": "A mass of lesser demons who seem to believe less can be more."
 }, {
 	"id": 92,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3001",
+	"enemyID": "N3028",
 	"Name": "Giant Buer",
 	"Stats": [{
 		"LV": 41,
@@ -4197,8 +4197,8 @@
 	"Description": "A buer made immense through untold sorcery."
 }, {
 	"id": 93,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3038",
+	"enemyID": "N3038",
 	"Name": "Chariot Buer",
 	"Stats": [{
 		"LV": 40,
@@ -4242,8 +4242,8 @@
 	"Description": "A new and improved demon chariot."
 }, {
 	"id": 94,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3081",
+	"enemyID": "N3081",
 	"Name": "Marbas",
 	"Stats": [{
 		"LV": 42,
@@ -4287,8 +4287,8 @@
 	"Description": "A leonine demon with the power to heal."
 }, {
 	"id": 95,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2003",
+	"enemyID": "N2003",
 	"Name": "Silver Wolfman",
 	"Stats": [{
 		"LV": 41,
@@ -4332,8 +4332,8 @@
 	"Description": "A wolfman with a coat of breathtaking silver."
 }, {
 	"id": 96,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2008",
+	"enemyID": "N2008",
 	"Name": "Abyssal Guardian",
 	"Stats": [{
 		"LV": 44,
@@ -4378,8 +4378,8 @@
 	"Description": "A jet black dragon that brings death to all before it."
 }, {
 	"id": 97,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3021",
+	"enemyID": "N3021",
 	"Name": "Harrier",
 	"Stats": [{
 		"LV": 44,
@@ -4423,8 +4423,8 @@
 	"Description": "A man in constant search of one faster than himself."
 }, {
 	"id": 98,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3031",
+	"enemyID": "N3031",
 	"Name": "Ice Elemental",
 	"Stats": [{
 		"LV": 44,
@@ -4468,8 +4468,8 @@
 	"Description": "A magical manifestation of ice birthed by wicked means."
 }, {
 	"id": 99,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3088",
+	"enemyID": "N3088",
 	"Name": "Tracer",
 	"Stats": [{
 		"LV": 45,
@@ -4513,8 +4513,8 @@
 	"Description": "A fiend that lurks in walls"
 }, {
 	"id": 100,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3018",
+	"enemyID": "N3018",
 	"Name": "Gusion Cannon",
 	"Stats": [{
 		"LV": 46,
@@ -4558,8 +4558,8 @@
 	"Description": "A demon cannon that fires other demons."
 }, {
 	"id": 101,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3120",
+	"enemyID": "N3120",
 	"Name": "G Axe Outsider",
 	"Stats": [{
 		"LV": 47,
@@ -4603,8 +4603,8 @@
 	"Description": "A toughened knight in armor who skillfully wields an enormous axe."
 }, {
 	"id": 102,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3057",
+	"enemyID": "N3057",
 	"Name": "Demon Lord",
 	"Stats": [{
 		"LV": 48,
@@ -4648,8 +4648,8 @@
 	"Description": "A member of demon royalty. Commands unfathomable sorcery."
 }, {
 	"id": 103,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3121",
+	"enemyID": "N3121",
 	"Name": "Eight Bit Zombie",
 	"Stats": [{
 		"LV": 44,
@@ -4694,7 +4694,7 @@
 }, {
 	"id": 104,
 	"folderID": "",
-	"enemyID": "",
+	"enemyID": "N3122",
 	"Name": "Eight Bit Ghost",
 	"Stats": [{
 		"LV": 44,
@@ -4738,8 +4738,8 @@
 	"Description": "A ghost who has been banished to another dimension inside a book."
 }, {
 	"id": 105,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3124",
+	"enemyID": "N3124",
 	"Name": "Eight Bit Skull",
 	"Stats": [{
 		"LV": 44,
@@ -4783,8 +4783,8 @@
 	"Description": "A skull from a dark void that was sealed in a tome."
 }, {
 	"id": 106,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2015",
+	"enemyID": "N2015",
 	"Name": "Eight Bit Overlord",
 	"Stats": [{
 		"LV": 55,
@@ -4828,8 +4828,8 @@
 	"Description": "A demon overlord who has been banished to another dimension inside a book."
 }, {
 	"id": 107,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3106",
+	"enemyID": "N3106",
 	"Name": "Master Carpenter",
 	"Stats": [{
 		"LV": 54,
@@ -4873,8 +4873,8 @@
 	"Description": "A demon carpenter gifted at summoning."
 }, {
 	"id": 108,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3107",
+	"enemyID": "N3107",
 	"Name": "Revenant",
 	"Stats": [{
 		"LV": 54,
@@ -4918,8 +4918,8 @@
 	"Description": "A brave demon warrior who possesses skill with the whip."
 }, {
 	"id": 109,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N3108",
+	"enemyID": "N3108",
 	"Name": "Millionaire's Bane",
 	"Stats": [{
 		"LV": 54,
@@ -4963,8 +4963,8 @@
 	"Description": "The spirit of a greedy people awaiting either destruction or salvation."
 }, {
 	"id": 110,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1001",
+	"enemyID": "N1001",
 	"Name": "Vepar",
 	"Stats": [{
 		"LV": 8,
@@ -5008,8 +5008,8 @@
 	"Description": "A sea-demon feared for hailing storms and casting ships into the abyss."
 }, {
 	"id": 111,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1011",
+	"enemyID": "N1011",
 	"Name": "Zangetsu",
 	"Stats": [{
 		"LV": 16,
@@ -5053,8 +5053,8 @@
 	"Description": "A demonslayer from the Far East who crossed the sea in search of revenge."
 }, {
 	"id": 112,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1003",
+	"enemyID": "N1003",
 	"Name": "Craftwork",
 	"Stats": [{
 		"LV": 18,
@@ -5098,8 +5098,8 @@
 	"Description": "Stained glass imbued with regret and with wrath after being broken time and again."
 }, {
 	"id": 113,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2004",
+	"enemyID": "N2004",
 	"Name": "Andrealphus",
 	"Stats": [{
 		"LV": 20,
@@ -5143,8 +5143,8 @@
 	"Description": "A demon with a stunning, peacock-like panoply of feathers."
 }, {
 	"id": 114,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1005",
+	"enemyID": "N1005",
 	"Name": "Valac",
 	"Stats": [{
 		"LV": 24,
@@ -5188,8 +5188,8 @@
 	"Description": "A twin-headed, demon drake who rules over the tower."
 }, {
 	"id": 115,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2001",
+	"enemyID": "N2001",
 	"Name": "Glutton Train",
 	"Stats": [{
 		"LV": 25,
@@ -5233,8 +5233,8 @@
 	"Description": "A demon that fused with a train's engine, causing it to run amok."
 }, {
 	"id": 116,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1006",
+	"enemyID": "N1006",
 	"Name": "Bathin",
 	"Stats": [{
 		"LV": 27,
@@ -5278,8 +5278,8 @@
 	"Description": "A demon with the ability to reflect like light."
 }, {
 	"id": 117,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1012",
+	"enemyID": "N1012",
 	"Name": "Gebel",
 	"Stats": [{
 		"LV": 30,
@@ -5323,8 +5323,8 @@
 	"Description": "A man who was offered to hell but managed to survive. Miriam's friend."
 }, {
 	"id": 118,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1002",
+	"enemyID": "N1002",
 	"Name": "Bloodless",
 	"Stats": [{
 		"LV": 35,
@@ -5368,8 +5368,8 @@
 	"Description": "A vampire who can manipulate blood. She bathes thrice a day without fail."
 }, {
 	"id": 119,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2014",
+	"enemyID": "N2014",
 	"Name": "Alfred",
 	"Stats": [{
 		"LV": 400,
@@ -5413,8 +5413,8 @@
 	"Description": "A grey-bearded alchemist who had a hand in the demon summoning ritual."
 }, {
 	"id": 120,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2007",
+	"enemyID": "N2007",
 	"Name": "Doppelganger",
 	"Stats": [{
 		"LV": 43,
@@ -5458,8 +5458,8 @@
 	"Description": "A demon that assumes the form of whatever it intends to kill."
 }, {
 	"id": 121,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2006",
+	"enemyID": "N2006",
 	"Name": "Orobas",
 	"Stats": [{
 		"LV": 45,
@@ -5503,8 +5503,8 @@
 	"Description": "A demon who can alter gravity's pull on himself. Half-man, half-stallion."
 }, {
 	"id": 122,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1011",
+	"enemyID": "N1011_STRONG",
 	"Name": "Zangetsu",
 	"Stats": [{
 		"LV": 50,
@@ -5548,8 +5548,8 @@
 	"Description": "The strongest demonslayer who crossed the sea in search of revenge."
 }, {
 	"id": 123,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1004",
+	"enemyID": "N1004",
 	"Name": "Valefar",
 	"Stats": [{
 		"LV": 45,
@@ -5593,8 +5593,8 @@
 	"Description": "A demon who draws power from coin. His fortune has waned of late."
 }, {
 	"id": 124,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1008",
+	"enemyID": "N1008",
 	"Name": "Gremory",
 	"Stats": [{
 		"LV": 49,
@@ -5638,8 +5638,8 @@
 	"Description": "A demoness of half-human, half-beast form. She presides over the moon."
 }, {
 	"id": 125,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N5008",
+	"enemyID": "N1009",
 	"Name": "Dominique",
 	"Stats": [{
 		"LV": 47,
@@ -5683,8 +5683,8 @@
 	"Description": "A fool who believed demonic power would allow her to transcend God."
 }, {
 	"id": 126,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N1013",
+	"enemyID": "N1013",
 	"Name": "Bael",
 	"Stats": [{
 		"LV": 60,
@@ -5728,8 +5728,8 @@
 	"Description": "King of Kings, and high ruler over all demonkind."
 }, {
 	"id": 127,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2012",
+	"enemyID": "N2012",
 	"Name": "Orlok Dracule",
 	"Stats": [{
 		"LV": 71,
@@ -5773,8 +5773,8 @@
 	"Description": "A vampire who presides over the library. He can manipulate time."
 }, {
 	"id": 128,
-	"folderID": "",
-	"enemyID": "",
+	"folderID": "N2013",
+	"enemyID": "N2013",
 	"Name": "IGA",
 	"Stats": [{
 		"LV": 71,

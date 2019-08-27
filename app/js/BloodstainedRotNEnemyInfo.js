@@ -19,6 +19,10 @@ function templateInfo(data, i) {
 
 	dataResult += "<div class='content'>"
 	dataResult += "<h1><b>" + data[i].Name + " (</b>ID:&nbsp;" + data[i].id + ")</h1>";
+	dataResult += "<p class='otherID'>";
+	dataResult += "Folder&nbsp;ID: " + data[i].folderID + "</br>";
+	dataResult += "Enemy&nbsp;&nbsp;ID: " + data[i].enemyID + "</br>";
+	dataResult += "</p>";
 	dataResult += "<img style='vertical-align:middle' src='img/stat-lv.png'> " + data[i].Stats[0].LV + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-exp.png'> " + data[i].Stats[0].EXP + "&nbsp;&nbsp;<img style='vertical-align:middle' src='img/stat-hp.png'> " + data[i].Stats[0].HP + "<br>";
 
 	dataResult += "<div class='columns'>";
