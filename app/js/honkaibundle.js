@@ -209,7 +209,8 @@ function showResult() {
             Valkyries[i].type.toLowerCase().includes(searchValue.toLowerCase()) ||
             Valkyries[i].soul.toLowerCase() == searchValue.toLowerCase() ||
             Valkyries[i].weapon.toLowerCase().includes(searchValue.toLowerCase()) ||
-            Valkyries[i].acronym.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase())) {
+            Valkyries[i].acronym.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
+            Valkyries[i].acronym.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
             // Search one or multiple results
             dataResult += templateInfo(Valkyries, i)
         }
