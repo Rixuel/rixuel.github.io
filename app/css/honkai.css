@@ -24,6 +24,7 @@ html, body {
 	}
 	.content h2 {
 		font-size: 1.2em;
+		letter-spacing: 2px !important;
 	}
 }
 img {
