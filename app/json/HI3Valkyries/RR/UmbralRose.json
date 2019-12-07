@@ -1,0 +1,24 @@
+{
+    "battlesuit": "Umbral Rose",
+    "acronym": [
+        "UR"
+    ],
+    "type": "Psychic",
+    "soul": "Original",
+    "firstname": "Rita",
+    "lastname": "Rossweisse",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/8/8a/Umbral_Rose.png/450px-Umbral_Rose.png",
+    "birthday": "March 1st",
+    "weapon": "Scythes",
+    "costume": [
+        "Umbral Rose",
+        "Dame de Coeur",
+        "Dusky Murmurs"
+    ],
+    "fragdropinfo": [
+        "Story 2-11 (H)",
+        "Story 3-4 (S)",
+        "Story 9-10 (H)",
+        "Story 9-4 (S)"
+    ]
+}

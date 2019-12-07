@@ -1,0 +1,139 @@
+html, body {
+	background-color: #000;
+	background-image: url("../img/hovbackground.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+	font-family: "Raleway", Arial;
+}
+@media only screen and (max-width: 960px) {
+	.searchbar {
+		margin-top: 80px !important;
+	}
+	.logo {
+		width: 300px !important;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.searchbar {
+		margin-top: 160px !important;
+	}
+}
+img {
+	border: 0;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.logo {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+    margin-top: 100px;
+	margin-bottom: 40px;
+	max-width: 100%;
+	max-height: 100%;
+	width: 700px;
+}
+.searchbar {
+	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 0px;
+	max-width: 900px;
+}
+#searchInput {
+	background-color: #252229;
+	border: 2px solid #FB9929;
+	color: #35D6FF;
+	font-family: "Raleway", Arial;
+	font-size: 1.2em;
+	padding: 10px;
+	width: 100%;
+}
+#clickButton, #clickShowAll {
+	background-color: #252229;
+	border: 2px solid #FB9929;
+	color: #35D6FF;
+	font-family: "Raleway", Arial;
+	font-size: 1.2em;
+	padding: 10px;
+	width: 100%;
+}
+#clickButton:active, #clickShowAll:active {
+	background-color: #990000;
+	color: #ff2266;
+}
+.content {
+	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
+	color: #FFFFFF;
+	font-size: 1.0em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 16px;
+	max-width: 900px;
+}
+.content .acronym {
+    color: #FF7799;
+    font-family: Consolas, Arial;
+	padding-top: 5px;
+    padding-bottom: 5px;
+}
+.content h1 {
+	color: #E4F1A4;
+	font-family: "Lora", Consolas, Arial;
+    padding-top: 20px;
+    line-height: 0px;
+}
+.content h2 {
+	color: #35D6FF;
+	font-family: "Lora", Calibri, Arial;
+    padding-bottom: 5px;
+    letter-spacing: 8px;
+    line-height: 0px;
+}
+.content h4 {
+    color: #ECDECC;
+	margin-top: 8px;
+	margin-bottom: 4px;
+}
+.content .otherID {
+	color: #da0c3c;
+	font-family: 'Roboto Mono', Consolas, Arial;
+}
+.valkpic {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.footer {
+	background-color: rgba(18, 20, 22, 0.80);
+	border-top: 1px solid #FB9929;
+	/*border: 2px solid #0cda3c;*/
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	padding: 10px;
+	max-width: 900px;
+}
+
+.footer a {
+	color: #FFF;
+}
+
+.footer a:hover {
+	color: #35D6FF;
+}
+
+.footer h1 {
+	border-bottom: 1px solid #FB9929;
+	color: #FB9929;
+	font-family: "Didact Gothic", Consolas, Arial;
+	font-size: 1.4em;
+}

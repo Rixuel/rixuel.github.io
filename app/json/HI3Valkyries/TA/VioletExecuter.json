@@ -1,0 +1,24 @@
+{
+    "battlesuit": "Violet Executer",
+    "acronym": [
+        "VE",
+        "TP"
+    ],
+    "type": "Mecha",
+    "soul": "Original",
+    "firstname": "Theresa",
+    "lastname": "Apocalypse",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/7/7b/Violet_Executer.png/450px-Violet_Executer.png",
+    "birthday": "March 28th",
+    "weapon": "Crosses",
+    "costume": [
+        "Violet Executer",
+        "Blood Knight: Moonlight",
+        "Wonderland Trek",
+        "Twilight Paladin",
+        "Morning Sunshine"
+    ],
+    "fragdropinfo": [
+        "War Treasury"
+    ]
+}

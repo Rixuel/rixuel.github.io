@@ -1,0 +1,21 @@
+{
+    "battlesuit": "Herrscher of the Void",
+    "acronym": [
+        "HotV",
+        "HoV",
+        "HV"
+    ],
+    "type": "Biologic",
+    "soul": "Awakening",
+    "firstname": "Kiana",
+    "lastname": "Kaslana",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/2/29/Herrscher_of_the_Void.png/450px-Herrscher_of_the_Void.png",
+    "birthday": "December 7th",
+    "weapon": "Pistols",
+    "costume": [
+        "Herrscher of the Void",
+        "Parasol Kaiserin"
+    ],
+    "fragdropinfo": [
+    ]
+}

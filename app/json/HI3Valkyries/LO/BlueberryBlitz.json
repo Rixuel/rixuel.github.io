@@ -1,0 +1,24 @@
+{
+    "battlesuit": "Blueberry Blitz",
+    "acronym": [
+        "BB"
+    ],
+    "type": "Mecha",
+    "soul": "Original",
+    "firstname": "Liliya",
+    "lastname": "Olenyeva",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/4/4e/Blueberry_Blitz.png/450px-Blueberry_Blitz.png",
+    "birthday": "Unknown",
+    "weapon": "Greatswords",
+    "costume": [
+        "Blueberry Blitz",
+        "Shelley's Beastliya"
+    ],
+    "fragdropinfo": [
+        "Chronicles: Dreams of Gemina",
+        "Stage 7-1 (H)",
+        "Stage 11-5 (H)",
+        "Stage 2-17 (S)",
+        "Stage 11-7 (S)"
+    ]
+}
