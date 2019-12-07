@@ -121,7 +121,7 @@ searchBarInput.addEventListener("keyup", function(event) {
 });
 
 var ValkyrieLength = Valkyries.length;
-console.log("ValkyrieLength: " + ValkyrieLength);
+//console.log("ValkyrieLength: " + ValkyrieLength);
 
 function getAcronyms(length, output, data, i) {
     for (var j=0; j<length; j++) {
@@ -190,7 +190,7 @@ function templateInfo(data, i) {
 function showResult() {
     var dataResult = "";
     searchValue = searchInput.value;
-    console.log("searchValue: " + searchValue);
+    //console.log("searchValue: " + searchValue);
 
     for (var i=0; i<ValkyrieLength; i++) {
         acronymLength = Valkyries[i].acronym.length;
