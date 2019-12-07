@@ -168,6 +168,8 @@ function templateInfo(data, i) {
         dataResult += "<h1>" + Valkyries[i].battlesuit + " (" + Valkyries[i].type + ")</h1>";
         dataResult += "<h2>" + Valkyries[i].firstname + " " + Valkyries[i].lastname + "</h2>";
         dataResult += "<p class='acronym'>" + acronyms + "</p>";
+
+
         dataResult += "<div class='columns'>";
 
             dataResult += "<div class='column is-half'>";
