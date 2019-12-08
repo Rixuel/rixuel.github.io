@@ -164,10 +164,25 @@ function templateInfo(data, i) {
     fragdropinfos = getFragDropInfos(fragdropinfoLength, fragdropinfos, Valkyries, i);
 
     dataResult += "<div class='content'>";
-        dataResult += "<h1>" + Valkyries[i].battlesuit + " (" + Valkyries[i].type + ")</h1>";
-        dataResult += "<h2>" + Valkyries[i].firstname + " " + Valkyries[i].lastname + "</h2>";
-        dataResult += "<p class='acronym'>" + acronyms + "</p>";
+        dataResult += "<div class='columns'>";
+            dataResult += "<div class='column is-11'>";
+                dataResult += "<h1>" + Valkyries[i].battlesuit + "</h1>";
+                dataResult += "<h2>" + Valkyries[i].firstname + " " + Valkyries[i].lastname + "</h2>";
+                dataResult += "<p class='acronym'>" + acronyms + "</p>";
+            dataResult += "</div>";
 
+            dataResult += "<div class='column'>";
+                if (Valkyries[i].type == "Mecha") {
+                    dataResult += "<img class='typeimg' src='img/MECH.PNG' title='" + Valkyries[i].type + "'>";
+                } else if (Valkyries[i].type == "Biologic") {
+                    dataResult += "<img class='typeimg' src='img/BIO.PNG' title='" + Valkyries[i].type + "'>";
+                } else if (Valkyries[i].type == "Psychic") {
+                    dataResult += "<img class='typeimg' src='img/PSY.PNG' title='" + Valkyries[i].type + "'>";
+                } else if (Valkyries[i].type == "Quantum") {
+                    dataResult += "<img class='typeimg' src='img/QUA.PNG' title='" + Valkyries[i].type + "'>";
+                }
+            dataResult += "</div>";
+        dataResult += "</div>";
 
         dataResult += "<div class='columns'>";
 

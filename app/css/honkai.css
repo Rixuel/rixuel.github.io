@@ -20,11 +20,14 @@ html, body {
 		margin-top: 100px !important;
 	}
 	.content h1 {
-		font-size: 1.4em;
+		font-size: 1.7em;
 	}
 	.content h2 {
 		font-size: 1.2em;
 		letter-spacing: 2px !important;
+	}
+	.typeimg {
+		max-height: 30px !important;
 	}
 }
 img {
@@ -100,7 +103,9 @@ img {
 }
 .content h2 {
 	color: #35D6FF;
-	font-family: "Lora", Calibri, Arial;
+	font-family: "Raleway", Calibri, Arial;
+	font-size: 1.4em;
+    padding-top: 5px;
     padding-bottom: 5px;
     letter-spacing: 8px;
     line-height: 0px;
@@ -113,6 +118,9 @@ img {
 .content .otherID {
 	color: #da0c3c;
 	font-family: 'Roboto Mono', Consolas, Arial;
+}
+.typeimg {
+	max-height: 50px;
 }
 .valkpic {
 	background-color: rgba(255, 255, 255, 0.15);
