@@ -603,7 +603,8 @@ module.exports={
 module.exports={
     "battlesuit": "Divine Prayer",
     "acronym": [
-        "DP"
+        "DP",
+        "Tuna"
     ],
     "type": "Psychic",
     "soul": "Original",
@@ -632,7 +633,8 @@ module.exports={
     "acronym": [
         "HotV",
         "HoV",
-        "HV"
+        "HV",
+        "Tuna"
     ],
     "type": "Biologic",
     "soul": "Awakening",
@@ -653,7 +655,8 @@ module.exports={
 module.exports={
     "battlesuit": "Knight Moonbeam",
     "acronym": [
-        "KMB"
+        "KMB",
+        "Tuna"
     ],
     "type": "Biologic",
     "soul": "Original",
@@ -677,7 +680,8 @@ module.exports={
     "battlesuit": "Valkyrie Ranger",
     "acronym": [
         "VR",
-        "VD"
+        "VD",
+        "Tuna"
     ],
     "type": "Mecha",
     "soul": "Original",
@@ -706,7 +710,8 @@ module.exports={
 module.exports={
     "battlesuit": "White Comet",
     "acronym": [
-        "WC"
+        "WC",
+        "Tuna"
     ],
     "type": "Mecha",
     "soul": "Original",
@@ -1161,7 +1166,8 @@ module.exports={
 module.exports={
     "battlesuit": "Celestial Hymn",
     "acronym": [
-        "CH"
+        "CH",
+        "Teri"
     ],
     "type": "Biologic",
     "soul": "Original",
@@ -1183,7 +1189,8 @@ module.exports={
 module.exports={
     "battlesuit": "Luna Kindred",
     "acronym": [
-        "LK"
+        "LK",
+        "Teri"
     ],
     "type": "Biologic",
     "soul": "Awakening",
@@ -1206,7 +1213,8 @@ module.exports={
 module.exports={
     "battlesuit": "Sakuno Rondo",
     "acronym": [
-        "SR"
+        "SR",
+        "Teri"
     ],
     "type": "Psychic",
     "soul": "Original",
@@ -1232,7 +1240,8 @@ module.exports={
 module.exports={
     "battlesuit": "Valkyrie Pledge",
     "acronym": [
-        "VP"
+        "VP",
+        "Teri"
     ],
     "type": "Psychic",
     "soul": "Original",
@@ -1264,7 +1273,8 @@ module.exports={
     "battlesuit": "Violet Executer",
     "acronym": [
         "VE",
-        "TP"
+        "TP",
+        "Teri"
     ],
     "type": "Mecha",
     "soul": "Original",
