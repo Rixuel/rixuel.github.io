@@ -173,13 +173,13 @@ function templateInfo(data, i) {
 
             dataResult += "<div class='column'>";
                 if (Valkyries[i].type == "Mecha") {
-                    dataResult += "<img class='typeimg' src='img/MECH.PNG' title='" + Valkyries[i].type + "'>";
+                    dataResult += "<img class='typeimg' src='img/MECH.png' title='" + Valkyries[i].type + "'>";
                 } else if (Valkyries[i].type == "Biologic") {
-                    dataResult += "<img class='typeimg' src='img/BIO.PNG' title='" + Valkyries[i].type + "'>";
+                    dataResult += "<img class='typeimg' src='img/BIO.png' title='" + Valkyries[i].type + "'>";
                 } else if (Valkyries[i].type == "Psychic") {
-                    dataResult += "<img class='typeimg' src='img/PSY.PNG' title='" + Valkyries[i].type + "'>";
+                    dataResult += "<img class='typeimg' src='img/PSY.png' title='" + Valkyries[i].type + "'>";
                 } else if (Valkyries[i].type == "Quantum") {
-                    dataResult += "<img class='typeimg' src='img/QUA.PNG' title='" + Valkyries[i].type + "'>";
+                    dataResult += "<img class='typeimg' src='img/QUA.png' title='" + Valkyries[i].type + "'>";
                 }
             dataResult += "</div>";
         dataResult += "</div>";
