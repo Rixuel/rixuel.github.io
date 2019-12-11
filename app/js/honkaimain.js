@@ -1,58 +1,58 @@
-var BlackNucleus = require("./json/HI3Valkyries/BZ/BlackNucleus.json");
-var DimensionBreaker = require("./json/HI3Valkyries/BZ/DimensionBreaker.json");
-var HerrscherOfReason = require("./json/HI3Valkyries/BZ/HerrscherOfReason.json");
-var SnowySniper = require("./json/HI3Valkyries/BZ/SnowySniper.json");
-var ValkyrieChariot = require("./json/HI3Valkyries/BZ/ValkyrieChariot.json");
-var WolfsDawn = require("./json/HI3Valkyries/BZ/WolfsDawn.json");
-var YamabukiArmor = require("./json/HI3Valkyries/BZ/YamabukiArmor.json");
+var BlackNucleus = require("../json/HI3Valkyries/BZ/BlackNucleus.json");
+var DimensionBreaker = require("../json/HI3Valkyries/BZ/DimensionBreaker.json");
+var HerrscherOfReason = require("../json/HI3Valkyries/BZ/HerrscherOfReason.json");
+var SnowySniper = require("../json/HI3Valkyries/BZ/SnowySniper.json");
+var ValkyrieChariot = require("../json/HI3Valkyries/BZ/ValkyrieChariot.json");
+var WolfsDawn = require("../json/HI3Valkyries/BZ/WolfsDawn.json");
+var YamabukiArmor = require("../json/HI3Valkyries/BZ/YamabukiArmor.json");
 
-var NightSquire = require("./json/HI3Valkyries/FH/NightSquire.json");
-var Phoenix = require("./json/HI3Valkyries/FH/Phoenix.json");
-var ShadowKnight = require("./json/HI3Valkyries/FH/ShadowKnight.json");
-var ValkyrieAccipiter = require("./json/HI3Valkyries/FH/ValkyrieAccipiter.json");
+var NightSquire = require("../json/HI3Valkyries/FH/NightSquire.json");
+var Phoenix = require("../json/HI3Valkyries/FH/Phoenix.json");
+var ShadowKnight = require("../json/HI3Valkyries/FH/ShadowKnight.json");
+var ValkyrieAccipiter = require("../json/HI3Valkyries/FH/ValkyrieAccipiter.json");
 
-var ImayohRitual = require("./json/HI3Valkyries/KA/ImayohRitual.json");
-var SixthSerenade = require("./json/HI3Valkyries/KA/SixthSerenade.json");
-var Sundenjager = require("./json/HI3Valkyries/KA/Sundenjager.json");
+var ImayohRitual = require("../json/HI3Valkyries/KA/ImayohRitual.json");
+var SixthSerenade = require("../json/HI3Valkyries/KA/SixthSerenade.json");
+var Sundenjager = require("../json/HI3Valkyries/KA/Sundenjager.json");
 
-var DivinePrayer = require("./json/HI3Valkyries/KK/DivinePrayer.json");
-var HerrscherOfTheVoid = require("./json/HI3Valkyries/KK/HerrscherOfTheVoid.json");
-var KnightMoonbeam = require("./json/HI3Valkyries/KK/KnightMoonbeam.json");
-var ValkyrieRanger = require("./json/HI3Valkyries/KK/ValkyrieRanger.json");
-var WhiteComet = require("./json/HI3Valkyries/KK/WhiteComet.json");
+var DivinePrayer = require("../json/HI3Valkyries/KK/DivinePrayer.json");
+var HerrscherOfTheVoid = require("../json/HI3Valkyries/KK/HerrscherOfTheVoid.json");
+var KnightMoonbeam = require("../json/HI3Valkyries/KK/KnightMoonbeam.json");
+var ValkyrieRanger = require("../json/HI3Valkyries/KK/ValkyrieRanger.json");
+var WhiteComet = require("../json/HI3Valkyries/KK/WhiteComet.json");
 
-var BlueberryBlitz = require("./json/HI3Valkyries/LO/BlueberryBlitz.json");
+var BlueberryBlitz = require("../json/HI3Valkyries/LO/BlueberryBlitz.json");
 
-var ArcticKriegsmesser = require("./json/HI3Valkyries/MH/ArcticKriegsmesser.json");
-var BattleStorm = require("./json/HI3Valkyries/MH/BattleStorm.json");
-var BloodRose = require("./json/HI3Valkyries/MH/BloodRose.json");
-var ScarletFusion = require("./json/HI3Valkyries/MH/ScarletFusion.json");
-var ValkyrieTriumph = require("./json/HI3Valkyries/MH/ValkyrieTriumph.json");
-var VermilionKnight = require("./json/HI3Valkyries/MH/VermilionKnight.json");
+var ArcticKriegsmesser = require("../json/HI3Valkyries/MH/ArcticKriegsmesser.json");
+var BattleStorm = require("../json/HI3Valkyries/MH/BattleStorm.json");
+var BloodRose = require("../json/HI3Valkyries/MH/BloodRose.json");
+var ScarletFusion = require("../json/HI3Valkyries/MH/ScarletFusion.json");
+var ValkyrieTriumph = require("../json/HI3Valkyries/MH/ValkyrieTriumph.json");
+var VermilionKnight = require("../json/HI3Valkyries/MH/VermilionKnight.json");
 
-var CrimsonImpulse = require("./json/HI3Valkyries/RM/CrimsonImpulse.json");
-var LightningEmpress = require("./json/HI3Valkyries/RM/LightningEmpress.json");
-var ShadowDash = require("./json/HI3Valkyries/RM/ShadowDash.json");
-var ValkyrieBladestrike = require("./json/HI3Valkyries/RM/ValkyrieBladestrike.json");
+var CrimsonImpulse = require("../json/HI3Valkyries/RM/CrimsonImpulse.json");
+var LightningEmpress = require("../json/HI3Valkyries/RM/LightningEmpress.json");
+var ShadowDash = require("../json/HI3Valkyries/RM/ShadowDash.json");
+var ValkyrieBladestrike = require("../json/HI3Valkyries/RM/ValkyrieBladestrike.json");
 
-var MolotovCherry = require("./json/HI3Valkyries/RO/MolotovCherry.json");
+var MolotovCherry = require("../json/HI3Valkyries/RO/MolotovCherry.json");
 
-var ArgentKnight = require("./json/HI3Valkyries/RR/ArgentKnight.json");
-var PhantomIron = require("./json/HI3Valkyries/RR/PhantomIron.json");
-var UmbralRose = require("./json/HI3Valkyries/RR/UmbralRose.json");
+var ArgentKnight = require("../json/HI3Valkyries/RR/ArgentKnight.json");
+var PhantomIron = require("../json/HI3Valkyries/RR/PhantomIron.json");
+var UmbralRose = require("../json/HI3Valkyries/RR/UmbralRose.json");
 
-var StygianNymph = require("./json/HI3Valkyries/SV/StygianNymph.json");
-var SwallowtailPhantasm = require("./json/HI3Valkyries/SV/SwallowtailPhantasm.json");
+var StygianNymph = require("../json/HI3Valkyries/SV/StygianNymph.json");
+var SwallowtailPhantasm = require("../json/HI3Valkyries/SV/SwallowtailPhantasm.json");
 
-var CelestialHymn = require("./json/HI3Valkyries/TA/CelestialHymn.json");
-var LunaKindred = require("./json/HI3Valkyries/TA/LunaKindred.json");
-var SakunoRondo = require("./json/HI3Valkyries/TA/SakunoRondo.json");
-var ValkyriePledge = require("./json/HI3Valkyries/TA/ValkyriePledge.json");
-var VioletExecuter = require("./json/HI3Valkyries/TA/VioletExecuter.json");
+var CelestialHymn = require("../json/HI3Valkyries/TA/CelestialHymn.json");
+var LunaKindred = require("../json/HI3Valkyries/TA/LunaKindred.json");
+var SakunoRondo = require("../json/HI3Valkyries/TA/SakunoRondo.json");
+var ValkyriePledge = require("../json/HI3Valkyries/TA/ValkyriePledge.json");
+var VioletExecuter = require("../json/HI3Valkyries/TA/VioletExecuter.json");
 
-var FlameSakitama = require("./json/HI3Valkyries/YS/FlameSakitama.json");
-var GoushinnsoMemento = require("./json/HI3Valkyries/YS/GoushinnsoMemento.json");
-var GyakushinnMiko = require("./json/HI3Valkyries/YS/GyakushinnMiko.json");
+var FlameSakitama = require("../json/HI3Valkyries/YS/FlameSakitama.json");
+var GoushinnsoMemento = require("../json/HI3Valkyries/YS/GoushinnsoMemento.json");
+var GyakushinnMiko = require("../json/HI3Valkyries/YS/GyakushinnMiko.json");
 
 var Valkyries = [
     ArcticKriegsmesser,
