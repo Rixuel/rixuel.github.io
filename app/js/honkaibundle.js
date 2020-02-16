@@ -51,6 +51,7 @@ var SakunoRondo = require("../json/HI3Valkyries/TA/SakunoRondo.json");
 var ValkyriePledge = require("../json/HI3Valkyries/TA/ValkyriePledge.json");
 var VioletExecuter = require("../json/HI3Valkyries/TA/VioletExecuter.json");
 
+var DarkBoltJonin = require("../json/HI3Valkyries/YS/DarkBoltJonin.json");
 var FlameSakitama = require("../json/HI3Valkyries/YS/FlameSakitama.json");
 var GoushinnsoMemento = require("../json/HI3Valkyries/YS/GoushinnsoMemento.json");
 var GyakushinnMiko = require("../json/HI3Valkyries/YS/GyakushinnMiko.json");
@@ -64,6 +65,7 @@ var Valkyries = [
     BlueberryBlitz,
     CelestialHymn,
     CrimsonImpulse,
+    DarkBoltJonin,
     DimensionBreaker,
     DivinePrayer,
     FlameSakitama,
@@ -253,9 +255,9 @@ button.addEventListener("click", showResult);
 var buttonShowAll = document.getElementById("clickShowAll");
 buttonShowAll.addEventListener("click", showAll);
 
-// browserify honkaimain.js -o js/honkaibundle.js
+// browserify js/honkaimain.js -o js/honkaibundle.js
 
-},{"../json/HI3Valkyries/BZ/BlackNucleus.json":2,"../json/HI3Valkyries/BZ/DimensionBreaker.json":3,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":4,"../json/HI3Valkyries/BZ/SnowySniper.json":5,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":6,"../json/HI3Valkyries/BZ/WolfsDawn.json":7,"../json/HI3Valkyries/BZ/YamabukiArmor.json":8,"../json/HI3Valkyries/FH/NightSquire.json":9,"../json/HI3Valkyries/FH/Phoenix.json":10,"../json/HI3Valkyries/FH/ShadowKnight.json":11,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":12,"../json/HI3Valkyries/KA/ImayohRitual.json":13,"../json/HI3Valkyries/KA/SixthSerenade.json":14,"../json/HI3Valkyries/KA/Sundenjager.json":15,"../json/HI3Valkyries/KK/DivinePrayer.json":16,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":17,"../json/HI3Valkyries/KK/KnightMoonbeam.json":18,"../json/HI3Valkyries/KK/ValkyrieRanger.json":19,"../json/HI3Valkyries/KK/WhiteComet.json":20,"../json/HI3Valkyries/LO/BlueberryBlitz.json":21,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":22,"../json/HI3Valkyries/MH/BattleStorm.json":23,"../json/HI3Valkyries/MH/BloodRose.json":24,"../json/HI3Valkyries/MH/ScarletFusion.json":25,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":26,"../json/HI3Valkyries/MH/VermilionKnight.json":27,"../json/HI3Valkyries/RM/CrimsonImpulse.json":28,"../json/HI3Valkyries/RM/LightningEmpress.json":29,"../json/HI3Valkyries/RM/ShadowDash.json":30,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":31,"../json/HI3Valkyries/RO/MolotovCherry.json":32,"../json/HI3Valkyries/RR/ArgentKnight.json":33,"../json/HI3Valkyries/RR/PhantomIron.json":34,"../json/HI3Valkyries/RR/UmbralRose.json":35,"../json/HI3Valkyries/SV/StygianNymph.json":36,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":37,"../json/HI3Valkyries/TA/CelestialHymn.json":38,"../json/HI3Valkyries/TA/LunaKindred.json":39,"../json/HI3Valkyries/TA/SakunoRondo.json":40,"../json/HI3Valkyries/TA/ValkyriePledge.json":41,"../json/HI3Valkyries/TA/VioletExecuter.json":42,"../json/HI3Valkyries/YS/FlameSakitama.json":43,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":44,"../json/HI3Valkyries/YS/GyakushinnMiko.json":45}],2:[function(require,module,exports){
+},{"../json/HI3Valkyries/BZ/BlackNucleus.json":2,"../json/HI3Valkyries/BZ/DimensionBreaker.json":3,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":4,"../json/HI3Valkyries/BZ/SnowySniper.json":5,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":6,"../json/HI3Valkyries/BZ/WolfsDawn.json":7,"../json/HI3Valkyries/BZ/YamabukiArmor.json":8,"../json/HI3Valkyries/FH/NightSquire.json":9,"../json/HI3Valkyries/FH/Phoenix.json":10,"../json/HI3Valkyries/FH/ShadowKnight.json":11,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":12,"../json/HI3Valkyries/KA/ImayohRitual.json":13,"../json/HI3Valkyries/KA/SixthSerenade.json":14,"../json/HI3Valkyries/KA/Sundenjager.json":15,"../json/HI3Valkyries/KK/DivinePrayer.json":16,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":17,"../json/HI3Valkyries/KK/KnightMoonbeam.json":18,"../json/HI3Valkyries/KK/ValkyrieRanger.json":19,"../json/HI3Valkyries/KK/WhiteComet.json":20,"../json/HI3Valkyries/LO/BlueberryBlitz.json":21,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":22,"../json/HI3Valkyries/MH/BattleStorm.json":23,"../json/HI3Valkyries/MH/BloodRose.json":24,"../json/HI3Valkyries/MH/ScarletFusion.json":25,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":26,"../json/HI3Valkyries/MH/VermilionKnight.json":27,"../json/HI3Valkyries/RM/CrimsonImpulse.json":28,"../json/HI3Valkyries/RM/LightningEmpress.json":29,"../json/HI3Valkyries/RM/ShadowDash.json":30,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":31,"../json/HI3Valkyries/RO/MolotovCherry.json":32,"../json/HI3Valkyries/RR/ArgentKnight.json":33,"../json/HI3Valkyries/RR/PhantomIron.json":34,"../json/HI3Valkyries/RR/UmbralRose.json":35,"../json/HI3Valkyries/SV/StygianNymph.json":36,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":37,"../json/HI3Valkyries/TA/CelestialHymn.json":38,"../json/HI3Valkyries/TA/LunaKindred.json":39,"../json/HI3Valkyries/TA/SakunoRondo.json":40,"../json/HI3Valkyries/TA/ValkyriePledge.json":41,"../json/HI3Valkyries/TA/VioletExecuter.json":42,"../json/HI3Valkyries/YS/DarkBoltJonin.json":43,"../json/HI3Valkyries/YS/FlameSakitama.json":44,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":45,"../json/HI3Valkyries/YS/GyakushinnMiko.json":46}],2:[function(require,module,exports){
 module.exports={
     "battlesuit": "Black Nucleus",
     "acronym": [
@@ -1106,7 +1108,8 @@ module.exports={
     "costume": [
         "Umbral Rose",
         "Dame de Coeur",
-        "Dusky Murmurs"
+        "Dusky Murmurs",
+        "Victoria"
     ],
     "fragdropinfo": [
         "Story 2-11 (H)",
@@ -1297,6 +1300,30 @@ module.exports={
 
 },{}],43:[function(require,module,exports){
 module.exports={
+    "battlesuit": "DarkBolt Jonin",
+    "acronym": [
+        "DJ",
+        "Kasumi"
+    ],
+    "type": "Biologic",
+    "soul": "Original",
+    "firstname": "Sakura",
+    "lastname": "Yae",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/4/4b/Darkbolt_Jonin.png/936px-Darkbolt_Jonin.png",
+    "birthday": "July 22th",
+    "weapon": "Katanas",
+    "costume": [
+        "Peach Sanctuary"
+    ],
+    "fragdropinfo": [
+        "Open World: Adventure Tasks",
+        "Asterite Shop",
+        "Battle Arsenal"
+    ]
+}
+
+},{}],44:[function(require,module,exports){
+module.exports={
     "battlesuit": "Flame Sakitama",
     "acronym": [
         "FS"
@@ -1318,7 +1345,7 @@ module.exports={
     ]
 }
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 module.exports={
     "battlesuit": "Goushinnso Memento",
     "acronym": [
@@ -1341,7 +1368,7 @@ module.exports={
     ]
 }
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 module.exports={
     "battlesuit": "Gyakushinn Miko",
     "acronym": [

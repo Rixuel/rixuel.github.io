@@ -50,6 +50,7 @@ var SakunoRondo = require("../json/HI3Valkyries/TA/SakunoRondo.json");
 var ValkyriePledge = require("../json/HI3Valkyries/TA/ValkyriePledge.json");
 var VioletExecuter = require("../json/HI3Valkyries/TA/VioletExecuter.json");
 
+var DarkBoltJonin = require("../json/HI3Valkyries/YS/DarkBoltJonin.json");
 var FlameSakitama = require("../json/HI3Valkyries/YS/FlameSakitama.json");
 var GoushinnsoMemento = require("../json/HI3Valkyries/YS/GoushinnsoMemento.json");
 var GyakushinnMiko = require("../json/HI3Valkyries/YS/GyakushinnMiko.json");
@@ -63,6 +64,7 @@ var Valkyries = [
     BlueberryBlitz,
     CelestialHymn,
     CrimsonImpulse,
+    DarkBoltJonin,
     DimensionBreaker,
     DivinePrayer,
     FlameSakitama,
@@ -252,4 +254,4 @@ button.addEventListener("click", showResult);
 var buttonShowAll = document.getElementById("clickShowAll");
 buttonShowAll.addEventListener("click", showAll);
 
-// browserify honkaimain.js -o js/honkaibundle.js
+// browserify js/honkaimain.js -o js/honkaibundle.js
