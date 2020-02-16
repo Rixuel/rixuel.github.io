@@ -7,6 +7,7 @@ var ValkyrieChariot = require("../json/HI3Valkyries/BZ/ValkyrieChariot.json");
 var WolfsDawn = require("../json/HI3Valkyries/BZ/WolfsDawn.json");
 var YamabukiArmor = require("../json/HI3Valkyries/BZ/YamabukiArmor.json");
 
+var AzureEmpyrea = require("../json/HI3Valkyries/FH/AzureEmpyrea.json");
 var NightSquire = require("../json/HI3Valkyries/FH/NightSquire.json");
 var Phoenix = require("../json/HI3Valkyries/FH/Phoenix.json");
 var ShadowKnight = require("../json/HI3Valkyries/FH/ShadowKnight.json");
@@ -59,6 +60,7 @@ var GyakushinnMiko = require("../json/HI3Valkyries/YS/GyakushinnMiko.json");
 var Valkyries = [
     ArcticKriegsmesser,
     ArgentKnight,
+    AzureEmpyrea,
     BattleStorm,
     BlackNucleus,
     BloodRose,
@@ -257,7 +259,7 @@ buttonShowAll.addEventListener("click", showAll);
 
 // browserify js/honkaimain.js -o js/honkaibundle.js
 
-},{"../json/HI3Valkyries/BZ/BlackNucleus.json":2,"../json/HI3Valkyries/BZ/DimensionBreaker.json":3,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":4,"../json/HI3Valkyries/BZ/SnowySniper.json":5,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":6,"../json/HI3Valkyries/BZ/WolfsDawn.json":7,"../json/HI3Valkyries/BZ/YamabukiArmor.json":8,"../json/HI3Valkyries/FH/NightSquire.json":9,"../json/HI3Valkyries/FH/Phoenix.json":10,"../json/HI3Valkyries/FH/ShadowKnight.json":11,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":12,"../json/HI3Valkyries/KA/ImayohRitual.json":13,"../json/HI3Valkyries/KA/SixthSerenade.json":14,"../json/HI3Valkyries/KA/Sundenjager.json":15,"../json/HI3Valkyries/KK/DivinePrayer.json":16,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":17,"../json/HI3Valkyries/KK/KnightMoonbeam.json":18,"../json/HI3Valkyries/KK/ValkyrieRanger.json":19,"../json/HI3Valkyries/KK/WhiteComet.json":20,"../json/HI3Valkyries/LO/BlueberryBlitz.json":21,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":22,"../json/HI3Valkyries/MH/BattleStorm.json":23,"../json/HI3Valkyries/MH/BloodRose.json":24,"../json/HI3Valkyries/MH/ScarletFusion.json":25,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":26,"../json/HI3Valkyries/MH/VermilionKnight.json":27,"../json/HI3Valkyries/RM/CrimsonImpulse.json":28,"../json/HI3Valkyries/RM/LightningEmpress.json":29,"../json/HI3Valkyries/RM/ShadowDash.json":30,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":31,"../json/HI3Valkyries/RO/MolotovCherry.json":32,"../json/HI3Valkyries/RR/ArgentKnight.json":33,"../json/HI3Valkyries/RR/PhantomIron.json":34,"../json/HI3Valkyries/RR/UmbralRose.json":35,"../json/HI3Valkyries/SV/StygianNymph.json":36,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":37,"../json/HI3Valkyries/TA/CelestialHymn.json":38,"../json/HI3Valkyries/TA/LunaKindred.json":39,"../json/HI3Valkyries/TA/SakunoRondo.json":40,"../json/HI3Valkyries/TA/ValkyriePledge.json":41,"../json/HI3Valkyries/TA/VioletExecuter.json":42,"../json/HI3Valkyries/YS/DarkBoltJonin.json":43,"../json/HI3Valkyries/YS/FlameSakitama.json":44,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":45,"../json/HI3Valkyries/YS/GyakushinnMiko.json":46}],2:[function(require,module,exports){
+},{"../json/HI3Valkyries/BZ/BlackNucleus.json":2,"../json/HI3Valkyries/BZ/DimensionBreaker.json":3,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":4,"../json/HI3Valkyries/BZ/SnowySniper.json":5,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":6,"../json/HI3Valkyries/BZ/WolfsDawn.json":7,"../json/HI3Valkyries/BZ/YamabukiArmor.json":8,"../json/HI3Valkyries/FH/AzureEmpyrea.json":9,"../json/HI3Valkyries/FH/NightSquire.json":10,"../json/HI3Valkyries/FH/Phoenix.json":11,"../json/HI3Valkyries/FH/ShadowKnight.json":12,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":13,"../json/HI3Valkyries/KA/ImayohRitual.json":14,"../json/HI3Valkyries/KA/SixthSerenade.json":15,"../json/HI3Valkyries/KA/Sundenjager.json":16,"../json/HI3Valkyries/KK/DivinePrayer.json":17,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":18,"../json/HI3Valkyries/KK/KnightMoonbeam.json":19,"../json/HI3Valkyries/KK/ValkyrieRanger.json":20,"../json/HI3Valkyries/KK/WhiteComet.json":21,"../json/HI3Valkyries/LO/BlueberryBlitz.json":22,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":23,"../json/HI3Valkyries/MH/BattleStorm.json":24,"../json/HI3Valkyries/MH/BloodRose.json":25,"../json/HI3Valkyries/MH/ScarletFusion.json":26,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":27,"../json/HI3Valkyries/MH/VermilionKnight.json":28,"../json/HI3Valkyries/RM/CrimsonImpulse.json":29,"../json/HI3Valkyries/RM/LightningEmpress.json":30,"../json/HI3Valkyries/RM/ShadowDash.json":31,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":32,"../json/HI3Valkyries/RO/MolotovCherry.json":33,"../json/HI3Valkyries/RR/ArgentKnight.json":34,"../json/HI3Valkyries/RR/PhantomIron.json":35,"../json/HI3Valkyries/RR/UmbralRose.json":36,"../json/HI3Valkyries/SV/StygianNymph.json":37,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":38,"../json/HI3Valkyries/TA/CelestialHymn.json":39,"../json/HI3Valkyries/TA/LunaKindred.json":40,"../json/HI3Valkyries/TA/SakunoRondo.json":41,"../json/HI3Valkyries/TA/ValkyriePledge.json":42,"../json/HI3Valkyries/TA/VioletExecuter.json":43,"../json/HI3Valkyries/YS/DarkBoltJonin.json":44,"../json/HI3Valkyries/YS/FlameSakitama.json":45,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":46,"../json/HI3Valkyries/YS/GyakushinnMiko.json":47}],2:[function(require,module,exports){
 module.exports={
     "battlesuit": "Black Nucleus",
     "acronym": [
@@ -435,6 +437,25 @@ module.exports={
 
 },{}],9:[function(require,module,exports){
 module.exports={
+    "battlesuit": "Azure Empyrea",
+    "acronym": [
+        "AE"
+    ],
+    "type": "Psychic",
+    "soul": "Awakening",
+    "firstname": "Fu",
+    "lastname": "Hua",
+    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/b/b9/Azure_Empyrea.png/936px-Azure_Empyrea.png",
+    "birthday": "February 9th",
+    "weapon": "Gauntlets",
+    "costume": [
+    ],
+    "fragdropinfo": [
+    ]
+}
+
+},{}],10:[function(require,module,exports){
+module.exports={
     "battlesuit": "Night Squire",
     "acronym": [
         "NS"
@@ -460,7 +481,7 @@ module.exports={
     ]
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 module.exports={
     "battlesuit": "Phoenix",
     "acronym": [
@@ -483,7 +504,7 @@ module.exports={
     ]
 }
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 module.exports={
     "battlesuit": "Shadow Knight",
     "acronym": [
@@ -503,7 +524,7 @@ module.exports={
     ]
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Accipiter",
     "acronym": [
@@ -532,7 +553,7 @@ module.exports={
     ]
 }
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 module.exports={
     "battlesuit": "Imayoh Ritual",
     "acronym": [
@@ -557,7 +578,7 @@ module.exports={
     ]
 }
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sixth Serenade",
     "acronym": [
@@ -578,7 +599,7 @@ module.exports={
     ]
 }
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sundenjager",
     "acronym": [
@@ -601,7 +622,7 @@ module.exports={
     ]
 }
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 module.exports={
     "battlesuit": "Divine Prayer",
     "acronym": [
@@ -629,7 +650,7 @@ module.exports={
     ]
 }
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 module.exports={
     "battlesuit": "Herrscher of the Void",
     "acronym": [
@@ -653,7 +674,7 @@ module.exports={
     ]
 }
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 module.exports={
     "battlesuit": "Knight Moonbeam",
     "acronym": [
@@ -677,7 +698,7 @@ module.exports={
     ]
 }
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Ranger",
     "acronym": [
@@ -708,7 +729,7 @@ module.exports={
     ]
 }
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 module.exports={
     "battlesuit": "White Comet",
     "acronym": [
@@ -737,7 +758,7 @@ module.exports={
     ]
 }
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 module.exports={
     "battlesuit": "Blueberry Blitz",
     "acronym": [
@@ -763,7 +784,7 @@ module.exports={
     ]
 }
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 module.exports={
     "battlesuit": "Artic Kriegsmesser",
     "acronym": [
@@ -785,7 +806,7 @@ module.exports={
     ]
 }
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 module.exports={
     "battlesuit": "Battle Storm",
     "acronym": [
@@ -811,7 +832,7 @@ module.exports={
     ]
 }
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 module.exports={
     "battlesuit": "Blood Rose",
     "acronym": [
@@ -834,7 +855,7 @@ module.exports={
     ]
 }
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 module.exports={
     "battlesuit": "Scarlet Fusion",
     "acronym": [
@@ -862,7 +883,7 @@ module.exports={
     ]
 }
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Triumph",
     "acronym": [
@@ -888,7 +909,7 @@ module.exports={
     ]
 }
 
-},{}],27:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 module.exports={
     "battlesuit": "Vermilion Knight",
     "acronym": [
@@ -909,7 +930,7 @@ module.exports={
     ]
 }
 
-},{}],28:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 module.exports={
     "battlesuit": "Crimson Impulse",
     "acronym": [
@@ -936,7 +957,7 @@ module.exports={
     ]
 }
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 module.exports={
     "battlesuit": "Lightning Empress",
     "acronym": [
@@ -962,7 +983,7 @@ module.exports={
     ]
 }
 
-},{}],30:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 module.exports={
     "battlesuit": "Shadow Dash",
     "acronym": [
@@ -990,7 +1011,7 @@ module.exports={
     ]
 }
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Bladestrike",
     "acronym": [
@@ -1021,7 +1042,7 @@ module.exports={
     ]
 }
 
-},{}],32:[function(require,module,exports){
+},{}],33:[function(require,module,exports){
 module.exports={
     "battlesuit": "Molotov Cherry",
     "acronym": [
@@ -1043,7 +1064,7 @@ module.exports={
     ]
 }
 
-},{}],33:[function(require,module,exports){
+},{}],34:[function(require,module,exports){
 module.exports={
     "battlesuit": "Argent Knight",
     "acronym": [
@@ -1067,7 +1088,7 @@ module.exports={
     ]
 }
 
-},{}],34:[function(require,module,exports){
+},{}],35:[function(require,module,exports){
 module.exports={
     "battlesuit": "Phantom Iron",
     "acronym": [
@@ -1092,7 +1113,7 @@ module.exports={
     ]
 }
 
-},{}],35:[function(require,module,exports){
+},{}],36:[function(require,module,exports){
 module.exports={
     "battlesuit": "Umbral Rose",
     "acronym": [
@@ -1119,7 +1140,7 @@ module.exports={
     ]
 }
 
-},{}],36:[function(require,module,exports){
+},{}],37:[function(require,module,exports){
 module.exports={
     "battlesuit": "Stygian Nymph",
     "acronym": [
@@ -1139,7 +1160,7 @@ module.exports={
     ]
 }
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 module.exports={
     "battlesuit": "Swallowtail Phantasm",
     "acronym": [
@@ -1165,7 +1186,7 @@ module.exports={
     ]
 }
 
-},{}],38:[function(require,module,exports){
+},{}],39:[function(require,module,exports){
 module.exports={
     "battlesuit": "Celestial Hymn",
     "acronym": [
@@ -1188,7 +1209,7 @@ module.exports={
     ]
 }
 
-},{}],39:[function(require,module,exports){
+},{}],40:[function(require,module,exports){
 module.exports={
     "battlesuit": "Luna Kindred",
     "acronym": [
@@ -1212,7 +1233,7 @@ module.exports={
     ]
 }
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sakuno Rondo",
     "acronym": [
@@ -1239,7 +1260,7 @@ module.exports={
     ]
 }
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Pledge",
     "acronym": [
@@ -1271,7 +1292,7 @@ module.exports={
     ]
 }
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 module.exports={
     "battlesuit": "Violet Executer",
     "acronym": [
@@ -1298,7 +1319,7 @@ module.exports={
     ]
 }
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 module.exports={
     "battlesuit": "DarkBolt Jonin",
     "acronym": [
@@ -1322,7 +1343,7 @@ module.exports={
     ]
 }
 
-},{}],44:[function(require,module,exports){
+},{}],45:[function(require,module,exports){
 module.exports={
     "battlesuit": "Flame Sakitama",
     "acronym": [
@@ -1345,7 +1366,7 @@ module.exports={
     ]
 }
 
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 module.exports={
     "battlesuit": "Goushinnso Memento",
     "acronym": [
@@ -1368,7 +1389,7 @@ module.exports={
     ]
 }
 
-},{}],46:[function(require,module,exports){
+},{}],47:[function(require,module,exports){
 module.exports={
     "battlesuit": "Gyakushinn Miko",
     "acronym": [
