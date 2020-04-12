@@ -308,7 +308,8 @@ module.exports={
     "battlesuit": "Herrscher of Reason",
     "acronym": [
         "HoR",
-        "HR"
+        "HR",
+        "BK"
     ],
     "type": "Mecha",
     "soul": "Awakening",
@@ -439,7 +440,8 @@ module.exports={
 module.exports={
     "battlesuit": "Azure Empyrea",
     "acronym": [
-        "AE"
+        "AE",
+        "SB"
     ],
     "type": "Psychic",
     "soul": "Awakening",
