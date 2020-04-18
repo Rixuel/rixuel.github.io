@@ -1,3 +1,5 @@
+var ValkyrieGloria = require("../json/HI3Valkyries/BA/ValkyrieGloria.json");
+
 var BlackNucleus = require("../json/HI3Valkyries/BZ/BlackNucleus.json");
 var DimensionBreaker = require("../json/HI3Valkyries/BZ/DimensionBreaker.json");
 var HerrscherOfReason = require("../json/HI3Valkyries/BZ/HerrscherOfReason.json");
@@ -95,6 +97,7 @@ var Valkyries = [
     ValkyrieAccipiter,
     ValkyrieBladestrike,
     ValkyrieChariot,
+    ValkyrieGloria,
     ValkyriePledge,
     ValkyrieRanger,
     ValkyrieTriumph,
