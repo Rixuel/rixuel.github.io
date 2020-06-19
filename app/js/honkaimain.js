@@ -1,3 +1,4 @@
+var BrightKnightExcelsis = require("../json/HI3Valkyries/BA/BrightKnightExcelsis.json");
 var ValkyrieGloria = require("../json/HI3Valkyries/BA/ValkyrieGloria.json");
 
 var BlackNucleus = require("../json/HI3Valkyries/BZ/BlackNucleus.json");
@@ -66,6 +67,7 @@ var Valkyries = [
     BlackNucleus,
     BloodRose,
     BlueberryBlitz,
+    BrightKnightExcelsis,
     CelestialHymn,
     CrimsonImpulse,
     DarkBoltJonin,
