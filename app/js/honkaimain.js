@@ -35,6 +35,7 @@ var ValkyrieTriumph = require("../json/HI3Valkyries/MH/ValkyrieTriumph.json");
 var VermilionKnight = require("../json/HI3Valkyries/MH/VermilionKnight.json");
 
 var CrimsonImpulse = require("../json/HI3Valkyries/RM/CrimsonImpulse.json");
+var HerrscherOfThunder = require("../json/HI3Valkyries/RM/HerrscherOfThunder.json");
 var LightningEmpress = require("../json/HI3Valkyries/RM/LightningEmpress.json");
 var ShadowDash = require("../json/HI3Valkyries/RM/ShadowDash.json");
 var ValkyrieBladestrike = require("../json/HI3Valkyries/RM/ValkyrieBladestrike.json");
@@ -51,6 +52,7 @@ var SwallowtailPhantasm = require("../json/HI3Valkyries/SV/SwallowtailPhantasm.j
 var CelestialHymn = require("../json/HI3Valkyries/TA/CelestialHymn.json");
 var LunaKindred = require("../json/HI3Valkyries/TA/LunaKindred.json");
 var SakunoRondo = require("../json/HI3Valkyries/TA/SakunoRondo.json");
+var StarlitAstrologos = require("../json/HI3Valkyries/TA/StarlitAstrologos.json");
 var ValkyriePledge = require("../json/HI3Valkyries/TA/ValkyriePledge.json");
 var VioletExecuter = require("../json/HI3Valkyries/TA/VioletExecuter.json");
 
@@ -78,6 +80,7 @@ var Valkyries = [
     GyakushinnMiko,
     HerrscherOfReason,
     HerrscherOfTheVoid,
+    HerrscherOfThunder,
     ImayohRitual,
     KnightMoonbeam,
     LightningEmpress,
@@ -92,6 +95,7 @@ var Valkyries = [
     ShadowKnight,
     SixthSerenade,
     SnowySniper,
+    StarlitAstrologos,
     StygianNymph,
     Sundenjager,
     SwallowtailPhantasm,
