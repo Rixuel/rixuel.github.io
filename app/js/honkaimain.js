@@ -134,7 +134,7 @@ searchBarInput.addEventListener("keyup", function(event) {
 });
 
 var ValkyrieLength = Valkyries.length;
-//console.log("ValkyrieLength: " + ValkyrieLength);
+console.log("ValkyrieLength: " + ValkyrieLength);
 
 function getAcronyms(length, output, data, i) {
     for (var j=0; j<length; j++) {
@@ -164,6 +164,41 @@ function getFragDropInfos(length, output, data, i) {
         }
     }
     return output;
+}
+
+function howTo() {
+    var howToTemplate = "";
+    howToTemplate += "<div class='content'>";
+        howToTemplate += "<div class='columns'>";
+            howToTemplate += "<div class='column'>";
+                howToTemplate += "<h1>How to use?</h1>";
+                howToTemplate += "This guide shows you how to use the search function.<br>";
+                howToTemplate += "<h2>You can search by...</h2>";
+                howToTemplate += "<b><u>First Name</u></b> (ex: Kiana)<br>";
+                howToTemplate += "<b><u>Last Name</u></b> (ex: Kaslana)<br>";
+                howToTemplate += "<b><u>First & Last Names</u></b> (ex: Kiana Kaslana)<br>";
+                howToTemplate += "<b><u>Last & First Names</u></b> (ex: Kaslana Kiana)<br>";
+                howToTemplate += "<b><u>Battlesuit</u></b> (ex: Celestial Hymn)<br>";
+                howToTemplate += "<b><u>Type</u></b> (ex: Mecha, Biologic, Psychic, Quantum)<br>";
+                howToTemplate += "<b><u>Soul</u></b> (ex: Original, Awakening)<br>";
+                howToTemplate += "<b><u>Weapon</u></b> (ex: Cannons, Crosses, Gauntlets, Greatswords, Katanas, Lances, Pistols, Scythes)<br>";
+                howToTemplate += "<b><u>Acronym</u></b> (ex: AK, AE, ... [Check the next section about Acronym])<br>";
+                howToTemplate += "<h2>Searching with an Acronym accurately</h2>";
+                howToTemplate += "Sometime, searching with an acronym might cause some inaccuracy.<br>";
+                howToTemplate += "Use <b>square brackets</b> with the acronym in it to get accurated result.<br>";
+                howToTemplate += "ex: [AK], [AE], [HoR], [Tuna], ...<br>";
+                howToTemplate += "<h2>Lowercase or Uppercase?</h2>";
+                howToTemplate += "It doesn't matter. The search function understands Kiana, kiana, or KiAnA inputs. <br>";
+                howToTemplate += "<h2>How to show all Valkyries?</h2>";
+                howToTemplate += "This function might slow down your computer or consume your bandwidth (because of loading pictures).<br>";
+                howToTemplate += "In the search bar, type: <b>[showAll]</b><br>";
+                howToTemplate += "<h2>How to empty the result</h2>";
+                howToTemplate += "Leave the search bar empty (or enter invalid inputs).</b><br>";
+            howToTemplate += "</div>";
+        howToTemplate += "</div>";
+    howToTemplate += "</div>";
+
+    document.getElementById("output").innerHTML = howToTemplate;
 }
 
 function templateInfo(data, i) {
@@ -220,6 +255,7 @@ function templateInfo(data, i) {
 function showResult() {
     var dataResult = "";
     searchValue = searchInput.value;
+    var showAllStr = "[showAll]";
     //console.log("searchValue: " + searchValue);
 
     for (var i=0; i<ValkyrieLength; i++) {
@@ -229,6 +265,17 @@ function showResult() {
 
         if (searchValue == "" || searchValue == " " || (searchValue.length < 2)) {
             // Do nothing
+        } else if (showAllStr.toLowerCase().includes(searchValue.toLowerCase())) {
+            // A specific command to show all Valkyries
+            var dataResult = "";
+        	for (var i=0, len=Valkyries.length; i<len; i++) {
+                acronymLength = Valkyries[i].acronym.length;
+                costumeLength = Valkyries[i].costume.length;
+                fragdropinfoLength = Valkyries[i].fragdropinfo.length;
+        		dataResult += templateInfo(Valkyries, i);
+        	}
+            document.getElementById("output").innerHTML = dataResult;
+
         } else if (Valkyries[i].battlesuit.toLowerCase() == searchValue.toLowerCase() ||
             Valkyries[i].battlesuit.toLowerCase().includes(searchValue.toLowerCase()) ||
             Valkyries[i].firstname.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -247,22 +294,10 @@ function showResult() {
     document.getElementById("output").innerHTML = dataResult;
 }
 
-function showAll() {
-	var dataResult = "";
-	for (var i=0, len=Valkyries.length; i<len; i++) {
-        acronymLength = Valkyries[i].acronym.length;
-        costumeLength = Valkyries[i].costume.length;
-        fragdropinfoLength = Valkyries[i].fragdropinfo.length;
-		dataResult += templateInfo(Valkyries, i);
-	}
-    document.getElementById("output").innerHTML = dataResult;
-}
-
-
 var button = document.getElementById("clickButton");
 button.addEventListener("click", showResult);
 
-var buttonShowAll = document.getElementById("clickShowAll");
-buttonShowAll.addEventListener("click", showAll);
+var buttonHowTo = document.getElementById("clickHowTo");
+buttonHowTo.addEventListener("click", howTo);
 
 // browserify js/honkaimain.js -o js/honkaibundle.js
