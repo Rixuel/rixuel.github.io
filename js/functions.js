@@ -62,7 +62,7 @@ function navbar() {
             "<div id='navbarBasicExample' class='navbar-menu'>" +
                 "<div class='navbar-start'>" +
                     "<a class='navbar-item' href='index.html' id='MenuHome'>Home</a>" +
-                    "<a class='navbar-item' href='profile.html' id='MenuProfile'>Profile</a>" +
+                    "<a class='navbar-item' href='about.html' id='MenuAbout'>About</a>" +
                     "<a class='navbar-item' href='gallery.html' id='MenuGallery'>Gallery</a>" +
                     "<div class='navbar-item has-dropdown is-hoverable'>" +
                         "<a class='navbar-link' href='downloads.html' id='MenuDownloads'>Downloads</a>" +
@@ -127,8 +127,8 @@ function checkPageWithMenu() {
     if (pageWithoutExt.toString().toLowerCase() === "index") {
         selectedMenu("MenuHome");
     }
-    if (pageWithoutExt.toString().toLowerCase() === "profile") {
-        selectedMenu("MenuProfile");
+    if (pageWithoutExt.toString().toLowerCase() === "about") {
+        selectedMenu("MenuAbout");
     }
     if (pageWithoutExt.toString().toLowerCase() === "gallery") {
         selectedMenu("MenuGallery");
