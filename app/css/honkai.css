@@ -23,8 +23,10 @@ html, body {
 		font-size: 1.7em;
 	}
 	.content h2 {
+		display: block;
 		font-size: 1.2em;
 		letter-spacing: 2px !important;
+		word-wrap: break-word;
 	}
 	.typeimg {
 		max-height: 30px !important;
@@ -91,24 +93,20 @@ img {
 }
 .content .acronym {
     color: #FF7799;
+	font-size: 1.0em;
     font-family: Consolas, Arial;
-	padding-top: 5px;
-    padding-bottom: 5px;
 }
 .content h1 {
+	border-bottom: 1px solid #E4F1A4;
 	color: #E4F1A4;
+	font-size: 2.2em;
 	font-family: "Lora", Consolas, Arial;
-    padding-top: 20px;
-    line-height: 0px;
 }
 .content h2 {
 	color: #35D6FF;
 	font-family: "Raleway", Calibri, Arial;
 	font-size: 1.4em;
-    padding-top: 5px;
-    padding-bottom: 5px;
     letter-spacing: 8px;
-    line-height: 0px;
 }
 .content h4 {
     color: #ECDECC;
