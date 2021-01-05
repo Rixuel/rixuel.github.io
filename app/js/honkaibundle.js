@@ -1258,7 +1258,7 @@ module.exports={
     "soul": "Original",
     "firstname": "Rita",
     "lastname": "Rossweisse",
-    "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b0/Fallen_Rosemary.png/revision/latest?cb=20200915111813",
+    "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b0/Fallen_Rosemary.png",
     "birthday": "March 1st",
     "weapon": "Scythes",
     "costume": [
