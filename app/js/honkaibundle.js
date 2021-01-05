@@ -341,7 +341,7 @@ module.exports={
     "soul": "Original",
     "firstname": "Bianka",
     "lastname": "Ataegina",
-    "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/c/c2/Lord_Paramount_(Costume).png",
+    "img": "https://uploadstatic-sea.mihoyo.com/contentweb/20201216/2020121616452893349.png",
     "birthday": "Jan 1st (according to Schicksal)",
     "weapon": "Lances",
     "costume": [
@@ -1258,7 +1258,7 @@ module.exports={
     "soul": "Original",
     "firstname": "Rita",
     "lastname": "Rossweisse",
-    "img": "https://static.wikia.nocookie.net/honkaiimpact3_gamepedia_en/images/b/b0/Fallen_Rosemary.png",
+    "img": "https://uploadstatic-sea.mihoyo.com/contentweb/20200915/2020091513442677610.png",
     "birthday": "March 1st",
     "weapon": "Scythes",
     "costume": [
