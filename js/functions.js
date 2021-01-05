@@ -65,14 +65,14 @@ function navbar() {
                     "<a class='navbar-item' href='about.html' id='MenuAbout'>About</a>" +
                     "<a class='navbar-item' href='gallery.html' id='MenuGallery'>Gallery</a>" +
                     "<div class='navbar-item has-dropdown is-hoverable'>" +
-                        "<a class='navbar-link' href='downloads.html' id='MenuDownloads'>Downloads</a>" +
+                        "<a class='navbar-link' href='projects.html' id='MenuProjects'>Projects</a>" +
                         "<div class='navbar-dropdown'>" +
                             "<a class='navbar-item' href='app/crypto.html'>Crypto</a>" +
                             "<a class='navbar-item' href='app/bible.html'>Read Bible Online</a>" +
                             "<a class='navbar-item' href='app/sortlist.html'>Sort the List</a>" +
                             "<a class='navbar-item' href='app/viewjson.html'>View JSON</a>" +
                             "<hr class='navbar-divider'>" +
-                            "<a class='navbar-item' href='downloads.html'>More...</a>" +
+                            "<a class='navbar-item' href='projects.html'>More...</a>" +
                         "</div>" +
                     "</div>" +
                     "<a class='navbar-item' href='random.html' id='MenuRandom'>Random</a>" +
@@ -133,8 +133,8 @@ function checkPageWithMenu() {
     if (pageWithoutExt.toString().toLowerCase() === "gallery") {
         selectedMenu("MenuGallery");
     }
-    if (pageWithoutExt.toString().toLowerCase() === "downloads") {
-        selectedMenu("MenuDownloads");
+    if (pageWithoutExt.toString().toLowerCase() === "projects") {
+        selectedMenu("MenuProjects");
     }
     if (pageWithoutExt.toString().toLowerCase() === "random") {
         selectedMenu("MenuRandom");
