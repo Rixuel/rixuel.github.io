@@ -1,7 +1,8 @@
 {
     "battlesuit": "Molotov Cherry",
     "acronym": [
-        "MC"
+        "MC", 
+        "FT"
     ],
     "type": "Psychic",
     "soul": "Original",
@@ -12,7 +13,10 @@
     "weapon": "Greatswords",
     "costume": [
         "Molotov Cherry",
-        "Gothic Rozamary"
+        "Coral Sunrise",
+        "Fervent Tempo",
+        "Gothic Rozamary",
+        "Violet Dreamscape"
     ],
     "fragdropinfo": [
         "War Treasury"

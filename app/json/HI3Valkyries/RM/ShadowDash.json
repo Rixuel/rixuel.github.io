@@ -1,7 +1,8 @@
 {
     "battlesuit": "Shadow Dash",
     "acronym": [
-        "SD"
+        "SD",
+        "DS"
     ],
     "type": "Mecha",
     "soul": "Original",
@@ -12,6 +13,8 @@
     "weapon": "Katanas",
     "costume": [
         "Shadow Dash",
+        "Danzai Spectramancer",
+        "Orochi Cuirass",
         "Soul Symphony",
         "Hind of Noel",
         "Vast Ocean"

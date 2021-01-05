@@ -1,4 +1,5 @@
 var BrightKnightExcelsis = require("../json/HI3Valkyries/BA/BrightKnightExcelsis.json");
+var DeaAnchora = require("../json/HI3Valkyries/BA/DeaAnchora.json");
 var ValkyrieGloria = require("../json/HI3Valkyries/BA/ValkyrieGloria.json");
 
 var BlackNucleus = require("../json/HI3Valkyries/BZ/BlackNucleus.json");
@@ -43,6 +44,7 @@ var ValkyrieBladestrike = require("../json/HI3Valkyries/RM/ValkyrieBladestrike.j
 var MolotovCherry = require("../json/HI3Valkyries/RO/MolotovCherry.json");
 
 var ArgentKnight = require("../json/HI3Valkyries/RR/ArgentKnight.json");
+var FallenRosemary = require("../json/HI3Valkyries/RR/FallenRosemary.json");
 var PhantomIron = require("../json/HI3Valkyries/RR/PhantomIron.json");
 var UmbralRose = require("../json/HI3Valkyries/RR/UmbralRose.json");
 
@@ -73,8 +75,10 @@ var Valkyries = [
     CelestialHymn,
     CrimsonImpulse,
     DarkBoltJonin,
+    DeaAnchora,
     DimensionBreaker,
     DivinePrayer,
+    FallenRosemary,
     FlameSakitama,
     GoushinnsoMemento,
     GyakushinnMiko,
