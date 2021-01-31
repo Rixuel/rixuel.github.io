@@ -1,4 +1,6 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+var BlazingHope = require("../json/HI3Valkyries/aLimited/BlazingHope.json");
+
 var BrightKnightExcelsis = require("../json/HI3Valkyries/BA/BrightKnightExcelsis.json");
 var DeaAnchora = require("../json/HI3Valkyries/BA/DeaAnchora.json");
 var ValkyrieGloria = require("../json/HI3Valkyries/BA/ValkyrieGloria.json");
@@ -70,6 +72,7 @@ var Valkyries = [
     AzureEmpyrea,
     BattleStorm,
     BlackNucleus,
+    BlazingHope,
     BloodRose,
     BlueberryBlitz,
     BrightKnightExcelsis,
@@ -139,7 +142,10 @@ searchBarInput.addEventListener("keyup", function(event) {
 });
 
 var ValkyrieLength = Valkyries.length;
-console.log("ValkyrieLength: " + ValkyrieLength);
+//console.log("ValkyrieLength: " + ValkyrieLength);
+document.getElementById("ValkyrieLength").innerHTML = ValkyrieLength;
+
+var searchResultCounter = 0;
 
 function getTags(length, output, data, i) {
     for (var j=0; j<length; j++) {
@@ -203,7 +209,22 @@ function howTo() {
         howToTemplate += "</div>";
     howToTemplate += "</div>";
 
+    document.getElementById("SearchResultCounter").innerHTML = "";
     document.getElementById("output").innerHTML = howToTemplate;
+}
+
+function aSearchResultCounter() {
+    var resultCounterTemplate = "";
+    resultCounterTemplate += "<div class='content'>";
+        resultCounterTemplate += "<div class='columns'>";
+            resultCounterTemplate += "<div class='column'>";
+                resultCounterTemplate += "<span style='color:#35D6FF'>Search Result found: </span>";
+                resultCounterTemplate += "<b><span style='color:#FB9929'>" + searchResultCounter + "</span></b>";
+            resultCounterTemplate += "</div>";
+        resultCounterTemplate += "</div>";
+    resultCounterTemplate += "</div><span> </span>";
+
+    return resultCounterTemplate;
 }
 
 function templateInfo(data, i) {
@@ -263,6 +284,9 @@ function showResult() {
     var showAllStr = "[showAll]";
     //console.log("searchValue: " + searchValue);
 
+    // Initialize the Search Result Counter to 0
+    searchResultCounter = 0;
+
     for (var i=0; i<ValkyrieLength; i++) {
         tagLength = Valkyries[i].tag.length;
         costumeLength = Valkyries[i].costume.length;
@@ -270,10 +294,13 @@ function showResult() {
 
         if (searchValue == "" || searchValue == " " || (searchValue.length < 2)) {
             // Do nothing
+            //console.log("[1] searchResultCounter: " + searchResultCounter);
         } else if (showAllStr.toLowerCase().includes(searchValue.toLowerCase())) {
             // A specific command to show all Valkyries
             var dataResult = "";
         	for (var i=0, len=Valkyries.length; i<len; i++) {
+                searchResultCounter++;
+                //console.log("[2] searchResultCounter: " + searchResultCounter);
                 tagLength = Valkyries[i].tag.length;
                 costumeLength = Valkyries[i].costume.length;
                 fragdropinfoLength = Valkyries[i].fragdropinfo.length;
@@ -293,9 +320,19 @@ function showResult() {
             Valkyries[i].tag.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
             Valkyries[i].tag.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
             // Search one or multiple results
+            searchResultCounter++;
+            //console.log("[3] searchResultCounter: " + searchResultCounter);
             dataResult += templateInfo(Valkyries, i)
         }
     }
+
+    // Hide the search result counter if there is no result. Otherwise, show it.
+    if (searchResultCounter == 0) {
+        document.getElementById("SearchResultCounter").innerHTML = "";
+    } else {
+        document.getElementById("SearchResultCounter").innerHTML = aSearchResultCounter();
+    }
+    // The core output
     document.getElementById("output").innerHTML = dataResult;
 }
 
@@ -307,7 +344,7 @@ buttonHowTo.addEventListener("click", howTo);
 
 // browserify js/honkaimain.js -o js/honkaibundle.js
 
-},{"../json/HI3Valkyries/BA/BrightKnightExcelsis.json":2,"../json/HI3Valkyries/BA/DeaAnchora.json":3,"../json/HI3Valkyries/BA/ValkyrieGloria.json":4,"../json/HI3Valkyries/BZ/BlackNucleus.json":5,"../json/HI3Valkyries/BZ/DimensionBreaker.json":6,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":7,"../json/HI3Valkyries/BZ/SnowySniper.json":8,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":9,"../json/HI3Valkyries/BZ/WolfsDawn.json":10,"../json/HI3Valkyries/BZ/YamabukiArmor.json":11,"../json/HI3Valkyries/FH/AzureEmpyrea.json":12,"../json/HI3Valkyries/FH/NightSquire.json":13,"../json/HI3Valkyries/FH/Phoenix.json":14,"../json/HI3Valkyries/FH/ShadowKnight.json":15,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":16,"../json/HI3Valkyries/KA/ImayohRitual.json":17,"../json/HI3Valkyries/KA/SixthSerenade.json":18,"../json/HI3Valkyries/KA/Sundenjager.json":19,"../json/HI3Valkyries/KK/DivinePrayer.json":20,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":21,"../json/HI3Valkyries/KK/KnightMoonbeam.json":22,"../json/HI3Valkyries/KK/ValkyrieRanger.json":23,"../json/HI3Valkyries/KK/WhiteComet.json":24,"../json/HI3Valkyries/LO/BlueberryBlitz.json":25,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":26,"../json/HI3Valkyries/MH/BattleStorm.json":27,"../json/HI3Valkyries/MH/BloodRose.json":28,"../json/HI3Valkyries/MH/ScarletFusion.json":29,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":30,"../json/HI3Valkyries/MH/VermilionKnight.json":31,"../json/HI3Valkyries/RM/CrimsonImpulse.json":32,"../json/HI3Valkyries/RM/HerrscherOfThunder.json":33,"../json/HI3Valkyries/RM/LightningEmpress.json":34,"../json/HI3Valkyries/RM/ShadowDash.json":35,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":36,"../json/HI3Valkyries/RO/MolotovCherry.json":37,"../json/HI3Valkyries/RR/ArgentKnight.json":38,"../json/HI3Valkyries/RR/FallenRosemary.json":39,"../json/HI3Valkyries/RR/PhantomIron.json":40,"../json/HI3Valkyries/RR/UmbralRose.json":41,"../json/HI3Valkyries/SV/StygianNymph.json":42,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":43,"../json/HI3Valkyries/TA/CelestialHymn.json":44,"../json/HI3Valkyries/TA/LunaKindred.json":45,"../json/HI3Valkyries/TA/SakunoRondo.json":46,"../json/HI3Valkyries/TA/StarlitAstrologos.json":47,"../json/HI3Valkyries/TA/ValkyriePledge.json":48,"../json/HI3Valkyries/TA/VioletExecuter.json":49,"../json/HI3Valkyries/YS/DarkBoltJonin.json":50,"../json/HI3Valkyries/YS/FlameSakitama.json":51,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":52,"../json/HI3Valkyries/YS/GyakushinnMiko.json":53}],2:[function(require,module,exports){
+},{"../json/HI3Valkyries/BA/BrightKnightExcelsis.json":2,"../json/HI3Valkyries/BA/DeaAnchora.json":3,"../json/HI3Valkyries/BA/ValkyrieGloria.json":4,"../json/HI3Valkyries/BZ/BlackNucleus.json":5,"../json/HI3Valkyries/BZ/DimensionBreaker.json":6,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":7,"../json/HI3Valkyries/BZ/SnowySniper.json":8,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":9,"../json/HI3Valkyries/BZ/WolfsDawn.json":10,"../json/HI3Valkyries/BZ/YamabukiArmor.json":11,"../json/HI3Valkyries/FH/AzureEmpyrea.json":12,"../json/HI3Valkyries/FH/NightSquire.json":13,"../json/HI3Valkyries/FH/Phoenix.json":14,"../json/HI3Valkyries/FH/ShadowKnight.json":15,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":16,"../json/HI3Valkyries/KA/ImayohRitual.json":17,"../json/HI3Valkyries/KA/SixthSerenade.json":18,"../json/HI3Valkyries/KA/Sundenjager.json":19,"../json/HI3Valkyries/KK/DivinePrayer.json":20,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":21,"../json/HI3Valkyries/KK/KnightMoonbeam.json":22,"../json/HI3Valkyries/KK/ValkyrieRanger.json":23,"../json/HI3Valkyries/KK/WhiteComet.json":24,"../json/HI3Valkyries/LO/BlueberryBlitz.json":25,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":26,"../json/HI3Valkyries/MH/BattleStorm.json":27,"../json/HI3Valkyries/MH/BloodRose.json":28,"../json/HI3Valkyries/MH/ScarletFusion.json":29,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":30,"../json/HI3Valkyries/MH/VermilionKnight.json":31,"../json/HI3Valkyries/RM/CrimsonImpulse.json":32,"../json/HI3Valkyries/RM/HerrscherOfThunder.json":33,"../json/HI3Valkyries/RM/LightningEmpress.json":34,"../json/HI3Valkyries/RM/ShadowDash.json":35,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":36,"../json/HI3Valkyries/RO/MolotovCherry.json":37,"../json/HI3Valkyries/RR/ArgentKnight.json":38,"../json/HI3Valkyries/RR/FallenRosemary.json":39,"../json/HI3Valkyries/RR/PhantomIron.json":40,"../json/HI3Valkyries/RR/UmbralRose.json":41,"../json/HI3Valkyries/SV/StygianNymph.json":42,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":43,"../json/HI3Valkyries/TA/CelestialHymn.json":44,"../json/HI3Valkyries/TA/LunaKindred.json":45,"../json/HI3Valkyries/TA/SakunoRondo.json":46,"../json/HI3Valkyries/TA/StarlitAstrologos.json":47,"../json/HI3Valkyries/TA/ValkyriePledge.json":48,"../json/HI3Valkyries/TA/VioletExecuter.json":49,"../json/HI3Valkyries/YS/DarkBoltJonin.json":50,"../json/HI3Valkyries/YS/FlameSakitama.json":51,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":52,"../json/HI3Valkyries/YS/GyakushinnMiko.json":53,"../json/HI3Valkyries/aLimited/BlazingHope.json":54}],2:[function(require,module,exports){
 module.exports={
     "battlesuit": "Bright Knight Excelsis",
     "tag": [
@@ -1623,6 +1660,31 @@ module.exports={
         "Sakura Samsara: Adventure Tasks",
         "Sakura Samsara - Adventure Tasks - Finalization Reward",
         "Asterite Shop"
+    ]
+}
+
+},{}],54:[function(require,module,exports){
+module.exports={
+    "battlesuit": "Blazing Hope",
+    "tag": [
+        "Asuka",
+        "BH",
+        "Limited"
+    ],
+    "type": "Biologic",
+    "soul": "Original",
+    "firstname": "Asuka",
+    "lastname": "Shikinami Langley",
+    "img": "https://uploadstatic-sea.mihoyo.com/contentweb/20210126/2021012614530670099.png",
+    "birthday": "December 4th",
+    "weapon": "Lances",
+    "costume": [
+        "Blazing Hope",
+        "Auburn Sync PS"
+    ],
+    "fragdropinfo": [
+        "Collab Supply",
+        "Event Shop (New Century)"
     ]
 }
 

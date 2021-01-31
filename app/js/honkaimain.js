@@ -1,3 +1,5 @@
+var BlazingHope = require("../json/HI3Valkyries/aLimited/BlazingHope.json");
+
 var BrightKnightExcelsis = require("../json/HI3Valkyries/BA/BrightKnightExcelsis.json");
 var DeaAnchora = require("../json/HI3Valkyries/BA/DeaAnchora.json");
 var ValkyrieGloria = require("../json/HI3Valkyries/BA/ValkyrieGloria.json");
@@ -69,6 +71,7 @@ var Valkyries = [
     AzureEmpyrea,
     BattleStorm,
     BlackNucleus,
+    BlazingHope,
     BloodRose,
     BlueberryBlitz,
     BrightKnightExcelsis,
@@ -138,7 +141,10 @@ searchBarInput.addEventListener("keyup", function(event) {
 });
 
 var ValkyrieLength = Valkyries.length;
-console.log("ValkyrieLength: " + ValkyrieLength);
+//console.log("ValkyrieLength: " + ValkyrieLength);
+document.getElementById("ValkyrieLength").innerHTML = ValkyrieLength;
+
+var searchResultCounter = 0;
 
 function getTags(length, output, data, i) {
     for (var j=0; j<length; j++) {
@@ -202,7 +208,22 @@ function howTo() {
         howToTemplate += "</div>";
     howToTemplate += "</div>";
 
+    document.getElementById("SearchResultCounter").innerHTML = "";
     document.getElementById("output").innerHTML = howToTemplate;
+}
+
+function aSearchResultCounter() {
+    var resultCounterTemplate = "";
+    resultCounterTemplate += "<div class='content'>";
+        resultCounterTemplate += "<div class='columns'>";
+            resultCounterTemplate += "<div class='column'>";
+                resultCounterTemplate += "<span style='color:#35D6FF'>Search Result found: </span>";
+                resultCounterTemplate += "<b><span style='color:#FB9929'>" + searchResultCounter + "</span></b>";
+            resultCounterTemplate += "</div>";
+        resultCounterTemplate += "</div>";
+    resultCounterTemplate += "</div><span> </span>";
+
+    return resultCounterTemplate;
 }
 
 function templateInfo(data, i) {
@@ -262,6 +283,9 @@ function showResult() {
     var showAllStr = "[showAll]";
     //console.log("searchValue: " + searchValue);
 
+    // Initialize the Search Result Counter to 0
+    searchResultCounter = 0;
+
     for (var i=0; i<ValkyrieLength; i++) {
         tagLength = Valkyries[i].tag.length;
         costumeLength = Valkyries[i].costume.length;
@@ -269,10 +293,13 @@ function showResult() {
 
         if (searchValue == "" || searchValue == " " || (searchValue.length < 2)) {
             // Do nothing
+            //console.log("[1] searchResultCounter: " + searchResultCounter);
         } else if (showAllStr.toLowerCase().includes(searchValue.toLowerCase())) {
             // A specific command to show all Valkyries
             var dataResult = "";
         	for (var i=0, len=Valkyries.length; i<len; i++) {
+                searchResultCounter++;
+                //console.log("[2] searchResultCounter: " + searchResultCounter);
                 tagLength = Valkyries[i].tag.length;
                 costumeLength = Valkyries[i].costume.length;
                 fragdropinfoLength = Valkyries[i].fragdropinfo.length;
@@ -292,9 +319,19 @@ function showResult() {
             Valkyries[i].tag.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
             Valkyries[i].tag.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
             // Search one or multiple results
+            searchResultCounter++;
+            //console.log("[3] searchResultCounter: " + searchResultCounter);
             dataResult += templateInfo(Valkyries, i)
         }
     }
+
+    // Hide the search result counter if there is no result. Otherwise, show it.
+    if (searchResultCounter == 0) {
+        document.getElementById("SearchResultCounter").innerHTML = "";
+    } else {
+        document.getElementById("SearchResultCounter").innerHTML = aSearchResultCounter();
+    }
+    // The core output
     document.getElementById("output").innerHTML = dataResult;
 }
 
