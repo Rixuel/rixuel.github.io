@@ -120,7 +120,7 @@ var Valkyries = [
 ];
 
 var dataResult = "";
-var acronymLength = "";
+var tagLength = "";
 var costumeLength = "";
 var fragdropinfoLength = "";
 
@@ -141,9 +141,9 @@ searchBarInput.addEventListener("keyup", function(event) {
 var ValkyrieLength = Valkyries.length;
 console.log("ValkyrieLength: " + ValkyrieLength);
 
-function getAcronyms(length, output, data, i) {
+function getTags(length, output, data, i) {
     for (var j=0; j<length; j++) {
-        output += "[<b>" + data[i].acronym[j] + "</b>]";
+        output += "[<b>" + data[i].tag[j] + "</b>]";
         if (j<length-1) {
             output += " ";
         }
@@ -187,10 +187,10 @@ function howTo() {
                 howToTemplate += "<b><u>Type</u></b> (ex: Mecha, Biologic, Psychic, Quantum)<br>";
                 howToTemplate += "<b><u>Soul</u></b> (ex: Original, Awakening)<br>";
                 howToTemplate += "<b><u>Weapon</u></b> (ex: Cannons, Crosses, Gauntlets, Greatswords, Katanas, Lances, Pistols, Scythes)<br>";
-                howToTemplate += "<b><u>Acronym</u></b> (ex: AK, AE, ... [Check the next section about Acronym])<br>";
-                howToTemplate += "<h2>Searching with an Acronym accurately</h2>";
-                howToTemplate += "Sometime, searching with an acronym might cause some inaccuracy.<br>";
-                howToTemplate += "Use <b>square brackets</b> with the acronym in it to get accurated result.<br>";
+                howToTemplate += "<b><u>Tag</u></b> (ex: AK, AE, ... [Check the next section about Tag])<br>";
+                howToTemplate += "<h2>Searching with a Tag accurately</h2>";
+                howToTemplate += "Sometime, searching with an tag might cause some inaccuracy.<br>";
+                howToTemplate += "Use <b>square brackets</b> with the tag in it to get accurated result.<br>";
                 howToTemplate += "ex: [AK], [AE], [HoR], [Tuna], ...<br>";
                 howToTemplate += "<h2>Lowercase or Uppercase?</h2>";
                 howToTemplate += "It doesn't matter. The search function understands Kiana, kiana, or KiAnA inputs. <br>";
@@ -208,11 +208,11 @@ function howTo() {
 
 function templateInfo(data, i) {
     var dataResult = "";
-    var acronyms = "";
+    var tags = "";
     var costumes = "";
     var fragdropinfos = "";
 
-    acronyms = getAcronyms(acronymLength, acronyms, Valkyries, i);
+    tags = getTags(tagLength, tags, Valkyries, i);
     costumes = getCostumes(costumeLength, costumes, Valkyries, i);
     fragdropinfos = getFragDropInfos(fragdropinfoLength, fragdropinfos, Valkyries, i);
 
@@ -221,7 +221,7 @@ function templateInfo(data, i) {
             dataResult += "<div class='column is-11'>";
                 dataResult += "<h1>" + Valkyries[i].battlesuit + "</h1>";
                 dataResult += "<h2>" + Valkyries[i].firstname + " " + Valkyries[i].lastname + "</h2>";
-                dataResult += "<p class='acronym'>" + acronyms + "</p>";
+                dataResult += "<p class='tagList'>" + tags + "</p>";
             dataResult += "</div>";
 
             dataResult += "<div class='column'>";
@@ -264,7 +264,7 @@ function showResult() {
     //console.log("searchValue: " + searchValue);
 
     for (var i=0; i<ValkyrieLength; i++) {
-        acronymLength = Valkyries[i].acronym.length;
+        tagLength = Valkyries[i].tag.length;
         costumeLength = Valkyries[i].costume.length;
         fragdropinfoLength = Valkyries[i].fragdropinfo.length;
 
@@ -274,7 +274,7 @@ function showResult() {
             // A specific command to show all Valkyries
             var dataResult = "";
         	for (var i=0, len=Valkyries.length; i<len; i++) {
-                acronymLength = Valkyries[i].acronym.length;
+                tagLength = Valkyries[i].tag.length;
                 costumeLength = Valkyries[i].costume.length;
                 fragdropinfoLength = Valkyries[i].fragdropinfo.length;
         		dataResult += templateInfo(Valkyries, i);
@@ -290,8 +290,8 @@ function showResult() {
             Valkyries[i].type.toLowerCase().includes(searchValue.toLowerCase()) ||
             Valkyries[i].soul.toLowerCase() == searchValue.toLowerCase() ||
             Valkyries[i].weapon.toLowerCase().includes(searchValue.toLowerCase()) ||
-            Valkyries[i].acronym.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
-            Valkyries[i].acronym.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
+            Valkyries[i].tag.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
+            Valkyries[i].tag.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
             // Search one or multiple results
             dataResult += templateInfo(Valkyries, i)
         }
@@ -310,7 +310,7 @@ buttonHowTo.addEventListener("click", howTo);
 },{"../json/HI3Valkyries/BA/BrightKnightExcelsis.json":2,"../json/HI3Valkyries/BA/DeaAnchora.json":3,"../json/HI3Valkyries/BA/ValkyrieGloria.json":4,"../json/HI3Valkyries/BZ/BlackNucleus.json":5,"../json/HI3Valkyries/BZ/DimensionBreaker.json":6,"../json/HI3Valkyries/BZ/HerrscherOfReason.json":7,"../json/HI3Valkyries/BZ/SnowySniper.json":8,"../json/HI3Valkyries/BZ/ValkyrieChariot.json":9,"../json/HI3Valkyries/BZ/WolfsDawn.json":10,"../json/HI3Valkyries/BZ/YamabukiArmor.json":11,"../json/HI3Valkyries/FH/AzureEmpyrea.json":12,"../json/HI3Valkyries/FH/NightSquire.json":13,"../json/HI3Valkyries/FH/Phoenix.json":14,"../json/HI3Valkyries/FH/ShadowKnight.json":15,"../json/HI3Valkyries/FH/ValkyrieAccipiter.json":16,"../json/HI3Valkyries/KA/ImayohRitual.json":17,"../json/HI3Valkyries/KA/SixthSerenade.json":18,"../json/HI3Valkyries/KA/Sundenjager.json":19,"../json/HI3Valkyries/KK/DivinePrayer.json":20,"../json/HI3Valkyries/KK/HerrscherOfTheVoid.json":21,"../json/HI3Valkyries/KK/KnightMoonbeam.json":22,"../json/HI3Valkyries/KK/ValkyrieRanger.json":23,"../json/HI3Valkyries/KK/WhiteComet.json":24,"../json/HI3Valkyries/LO/BlueberryBlitz.json":25,"../json/HI3Valkyries/MH/ArcticKriegsmesser.json":26,"../json/HI3Valkyries/MH/BattleStorm.json":27,"../json/HI3Valkyries/MH/BloodRose.json":28,"../json/HI3Valkyries/MH/ScarletFusion.json":29,"../json/HI3Valkyries/MH/ValkyrieTriumph.json":30,"../json/HI3Valkyries/MH/VermilionKnight.json":31,"../json/HI3Valkyries/RM/CrimsonImpulse.json":32,"../json/HI3Valkyries/RM/HerrscherOfThunder.json":33,"../json/HI3Valkyries/RM/LightningEmpress.json":34,"../json/HI3Valkyries/RM/ShadowDash.json":35,"../json/HI3Valkyries/RM/ValkyrieBladestrike.json":36,"../json/HI3Valkyries/RO/MolotovCherry.json":37,"../json/HI3Valkyries/RR/ArgentKnight.json":38,"../json/HI3Valkyries/RR/FallenRosemary.json":39,"../json/HI3Valkyries/RR/PhantomIron.json":40,"../json/HI3Valkyries/RR/UmbralRose.json":41,"../json/HI3Valkyries/SV/StygianNymph.json":42,"../json/HI3Valkyries/SV/SwallowtailPhantasm.json":43,"../json/HI3Valkyries/TA/CelestialHymn.json":44,"../json/HI3Valkyries/TA/LunaKindred.json":45,"../json/HI3Valkyries/TA/SakunoRondo.json":46,"../json/HI3Valkyries/TA/StarlitAstrologos.json":47,"../json/HI3Valkyries/TA/ValkyriePledge.json":48,"../json/HI3Valkyries/TA/VioletExecuter.json":49,"../json/HI3Valkyries/YS/DarkBoltJonin.json":50,"../json/HI3Valkyries/YS/FlameSakitama.json":51,"../json/HI3Valkyries/YS/GoushinnsoMemento.json":52,"../json/HI3Valkyries/YS/GyakushinnMiko.json":53}],2:[function(require,module,exports){
 module.exports={
     "battlesuit": "Bright Knight Excelsis",
-    "acronym": [
+    "tag": [
         "BKE",
         "DuDu",
         "DooDoo"
@@ -332,7 +332,7 @@ module.exports={
 },{}],3:[function(require,module,exports){
 module.exports={
     "battlesuit": "Dea Anchora",
-    "acronym": [
+    "tag": [
         "DA",
         "DuDu",
         "DooDoo"
@@ -354,7 +354,7 @@ module.exports={
 },{}],4:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Gloria",
-    "acronym": [
+    "tag": [
         "VG",
         "DuDu",
         "DooDoo"
@@ -378,7 +378,7 @@ module.exports={
 },{}],5:[function(require,module,exports){
 module.exports={
     "battlesuit": "Black Nucleus",
-    "acronym": [
+    "tag": [
         "BN"
     ],
     "type": "Biologic",
@@ -398,7 +398,7 @@ module.exports={
 },{}],6:[function(require,module,exports){
 module.exports={
     "battlesuit": "Dimension Breaker",
-    "acronym": [
+    "tag": [
         "DB"
     ],
     "type": "Mecha",
@@ -422,7 +422,7 @@ module.exports={
 },{}],7:[function(require,module,exports){
 module.exports={
     "battlesuit": "Herrscher of Reason",
-    "acronym": [
+    "tag": [
         "HoR",
         "HR",
         "BK"
@@ -444,7 +444,7 @@ module.exports={
 },{}],8:[function(require,module,exports){
 module.exports={
     "battlesuit": "Snowy Sniper",
-    "acronym": [
+    "tag": [
         "SS"
     ],
     "type": "Biologic",
@@ -472,7 +472,7 @@ module.exports={
 },{}],9:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Chariot",
-    "acronym": [
+    "tag": [
         "VC"
     ],
     "type": "Psychic",
@@ -500,7 +500,7 @@ module.exports={
 },{}],10:[function(require,module,exports){
 module.exports={
     "battlesuit": "Wolf's Dawn",
-    "acronym": [
+    "tag": [
         "WD"
     ],
     "type": "Psychic",
@@ -525,7 +525,7 @@ module.exports={
 },{}],11:[function(require,module,exports){
 module.exports={
     "battlesuit": "Yamabuki Armor",
-    "acronym": [
+    "tag": [
         "YA",
         "DK"
     ],
@@ -555,7 +555,7 @@ module.exports={
 },{}],12:[function(require,module,exports){
 module.exports={
     "battlesuit": "Azure Empyrea",
-    "acronym": [
+    "tag": [
         "AE",
         "SB"
     ],
@@ -577,7 +577,7 @@ module.exports={
 },{}],13:[function(require,module,exports){
 module.exports={
     "battlesuit": "Night Squire",
-    "acronym": [
+    "tag": [
         "NS"
     ],
     "type": "Biologic",
@@ -605,7 +605,7 @@ module.exports={
 },{}],14:[function(require,module,exports){
 module.exports={
     "battlesuit": "Phoenix",
-    "acronym": [
+    "tag": [
         "PX"
     ],
     "type": "Psychic",
@@ -628,7 +628,7 @@ module.exports={
 },{}],15:[function(require,module,exports){
 module.exports={
     "battlesuit": "Shadow Knight",
-    "acronym": [
+    "tag": [
         "SK"
     ],
     "type": "Mecha",
@@ -649,7 +649,7 @@ module.exports={
 },{}],16:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Accipiter",
-    "acronym": [
+    "tag": [
         "VA",
         "HotF",
         "HotY"
@@ -679,7 +679,7 @@ module.exports={
 },{}],17:[function(require,module,exports){
 module.exports={
     "battlesuit": "Imayoh Ritual",
-    "acronym": [
+    "tag": [
         "IR"
     ],
     "type": "Mecha",
@@ -704,7 +704,7 @@ module.exports={
 },{}],18:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sixth Serenade",
-    "acronym": [
+    "tag": [
         "6S"
     ],
     "type": "Psychic",
@@ -725,7 +725,7 @@ module.exports={
 },{}],19:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sundenjager",
-    "acronym": [
+    "tag": [
         "SJ",
         "SH"
     ],
@@ -748,7 +748,7 @@ module.exports={
 },{}],20:[function(require,module,exports){
 module.exports={
     "battlesuit": "Divine Prayer",
-    "acronym": [
+    "tag": [
         "DP",
         "Tuna"
     ],
@@ -777,7 +777,7 @@ module.exports={
 },{}],21:[function(require,module,exports){
 module.exports={
     "battlesuit": "Herrscher of the Void",
-    "acronym": [
+    "tag": [
         "HotV",
         "HoV",
         "HV",
@@ -802,7 +802,7 @@ module.exports={
 },{}],22:[function(require,module,exports){
 module.exports={
     "battlesuit": "Knight Moonbeam",
-    "acronym": [
+    "tag": [
         "KMB",
         "Tuna"
     ],
@@ -827,7 +827,7 @@ module.exports={
 },{}],23:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Ranger",
-    "acronym": [
+    "tag": [
         "VR",
         "VD",
         "Tuna"
@@ -858,7 +858,7 @@ module.exports={
 },{}],24:[function(require,module,exports){
 module.exports={
     "battlesuit": "White Comet",
-    "acronym": [
+    "tag": [
         "WC",
         "Tuna"
     ],
@@ -887,7 +887,7 @@ module.exports={
 },{}],25:[function(require,module,exports){
 module.exports={
     "battlesuit": "Blueberry Blitz",
-    "acronym": [
+    "tag": [
         "BB"
     ],
     "type": "Mecha",
@@ -915,7 +915,7 @@ module.exports={
 },{}],26:[function(require,module,exports){
 module.exports={
     "battlesuit": "Artic Kriegsmesser",
-    "acronym": [
+    "tag": [
         "AK"
     ],
     "type": "Psychic",
@@ -937,7 +937,7 @@ module.exports={
 },{}],27:[function(require,module,exports){
 module.exports={
     "battlesuit": "Battle Storm",
-    "acronym": [
+    "tag": [
         "BS"
     ],
     "type": "Biologic",
@@ -963,7 +963,7 @@ module.exports={
 },{}],28:[function(require,module,exports){
 module.exports={
     "battlesuit": "Blood Rose",
-    "acronym": [
+    "tag": [
         "BR"
     ],
     "type": "Psychic",
@@ -987,7 +987,7 @@ module.exports={
 },{}],29:[function(require,module,exports){
 module.exports={
     "battlesuit": "Scarlet Fusion",
-    "acronym": [
+    "tag": [
         "SF"
     ],
     "type": "Mecha",
@@ -1015,7 +1015,7 @@ module.exports={
 },{}],30:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Triumph",
-    "acronym": [
+    "tag": [
         "VT"
     ],
     "type": "Biologic",
@@ -1041,7 +1041,7 @@ module.exports={
 },{}],31:[function(require,module,exports){
 module.exports={
     "battlesuit": "Vermilion Knight",
-    "acronym": [
+    "tag": [
         "VK"
     ],
     "type": "Mecha",
@@ -1063,7 +1063,7 @@ module.exports={
 },{}],32:[function(require,module,exports){
 module.exports={
     "battlesuit": "Crimson Impulse",
-    "acronym": [
+    "tag": [
         "CI"
     ],
     "type": "Biologic",
@@ -1090,7 +1090,7 @@ module.exports={
 },{}],33:[function(require,module,exports){
 module.exports={
     "battlesuit": "Herrscher of Thunder",
-    "acronym": [
+    "tag": [
         "HoT",
         "HT",
         "HoL",
@@ -1113,7 +1113,7 @@ module.exports={
 },{}],34:[function(require,module,exports){
 module.exports={
     "battlesuit": "Lightning Empress",
-    "acronym": [
+    "tag": [
         "LE"
     ],
     "type": "Psychic",
@@ -1139,7 +1139,7 @@ module.exports={
 },{}],35:[function(require,module,exports){
 module.exports={
     "battlesuit": "Shadow Dash",
-    "acronym": [
+    "tag": [
         "SD",
         "DS"
     ],
@@ -1170,7 +1170,7 @@ module.exports={
 },{}],36:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Bladestrike",
-    "acronym": [
+    "tag": [
         "VB",
         "VBS",
         "Ful"
@@ -1201,7 +1201,7 @@ module.exports={
 },{}],37:[function(require,module,exports){
 module.exports={
     "battlesuit": "Molotov Cherry",
-    "acronym": [
+    "tag": [
         "MC", 
         "FT"
     ],
@@ -1227,7 +1227,7 @@ module.exports={
 },{}],38:[function(require,module,exports){
 module.exports={
     "battlesuit": "Argent Knight",
-    "acronym": [
+    "tag": [
         "AKA",
         "ArK",
         "Rice"
@@ -1251,7 +1251,7 @@ module.exports={
 },{}],39:[function(require,module,exports){
 module.exports={
     "battlesuit": "Fallen Rosemary",
-    "acronym": [
+    "tag": [
         "FR"
     ],
     "type": "Quantum",
@@ -1273,7 +1273,7 @@ module.exports={
 },{}],40:[function(require,module,exports){
 module.exports={
     "battlesuit": "Phantom Iron",
-    "acronym": [
+    "tag": [
         "PI"
     ],
     "type": "Mecha",
@@ -1298,7 +1298,7 @@ module.exports={
 },{}],41:[function(require,module,exports){
 module.exports={
     "battlesuit": "Umbral Rose",
-    "acronym": [
+    "tag": [
         "UR"
     ],
     "type": "Psychic",
@@ -1326,7 +1326,7 @@ module.exports={
 },{}],42:[function(require,module,exports){
 module.exports={
     "battlesuit": "Stygian Nymph",
-    "acronym": [
+    "tag": [
         "SN"
     ],
     "type": "Quantum",
@@ -1346,7 +1346,7 @@ module.exports={
 },{}],43:[function(require,module,exports){
 module.exports={
     "battlesuit": "Swallowtail Phantasm",
-    "acronym": [
+    "tag": [
         "SP"
     ],
     "type": "Quantum",
@@ -1373,7 +1373,7 @@ module.exports={
 },{}],44:[function(require,module,exports){
 module.exports={
     "battlesuit": "Celestial Hymn",
-    "acronym": [
+    "tag": [
         "CH",
         "Teri"
     ],
@@ -1397,7 +1397,7 @@ module.exports={
 },{}],45:[function(require,module,exports){
 module.exports={
     "battlesuit": "Luna Kindred",
-    "acronym": [
+    "tag": [
         "LK",
         "Teri"
     ],
@@ -1421,7 +1421,7 @@ module.exports={
 },{}],46:[function(require,module,exports){
 module.exports={
     "battlesuit": "Sakuno Rondo",
-    "acronym": [
+    "tag": [
         "SR",
         "Teri"
     ],
@@ -1448,7 +1448,7 @@ module.exports={
 },{}],47:[function(require,module,exports){
 module.exports={
     "battlesuit": "Starlit Astrologos",
-    "acronym": [
+    "tag": [
         "SA",
         "Teri"
     ],
@@ -1469,7 +1469,7 @@ module.exports={
 },{}],48:[function(require,module,exports){
 module.exports={
     "battlesuit": "Valkyrie Pledge",
-    "acronym": [
+    "tag": [
         "VP",
         "Teri"
     ],
@@ -1501,7 +1501,7 @@ module.exports={
 },{}],49:[function(require,module,exports){
 module.exports={
     "battlesuit": "Violet Executer",
-    "acronym": [
+    "tag": [
         "VE",
         "TP",
         "Teri"
@@ -1528,7 +1528,7 @@ module.exports={
 },{}],50:[function(require,module,exports){
 module.exports={
     "battlesuit": "DarkBolt Jonin",
-    "acronym": [
+    "tag": [
         "DJ",
         "Kasumi"
     ],
@@ -1554,7 +1554,7 @@ module.exports={
 },{}],51:[function(require,module,exports){
 module.exports={
     "battlesuit": "Flame Sakitama",
-    "acronym": [
+    "tag": [
         "FS"
     ],
     "type": "Biologic",
@@ -1577,7 +1577,7 @@ module.exports={
 },{}],52:[function(require,module,exports){
 module.exports={
     "battlesuit": "Goushinnso Memento",
-    "acronym": [
+    "tag": [
         "Meme"
     ],
     "type": "Mecha",
@@ -1601,7 +1601,7 @@ module.exports={
 },{}],53:[function(require,module,exports){
 module.exports={
     "battlesuit": "Gyakushinn Miko",
-    "acronym": [
+    "tag": [
         "Miko"
     ],
     "type": "Biologic",

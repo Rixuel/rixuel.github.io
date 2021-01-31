@@ -119,7 +119,7 @@ var Valkyries = [
 ];
 
 var dataResult = "";
-var acronymLength = "";
+var tagLength = "";
 var costumeLength = "";
 var fragdropinfoLength = "";
 
@@ -140,9 +140,9 @@ searchBarInput.addEventListener("keyup", function(event) {
 var ValkyrieLength = Valkyries.length;
 console.log("ValkyrieLength: " + ValkyrieLength);
 
-function getAcronyms(length, output, data, i) {
+function getTags(length, output, data, i) {
     for (var j=0; j<length; j++) {
-        output += "[<b>" + data[i].acronym[j] + "</b>]";
+        output += "[<b>" + data[i].tag[j] + "</b>]";
         if (j<length-1) {
             output += " ";
         }
@@ -186,10 +186,10 @@ function howTo() {
                 howToTemplate += "<b><u>Type</u></b> (ex: Mecha, Biologic, Psychic, Quantum)<br>";
                 howToTemplate += "<b><u>Soul</u></b> (ex: Original, Awakening)<br>";
                 howToTemplate += "<b><u>Weapon</u></b> (ex: Cannons, Crosses, Gauntlets, Greatswords, Katanas, Lances, Pistols, Scythes)<br>";
-                howToTemplate += "<b><u>Acronym</u></b> (ex: AK, AE, ... [Check the next section about Acronym])<br>";
-                howToTemplate += "<h2>Searching with an Acronym accurately</h2>";
-                howToTemplate += "Sometime, searching with an acronym might cause some inaccuracy.<br>";
-                howToTemplate += "Use <b>square brackets</b> with the acronym in it to get accurated result.<br>";
+                howToTemplate += "<b><u>Tag</u></b> (ex: AK, AE, ... [Check the next section about Tag])<br>";
+                howToTemplate += "<h2>Searching with a Tag accurately</h2>";
+                howToTemplate += "Sometime, searching with an tag might cause some inaccuracy.<br>";
+                howToTemplate += "Use <b>square brackets</b> with the tag in it to get accurated result.<br>";
                 howToTemplate += "ex: [AK], [AE], [HoR], [Tuna], ...<br>";
                 howToTemplate += "<h2>Lowercase or Uppercase?</h2>";
                 howToTemplate += "It doesn't matter. The search function understands Kiana, kiana, or KiAnA inputs. <br>";
@@ -207,11 +207,11 @@ function howTo() {
 
 function templateInfo(data, i) {
     var dataResult = "";
-    var acronyms = "";
+    var tags = "";
     var costumes = "";
     var fragdropinfos = "";
 
-    acronyms = getAcronyms(acronymLength, acronyms, Valkyries, i);
+    tags = getTags(tagLength, tags, Valkyries, i);
     costumes = getCostumes(costumeLength, costumes, Valkyries, i);
     fragdropinfos = getFragDropInfos(fragdropinfoLength, fragdropinfos, Valkyries, i);
 
@@ -220,7 +220,7 @@ function templateInfo(data, i) {
             dataResult += "<div class='column is-11'>";
                 dataResult += "<h1>" + Valkyries[i].battlesuit + "</h1>";
                 dataResult += "<h2>" + Valkyries[i].firstname + " " + Valkyries[i].lastname + "</h2>";
-                dataResult += "<p class='acronym'>" + acronyms + "</p>";
+                dataResult += "<p class='tagList'>" + tags + "</p>";
             dataResult += "</div>";
 
             dataResult += "<div class='column'>";
@@ -263,7 +263,7 @@ function showResult() {
     //console.log("searchValue: " + searchValue);
 
     for (var i=0; i<ValkyrieLength; i++) {
-        acronymLength = Valkyries[i].acronym.length;
+        tagLength = Valkyries[i].tag.length;
         costumeLength = Valkyries[i].costume.length;
         fragdropinfoLength = Valkyries[i].fragdropinfo.length;
 
@@ -273,7 +273,7 @@ function showResult() {
             // A specific command to show all Valkyries
             var dataResult = "";
         	for (var i=0, len=Valkyries.length; i<len; i++) {
-                acronymLength = Valkyries[i].acronym.length;
+                tagLength = Valkyries[i].tag.length;
                 costumeLength = Valkyries[i].costume.length;
                 fragdropinfoLength = Valkyries[i].fragdropinfo.length;
         		dataResult += templateInfo(Valkyries, i);
@@ -289,8 +289,8 @@ function showResult() {
             Valkyries[i].type.toLowerCase().includes(searchValue.toLowerCase()) ||
             Valkyries[i].soul.toLowerCase() == searchValue.toLowerCase() ||
             Valkyries[i].weapon.toLowerCase().includes(searchValue.toLowerCase()) ||
-            Valkyries[i].acronym.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
-            Valkyries[i].acronym.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
+            Valkyries[i].tag.map(function(x){return x.toLowerCase()}).includes(searchValue.toLowerCase()) ||
+            Valkyries[i].tag.map(function(x){return "["+x.toLowerCase()+"]"}).includes(searchValue.toLowerCase())) {
             // Search one or multiple results
             dataResult += templateInfo(Valkyries, i)
         }
