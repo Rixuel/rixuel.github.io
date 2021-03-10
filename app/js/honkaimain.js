@@ -13,6 +13,7 @@ var WolfsDawn = require("../json/HI3Valkyries/BZ/WolfsDawn.json");
 var YamabukiArmor = require("../json/HI3Valkyries/BZ/YamabukiArmor.json");
 
 var AzureEmpyrea = require("../json/HI3Valkyries/FH/AzureEmpyrea.json");
+var HerrscherOfSentience = require("../json/HI3Valkyries/FH/HerrscherOfSentience.json");
 var NightSquire = require("../json/HI3Valkyries/FH/NightSquire.json");
 var Phoenix = require("../json/HI3Valkyries/FH/Phoenix.json");
 var ShadowKnight = require("../json/HI3Valkyries/FH/ShadowKnight.json");
@@ -86,6 +87,7 @@ var Valkyries = [
     GoushinnsoMemento,
     GyakushinnMiko,
     HerrscherOfReason,
+    HerrscherOfSentience,
     HerrscherOfTheVoid,
     HerrscherOfThunder,
     ImayohRitual,
