@@ -696,7 +696,7 @@ module.exports={
     "soul": "Original",
     "firstname": "Fu",
     "lastname": "Hua",
-    "img": "https://gamepedia.cursecdn.com/honkaiimpact3_gamepedia_en/thumb/4/4a/Shadow_Knight_%28Costume%29.png/586px-Shadow_Knight_%28Costume%29.png",
+    "img": "https://uploadstatic-sea.mihoyo.com/contentweb/20200702/2020070215224878220.png",
     "birthday": "February 9th",
     "weapon": "Gauntlets",
     "costume": [
