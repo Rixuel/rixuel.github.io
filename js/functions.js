@@ -83,7 +83,6 @@ function navbar() {
                     "<a href='https://twitter.com/Rixuel'><i class='navbar-item fab fa-twitter fa-2x' aria-hidden='true' style='color:#1DA1F2;'></i></a>" +
                     "<a href='https://www.youtube.com/c/LordRixuel'><i class='navbar-item fab fa-youtube fa-2x' aria-hidden='true' style='color:#E62117;'></i></a>" +
                     "<a href='https://www.instagram.com/lordrixuel'><i class='navbar-item fab fa-instagram fa-2x' aria-hidden='true' style='color:#BF8360;'></i></a>" +
-                    "<a href='https://guardianpat.deviantart.com'><i class='navbar-item fab fa-deviantart fa-2x' aria-hidden='true' style='color:#05CC47;'></i></a>" +
                     "<a href='https://github.com/Rixuel'><i class='navbar-item fab fa-github fa-2x' aria-hidden='true' style='color:#FFF;'></i></a>" +
                 "</div></div>" +
             "</div>" +
