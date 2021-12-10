@@ -190,10 +190,10 @@ function adsbanners() {
     var ads, index;
     ads = [];
 
-    ads[0] = "<a href='https://alternaland.github.io'>" +
+    ads[0] = "<a href='#/'>" +
         "<img src='img/alternalogo.png' border='0'/></a>";
 
-    ads[1] = "<a href='https://alternaland.github.io'>" +
+    ads[1] = "<a href='#/'>" +
         "<img src='img/terra.png' border='0'/></a>";
 
     index = Math.floor(Math.random() * ads.length);
