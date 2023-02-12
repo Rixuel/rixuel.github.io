@@ -175,6 +175,9 @@ function randomMsg() {
     msg[28] = "Die monster! You don't belong in this world!";
     msg[29] = "GRIFFITH!!!!!!!!!!!!";
     msg[30] = "This is the difference between your and my eye-level";
+    msg[31] = "Chan chan Ai Chiki Chiki Ban Ban";
+    msg[32] = "Fight for all that's beautiful in the world";
+    msg[33] = "Ad Astra Abyssosque";
 
     index = Math.floor(Math.random() * msg.length);
     document.getElementById("randomMessages").innerHTML = msg[index];

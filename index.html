@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="js/functions.js"></script>
 </head>
 <body>
-	<!--div id="loader"><span id="loadcont"></span></div-->
+	<div id="loader"><span id="loadcont"></span></div>
 	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
 	<div id="menubar"><script>navbar();</script></div>
 	<div id="TriggerBulmaCardModal"></div>
@@ -27,7 +27,7 @@
 
 		<div class="columns">
 			<div class="column section-page checkcont">
-				Random message of the moment: [ <span id="randomMessages"><script>randomMsg();</script></span> ]
+				Random message: [ <span id="randomMessages"><script>randomMsg();</script></span> ]
 			</div>
 		</div>
 
@@ -65,15 +65,19 @@
 
 			<div class="column is-two-fifths checkcont">
 				<div class="container">
-					<div class="notification is-info">
+					<div class="notification is-info" style="border-radius: 0px;">
 						<div id="setDateTime">
 							<script>date_time("setDateTime");</script>
 						</div>
 					</div>
 				</div>
-
-				<a class="twitter-timeline" data-height="591" data-theme="dark" data-link-color="#66DD22" href="https://twitter.com/Rixuel" data-widget-id="517539373844144128">[Tweets by Rixuel]</a>
-				<a href="https://twitter.com/Rixuel" class="twitter-follow-button" data-show-count="true" data-widget-id="517539373844144128">Follow @Rixuel</a>
+				
+				<div class="flatbgtwitter">
+					<a class="twitter-timeline" data-height="591" data-theme="dark" data-link-color="#66DD22" href="https://twitter.com/Rixuel" data-widget-id="517539373844144128">[Tweets by Rixuel]</a>
+				</div>
+				<div class="flatbgtwitter2">
+					<a href="https://twitter.com/Rixuel" class="twitter-follow-button flatbgtwitter2" data-show-count="true" data-widget-id="517539373844144128">Follow @Rixuel</a>
+				</div>
 			</div>
 
 		</div>
@@ -161,7 +165,7 @@
 		Comment here.
 	</div>
 	-->
-	<div class="container comment">
+	<!--div class="container comment">
 		<date>March 14th, 2020</date>
 		<h2>How will I pick my new phone?</h2>
 		<h3>My basic criteria</h3>
@@ -313,7 +317,7 @@
 		Personally, I think he deserved punishment because if I was a super gullible fool, I would had lose my account instead.
 		Don't forget it's hard to punish a scammer online... It's more simple to ignore and avoid.
 		<br>
-	</div>
+	</div-->
 
 	<!-- Ads/Logo/Random Stuff -->
 	<div class="column is-full" id="adsfooter"><script>adsbanners();</script></div>
