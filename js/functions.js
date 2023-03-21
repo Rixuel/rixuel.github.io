@@ -75,7 +75,6 @@ function navbar() {
                         "</div>" +
                     "</div>" +
                     "<a class='navbar-item' href='random.html' id='MenuRandom'>Random</a>" +
-                    "<a class='navbar-item' href='links.html' id='MenuLinks'>Links</a>" +
                 "</div>" +
                 "<div class='navbar-end'><div class='navbar-item'>" +
                     "<a href='https://discord.gg/qhCsvqT'><i class='navbar-item fab fa-discord fa-2x' aria-hidden='true' style='color:#7289DA;'></i></a>" +
