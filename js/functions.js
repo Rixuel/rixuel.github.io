@@ -62,7 +62,6 @@ function navbar() {
             "<div id='navbarBasicExample' class='navbar-menu'>" +
                 "<div class='navbar-start'>" +
                     "<a class='navbar-item' href='index.html' id='MenuHome'>Home</a>" +
-                    "<a class='navbar-item' href='about.html' id='MenuAbout'>About</a>" +
                     "<div class='navbar-item has-dropdown is-hoverable'>" +
                         "<a class='navbar-link' href='projects.html' id='MenuProjects'>Projects</a>" +
                         "<div class='navbar-dropdown'>" +
@@ -74,7 +73,6 @@ function navbar() {
                             "<a class='navbar-item' href='projects.html'>More...</a>" +
                         "</div>" +
                     "</div>" +
-                    "<a class='navbar-item' href='random.html' id='MenuRandom'>Random</a>" +
                 "</div>" +
                 "<div class='navbar-end'><div class='navbar-item'>" +
                     "<a href='https://discord.gg/qhCsvqT'><i class='navbar-item fab fa-discord fa-2x' aria-hidden='true' style='color:#7289DA;'></i></a>" +
