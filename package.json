@@ -1,1 +1,13 @@
-{}
+{
+  "dependencies": {
+    "browserify": "^17.0.0"
+  },
+  "name": "rixuel.github.io",
+  "version": "1.0.0",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browserify js/new.js js/newA.js -o js/bundle.js"
+  },
+  "author": "Rixuel Neoliv"
+}
