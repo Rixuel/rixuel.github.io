@@ -1,0 +1,63 @@
+html {
+    background-color: #000 !important;
+}
+
+body {
+    background-color: #000;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    color: #FFF;
+    font-family: Verdana, Sans-Serif;
+    /* Font size defaut */
+    font-size: 1.0em;
+    margin: 0;
+}
+
+a:link, a:visited, a:active {
+    color: #1587e4;
+    text-decoration: none;
+}
+
+div h1, div h2, div h3 {
+    font-family: 'Ubuntu', Tahoma, Helvetica, Arial;
+}
+
+div h1 {
+    color: #66DD22;
+    font-size: 2.4em;
+    letter-spacing: 4px;
+}
+
+div h2 {
+    color: #3388ee;
+    font-size: 2.0em;
+}
+
+.container {
+    /*position: relative;*/
+    width: 100% !important;
+    max-width: 960px !important;
+    margin: 0 auto !important;
+    /*box-sizing: border-box;*/
+}
+
+.wrapper {
+    background-color: rgba(248, 250, 252, 0.10);
+    color: #FFF;
+    font-family: 'Open Sans', Verdana;
+    /*top down, right left*/
+    margin: 30px auto !important;
+    padding: 10px !important;
+}
+
+.comment h2 {
+    color: #38E;
+    font-family: Georgia, Consolas, Helvetica, "Lucida Console";
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    /*top down, right left*/
+    margin: 15px 0px;
+    text-align: left;
+}
