@@ -1,0 +1,120 @@
+html, body {
+	background-color: #000;
+	background-image: url("../img/bloodstainedbackground.gif");
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-family: "Raleway", Arial;
+}
+@media only screen and (max-width: 960px) {
+	.searchbar {
+		margin-top: 80px !important;
+	}
+	.logo {
+		width: 600px !important;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.searchbar {
+		margin-top: 160px !important;
+	}
+}
+img {
+	border: 0;
+	max-width: 100%;
+	max-height: 100%;
+}
+hr {
+	border: 2px solid #000;
+	margin-bottom: 8px;
+}
+
+.logo {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100%;
+	max-height: 100%;
+	width: 700px;
+}
+.searchbar {
+	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	padding: 0px;
+	max-width: 900px;
+}
+#searchInput {
+	background-color: #39000e;
+	border: 2px solid #da0c3c;
+	color: #ff0000;
+	font-family: "Raleway", Arial;
+	font-size: 1.2em;
+	padding: 10px;
+	width: 100%;
+}
+#searchButton {
+	background-color: #39000e;
+	border: 2px solid #da0c3c;
+	color: #ff0000;
+	font-family: "Raleway", Arial;
+	font-size: 1.2em;
+	padding: 10px;
+	width: 100%;
+}
+#searchButton:active {
+	background-color: #990000;
+	color: #ff2266;
+}
+.content {
+	background-color: rgba(18, 20, 22, 0.80);
+	/*border: 2px solid #0cda3c;*/
+	color: #FFFFFF;
+	font-size: 1.0em;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 16px;
+	max-width: 900px;
+}
+.content h1 {
+	color: #da0c3c;
+	font-family: "Lora", Consolas, Arial;
+}
+.content .otherID {
+	color: #da0c3c;
+	font-family: 'Roboto Mono', Consolas, Arial;
+}
+.statsNum {
+	color: #0f0;
+}
+
+.footer {
+	background-color: rgba(18, 20, 22, 0.80);
+	border-top: 1px solid #da0c3c;
+	/*border: 2px solid #0cda3c;*/
+	color: #FFFFFF;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	padding: 10px;
+	max-width: 900px;
+}
+
+.footer a {
+	color: #FFF;
+}
+
+.footer a:hover {
+	color: #da0c3c;
+}
+
+.footer h1 {
+	border-bottom: 1px solid #da0c3c;
+	color: #da0c3c;
+	font-family: "Didact Gothic", Consolas, Arial;
+	font-size: 1.4em;
+}
