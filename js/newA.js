@@ -1,1 +1,0 @@
-console.log("newA.js TEST");
