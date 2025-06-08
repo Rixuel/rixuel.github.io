@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cash Exchange Rates</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="js/Chart.min.js"></script>
+	<script src="../js/jquery-1.12.4.min.js"></script-->
+	
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/cer.css">
+
+	
+	<script>
+		var base = "";
+		var baseVal = 1;
+		var resturl = "";
+		var jsonStr = ""; // To define data
+		var count = 0;
+		
+		
+		function selBase(){
+			base = document.getElementById("selectBase").value;
+			resturl = "http://api.fixer.io/latest?base=";
+			resturl += base;
+			console.log(resturl);
+			
+			$.ajax({
+				url: resturl,
+				type: "get",
+				dataType: 'json',
+				success: function(data){
+					console.log(data);
+					jsonStr = data; // Get data in jsonStr obj
+				}
+			});
+		}
+		
+		var key;
+		var keyArr = [];
+		var keyValueArr = [];
+		
+		function pickBaseUpdate(){
+			count = 0;
+			for(key in jsonStr.rates) {
+				if(jsonStr.rates.hasOwnProperty(key)) {
+					keyArr[count] = key;
+					keyValueArr[count] = jsonStr.rates[keyArr[count]];
+					count++;
+				}
+			}
+			
+			document.getElementById("jsonbox").innerHTML = JSON.stringify(jsonStr, null, "\t");
+			document.getElementById("lastestUpdate").innerHTML = jsonStr.date;
+			document.getElementById("erLength").innerHTML = count;
+			if (document.getElementById("selectBase").value != "")
+				document.getElementById("chosenBase").innerHTML = baseVal.toFixed(2) + " " + base;
+			document.getElementById("excRateVal").innerHTML = "";
+		}
+		
+		
+		function excUpdate(){
+			var str = "";
+			var select = document.getElementById('selectExc');
+			
+			// To clear selectExc when picking another base.
+			$('#selectExc')
+				.find('option')
+				.remove()
+				.end()
+				.append('<option value="">Select an equivalent</option>')
+				.val('none')
+			;
+			
+			// Add option to selectExc.
+			for(var i=0; i<count; i++){
+				var opt = document.createElement('option');
+				opt.value = keyValueArr[i].toFixed(2);
+    			opt.innerHTML = keyArr[i];
+				select.appendChild(opt);
+			}
+		}
+		
+		var excVal = "";
+		var excKey = "";
+		function pickExcUpdate(){
+			excVal = document.getElementById("selectExc").value;
+			excKey = selectExc.options[selectExc.selectedIndex].text;
+			
+			if (document.getElementById("selectExc").value != "")
+			document.getElementById("excRateVal").innerHTML = " = " + excVal + " " + excKey;
+		}
+		
+		function createValueList() {		
+			var tabStrLoop = "";
+			var tabStr1 = "<table class='table'><thead>"+
+				"<tr><th>Currency</th><th>Value</th></tr>"+
+				"</thead><tbody>";		
+			for(var i=0; i<count; i++){
+				tabStrLoop +=
+					"<tr><td>"+keyArr[i]+"</td>"+
+					"<td>"+keyValueArr[i].toFixed(2)+"</td></tr>";
+			}
+			var tabStr2 = "</tbody></table>";
+			
+			document.getElementById("valueList").innerHTML = tabStr1+tabStrLoop+tabStr2;
+		}
+		
+		
+		var valueBarChart = null;
+		var valueBarConfig = {options:{scales: {
+        	xAxes: [{ticks: {fontColor: '#ffff00'}}],
+        	yAxes: [{ticks: {suggestedMin: 0, fontColor: '#ffff00'}}]
+    	}}, type:'bar'};
+		
+		function barChart() {
+			var ctx = document.getElementById('valueBarChart').getContext('2d');
+			var currencyBar = [];
+			var currencyValBar = [];
+			
+			// Filter some rates
+			for (var i=0; i<count; i++) {
+				if(keyArr[i] != "IDR" && keyArr[i] != "KRW" 
+				   && keyArr[i] != "HUF" && keyArr[i] != "INR"
+				   && keyArr[i] != "JPY" && keyArr[i] != "PHP"
+				   && keyArr[i] != "RUB" && keyArr[i] != "THB"
+				   && keyArr[i] != "CZK" && keyArr[i] != "MXN"
+				   && keyArr[i] != "ZAR"){
+					currencyBar[i] = keyArr[i];
+					currencyValBar[i] = keyValueArr[i];
+				}
+				else{
+					currencyBar[i] = "*";
+				}
+			}
+
+			
+			valueBarConfig.data = {
+				labels: currencyBar,
+				datasets: [
+					{
+						label: "Exchange Rates",
+						backgroundColor: "rgba(255,240,132,0.5)",
+						borderColor: "rgba(255,255,132,1)",
+						borderWidth: 1,
+						hoverBackgroundColor: "rgba(232,199,255,0.4)",
+						hoverBorderColor: "rgba(32,99,255,1)",
+						data: currencyValBar
+					}
+				]
+			};
+
+			if(valueBarChart == null){
+				valueBarChart = new Chart(ctx, valueBarConfig);
+			}else{
+				valueBarChart.update();
+			}
+			
+			document.getElementById("noteValueCharts").innerHTML = "Note: Labels with * are excluded from the chart.";
+		}
+		
+		
+		$(function() {
+			$("#toggleListValue").click(function() {
+				$("#listCont").fadeToggle();
+			});
+			$("#toggleChart").click(function() {
+				$("#chartCont").fadeToggle();
+			});
+			$("#toggleJSON").click(function() {
+				$("#jsonCont").fadeToggle();
+			});
+			
+			$("#showAll").click(function() {
+				$("#listCont").fadeIn();
+				$("#chartCont").fadeIn();
+				$("#jsonCont").fadeIn();
+			});
+			$("#hideAll").click(function() {
+				$("#listCont").fadeOut();
+				$("#chartCont").fadeOut();
+				$("#jsonCont").fadeOut();
+			});
+		});
+		
+	</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		
+		<!-- Navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/app/cer"><span class="glyphicon glyphicon-transfer" aria-hidden="true"></span> Cash Exchange Rates</a>
+			</div>
+			
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav"> 
+                <li><a href="#" onclick="location.reload(true);"><i class="glyphicon glyphicon-refresh"></i> Refresh</a></li>
+				<li><a href="#" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i> Info</a></li>
+            </ul>
+			
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a>Options</a>
+                    </li>
+					<li>
+                        <a href="#/" id="toggleListValue"><i class="glyphicon glyphicon-th-list"></i> Value List</a>
+                    </li>
+                    <li>
+                        <a href="#/" id="toggleChart"><i class="glyphicon glyphicon-stats"></i> Chart</a>
+                    </li>		
+					<li>
+                        <a href="#/" id="toggleJSON"><i class="glyphicon glyphicon-grain"></i> JSON</a>
+                    </li>
+					<li>
+                        <a href="#/" id="showAll"><i class="glyphicon glyphicon-eye-open"></i> Show All</a>
+                    </li>
+					<li>
+                        <a href="#/" id="hideAll"><i class="glyphicon glyphicon-eye-close"></i> Hide All</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+	
+	
+	
+		<div id="page-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Side Menu -->
+					<div class="col-lg-12">
+						<h1>Cash Exchange Rates</h1>
+						<h4>Lastest currency update : <span id="lastestUpdate">YYYY-MM-DD</span></h4>
+						<h4>Exchange rate choices : <span id="erLength">0</span></h4>
+						<hr>
+						
+						<div class="row">
+							<div class="col-lg-4">
+								<div class="form-group">
+									<select class="form-control" id="selectBase" onchange="selBase();">
+										<option value="">Select a currency base</option>
+										<option value="USD">USD (US Dollar)</option>
+										<option value="EUR">EUR (Euro)</option>
+										<option value="CAD">CAD (Canadian Dollar)</option>
+
+										<option value="AUD">AUD (Australian Dollar)</option>
+										<option value="BGN">BGN (Bulgarian Lev)</option>
+										<option value="BRL">BRL (Brazilian Real)</option>
+										<option value="CHF">CHF (Swiss Franc)</option>
+										<option value="CNY">CNY (Chinese Yuan Renminbi)</option>
+										<option value="CZK">CZK (Czech Koruna)</option>
+										<option value="DKK">DKK (Danish Krone)</option>
+										<option value="GBP">GBP (British Pound)</option>
+										<option value="HKD">HKD (Hong Kong Dollar)</option>
+										<option value="HRK">HRK (Croatian Kuna)</option>
+										<option value="HUF">HUF (Hungarian Forint)</option>
+										<option value="IDR">IDR (Indonesian Rupiah)</option>
+										<option value="ILS">ILS (Israeli Shekel)</option>
+										<option value="INR">INR (Indian Rupee)</option>
+										<option value="JPY">JPY (Japanese Yen)</option>
+										<option value="KRW">KRW (South Korean Won)</option>
+										<option value="MXN">MXN (Mexican Peso)</option>
+										<option value="MYR">MYR (Malaysian Ringgit)</option>
+										<option value="NOK">NOK (Norwegian Krone)</option>
+										<option value="NZD">NZD (New Zealand Dollar)</option>
+										<option value="PHP">PHP (Philippine Peso)</option>
+										<option value="PLN">PLN (Polish Zloty)</option>
+										<option value="RON">RON (Romanian New Leu)</option>
+										<option value="RUB">RUB (Russian Ruble)</option>
+										<option value="SEK">SEK (Swedish Krona)</option>
+										<option value="SGD">SGD (Singapore Dollar)</option>
+										<option value="THB">THB (Thai Baht)</option>
+										<option value="TRY">TRY (Turkish Lira)</option>
+										<option value="ZAR">ZAR (South African Rand)</option>
+									</select>
+								</div>
+								<button class="btn btn-primary" onclick="pickBaseUpdate();excUpdate();createValueList();barChart()">Start</button>
+								<br><br>
+							</div>
+						
+							<div class="col-lg-4">
+								<div class="form-group">
+									<select class="form-control" id="selectExc">
+										<option value="">Select a base first</option>
+									</select>
+								</div>
+								<button class="btn btn-primary" onclick="pickExcUpdate()">Get equivalent value</button>
+								<br><br>
+							</div>
+						</div>
+						
+						
+						<h3>
+							Rate : <span id="chosenBase">Unavailable</span>
+							<span id="excRateVal"></span>
+						</h3>
+						
+						
+
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-lg-4" id="listCont" style="display:none">
+						<h2>Value List</h2>
+						<div id="valueList"></div>							
+					</div>
+					
+					<div class="col-lg-8">
+						<div id="chartCont" style="display:none">
+							<h2>Chart</h2>
+							<canvas id="valueBarChart"></canvas>
+							<div id="noteValueCharts"></div>
+						</div>
+						<div id="jsonCont" style="display:none">
+							<h2>JSON</h2>
+							<pre><code id="jsonbox"></code></pre>
+						</div>
+					</div>
+				</div>
+							
+				
+			</div><!-- container-fluid -->
+		</div><!-- page-wrapper -->
+	</div><!-- Wrapper -->
+	
+	
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title"><i class="glyphicon glyphicon-info-sign"></i> Info about Cash Exchange Rates</h4>
+				</div>
+				<div class="modal-body">
+					<p>
+						By Lord Rixuel<br>
+						API: <a href="http://fixer.io">Fixer.io</a><br>
+						Frameworks: Bootstrap, Chart.js<br>
+						Languages: HTML, CSS, Javascript, jQuery, JSON<br>
+					</p>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--script src="js/bootstrap.min.js"></script-->
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</body>
+</html>
