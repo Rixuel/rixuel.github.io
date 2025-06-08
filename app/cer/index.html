@@ -57,7 +57,8 @@
 			}
 			
 			document.getElementById("jsonbox").innerHTML = JSON.stringify(jsonStr, null, "\t");
-			document.getElementById("lastestUpdate").innerHTML = jsonStr.date;
+			document.getElementById("latestUpdate").innerHTML = jsonStr.time_last_update_utc;
+			console.log("jsonStr.date = " + jsonStr.time_last_update_utc);
 			document.getElementById("erLength").innerHTML = count;
 			if (document.getElementById("selectBase").value != "")
 				document.getElementById("chosenBase").innerHTML = baseVal.toFixed(2) + " " + base;
@@ -247,7 +248,7 @@
 					<!-- Side Menu -->
 					<div class="col-lg-12">
 						<h1>Cash Exchange Rates</h1>
-						<h4>Lastest currency update : <span id="lastestUpdate">YYYY-MM-DD</span></h4>
+						<h4>Latest currency update : <span id="latestUpdate">Day, DD MM YYYY Time +0000</span></h4>
 						<h4>Exchange rate choices : <span id="erLength">0</span></h4>
 						<hr>
 						
