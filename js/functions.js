@@ -65,10 +65,12 @@ function navbar() {
                     "<div class='navbar-item has-dropdown is-hoverable'>" +
                         "<a class='navbar-link' href='projects.html' id='MenuProjects'>Projects</a>" +
                         "<div class='navbar-dropdown'>" +
-                            "<a class='navbar-item' href='app/crypto.html'>Crypto</a>" +
-                            "<a class='navbar-item' href='app/bible.html'>Read Bible Online</a>" +
-                            "<a class='navbar-item' href='app/sortlist.html'>Sort the List</a>" +
-                            "<a class='navbar-item' href='app/viewjson.html'>View JSON</a>" +
+                            "<a class='navbar-item' href='app/cer'>Cash Exchange Rates</a>" +
+                            "<a class='navbar-item' href='app/crypto'>Crypto</a>" +
+                            "<a class='navbar-item' href='app/bible'>Read Bible Online</a>" +
+                            "<a class='navbar-item' href='app/rpgday'>RPG Day</a>" +
+                            "<a class='navbar-item' href='app/sortlist'>Sort the List</a>" +
+                            "<a class='navbar-item' href='app/viewjson'>View JSON</a>" +
                             "<hr class='navbar-divider'>" +
                             "<a class='navbar-item' href='projects.html'>More...</a>" +
                         "</div>" +
