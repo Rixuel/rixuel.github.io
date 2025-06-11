@@ -33,10 +33,10 @@ function navbar() {
                                 <ul class="dropdown-menu navbar-custom-style">
                                     <li><a class="dropdown-item" href="projects.html">Go to Projects page</a></li>
                                     <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="app/cer">Cash Exchange Rates</a></li>
-                                    <li><a class="dropdown-item" href="app/crypto">Crypto</a></li>
-                                    <li><a class="dropdown-item" href="app/sortlist">Sort the List</a></li>
-                                    <li><a class="dropdown-item" href="app/viewjson">View JSON</a></li>
+                                    <li><a class="dropdown-item" href="app/cer"><i class="bi bi-currency-exchange"></i> Cash Exchange Rates</a></li>
+                                    <li><a class="dropdown-item" href="app/crypto"><i class="bi bi-code-square"></i> Crypto</a></li>
+                                    <li><a class="dropdown-item" href="app/sortlist"><i class="bi bi-list-ol"></i> Sort the List</a></li>
+                                    <li><a class="dropdown-item" href="app/viewjson"><i class="bi bi-filetype-json"></i> View JSON</a></li>
                                 </ul>
                             </li>
                         </ul>
