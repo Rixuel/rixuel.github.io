@@ -1,3 +1,11 @@
+p a:hover {
+    color: #FFF;
+}
+
+p a {
+    color: #ccc;
+}
+
 .button:active, .button:hover, .button:link, .button:visited, .buttonGen {
     color: #FFF
 }
