@@ -4,7 +4,7 @@ function navbar() {
     var menubar = `
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom-style setOpacity" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand noSelect" href="index.html">
+                <a class="navbar-brand user-select-none" href="index.html">
                     <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
 
