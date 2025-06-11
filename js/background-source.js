@@ -30,6 +30,10 @@ const imageArr = [
     {
         "img": "img/landscapebackground.jpg",
         "source": "Pixiv: <a href='https://www.pixiv.net/en/users/6163754' target='_blank'>そよ風</a>"
+    },
+    {
+        "img": "img/landscapebackground2.jpg",
+        "source": "Alpha Coders: <a href='https://alphacoders.com/users/profile/227699/patrika' target='_blank'>patrika</a>"
     }
 ];
 
