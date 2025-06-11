@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Rixuel Neoliv</title>
+	<meta charset="utf-8">
+	<meta name="Rixuel Neoliv" content="Lord Rixuel">
+	<link rel="icon" type="image/png" href="img/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu' rel='stylesheet' type='text/css'>
+
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+	<div class="logo"><a href="index.html" id="toplogo"><script>logo();</script></a></div>
+	<div id="menubar"><script>navbar();</script></div>
+	<div id="TriggerBulmaCardModal"></div>
+
+	<!-- MAIN -->
+	<div class="container wrapper">
+		<div class="columns">
+			<div class="column section-page checkcont">
+				<b><div id="randomMessages"></div><script>randomMsg();</script></b>
+			</div>
+		</div>
+
+		<div class="columns">
+			<div class="column is-three-fifths checkcont">
+				<a href="https://discord.gg/qhCsvqT"><img src="img/discordserverbanner.png"></a>
+				<br>
+				<a href="app/crypto"><img src="img/cryptobanner.png"></a>
+				<br>
+
+                <i class="fab fa-firefox" aria-hidden="true"></i>
+                <i class="fab fa-chrome" aria-hidden="true"></i>
+                <i class="fab fa-edge" aria-hidden="true"></i>
+                <i class="fab fa-html5" aria-hidden="true"></i>
+                <i class="fab fa-css3" aria-hidden="true"></i>
+                <i class="fas fa-code" aria-hidden="true"></i>
+                <i class="fab fa-windows" aria-hidden="true"></i>
+                <i class="fab fa-linux" aria-hidden="true"></i>
+                <i class="fab fa-apple" aria-hidden="true"></i>
+                <i class="fas fa-mobile-alt" aria-hidden="true"></i>
+                <i class="fab fa-font-awesome" aria-hidden="true"></i>
+			</div>
+
+			<div class="column is-two-fifths checkcont">
+				<div class="container">
+					<div class="notification is-info" style="border-radius: 0px;">
+						<div id="setDateTime">
+							<script>date_time("setDateTime");</script>
+						</div>
+					</div>
+				</div>
+
+				<a href="javascript:void(0)" onclick="BulmaCardModal('myModalWelcome', 'Hello', myModalWelcomeContent, '')">
+					<img src="img/frontcover.png">
+				</a>
+				<script>
+					var myModalWelcomeContent =
+					"Hey, sup? Welcome to my website. I build it with code. No CMS used.<br>" +
+					"Nothing special so far. Just some web pages to mess with.<br>" +
+					"Twitter: <a href='https://twitter.com/Rixuel'>Rixuel</a>";
+				</script>
+
+				<br>
+			</div>
+
+		</div>
+	</div>
+	<!-- END MAIN -->
+
+	<!-- Ads/Logo/Random Stuff -->
+	<div class="column" id="adsfooter"><script>adsbanners();</script></div>
+	<!-- COPYRIGHT -->
+	<div class="column is-full" id="footer"><script>COPYRIGHT();</script></div>
+
+</body>
+</html>
