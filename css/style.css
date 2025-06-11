@@ -27,6 +27,10 @@ marquee {
     margin: 3px;
 }
 
+.custom-container-width {
+    max-width: 62em;
+}
+
 .navbar-nav li a:hover {
     background-color: #333;
 }
@@ -44,9 +48,9 @@ marquee {
 }
 
 .noSelect {
-  -webkit-user-select: none; /* Safari */
-  -ms-user-select: none; /* IE 10 and IE 11 */
-  user-select: none; /* Standard syntax */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .setOpacity {
