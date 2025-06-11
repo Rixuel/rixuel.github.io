@@ -53,7 +53,7 @@
 	<style>
 		body {
 			background-color: #000;
-			color: #66DD00;
+			color: #15b500;
 		}
 		body,
 		code {
@@ -63,9 +63,10 @@
 			color: #BBDDBB;
 		}
 		pre {
-			border-left: 4px solid #66DD00;
+			border-left: 4px solid #15b500;
 			margin-left: 10px;
 			padding-left: 10px;
+			font-size: 14px;
 		}
 		button,
 		input {
@@ -75,11 +76,15 @@
 			color: #ccddee;
 			padding: 8px;
 		}
+		a {
+			color: #FFF;
+		}
 	</style>
 </head>
 
 <body>
 	<h1>View JSON</h1>
+	<p><a href="../../index.html">Home</a> | <a href="../../projects.html">Projects</a></p>
 	Enter a JSON API link: <br>
 	<input type="text" id="urlInput" size="100" onkeypress="return runScript(event)"/>
 	<button onclick="viewJSON()">Click</button>
