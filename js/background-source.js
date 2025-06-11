@@ -12,10 +12,6 @@ const imageArr = [
         "source": "Kuro Games"
     },
     {
-        "img": "img/minimalistmoonwallpaper.jpg",
-        "source": "wallpaperflare.com"
-    },
-    {
         "img": "img/floatingislandswallpapers.jpg",
         "source": "Granblue Fantasy"
     },
