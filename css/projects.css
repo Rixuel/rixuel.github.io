@@ -5,3 +5,22 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.card {
+    background-color: #112233;
+    color: #ccddee;
+}
+
+.list-group-item {
+    background-color: #222;
+    color: #ccddee;
+    border-color: #000;
+}
+
+.list-group-item:hover {
+    background-color: #333;
+}
+
+.list-group a {
+    color: #fff;
+}
