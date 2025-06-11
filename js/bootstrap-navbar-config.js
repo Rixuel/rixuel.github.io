@@ -4,7 +4,7 @@ function navbar() {
     var menubar = `
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom-style setOpacity" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand noSelect">
+                <a class="navbar-brand noSelect" href="index.html">
                     <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
 
@@ -23,7 +23,7 @@ function navbar() {
                     <div class="offcanvas-body">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" id="menuHome" href="index.html"><i class="bi bi-house"></i> Home</a>
+                                <a class="nav-link" id="menuHome" href="./"><i class="bi bi-house"></i> Home</a>
                             </li>
                             <li class="nav-item dropdown"> 
                                 <a class="nav-link dropdown-toggle" id="menuProjects" href="projects.html" role="button" data-bs-toggle="dropdown"

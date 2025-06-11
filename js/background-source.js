@@ -1,5 +1,3 @@
-let index, imageSourceInfo, imageURL;
-
 const imageArr = [
     {
         "img": "img/velionabackground3.png",
@@ -30,6 +28,8 @@ const imageArr = [
         "source": "X: @Jimboboxart"
     }
 ];
+
+let index, imageSourceInfo, imageURL;
 
 index = Math.floor(Math.random() * imageArr.length);
 imageSourceInfo = imageArr[index].source;
