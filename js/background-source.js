@@ -1,4 +1,5 @@
 const imageArr = [
+    /* Background images data */
     {
         "img": "img/velionabackground3.png",
         "source": "Hoyoverse"
@@ -30,8 +31,17 @@ const imageArr = [
     {
         "img": "img/landscapebackground2.jpg",
         "source": "Alpha Coders: <a href='https://alphacoders.com/users/profile/227699/patrika' target='_blank'>patrika</a>"
+    },
+    {
+        "img": "img/mavuikabackground.jpg",
+        "source": "Hoyoverse"
+    },
+    {
+        "img": "img/weatheringwithyoubackground.jpg",
+        "source": "Weathering with you"
     }
 ];
+//console.log("Check imageArr[] length: " + imageArr.length);
 
 let index, imageSourceInfo, imageURL;
 
