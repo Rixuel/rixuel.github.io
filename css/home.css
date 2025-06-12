@@ -1,5 +1,12 @@
 marquee {
-    margin-bottom: -7px;
+    margin-bottom: -4px;
+}
+
+/* marquee on firefox has different margin than chromium browsers*/
+@-moz-document url-prefix() {
+    marquee {
+        margin: 0;
+    }
 }
 
 .infoIcon:hover {
