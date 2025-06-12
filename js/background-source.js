@@ -17,10 +17,6 @@ const imageArr = [
         "source": "Granblue Fantasy"
     },
     {
-        "img": "img/heliabackground.jpg",
-        "source": "Hoyoverse"
-    },
-    {
         "img": "img/shieldherobackground.jpg",
         "source": "X: @Jimboboxart"
     },
@@ -39,6 +35,10 @@ const imageArr = [
     {
         "img": "img/weatheringwithyoubackground.jpg",
         "source": "Weathering with you"
+    },
+    {
+        "img": "img/kianavitabackground.jpg",
+        "source": "Hoyoverse"
     }
 ];
 //console.log("Check imageArr[] length: " + imageArr.length);
