@@ -41,8 +41,12 @@ function navbar() {
                             </li>
                         </ul>
 
-                        <ul class="navbar-nav">
-                            <!--li class="nav-item">
+                        <span class="navbar-text">
+                            Navbar text with an inline element 2
+                        </span>
+
+                        <!--ul class="navbar-nav">
+                            <li class="nav-item">
                                 <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
                             </li>
                             <li class="nav-item">
@@ -50,11 +54,8 @@ function navbar() {
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
-                            </li-->
-                            <span class="navbar-text">
-                                Navbar text with an inline element
-                            </span>
-                        </ul>
+                            </li>
+                        </ul-->
                     </div>
 
                 </div>
