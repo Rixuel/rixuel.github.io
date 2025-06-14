@@ -4,11 +4,8 @@ function navbar() {
     var menubar = `
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom-style setOpacity" data-bs-theme="dark">
             <div class="container">
-                <a class="navbar-brand user-select-none" href="index.html">
-                    <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
-                </a>
-                <a class="navbar-brand">
-                    Neoliv
+                <a class="navbar-brand" href="index.html">
+                    <img class="user-select-none" src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
