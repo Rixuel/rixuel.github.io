@@ -45,8 +45,8 @@ function navbar() {
                         </ul>
 
                         <ul class="navbar-nav">
-                            <li>
-                                <a>test</a>
+                            <li class="nav-item">
+                                <a>test 2</a>
                             </li>
                         </ul>
 
