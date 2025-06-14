@@ -47,14 +47,14 @@ function navbar() {
                             <a href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
                         </span-->
 
-                        <ul class="navbar-nav">
-                            <li class="nav-itemm">
+                        <ul class="navbar-text">
+                            <li class="nav-item">
                                 <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
                             </li>
-                            <li class="nav-itemm">
+                            <li class="nav-item">
                                 <a class="nav-link" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
                             </li>
-                            <li class="nav-itemm">
+                            <li class="nav-item">
                                 <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
                             </li>
                         </ul>
