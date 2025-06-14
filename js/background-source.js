@@ -63,8 +63,9 @@ function getImageSourceInfo() {
     document.getElementById("BackgroundImageSourceText").innerHTML = imageSourceInfo;
 }
 
+/*
 // HTML of the Modal popup
-/*let imageSourceModalHTML = `
+let imageSourceModalHTML = `
     <div class="modal fade" id="BackgroundImageSourceModal" tabindex="-1" aria-labelledby="BackgroundImageSourceModalLabel" aria-hidden="true" data-bs-theme="dark">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
@@ -89,7 +90,7 @@ document.getElementById("imageSourceModal").innerHTML = imageSourceModalHTML;
 // HTML of the Toast
 let imageSourceToastHTML = `
     <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" data-bs-theme="dark">
-        <div id="imageSourceLiveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="imageSourceLiveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
             <div class="toast-header">
                 <i class="bi bi-info-circle"></i>&nbsp;
                 <strong class="me-auto">Background Image Source</strong>
@@ -104,7 +105,7 @@ let imageSourceToastHTML = `
 
 document.getElementById("imageSourceToast").innerHTML = imageSourceToastHTML;
 
-// Bootstrap code. Need to put it at the end of the HTML to work.
+// Bootstrap code for the toast. Need to put it at the end of the HTML to work.
 const toastTrigger = document.getElementById('imageSourceLiveToastBtn')
 const toastLiveExample = document.getElementById('imageSourceLiveToast')
 
