@@ -25,6 +25,10 @@ img {
     padding-right: 6px;
 }
 
+.toright {
+    justify-content: flex-end;
+}
+
 .navbar-custom-style {
     background-color: #111 !important;
 }

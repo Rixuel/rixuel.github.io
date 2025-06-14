@@ -4,7 +4,7 @@ function navbar() {
     var menubar = `
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom-style setOpacity" data-bs-theme="dark">
             <div class="container testborder">
-                <a class="navbar-brand user-select-nonee" href="index.html">
+                <a class="navbar-brand user-select-none" href="index.html">
                     <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
 
@@ -39,13 +39,16 @@ function navbar() {
                                     <li><a class="dropdown-item" href="app/viewjson"><i class="bi bi-filetype-json"></i> View JSON</a></li>
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link navbar-right" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            </li>
                         </ul>
 
-                        <span class="navbar-text">
+                        <!--span class="navbar-text">
                             <a class="navbar-right-item" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
                             <a class="navbar-right-item" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
                             <a class="navbar-right-item" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
-                        </span>
+                        </span-->
 
                         <!--span class="d-flex">
                             <button class="btn btn-outline-success">Search</button>
