@@ -13,12 +13,16 @@ img {
     max-width: 62em;
 }
 
-.navbar-nav li a:hover {
+.navbar-nav li a:hover, .navbar-right-item:hover {
     background-color: #333;
 }
 
-.navbar-text a {
+.navbar-right-item {
     text-decoration: none;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 .navbar-custom-style {

@@ -3,8 +3,8 @@ function navbar() {
     "use strict";
     var menubar = `
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-custom-style setOpacity" data-bs-theme="dark">
-            <div class="container">
-                <a class="navbar-brand user-select-none" href="index.html">
+            <div class="container testborder">
+                <a class="navbar-brand user-select-nonee" href="index.html">
                     <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
 
@@ -41,23 +41,27 @@ function navbar() {
                             </li>
                         </ul>
 
-                        <!--span class="navbar-text">
-                            <a href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
-                            <a href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
-                            <a href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
+                        <span class="navbar-text">
+                            <a class="navbar-right-item" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            <a class="navbar-right-item" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
+                            <a class="navbar-right-item" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
+                        </span>
+
+                        <!--span class="d-flex">
+                            <button class="btn btn-outline-success">Search</button>
                         </span-->
 
-                        <ul class="">
-                            <li class="">
-                                <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord 2</a>
+                        <!--ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link"><i class="bi bi-discord"></i> Discord</a>
                             </li>
-                            <li class="">
-                                <a class="nav-link" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
+                            <li class="nav-item">
+                                <a class="nav-link"><i class="bi bi-youtube"></i> Youtube</a>
                             </li>
-                            <li class="">
-                                <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
+                            <li class="nav-item">
+                                <a class="nav-link"><i class="bi bi-github"></i> Github</a>
                             </li>
-                        </ul>
+                        </ul-->
                     </div>
 
                 </div>
