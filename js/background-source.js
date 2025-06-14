@@ -89,7 +89,7 @@ document.getElementById("imageSourceModal").innerHTML = imageSourceModalHTML;
 
 // HTML of the Toast
 let imageSourceToastHTML = `
-    <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" data-bs-theme="dark">
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" data-bs-theme="dark">
         <div id="imageSourceLiveToast" class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
             <div class="toast-header">
                 <i class="bi bi-info-circle"></i>&nbsp;
