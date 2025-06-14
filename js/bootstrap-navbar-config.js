@@ -51,9 +51,9 @@ function navbar() {
                             <li class="nav-item">
                                 <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
                             </li-->
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/c/LordRixuel">Youtube</a>
-                            </li>
+                            <span class="navbar-text">
+                                Navbar text with an inline element
+                            </span>
                         </ul>
                     </div>
 
