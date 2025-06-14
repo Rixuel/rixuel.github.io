@@ -39,9 +39,6 @@ function navbar() {
                                     <li><a class="dropdown-item" href="app/viewjson"><i class="bi bi-filetype-json"></i> View JSON</a></li>
                                 </ul>
                             </li>
-                            <!--li class="nav-item">
-                                <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
-                            </li-->
                         </ul>
 
                         <ul class="navbar-nav">
@@ -55,28 +52,6 @@ function navbar() {
                                 <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
                             </li>
                         </ul>
-
-                        <!--span class="navbar-text">
-                            <a class="navbar-right-item" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
-                            <a class="navbar-right-item" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
-                            <a class="navbar-right-item" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
-                        </span-->
-
-                        <!--span class="d-flex">
-                            <button class="btn btn-outline-success">Search</button>
-                        </span-->
-
-                        <!--ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link"><i class="bi bi-discord"></i> Discord</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"><i class="bi bi-youtube"></i> Youtube</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"><i class="bi bi-github"></i> Github</a>
-                            </li>
-                        </ul-->
                     </div>
 
                 </div>
