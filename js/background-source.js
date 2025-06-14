@@ -90,13 +90,13 @@ document.getElementById("imageSourceModal").innerHTML = imageSourceModalHTML;
 // HTML of the Toast
 let imageSourceToastHTML = `
     <div class="toast-container position-fixed top-50 start-50 translate-middle p-3" data-bs-theme="dark">
-        <div id="imageSourceLiveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+        <div id="imageSourceLiveToast" class="toast" role="status" aria-live="polite" aria-atomic="true" data-bs-autohide="false">
             <div class="toast-header">
                 <i class="bi bi-info-circle"></i>&nbsp;
                 <strong class="me-auto">Background Image Source</strong>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-            <div class="toast-body">
+            <div class="toast-body text-start">
                 <span id="BackgroundImageSourceText"></span>
             </div>
         </div>
