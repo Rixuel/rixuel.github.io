@@ -48,6 +48,12 @@ function navbar() {
                             <li class="nav-item">
                                 <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            </li>
                         </ul>
 
                         <!--span class="navbar-text">
