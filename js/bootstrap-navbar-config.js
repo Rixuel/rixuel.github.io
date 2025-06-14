@@ -40,7 +40,13 @@ function navbar() {
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link navbar-right" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                                <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            </li>
+                        </ul>
+
+                        <ul class="">
+                            <li>
+                                <a>test</a>
                             </li>
                         </ul>
 
