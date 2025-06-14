@@ -13,7 +13,7 @@ function navbar() {
                     <i class="bi bi-list"></i>
                 </button>
 
-                <div class="offcanvas offcanvas-end navbar-custom-style" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <!--div class="offcanvas offcanvas-end navbar-custom-style" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
 
                     <div class="offcanvas-header">
                         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -54,7 +54,7 @@ function navbar() {
                         </ul>
                     </div>
 
-                </div>
+                </div-->
 
             </div>
         </nav>
