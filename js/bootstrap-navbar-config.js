@@ -39,9 +39,9 @@ function navbar() {
                                     <li><a class="dropdown-item" href="app/viewjson"><i class="bi bi-filetype-json"></i> View JSON</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
+                            <!--li class="nav-item">
                                 <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
-                            </li>
+                            </li-->
                         </ul>
 
                         <ul class="navbar-nav">
