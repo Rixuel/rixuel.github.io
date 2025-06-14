@@ -46,7 +46,7 @@ function navbar() {
 
                         <ul class="navbar-nav">
                             <li class="nav-item">
-                                <a>test 2</a>
+                                <a class="nav-link">test 2</a>
                             </li>
                         </ul>
 
