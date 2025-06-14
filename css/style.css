@@ -17,6 +17,10 @@ img {
     background-color: #333;
 }
 
+.navbar-text a {
+    text-decoration: none;
+}
+
 .navbar-custom-style {
     background-color: #111 !important;
 }

@@ -41,21 +41,23 @@ function navbar() {
                             </li>
                         </ul>
 
-                        <span class="navbar-text">
-                            Navbar text with an inline element 2
-                        </span>
+                        <!--span class="navbar-text">
+                            <a href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
+                            <a href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
+                            <a href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
+                        </span-->
 
-                        <!--ul class="navbar-nav">
-                            <li class="nav-item">
+                        <ul class="navbar-nav">
+                            <li class="nav-itemm">
                                 <a class="nav-link" href="https://discord.gg/qhCsvqT"><i class="bi bi-discord"></i> Discord</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-itemm">
                                 <a class="nav-link" href="https://www.youtube.com/c/LordRixuel"><i class="bi bi-youtube"></i> Youtube</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-itemm">
                                 <a class="nav-link" href="https://github.com/Rixuel"><i class="bi bi-github"></i> Github</a>
                             </li>
-                        </ul-->
+                        </ul>
                     </div>
 
                 </div>
