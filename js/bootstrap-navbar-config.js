@@ -7,7 +7,7 @@ function navbar() {
                 <a class="navbar-brand user-select-none" href="index.html">
                     <img src="img/rixuel-logo.png" alt="Bootstrap" width="112" height="28">
                 </a>
-
+                
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
                     aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
