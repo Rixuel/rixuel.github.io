@@ -1,8 +1,3 @@
-/* When a scrollbar shows up, the content is pushed to the left. We want to prevent that */
-html {
-    margin-left: calc(100vw - 100%);
-}
-
 body {
     background-color: #000;
     color: #FFF;
