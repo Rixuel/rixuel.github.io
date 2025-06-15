@@ -1,11 +1,3 @@
-.main-background-img {
-    background-color: #222;
-    background-image: url("../img/background.png");
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .card {
     background-color: #112233;
     color: #ccddee;

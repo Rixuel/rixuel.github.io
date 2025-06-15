@@ -9,6 +9,14 @@ img {
     max-height: 100%;
 }
 
+.background-img {
+    background-color: #222;
+    background-image: url("../img/background.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .custom-container-width {
     max-width: 62em;
 }

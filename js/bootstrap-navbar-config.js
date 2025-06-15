@@ -25,6 +25,9 @@ function navbar() {
                             <li class="nav-item">
                                 <a class="nav-link" id="menuHome" href="./"><i class="bi bi-house"></i> Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="menuRandom" href="random.html"><i class="bi bi-dice-3"></i> Random</a>
+                            </li>
                             <li class="nav-item dropdown"> 
                                 <a class="nav-link dropdown-toggle" id="menuProjects" href="projects.html" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
@@ -84,6 +87,9 @@ function checkPageWithMenu() {
     }
     if (pageWithoutExt.toString().toLowerCase() === "index") {
         selectedMenu("menuHome");
+    }
+    if (pageWithoutExt.toString().toLowerCase() === "random") {
+        selectedMenu("menuRandom");
     }
     if (pageWithoutExt.toString().toLowerCase() === "projects") {
         selectedMenu("menuProjects");
