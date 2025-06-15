@@ -14,7 +14,6 @@ img {
     background-image: url("../img/background.png");
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .custom-container-width {
