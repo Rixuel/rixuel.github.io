@@ -39,6 +39,10 @@ const imageArr = [
     {
         "img": "img/kianavitabackground.jpg",
         "source": "Hoyoverse"
+    },
+    {
+        "img": "img/mountainvillagebackground.jpg",
+        "source": "Alpha Coders: <a href='https://alphacoders.com/users/profile/227699/patrika' target='_blank'>patrika</a>"
     }
 ];
 //console.log("Check imageArr[] length: " + imageArr.length);
