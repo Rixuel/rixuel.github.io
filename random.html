@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/random.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous"-->
     <script src="js/bootstrap-navbar-config.js"></script>
@@ -33,44 +34,66 @@
             </div>        
         </div>
 
-        <div class="vh-100 miscBackground">
+        <div class="w-100 miscBackground" data-bs-spy="scroll">
             <div class="container mx-auto py-2 custom-container-width">
+
                 <div class="row">
-                    <div class="col">
-                        <i class="bi bi-dice-1"></i> <i class="bi bi-dice-1-fill"></i><br>
-                        <i class="bi bi-dice-2"></i> <i class="bi bi-dice-2-fill"></i><br>
-                        <i class="bi bi-dice-3"></i> <i class="bi bi-dice-3-fill"></i><br>
-                        <i class="bi bi-dice-4"></i> <i class="bi bi-dice-4-fill"></i><br>
-                        <i class="bi bi-dice-5"></i> <i class="bi bi-dice-5-fill"></i><br>
-                        <i class="bi bi-dice-6"></i> <i class="bi bi-dice-6-fill"></i><br>
+                    <div class="col-4">
+                        <div id="list-example" class="list-group sticky-top" data-bs-theme="dark">
+                            <a class="list-group-item list-group-item-action" href="#">To top</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-1">Useless Serial Number</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-2">Fantasy Username</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-3">Random Full Name</a>
+                            <a class="list-group-item list-group-item-action" href="#list-item-4">Barcode</a>
+                        </div>
                     </div>
-                    <div class="col">
-                        <i class="bi bi-dice-1"></i> <i class="bi bi-dice-1-fill"></i><br>
-                        <i class="bi bi-dice-2"></i> <i class="bi bi-dice-2-fill"></i><br>
-                        <i class="bi bi-dice-3"></i> <i class="bi bi-dice-3-fill"></i><br>
-                        <i class="bi bi-dice-4"></i> <i class="bi bi-dice-4-fill"></i><br>
-                        <i class="bi bi-dice-5"></i> <i class="bi bi-dice-5-fill"></i><br>
-                        <i class="bi bi-dice-6"></i> <i class="bi bi-dice-6-fill"></i><br>
+                    <div class="col-8">
+                        <div data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
+                            
+                            <div id="list-item-1" class="vh-100 random-content">
+                                <h4>Useless Serial Number</h4>
+                                <label for="" class="form-label">Select a number of separators</label>
+                                <div class="mb-3">
+                                    <select id="serialNumSeparator" class="form-select" aria-label="Number of separators" data-bs-theme="dark" onChange="onSelectSeparators();">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                        <option value="4" selected>Four (Default)</option>
+                                    </select>
+                                </div>
+                                <label for="" class="form-label">Output</label>
+                                <div class="input-group mb-3">
+                                    <input id="useless-serial-number-output" name="uselessSerialNumberOutput" class="form-control font-monospace" type="text" placeholder="XX00-X0X0-XXX0-000X-0X0X" data-bs-theme="dark" readonly>
+                                    <button class="btn btn-secondary" type="button" id="button-addon2" onclick="copySelectAll('useless-serial-number-output');"><i class="bi bi-copy"></i></button>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="btn btn-primary mb-3" onclick="generateSerialNum();">Generate</button>
+                                    <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
+                                </div>
+                            </div>
+                            
+                            <div id="list-item-2" class="vh-100 testbg random-content">
+                                <h4>Fantasy Username</h4>
+                                
+                                
+                            </div>
+                            
+                            <div id="list-item-3" class="vh-100 testbg3 random-content">
+                                <h4>Random Full Name</h4>
+                                
+                                
+                            </div>
+                            
+                            <div id="list-item-4" class="vh-100 testbg random-content">
+                                <h4>Barcode</h4>
+                                
+                                
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <i class="bi bi-dice-1"></i> <i class="bi bi-dice-1-fill"></i><br>
-                        <i class="bi bi-dice-2"></i> <i class="bi bi-dice-2-fill"></i><br>
-                        <i class="bi bi-dice-3"></i> <i class="bi bi-dice-3-fill"></i><br>
-                        <i class="bi bi-dice-4"></i> <i class="bi bi-dice-4-fill"></i><br>
-                        <i class="bi bi-dice-5"></i> <i class="bi bi-dice-5-fill"></i><br>
-                        <i class="bi bi-dice-6"></i> <i class="bi bi-dice-6-fill"></i><br>
-                    </div>
-                    <div class="col">
-                        <i class="bi bi-dice-1"></i> <i class="bi bi-dice-1-fill"></i><br>
-                        <i class="bi bi-dice-2"></i> <i class="bi bi-dice-2-fill"></i><br>
-                        <i class="bi bi-dice-3"></i> <i class="bi bi-dice-3-fill"></i><br>
-                        <i class="bi bi-dice-4"></i> <i class="bi bi-dice-4-fill"></i><br>
-                        <i class="bi bi-dice-5"></i> <i class="bi bi-dice-5-fill"></i><br>
-                        <i class="bi bi-dice-6"></i> <i class="bi bi-dice-6-fill"></i><br>
-                    </div>
-                </div>
+
             </div>
         </div>
         
@@ -80,6 +103,7 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/random-serial-number.js"></script>
     <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script-->
 </body>
 

@@ -1,0 +1,15 @@
+.list-group {
+    border-radius: 0px;
+}
+
+.active {
+    background-color: #083775 !important;
+    font-weight: bold;
+}
+
+.random-content {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
