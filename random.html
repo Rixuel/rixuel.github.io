@@ -34,23 +34,35 @@
             </div>        
         </div>
 
-        <div class="w-100 miscBackground" data-bs-spy="scroll">
+        <div class="w-100 miscBackground" data-bs-spyy="scroll">
             <div class="container mx-auto py-2 custom-container-width">
+                <div class="row mx-3">
+                    <div class="col">
 
-                <div class="row">
-                    <div class="col-4">
-                        <div id="list-example" class="list-group sticky-top" data-bs-theme="dark">
-                            <a class="list-group-item list-group-item-action" href="#">To top</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-1">Useless Serial Number</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-2">Fantasy Username</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-3">Random Full Name</a>
-                            <a class="list-group-item list-group-item-action" href="#list-item-4">Barcode</a>
-                        </div>
-                    </div>
-                    <div class="col-8">
-                        <div data-bs-target="#list-example" data-bs-smooth-scroll="true" class="scrollspy-example" tabindex="0">
-                            
-                            <div id="list-item-1" class="vh-100 random-content">
+                        <ul class="nav nav-pills mb-3 mt-2" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-userialnum" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                    Useless Serial Number
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-fantasyuser" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                    Fantasy Username
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-randfullname" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                    Random Full Name
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-barcode" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                    Barcode
+                                </button>
+                            </li>
+                        </ul>
+                        <div class="tab-content random-content" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-userialnum" role="tabpanel" aria-labelledby="pills-userialnum-tab" tabindex="0">
                                 <h4>Useless Serial Number</h4>
                                 <label for="" class="form-label">Select a number of separators</label>
                                 <div class="mb-3">
@@ -71,29 +83,22 @@
                                     <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
                                 </div>
                             </div>
-                            
-                            <div id="list-item-2" class="vh-100 testbg random-content">
+
+                            <div class="tab-pane fade" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
                                 <h4>Fantasy Username</h4>
-                                
-                                
-                            </div>
-                            
-                            <div id="list-item-3" class="vh-100 testbg3 random-content">
-                                <h4>Random Full Name</h4>
-                                
-                                
-                            </div>
-                            
-                            <div id="list-item-4" class="vh-100 testbg random-content">
-                                <h4>Barcode</h4>
-                                
-                                
                             </div>
 
+                            <div class="tab-pane fade" id="pills-randfullname" role="tabpanel" aria-labelledby="pills-randfullname-tab" tabindex="0">
+                                <h4>Random Full Name</h4>
+                            </div>
+
+                            <div class="tab-pane fade" id="pills-barcode" role="tabpanel" aria-labelledby="pills-barcode-tab" tabindex="0">
+                                <h4>Barcode</h4>
+                            </div>
                         </div>
+
                     </div>
                 </div>
-
             </div>
         </div>
         
