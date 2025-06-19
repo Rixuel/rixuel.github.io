@@ -8,8 +8,7 @@ function generateSerialNum() {
     let serialNumString = "";
     
     serialNum_Separator = document.getElementById("serialNumSeparator").value;
-    //document.getElementById("useless-serial-number-output").placeholder = "test";
-    console.log("Number of separators = " + serialNum_Separator)
+    //console.log("Number of separators = " + serialNum_Separator)
 
     // With 1 separator, the output is XX00-X0X0
     if(serialNum_Separator >= 1){
@@ -49,7 +48,7 @@ function generateSerialNum() {
         serialNumString += serialNum_Letters.charAt(Math.floor(Math.random() * serialNum_LettersLength));
     }
 
-    console.log("Generating: " + serialNumString);
+    //console.log("Generating: " + serialNumString);
     document.getElementById("useless-serial-number-output").value = serialNumString;
 }
 
