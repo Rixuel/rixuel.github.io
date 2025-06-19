@@ -36,7 +36,7 @@
 
         <div class="w-100 miscBackground">
             <div class="container mx-auto py-2 custom-container-width">
-                <div class="row mx-3">
+                <div class="row">
                     <div class="col">
 
                         <ul class="nav nav-pills mb-3 mt-2" id="pills-tab" role="tablist">
@@ -64,7 +64,7 @@
                         <div class="tab-content random-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-userialnum" role="tabpanel" aria-labelledby="pills-userialnum-tab" tabindex="0">
                                 <h4>Useless Serial Number</h4>
-                                <label for="" class="form-label">Select a number of separators</label>
+                                <label for="serialNumSeparator" class="form-label">Select a number of separators</label>
                                 <div class="mb-3">
                                     <select id="serialNumSeparator" class="form-select" aria-label="Number of separators" data-bs-theme="dark" onChange="onSelectSeparators();">
                                         <option value="1">One</option>
@@ -73,7 +73,7 @@
                                         <option value="4" selected>Four (Default)</option>
                                     </select>
                                 </div>
-                                <label for="" class="form-label">Output</label>
+                                <label for="useless-serial-number-output" class="form-label">Output</label>
                                 <div class="input-group mb-3">
                                     <input id="useless-serial-number-output" name="uselessSerialNumberOutput" class="form-control font-monospace" type="text" placeholder="XX00-X0X0-XXX0-000X-0X0X" data-bs-theme="dark" readonly>
                                     <button class="btn btn-secondary" type="button" id="button-addon2" onclick="copySelectAll('useless-serial-number-output');"><i class="bi bi-copy"></i></button>
@@ -87,21 +87,21 @@
                             <div class="tab-pane fade" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
                                 <h4>Fantasy Username</h4>
                                 <div class="row">
-                                    <div class="col-4">
-                                        <label for="" class="form-label">Mode</label>
-                                        <select id="" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
+                                    <div class="col-md-4">
+                                        <label for="fanuser-mode" class="form-label">Mode</label>
+                                        <select id="fanuser-mode" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
                                             <option value="1" selected>Fantasy</option>
                                             <option value="2">Other Llnguages</option>
                                         </select>
-                                        <label for="" class="form-label">Name length</label>
-                                        <select id="" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
+                                        <label for="fanuser-name-length" class="form-label">Name length</label>
+                                        <select id="fanuser-name-length" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
                                             <option value="1" selected>Short</option>
                                             <option value="2">Medium</option>
                                             <option value="3">Long</option>
                                         </select>
                                         <button class="btn btn-primary mb-3 w-100 py-3">Execute</button>
                                     </div>
-                                    <div class="col-8">
+                                    <div class="col-md-8">
                                         <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="10" data-bs-theme="dark" placeholder="Chaotic Username Soon" readonly></textarea>
                                         <button class="btn btn-secondary" type="button" id="" onclick=""><i class="bi bi-copy"></i></button>
                                         <button class="btn btn-danger" type="button" id="" onclick=""><i class="bi bi-trash"></i></button>
