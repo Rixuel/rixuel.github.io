@@ -14,13 +14,14 @@
     padding-right: 16px;
 }
 
-select {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  color: white !important;
-  background-color: #343a40;
-  border: 1px solid #444;
-  border-radius: 0.25rem;
-  padding-right: 2rem;
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: 1px solid #444;
+    padding-right: 2.5rem;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='white' viewBox='0 0 16 16' height='16' width='16' xmlns='http://www.w3.org/2000/svg'><path d='M1.5 5l6 6 6-6'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
 }
