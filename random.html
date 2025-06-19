@@ -34,29 +34,29 @@
             </div>        
         </div>
 
-        <div class="w-100 miscBackground" data-bs-spyy="scroll">
+        <div class="w-100 miscBackground">
             <div class="container mx-auto py-2 custom-container-width">
                 <div class="row mx-3">
                     <div class="col">
 
                         <ul class="nav nav-pills mb-3 mt-2" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-userialnum" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
+                                <button class="nav-link active" id="pills-userialnum-tab" data-bs-toggle="pill" data-bs-target="#pills-userialnum" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
                                     Useless Serial Number
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-fantasyuser" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
+                                <button class="nav-link" id="pills-fanuser-tab" data-bs-toggle="pill" data-bs-target="#pills-fantasyuser" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
                                     Fantasy Username
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-randfullname" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                <button class="nav-link" id="pills-randfullname-tab" data-bs-toggle="pill" data-bs-target="#pills-randfullname" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                                     Random Full Name
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-barcode" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
+                                <button class="nav-link" id="pills-barcode-tab" data-bs-toggle="pill" data-bs-target="#pills-barcode" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
                                     Barcode
                                 </button>
                             </li>
@@ -86,6 +86,27 @@
 
                             <div class="tab-pane fade" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
                                 <h4>Fantasy Username</h4>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <label for="" class="form-label">Mode</label>
+                                        <select id="" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
+                                            <option value="1" selected>Fantasy</option>
+                                            <option value="2">Other Llnguages</option>
+                                        </select>
+                                        <label for="" class="form-label">Name length</label>
+                                        <select id="" class="form-select mb-3" aria-label="" data-bs-theme="dark" onChange="">
+                                            <option value="1" selected>Short</option>
+                                            <option value="2">Medium</option>
+                                            <option value="3">Long</option>
+                                        </select>
+                                        <button class="btn btn-primary mb-3 w-100 py-3">Execute</button>
+                                    </div>
+                                    <div class="col-8">
+                                        <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="10" data-bs-theme="dark" placeholder="Chaotic Username Soon" readonly></textarea>
+                                        <button class="btn btn-secondary" type="button" id="" onclick=""><i class="bi bi-copy"></i></button>
+                                        <button class="btn btn-danger" type="button" id="" onclick=""><i class="bi bi-trash"></i></button>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="tab-pane fade" id="pills-randfullname" role="tabpanel" aria-labelledby="pills-randfullname-tab" tabindex="0">
@@ -107,6 +128,7 @@
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/random.js"></script>
     <script src="js/random-serial-number.js"></script>
     <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script-->
 </body>
