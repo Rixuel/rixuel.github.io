@@ -79,8 +79,10 @@
                                     <button class="btn btn-secondary" type="button" id="button-addon2" onclick="copySelectAll('useless-serial-number-output');"><i class="bi bi-copy"></i></button>
                                 </div>
                                 <div class="col-auto">
-                                    <button class="btn btn-primary mb-3" onclick="generateSerialNum();">Generate</button>
-                                    <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
+                                    <div class="d-flex w-100 gap-2">
+                                        <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
+                                        <button class="btn btn-primary mb-3 flex-grow-1" onclick="generateSerialNum();">Generate</button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -103,8 +105,10 @@
                                     </div>
                                     <div class="col-md-8">
                                         <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="10" data-bs-theme="dark" placeholder="Chaotic Username Soon" readonly></textarea>
-                                        <button class="btn btn-secondary" type="button" id="" onclick=""><i class="bi bi-copy"></i></button>
-                                        <button class="btn btn-danger" type="button" id="" onclick=""><i class="bi bi-trash"></i></button>
+                                        <div class="d-flex">
+                                            <button class="btn btn-secondary me-2" type="button" id="" onclick=""><i class="bi bi-copy"></i></button>
+                                            <button class="btn btn-danger ms-auto" type="button" id="" onclick=""><i class="bi bi-trash"></i></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
