@@ -95,23 +95,24 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <label for="fanuser-mode" class="form-label">Mode</label>
-                                        <select id="fanuser-mode" class="form-select mb-3 custom-select" aria-label="" data-bs-theme="dark" onChange="">
-                                            <option value="1" selected>Fantasy</option>
-                                            <option value="2">Other Languages</option>
+                                        <select id="fanuser-mode" class="form-select mb-3 custom-select" aria-label="" data-bs-theme="dark">
+                                            <option value="Fantasy" selected>Fantasy</option>
+                                            <option value="Euro">Euro</option>
+                                            <option value="Asia">Asia</option>
                                         </select>
                                         <label for="fanuser-name-length" class="form-label">Name length</label>
-                                        <select id="fanuser-name-length" class="form-select mb-3 custom-select" aria-label="" data-bs-theme="dark" onChange="">
-                                            <option value="1" selected>Short</option>
-                                            <option value="2">Medium</option>
-                                            <option value="3">Long</option>
+                                        <select id="fanuser-name-length" class="form-select mb-3 custom-select" aria-label="" data-bs-theme="dark">
+                                            <option value="2" selected>Short</option>
+                                            <option value="3">Medium</option>
+                                            <option value="4">Long</option>
                                         </select>
-                                        <button class="btn btn-primary mb-3 w-100 py-3">Execute</button>
+                                        <button class="btn btn-primary mb-3 w-100 py-3" onclick="fanuserExecute();">Execute</button>
                                     </div>
                                     <div class="col-md-8">
-                                        <textarea class="form-control mb-3" id="exampleFormControlTextarea1" rows="10" data-bs-theme="dark" placeholder="Chaotic Username Soon" readonly></textarea>
+                                        <textarea class="form-control mb-3" id="fantasy-username-output" rows="10" data-bs-theme="dark" placeholder="Chaotic Usernames" readonly></textarea>
                                         <div class="d-flex">
-                                            <button class="btn btn-secondary me-2" type="button" id="" onclick=""><i class="bi bi-copy"></i></button>
-                                            <button class="btn btn-danger ms-auto" type="button" id="" onclick=""><i class="bi bi-trash"></i></button>
+                                            <button class="btn btn-secondary me-2" type="button" id="" onclick="copySelectAllFanUser('fantasy-username-output');"><i class="bi bi-copy"></i></button>
+                                            <button class="btn btn-danger ms-auto" type="button" id="" onclick="clearFanUserOutput();"><i class="bi bi-trash"></i></button>
                                         </div>
                                     </div>
                                 </div>
@@ -138,6 +139,7 @@
     <script src="js/matrix.js"></script>
     <script src="js/random.js"></script>
     <script src="js/random-serial-number.js"></script>
+    <script src="js/random-fantasy-user.js"></script>
     <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script-->
 </body>
 
