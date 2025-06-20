@@ -80,44 +80,55 @@ let selectedModeLength = 0;
 let fanUserSelectedMode = "";
 let fanUserNameLength = 0;
 let fanUserOutput = "";
+let limitCounter = 0;
+let maxLimit = 300;
 
 function fanuserExecute() {
-    fanUserSelectedMode = document.getElementById("fanuser-mode").value;
-    fanUserNameLength = document.getElementById("fanuser-name-length").value;
-    //console.log("fanUserSelectedMode: " + fanUserSelectedMode);
-    //console.log("fanUserNameLength: " + fanUserNameLength);
+    if (limitCounter < maxLimit) {
+        fanUserSelectedMode = document.getElementById("fanuser-mode").value;
+        fanUserNameLength = document.getElementById("fanuser-name-length").value;
+        //console.log("fanUserSelectedMode: " + fanUserSelectedMode);
+        //console.log("fanUserNameLength: " + fanUserNameLength);
 
-    if (fanUserSelectedMode == "Fantasy") {
-        selectedMode = fantasy;
-        selectedModeLength = fantasy.length;
-    } else if (fanUserSelectedMode == "Euro") {
-        selectedMode = euro;
-        selectedModeLength = euro.length;
-    } else if (fanUserSelectedMode == "Asia") {
-        selectedMode = asia;
-        selectedModeLength = asia.length;
-    }
-    
-    let tempString = "";
-    for(let i=0; i<fanUserNameLength; i++) {
-        tempString += selectedMode[Math.floor(Math.random() * selectedModeLength)];
-    }
-    // Uppercase the first letter
-    fanUserOutput += tempString.charAt(0).toUpperCase() + tempString.slice(1);
+        if (fanUserSelectedMode == "Fantasy") {
+            selectedMode = fantasy;
+            selectedModeLength = fantasy.length;
+        } else if (fanUserSelectedMode == "Euro") {
+            selectedMode = euro;
+            selectedModeLength = euro.length;
+        } else if (fanUserSelectedMode == "Asia") {
+            selectedMode = asia;
+            selectedModeLength = asia.length;
+        }
+        
+        let tempString = "";
+        for(let i=0; i<fanUserNameLength; i++) {
+            tempString += selectedMode[Math.floor(Math.random() * selectedModeLength)];
+        }
+        
+        // Uppercase the first letter
+        fanUserOutput += tempString.charAt(0).toUpperCase() + tempString.slice(1);
 
-    //console.log("Output: \n" + fanUserOutput);
-    var textareaFanUser = document.getElementById("fantasy-username-output");
-    // Showing output in the textarea
-    textareaFanUser.value = fanUserOutput;
-    fanUserOutput += "\n"
-    // When more outputs are added, we want the scrollbar to go to the bottom
-    textareaFanUser.scrollTop = textareaFanUser.scrollHeight;
+        //console.log("Output: \n" + fanUserOutput);
+        var textareaFanUser = document.getElementById("fantasy-username-output");
+        // Showing output in the textarea
+        textareaFanUser.value = fanUserOutput;
+        fanUserOutput += "\n"
+        // When more outputs are added, we want the scrollbar to go to the bottom
+        textareaFanUser.scrollTop = textareaFanUser.scrollHeight;
+        updateLineNumbers();
+        limitCounter++;
+    }
+    //console.log("limitCounter = " + limitCounter);
 }
 
 function clearFanUserOutput() {
-    console.log("clearFanUserOutput() clicked")
+    //console.log("clearFanUserOutput() clicked")
     document.getElementById("fantasy-username-output").value = ""; // Empty the textarea
     fanUserOutput = ""; // Empty the output too
+    updateLineNumbers();
+    limitCounter = 0;
+    //console.log("limitCounter = " + limitCounter);
 }
 
 function copySelectAllFanUser(id) {
@@ -127,3 +138,65 @@ function copySelectAllFanUser(id) {
     // Copy the text inside the text field
     navigator.clipboard.writeText(input.value);
 }
+
+
+/*
+    Big code of line-number for the Fantasy Username textarea
+*/
+const textarea = document.getElementById('fantasy-username-output');
+const lineNumbers = document.getElementById('lineNumbers');
+
+function updateLineNumbers() {
+    const value = textarea.value || '';
+    const lines = value.split('\n');
+
+    // Setup mirror container
+    const mirror = document.createElement('div');
+    const style = getComputedStyle(textarea);
+
+    mirror.style.position = 'absolute';
+    mirror.style.visibility = 'hidden';
+    mirror.style.whiteSpace = 'pre-wrap';
+    mirror.style.wordBreak = 'break-word';
+    mirror.style.fontFamily = style.fontFamily;
+    mirror.style.fontSize = style.fontSize;
+    mirror.style.lineHeight = style.lineHeight;
+    mirror.style.padding = style.padding;
+    mirror.style.border = style.border;
+    mirror.style.boxSizing = style.boxSizing;
+    mirror.style.width = textarea.clientWidth + 'px';
+
+    document.body.appendChild(mirror);
+
+    const lineHeight = parseFloat(style.lineHeight);
+    let numbersText = '';
+
+    lines.forEach((line, index) => {
+        const span = document.createElement('span');
+        span.textContent = line || ' '; // Prevent zero height on empty lines
+        mirror.appendChild(span);
+
+        // Measure span height to find wrapped line count
+        const spanHeight = span.getBoundingClientRect().height;
+        const wrappedLines = Math.max(1, Math.round(spanHeight / lineHeight));
+
+        // Add line number + blank lines for wrapped parts
+        numbersText += (index + 1) + '\n';
+        for (let i = 1; i < wrappedLines; i++) {
+            numbersText += '\n';
+        }
+
+        mirror.removeChild(span);
+    });
+
+    lineNumbers.textContent = numbersText;
+
+    document.body.removeChild(mirror);
+}
+
+textarea.addEventListener('input', updateLineNumbers);
+textarea.addEventListener('scroll', () => {
+    lineNumbers.scrollTop = textarea.scrollTop;
+});
+window.addEventListener('resize', updateLineNumbers);
+document.addEventListener('DOMContentLoaded', updateLineNumbers);
