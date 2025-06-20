@@ -104,18 +104,19 @@ function fanuserExecute() {
     }
     // Uppercase the first letter
     fanUserOutput += tempString.charAt(0).toUpperCase() + tempString.slice(1);
-    fanUserOutput += "\n"
 
     //console.log("Output: \n" + fanUserOutput);
     var textareaFanUser = document.getElementById("fantasy-username-output");
+    // Showing output in the textarea
+    textareaFanUser.value = fanUserOutput;
+    fanUserOutput += "\n"
     // When more outputs are added, we want the scrollbar to go to the bottom
     textareaFanUser.scrollTop = textareaFanUser.scrollHeight;
-    // Showing output in the textarea
-    textareaFanUser.innerHTML = fanUserOutput;
 }
 
 function clearFanUserOutput() {
-    document.getElementById("fantasy-username-output").innerHTML = ""; // Empty the textarea
+    console.log("clearFanUserOutput() clicked")
+    document.getElementById("fantasy-username-output").value = ""; // Empty the textarea
     fanUserOutput = ""; // Empty the output too
 }
 

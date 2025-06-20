@@ -109,7 +109,9 @@
                                         <button class="btn btn-primary mb-3 w-100 py-3" onclick="fanuserExecute();">Execute</button>
                                     </div>
                                     <div class="col-md-8">
-                                        <textarea class="form-control mb-3 font-monospace" id="fantasy-username-output" rows="10" data-bs-theme="dark" placeholder="Chaotic Usernames" readonly></textarea>
+                                        <div class="editor-container mb-3">
+                                            <textarea class="form-control font-monospace" id="fantasy-username-output" data-bs-theme="dark" placeholder="Chaotic Usernames" rows="10" readonly></textarea>
+                                        </div>
                                         <div class="d-flex">
                                             <button class="btn btn-secondary me-2" type="button" id="" onclick="copySelectAllFanUser('fantasy-username-output');"><i class="bi bi-copy"></i></button>
                                             <button class="btn btn-danger ms-auto" type="button" id="" onclick="clearFanUserOutput();"><i class="bi bi-trash"></i></button>
