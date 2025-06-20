@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 */
-
+/*
 // hash version
 document.addEventListener("DOMContentLoaded", function () {
     const tabButtons = document.querySelectorAll('button[data-bs-toggle="pill"]');
@@ -40,6 +40,28 @@ document.addEventListener("DOMContentLoaded", function () {
             if (target) {
                 history.replaceState(null, null, target); // updates URL hash
             }
+        });
+    });
+});
+*/
+// sessionStorage version
+document.addEventListener("DOMContentLoaded", function () {
+    // Restore active pill from sessionStorage
+    const savedPill = sessionStorage.getItem("activePill");
+    if (savedPill) {
+        const trigger = document.querySelector(`[data-bs-target="${savedPill}"]`);
+        if (trigger) {
+            const pill = new bootstrap.Tab(trigger);
+            pill.show();
+        }
+    }
+
+    // Save pill when clicked
+    const triggers = document.querySelectorAll('button[data-bs-toggle="pill"]');
+    triggers.forEach(trigger => {
+        trigger.addEventListener("shown.bs.tab", function (event) {
+            const target = event.target.getAttribute("data-bs-target");
+            sessionStorage.setItem("activePill", target);
         });
     });
 });
