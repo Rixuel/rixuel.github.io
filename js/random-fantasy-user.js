@@ -108,13 +108,15 @@ function fanuserExecute() {
 
     //console.log("Output: \n" + fanUserOutput);
     var textareaFanUser = document.getElementById("fantasy-username-output");
+    // When more outputs are added, we want the scrollbar to go to the bottom
     textareaFanUser.scrollTop = textareaFanUser.scrollHeight;
+    // Showing output in the textarea
     textareaFanUser.innerHTML = fanUserOutput;
 }
 
 function clearFanUserOutput() {
-    document.getElementById("fantasy-username-output").innerHTML = "";
-    fanUserOutput = "";
+    document.getElementById("fantasy-username-output").innerHTML = ""; // Empty the textarea
+    fanUserOutput = ""; // Empty the output too
 }
 
 function copySelectAllFanUser(id) {
