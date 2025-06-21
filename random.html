@@ -45,13 +45,13 @@
 
                         <ul class="nav nav-pills mb-3 mt-2" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link active" id="pills-userialnum-tab" data-bs-toggle="pill" data-bs-target="#pills-userialnum" type="button" role="tab" aria-controls="pills-userialnum" aria-selected="true">
-                                    Useless Serial Number
+                                <button class="nav-link active" id="pills-fanuser-tab" data-bs-toggle="pill" data-bs-target="#pills-fantasyuser" type="button" role="tab" aria-controls="pills-fantasyuser" aria-selected="true">
+                                    Fantasy Username
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="pills-fanuser-tab" data-bs-toggle="pill" data-bs-target="#pills-fantasyuser" type="button" role="tab" aria-controls="pills-fantasyuser" aria-selected="false">
-                                    Fantasy Username
+                                <button class="nav-link" id="pills-userialnum-tab" data-bs-toggle="pill" data-bs-target="#pills-userialnum" type="button" role="tab" aria-controls="pills-userialnum" aria-selected="false">
+                                    Useless Serial Number
                                 </button>
                             </li>
                             <li class="nav-item" role="presentation">
@@ -66,31 +66,7 @@
                             </li>
                         </ul>
                         <div class="tab-content random-content" id="pills-tabContent">
-                            <div class="tab-pane fade show active" id="pills-userialnum" role="tabpanel" aria-labelledby="pills-userialnum-tab" tabindex="0">
-                                <h4>Useless Serial Number</h4>
-                                <label for="serialNumSeparator" class="form-label">Select a number of separators</label>
-                                <div class="mb-3">
-                                    <select id="serialNumSeparator" class="form-select custom-select" aria-label="Number of separators" data-bs-theme="dark" onChange="onSelectSeparators();">
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                        <option value="4" selected>Four (Default)</option>
-                                    </select>
-                                </div>
-                                <label for="useless-serial-number-output" class="form-label">Output</label>
-                                <div class="input-group mb-3">
-                                    <input id="useless-serial-number-output" name="uselessSerialNumberOutput" class="form-control font-monospace" type="text" placeholder="XX00-X0X0-XXX0-000X-0X0X" data-bs-theme="dark" readonly>
-                                    <button class="btn btn-secondary" type="button" id="button-addon2" onclick="copySelectAll('useless-serial-number-output');"><i class="bi bi-copy"></i></button>
-                                </div>
-                                <div class="col-auto">
-                                    <div class="d-flex w-100 gap-2">
-                                        <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
-                                        <button class="btn btn-primary mb-3 flex-grow-1" onclick="generateSerialNum();">Generate</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="tab-pane fade" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
+                            <div class="tab-pane fade show active" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
                                 <h4>Fantasy Username</h4>
                                 <div class="row">
                                     <div class="col-md-4">
@@ -123,6 +99,30 @@
                                             <button class="btn btn-secondary me-2" type="button" id="" onclick="copySelectAllFanUser('fantasy-username-output');"><i class="bi bi-copy"></i></button>
                                             <button class="btn btn-danger ms-auto" type="button" id="" onclick="clearFanUserOutput();"><i class="bi bi-trash"></i></button>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tab-pane fade" id="pills-userialnum" role="tabpanel" aria-labelledby="pills-userialnum-tab" tabindex="0">
+                                <h4>Useless Serial Number</h4>
+                                <label for="serialNumSeparator" class="form-label">Select a number of separators</label>
+                                <div class="mb-3">
+                                    <select id="serialNumSeparator" class="form-select custom-select" aria-label="Number of separators" data-bs-theme="dark" onChange="onSelectSeparators();">
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                        <option value="4" selected>Four (Default)</option>
+                                    </select>
+                                </div>
+                                <label for="useless-serial-number-output" class="form-label">Output</label>
+                                <div class="input-group mb-3">
+                                    <input id="useless-serial-number-output" name="uselessSerialNumberOutput" class="form-control font-monospace" type="text" placeholder="XX00-X0X0-XXX0-000X-0X0X" data-bs-theme="dark" readonly>
+                                    <button class="btn btn-secondary" type="button" id="button-addon2" onclick="copySelectAll('useless-serial-number-output');"><i class="bi bi-copy"></i></button>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="d-flex w-100 gap-2">
+                                        <button class="btn btn-danger mb-3" onclick="clearSerialNumOutput();">Clear</button>
+                                        <button class="btn btn-primary mb-3 flex-grow-1" onclick="generateSerialNum();">Generate</button>
                                     </div>
                                 </div>
                             </div>
