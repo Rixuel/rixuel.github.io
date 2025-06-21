@@ -89,6 +89,7 @@ img {
 
 .setOpacity {
     opacity: 0.9;
+    z-index: 3;
 }
 
 .titlebarBackground {
