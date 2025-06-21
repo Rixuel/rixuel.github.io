@@ -26,6 +26,10 @@
     background-size: 1rem;
 }
 
+#barcode {
+    font-size: clamp(0.9rem, 4vw, 5rem);
+}
+
 /*
     CSS for the line-number of the Fantasy Username textarea
 */
