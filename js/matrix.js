@@ -28,7 +28,9 @@ function matrix() {
     ctx.font = '12pt monospace';
 
     ypos.forEach((y, ind) => {
-        const text = String.fromCharCode(Math.random() * 128);
+        //const text = String.fromCharCode(Math.random() * 128); // Original code line
+        const selectedChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ｱｲｳｴｵｶｷｸｹｺｻｼｽｾｿﾀﾁﾂﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖﾗﾘﾙﾚﾛﾜｦﾝ<>/=+-*%&|^~";
+        const text = selectedChars[Math.floor(Math.random() * selectedChars.length)];
         const x = ind * 20;
         ctx.fillText(text, x, y);
         if (y > 100 + Math.random() * 10000) ypos[ind] = 0;
