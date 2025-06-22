@@ -27,28 +27,57 @@ let fantasy = [
     "ze", "zeni", "zeta", "zion", "zu", "zuel"
 ];
 
+let chinese = [
+    "a", "ai", "an", "ang", "ao",
+    "ba", "bai", "ban", "bang", "bao", "bei", "ben", "beng", "bi", "bian", "biao", "bie", "bin", "bing", "bo", "bu",
+    "ca", "cai", "can", "cang", "cao", "ce", "cen", "ceng", "cha", "chai", "chan", "chang", "chao", "che", "chen", "cheng", "chi", "chong", "chou", "chu", "chua", "chuai", "chuan", "chuang", "chui", "chun", "chuo",
+    "ci", "cong", "cou", "cu", "cuan", "cui", "cun", "cuo",
+    "da", "dai", "dan", "dang", "dao", "de", "dei", "den", "deng", "di", "dia", "dian", "diao", "die", "ding", "diu", "dong", "dou", "du", "duan", "dui", "dun", "duo",
+    "ei", "en", "eng", "er",
+    "fa", "fan", "fang", "fei", "fen", "feng", "fo", "fou", "fu",
+    "ga", "gai", "gan", "gang", "gao", "ge", "gei", "gen", "geng", "gong", "gou", "gu", "gua", "guai", "guan", "guang", "gui", "gun", "guo",
+    "ha", "hai", "han", "hang", "hao", "he", "hei", "hen", "heng", "hong", "hou", "hu", "hua", "huai", "huan", "huang", "hui", "hun", "huo",
+    "ji", "jia", "jian", "jiang", "jiao", "jie", "jin", "jing", "jiong", "jiu", "ju", "juan", "jue", "jun",
+    "ka", "kai", "kan", "kang", "kao", "ke", "ken", "keng", "kong", "kou", "ku", "kua", "kuai", "kuan", "kuang", "kui", "kun", "kuo",
+    "la", "lai", "lan", "lang", "lao", "le", "lei", "leng", "li", "lia", "lian", "liang", "liao", "lie", "lin", "ling", "liu", "long", "lou", "lu", "luan", "lue", "lun", "luo",
+    "ma", "mai", "man", "mang", "mao", "me", "mei", "men", "meng", "mi", "mian", "miao", "mie", "min", "ming", "miu", "mo", "mou", "mu",
+    "na", "nai", "nan", "nang", "nao", "ne", "nei", "nen", "neng", "ni", "nian", "niang", "niao", "nie", "nin", "ning", "niu", "nong", "nou", "nu", "nuan", "nue", "nuo",
+    "o", "ou",
+    "pa", "pai", "pan", "pang", "pao", "pei", "pen", "peng", "pi", "pian", "piao", "pie", "pin", "ping", "po", "pou", "pu",
+    "qi", "qia", "qian", "qiang", "qiao", "qie", "qin", "qing", "qiong", "qiu", "qu", "quan", "que", "qun",
+    "ran", "rang", "rao", "re", "ren", "reng", "ri", "rong", "rou", "ru", "rua", "ruan", "rui", "run", "ruo",
+    "sa", "sai", "san", "sang", "sao", "se", "sen", "seng", "sha", "shai", "shan", "shang", "shao", "she", "shen", "sheng", "shi", "shou", "shu", "shua", "shuai", "shuan", "shuang", "shui", "shun", "shuo",
+    "si", "song", "sou", "su", "suan", "sui", "sun", "suo",
+    "ta", "tai", "tan", "tang", "tao", "te", "teng", "ti", "tian", "tiao", "tie", "ting", "tong", "tou", "tu", "tuan", "tui", "tun", "tuo",
+    "wa", "wai", "wan", "wang", "wei", "wen", "weng", "wo", "wu",
+    "xi", "xia", "xian", "xiang", "xiao", "xie", "xin", "xing", "xiong", "xiu", "xu", "xuan", "xue", "xun",
+    "ya", "yan", "yang", "yao", "ye", "yi", "yin", "ying", "yo", "yong", "you", "yu", "yuan", "yue", "yun",
+    "za", "zai", "zan", "zang", "zao", "ze", "zei", "zen", "zeng", "zha", "zhai", "zhan", "zhang", "zhao", "zhe", "zhen", "zheng", "zhi", "zhong", "zhou", "zhu", "zhua", "zhuai", "zhuan", "zhuang", "zhui", "zhun", "zhuo",
+    "zi", "zong", "zou", "zu", "zuan", "zui", "zun", "zuo"
+];
+
 let german = [
     "ak", "al", "alex", "art", "auf", "augs",
-    "bar", "be", "bene", "bern", "bert", "bin", "borg", "brun", "burg",
+    "bar", "be", "bel", "bene", "bern", "bert", "bian", "bias", "bin", "borg", "brun", "burg",
     "caci", "cari", "chim",
     "da", "das", "de", "den", "di", "die", "diet", "dikt", "dith", "dolf", "drik",
-    "eber", "eck", "ed", "ekke", "em", "ene", "engel", "enz", "eve",
-    "fan", "fia", "fine", "frank", "frei", "fried", "fuh", "fur",
-    "gang", "geb", "gen", "go", "gor", "gre", "gun", "gus",
-    "halt", "han", "hard", "hein", "helm", "hild", "hilf", "hin", "hold", "hu",
-    "ich", "ida", "ir", "isa", "ist",
+    "eber", "eck", "ed", "ekke", "el", "em", "ene", "engel", "enz", "eve",
+    "fa", "fan", "fia", "fine", "frank", "frei", "fried", "fuh", "fur",
+    "gang", "geb", "gen", "go", "gor", "gre", "grid", "gun", "gus",
+    "halt", "han", "hanna", "hard", "hein", "helm", "hild", "hilf", "hin", "hold", "hu",
+    "ich", "ida", "in", "ir", "isa", "ist",
     "ja", "jak", "jan", "jo", "joa", "jona", "ju",
-    "ka", "kann", "kar", "ke", "kla", "kolo", "kor", "kresz", "krim",
+    "ka", "kann", "kar", "ke", "kla", "kolo", "kon", "kor", "kresz", "krim",
     "la", "lebe", "len", "lias", "lius", "lo", "lu", "lud",
-    "mann", "maus", "mei", "mein", "merich", "mu", "mund", "muns",
+    "mann", "maus", "mei", "mein", "merich", "mo", "mu", "mund", "muns",
     "nart", "ne", "nes", "nich", "nieder", "nine", "noch",
-    "ob",
-    "ra", "recht", "ren", "renz", "rer", "rich", "rik",
-    "sach", "sieg", "sind", "so", "stein", "sten", "sven",
-    "taf", "tav", "ter", "than", "ther", "tiede", "toria", "trud",
+    "ob", "ot",
+    "ra", "rad", "recht", "ren", "renz", "rer", "rich", "rik", "ritz",
+    "sa", "sach", "sieg", "sind", "so", "stein", "sten", "sven",
+    "taf", "tav", "ter", "than", "ther", "tiede", "to", "toria", "trud",
     "us", "ute", "utz",
     "ves", "vik", "vin", "von",
-    "wal", "walde", "was", "wen", "wie", "wies", "wig", "win", "wolf", "wulf",
+    "wal", "walde", "was", "wen", "wie", "wies", "wig", "wil", "win", "wolf", "wulf",
     "zel", "zent", "zenz", "zu"
 ];
 
@@ -108,17 +137,17 @@ let korean = [
     "ha", "han", "ho", "hun", "hwa", "hye", "hyung",
     "is",
     "jae", "je", "ji", "jin", "jo", "jong", "joon", "jun",
-    "ki", "kim", "ky",
+    "kang", "ki", "kim", "ky",
     "lee",
     "ma", "moon", "mye",
-    "nim",
+    "na", "nim",
     "ok", "on",
     "park",
     "ri",
     "san", "sang", "se", "seo", "shin", "si", "song", "sung",
     "uk", "ul", "ung",
     "wo",
-    "ye", "yo", "yong", "young", "yu"
+    "ye", "yeon", "yo", "yong", "young", "yu"
 ];
 
 let roman = [
@@ -190,27 +219,55 @@ let vietnamese = [
     "yen", "yet"
 ];
 
+let genshin = [
+    "ae", "al", "am", "an", "ao", "ar", "ara", "aya",
+    "bai", "bar", "bara", "bedo", "bei", "ben", "ber", "bert", "bu",
+    "capi", "cari", "cha", "char", "chas", "che", "chi", "chino", "chong", "cit", "clo", "cof", "col", "crose", "cy",
+    "da", "dah", "dain", "de", "den", "di", "dio", "direi", "do", "dou", "dyth",
+    "ede", "emi", "es", "eu", "eya", 
+    "fa", "faru", "fei", "fier", "fre", "fu",
+    "ga", "glia", "go", "gun",
+    "ha", "hai", "hara", "he", "hei", "hi", "hida", "hu", "hya",
+    "ian", "ischl", "it",
+    "je", "jin",
+    "ka", "ke", "ki", "kirk", "ko", "ku",
+    "la", "lali", "lan", "lani", "lay", "lec", "lei", "lette", "ley", "li", "lia", "lie", "ling", "lotte", "lou", "lu", "luc", "ly",
+    "ma", "mi", "mine", "ming", "miya", "mo", "mon", "mua",
+    "na", "nara", "nari", "nen", "net", "nett", "nette", "neu", "ney", "ni", "nich", "no", "nora", "nyu",
+    "ori", "oro",
+    "pai",
+    "qi", "qing", "qiu",
+    "ra", "rai", "resa", "ri", "ria", "rina", "rinde", "ro", "ron", "rou",
+    "sa", "san", "se", "shen", "shi", "sho", "sig", "sige", "sleff", "su",
+    "ta", "taki", "tano", "tao", "tar", "tham", "ther", "thes", "tho", "thos", "ti", "tigh", "to",
+    "va", "veh", "ven", "via", "vil", "vreuse", "vui",
+    "winne", "wrio",
+    "xi", "xian", "xiang", "xilo", "xin", "xing",
+    "yae", "yan", "yoi", "yu", "yun",
+    "zan", "zhong", "zhu", "zor", "zou", "zu"
+];
+
 let vulgar = [
     "ass", "arse",
-    "bag", "bastard", "bitch", "bull",
-    "cow", "crap", "creep",
-    "damn", "dirty", "dog", "dork", "dumb",
+    "bag", "bastard", "bitch", "brainless", "bull",
+    "chicken", "cow", "coward", "crap", "creep",
+    "damn", "dense", "dirty", "dog", "dork", "dull", "dumb",
     "eat", "er", "est", "evil",
     "fat", "fart", "fool", "face",
-    "ginger",
+    "ginger", "gutless",
     "hag", "head", "ho",
     "ier", "iest", "idiot",
     "jizz",
     "lard", "lame", "lose", "low",
     "meat", "moron",
-    "noob", "nub",
+    "naive", "noob", "nub",
+    "old",
     "pansy", "poor", "prick", "puss",
-    "re",
-    "shame", "shit", "stink", "stupid",
+    "saggy", "shame", "shit", "simp", "stink", "stupid",
     "tard", "trash", "turd",
-    "ugly",
+    "ugly", "unwise",
     "vile",
-    "whore", "woop", "wuss"
+    "weakling", "whore", "woop", "wuss"
 ];
 
 let selectedMode = [];
@@ -230,6 +287,7 @@ function fanuserExecute() {
 
         const modes = {
             Fantasy: fantasy,
+            Chinese: chinese,
             German: german,
             Greek: greek,
             Japanese: japanese,
@@ -237,6 +295,7 @@ function fanuserExecute() {
             Roman: roman,
             Russian: russian,
             Vietnamese: vietnamese,
+            Genshin: genshin,
             Vulgar: vulgar
         };
 
