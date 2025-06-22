@@ -64,6 +64,11 @@
                                     Barcode
                                 </button>
                             </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-zodiac-tab" data-bs-toggle="pill" data-bs-target="#pills-zodiac" type="button" role="tab" aria-controls="pills-zodiac" aria-selected="false">
+                                    Zodiac
+                                </button>
+                            </li>
                         </ul>
                         <div class="tab-content random-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-fantasyuser" role="tabpanel" aria-labelledby="pills-fantasyuser-tab" tabindex="0">
@@ -156,6 +161,22 @@
                                 <div id="barcode" class="text-center font-monospace user-select-all">█║█║▌║█▐║▌║║▐█▐║▌</div>
                                 <button class="btn btn-primary btn-lg mt-4 w-100" onclick="randomBarcode();">Generate</button>
                             </div>
+
+                            <div class="tab-pane fade" id="pills-zodiac" role="tabpanel" aria-labelledby="pills-zodiac-tab" tabindex="0">
+                                <h4>Zodiac</h4>
+                                <div class="mb-3">
+                                    <label for="birthdate" class="form-label">Enter a date:</label>
+                                    <input type="date" class="form-control" id="birthdate" data-bs-theme="dark">
+                                </div>
+                                
+                                <button class="btn btn-primary btn-lg w-100" onclick="findZodiac();">Get Zodiac Sign</button>
+                                
+                                <div class="mt-4">
+                                    <p id="inputDateString" class="fs-4 fw-bold"></p>
+                                    <p id="westernZodiac" class="fs-5 fw-semibold text-primary font-monospace"></p>
+                                    <p id="chineseZodiac" class="fs-5 fw-semibold text-danger font-monospace"></p>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
@@ -173,6 +194,7 @@
     <script src="js/random-fantasy-user.js"></script>
     <script src="js/random-dice.js"></script>
     <script src="js/random-barcode.js"></script>
+    <script src="js/random-zodiac.js"></script>
     <!--script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script-->
 </body>
 
