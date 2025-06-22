@@ -2,9 +2,9 @@ function findZodiac() {
     const input = document.getElementById('birthdate').value;
     // Check if input is correct. If not, there's an error message
     if (!input) {
-        document.getElementById('inputDateString').textContent = "";
-        document.getElementById('westernZodiac').textContent = "";
-        document.getElementById('chineseZodiac').textContent = "Error: Enter a correct date!";
+        document.getElementById('inputDateString').innerHTML = "";
+        document.getElementById('westernZodiac').innerHTML = "";
+        document.getElementById('chineseZodiac').innerHTML = "Error: Enter a correct date!";
         return;
     }
 
@@ -39,7 +39,7 @@ function findZodiac() {
     const chineseSign = chineseZodiacSigns[(index + 12) % 12]; // handle negative years
 
     // Outputs
-    document.getElementById('inputDateString').textContent = `${date.toDateString()}`;
-    document.getElementById('westernZodiac').textContent = `Western Zodiac: ${westernSign}`;
-    document.getElementById('chineseZodiac').textContent = `Chinese Zodiac: ${chineseSign}`;
+    document.getElementById('inputDateString').innerHTML = `${date.toDateString()}`;
+    document.getElementById('westernZodiac').innerHTML = "Western Zodiac:<br>" + westernSign;
+    document.getElementById('chineseZodiac').innerHTML = "Chinese Zodiac:<br>" + chineseSign;
 }
