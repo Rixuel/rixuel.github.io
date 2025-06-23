@@ -254,7 +254,7 @@ let vulgar = [
     "damn", "dense", "dirty", "dog", "dork", "dull", "dumb",
     "eat", "er", "est", "evil",
     "fat", "fart", "fool", "face",
-    "ginger", "gutless",
+    "gutless",
     "hag", "head", "ho",
     "ier", "iest", "idiot",
     "jizz",
