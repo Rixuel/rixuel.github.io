@@ -10,16 +10,12 @@ let JSONurl = "https://api.spaceflightnewsapi.net/v4/articles/?format=json&limit
 let allTitles = "";
 let counter = 0;
 
-$.ajax({
-    url: JSONurl,
-    type: "get",
-    dataType: 'json',
-    mimeType: "application/json",
-    success: function(data){
-        console.log("Spaceflight News API: " + JSONurl);
-        //console.log("data length: " + data.results.length);
-        //console.log("json string: " + JSON.stringify(data, null, 4));
-
+async function spaceFlightNews() {
+    console.log("Spaceflight News API: " + JSONurl);
+    try {
+        const response = await fetch(JSONurl);
+        const data = await response.json();
+        
         // Output example: [1] Comet-Catching NASA Technology Enables Exotic Works of Art
         for (var i=0, len=data.results.length; i<len; i++) {
             counter = i + 1;
@@ -33,9 +29,9 @@ $.ajax({
         if (data.results.length > 0) {
             document.getElementById("SpaceFlightNewsAllTitles").innerHTML = "<marquee scrollamount='6'>" + allTitles + "</marquee>";
         }
-
-    },
-    error: function() {
+    } catch (error) {
         document.getElementById("SpaceFlightNewsAllTitles").innerHTML = "(Broken API link)";
     }
-});
+}
+
+spaceFlightNews();
