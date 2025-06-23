@@ -249,25 +249,26 @@ let genshin = [
 
 let vulgar = [
     "ass", "arse",
-    "bag", "bastard", "bitch", "brainless", "bull",
+    "bag", "bastard", "bimbo", "bitch", "brainless", "bull",
     "chicken", "cow", "coward", "crap", "creep",
-    "damn", "dense", "dirty", "dog", "dork", "dull", "dumb",
-    "eat", "er", "est", "evil",
-    "fat", "fart", "fool", "face",
-    "gutless",
+    "damn", "deadbeat", "dense", "dirty", "dog", "donkey", "dork", "dull", "dumb",
+    "evil",
+    "face", "fat", "fart", "fool", "freak",
+    "gasbag", "geezer", "goose", "gutless",
     "hag", "head", "ho",
-    "ier", "iest", "idiot",
-    "jizz",
-    "lard", "lame", "lose", "low",
-    "meat", "moron",
+    "idiot",
+    "jackass", "jizz",
+    "lard", "lame", "loser", "loudmouth", "low",
+    "meat", "monkey", "moron",
     "naive", "noob", "nub",
     "old",
-    "pansy", "poor", "prick", "puss",
+    "pansy", "pig", "poop", "poor", "prick", "psycho", "puss",
+    "rat",
     "saggy", "shame", "shit", "simp", "stink", "stupid",
-    "tard", "trash", "turd",
+    "tard", "trash", "turd", "twit",
     "ugly", "unwise",
     "vile",
-    "weakling", "whore", "woop", "wuss"
+    "weakling", "weird", "wimp", "whore", "woop", "wuss"
 ];
 
 let selectedMode = [];
