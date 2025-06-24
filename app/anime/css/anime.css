@@ -24,6 +24,12 @@ html, body {
 
 #clear-btn {
     border-left: none;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#clear-btn:hover {
+    background-color: #454545
 }
 
 /* Hovering with cursor */
@@ -37,4 +43,11 @@ html, body {
     margin: 0px;
     padding-top: 12px;
     padding-bottom: 12px;
+}
+
+.custom-card-charname {
+    border-bottom: 2px solid #777;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
 }

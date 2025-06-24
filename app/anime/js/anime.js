@@ -185,7 +185,7 @@ async function getAnimeCharacters(animeId) {
                 <div class="card bg-dark text-light h-100">
                     <img src="${characterImage}" class="card-img-top" alt="${characterName}" loading="lazy">
                     <div class="card-body">
-                        <h5 class="card-title">${characterName}</h5>
+                        <h5 class="card-title custom-card-charname">${characterName}</h5>
                         <div>${vaHTML}</div>
                     </div>
                 </div>
