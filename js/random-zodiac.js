@@ -43,3 +43,30 @@ function findZodiac() {
     document.getElementById('westernZodiac').innerHTML = "Western Zodiac:<br>" + westernSign;
     document.getElementById('chineseZodiac').innerHTML = "Chinese Zodiac:<br>" + chineseSign;
 }
+
+/*
+    sessionStorage. When we refresh or change page, our choices remains.
+    Unless we close the tab or browser.
+*/
+const zodiacInputs = [
+    {
+        id: 'birthdate',
+        key: 'selectedBirthdate'
+    }
+];
+
+window.addEventListener('DOMContentLoaded', () => {
+    zodiacInputs.forEach(({id,key}) => {
+        const el = document.getElementById(id);
+        if (!el) return; // Skip if the element doesn't exist
+
+        // Load previous selections
+        const savedValue = sessionStorage.getItem(key);
+        if (savedValue) el.value = savedValue;
+
+        // Save new selections
+        el.addEventListener('change', () => {
+            sessionStorage.setItem(key, el.value);
+        });
+    });
+});

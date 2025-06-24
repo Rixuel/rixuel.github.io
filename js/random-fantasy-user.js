@@ -345,6 +345,37 @@ function copySelectAllFanUser(id) {
     navigator.clipboard.writeText(input.value);
 }
 
+/*
+    sessionStorage. When we refresh or change page, our choices remains.
+    Unless we close the tab or browser.
+*/
+const fanUserDropdowns = [
+    {
+        id: 'fanuser-mode',
+        key: 'selectedFanUserMode'
+    },
+    {
+        id: 'fanuser-name-length',
+        key: 'selectedFanUserNameLength'
+    }
+];
+
+window.addEventListener('DOMContentLoaded', () => {
+    fanUserDropdowns.forEach(({id,key}) => {
+        const select = document.getElementById(id);
+        if (!select) return; // Skip if the element doesn't exist
+
+        // Load previous selections
+        const savedValue = sessionStorage.getItem(key);
+        if (savedValue) select.value = savedValue;
+
+        // Save new selections
+        select.addEventListener('change', () => {
+            sessionStorage.setItem(key, select.value);
+        });
+    });
+});
+
 
 /*
     Big code of line-number for the Fantasy Username textarea

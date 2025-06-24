@@ -50,3 +50,56 @@ function rollDice() {
 
     document.getElementById("dice").innerHTML = diceOutput;
 }
+
+/*
+    sessionStorage. When we refresh or change page, our choices remains.
+    Unless we close the tab or browser.
+*/
+const diceInputs = [
+    {
+        id: 'diceQuantity',
+        key: 'selectedDiceQuantity',
+        type: 'number'
+    },
+    {
+        name: 'dice-colors',
+        key: 'selectedDiceColors',
+        type: 'radio'
+    }
+];
+
+window.addEventListener('DOMContentLoaded', () => {
+    diceInputs.forEach(input => {
+        if (input.type === 'radio') {
+            // Handle radios by name
+            const radios = document.querySelectorAll(`input[name="${input.name}"]`);
+            const saved = sessionStorage.getItem(input.key);
+            if (saved) {
+                radios.forEach(radio => {
+                    if (radio.value === saved) {
+                        radio.checked = true;
+                    }
+                });
+            }
+            // Save new selections
+            radios.forEach(radio => {
+                radio.addEventListener('change', () => {
+                    if (radio.checked) {
+                        sessionStorage.setItem(input.key, radio.value);
+                    }
+                });
+            });
+
+        } else {
+            // Handle select and number input by ID
+            const el = document.getElementById(input.id);
+            // Load previous selections
+            const savedValue = sessionStorage.getItem(input.key);
+            if (savedValue) el.value = savedValue;
+
+            el.addEventListener('input', () => {
+                sessionStorage.setItem(input.key, el.value);
+            });
+        }
+    });
+});
