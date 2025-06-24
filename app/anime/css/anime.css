@@ -1,0 +1,40 @@
+html, body {
+    background-color: #000;
+    color: #FFF;
+}
+
+#suggestions {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+}
+
+#suggestions strong {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+/* Hovering when moving with UP and DOWN arrow keys */
+#suggestions .active {
+    background-color: #454545 !important;
+    border: 0px solid #0f0;
+    margin: 0px;
+    color: white;
+}
+
+#clear-btn {
+    border-left: none;
+}
+
+/* Hovering with cursor */
+.suggestion-item:hover {
+    background-color: #454545 !important;
+    cursor: pointer;
+}
+
+.custom-suggestion-list {
+    border: 0px solid #f00;
+    margin: 0px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
