@@ -16,8 +16,8 @@ searchInput.addEventListener('input', () => {
             .then(res => res.json())
             .then(data => {
                 suggestions.innerHTML = ''; // To avoid a duplicated list when you enter a title and you press backspace.
+                selectedIndex = -1; // to reset state
                 data.data.forEach((anime, index) => {
-                    selectedIndex = -1; // to reset state
                     const li = document.createElement('li');
                     li.className = 'list-group-item bg-dark text-light suggestion-item custom-suggestion-list';
 
@@ -62,7 +62,11 @@ searchInput.addEventListener('keydown', (e) => {
         updateHighlight(items);
     } else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+        if (selectedIndex === -1) {
+            selectedIndex = items.length - 1; // Jump to last if nothing is selected yet
+        } else {
+            selectedIndex = (selectedIndex - 1 + items.length) % items.length;
+        }
         updateHighlight(items);
     } else if (e.key === 'Enter') {
         e.preventDefault();
@@ -101,8 +105,19 @@ async function getAnimeById(animeId) {
 
         const dataJSON = await response.json();
         const titles = dataJSON.data?.titles || [];
+        const studios = dataJSON.data?.studios || [];
+        const genres = dataJSON.data?.genres || [];
+        const themes = dataJSON.data?.themes || [];
         const imageURL = dataJSON.data?.images.jpg.large_image_url;
         //console.log("imageURL: ", imageURL);
+        const MALscore = dataJSON.data?.score || ["N/A"];
+        const MALscoreUsers = dataJSON.data?.scored_by || ["N/A"];
+        const MALrank = dataJSON.data?.rank || [""];
+        const MALpopularity = dataJSON.data?.popularity || ["N/A"];
+        /*console.log("MALscore: ", MALscore);
+        console.log("MALscoreUsers: ", MALscoreUsers);
+        console.log("MALrank: ", MALrank);
+        console.log("MALpopularity: ", MALpopularity);*/
 
         // In the JSON, get every item of "titles": [...]. We want to get each title.
         const getTitle = (type) =>
@@ -115,14 +130,41 @@ async function getAnimeById(animeId) {
         const synonymTitle = getTitle("Synonym");
         const foreignTitle = getTitle("Japanese");
         const englishTitle = getTitle("English");
+        const studioNames = studios.map(item => 
+            `<span class="badge bg-light text-dark me-2 rounded-pill">${item.name}</span>`
+        ).join(""); // To show all studios of "studios": [..., ...]
+        const genreNames = genres.map(item => 
+            `<span class="badge bg-success me-2 rounded-pill">${item.name}</span>`
+        ).join(""); // To show all genres of "genres": [..., ...]
+        const themeNames = themes.map(item => 
+            `<span class="badge bg-warning text-dark me-2 rounded-pill">${item.name}</span>`
+        ).join(""); // To show all themes of "themes": [..., ...]
         /*console.log("Default:", defaultTitle);
         console.log("Synonym:", synonymTitle);
         console.log("Foreign:", foreignTitle);
-        console.log("English:", englishTitle);*/
+        console.log("English:", englishTitle);
+        console.log("studioName:", studioName);*/
 
         document.getElementById("animeImage").innerHTML = `<img src="${imageURL}" class="img-fluid rounded">`;
-        document.getElementById("animeForeignTitles").innerHTML = foreignTitle + " (" + defaultTitle + ")";
-        document.getElementById("animeEngTitles").innerHTML = englishTitle + " (" + synonymTitle + ")";
+        document.getElementById("animeForeignTitles").innerHTML = `${foreignTitle} <span class="fs-5 fs-md-5 fs-lg-4 text-secondary">(${defaultTitle})</span>`;
+        document.getElementById("animeEngTitles").innerHTML = `${englishTitle} <span class="fs-5 fs-md-5 fs-lg-4 text-secondary">(${synonymTitle})</span>`;
+        document.getElementById("animeStudios").innerHTML = `Studio: ${studioNames}`;
+        document.getElementById("animeGenres").innerHTML = `Genres: ${genreNames}`;
+        document.getElementById("animeThemes").innerHTML = `Themes: ${themeNames}`;
+        document.getElementById("animeStats").innerHTML = `
+            <div class="bg-dark text-light my-2 p-2 d-flex flex-wrap gap-2 rounded">
+                <div>
+                    MAL Score: <span class="badge bg-primary fs-6 rounded-pill">${MALscore}</span> 
+                    <i>by ${MALscoreUsers} users</i> | 
+                </div>
+                <div>
+                    Rank <span class="badge bg-secondary fs-6 rounded-pill">#${MALrank}</span> | 
+                </div>
+                <div>
+                    Popularity: <span class="badge bg-secondary fs-6 rounded-pill">#${MALpopularity}</span>
+                </div>
+            </div>
+        `;
 
 
         //document.getElementById("animeOutput").innerHTML = dataJSON.data.titles[0].title;
@@ -142,13 +184,13 @@ async function getAnimeCharacters(animeId) {
 
         const dataJSON = await response.json();
         const animeCharacters = dataJSON.data;
-        const charactersLength = dataJSON.data.length;
-        console.log("Total Characters: ", charactersLength);
+        const totalCharacters = animeCharacters.length;
+        //console.log("Total Characters: ", totalCharacters);
 
         const container = document.getElementById("animeCharacters");
 
         // Add title header
-        container.innerHTML = `<div class="fs-3 fs-md-2 fs-lg-1">List of characters</div>`;
+        container.innerHTML = `<div class="fs-3 fs-md-2 fs-lg-1">List of ${totalCharacters} characters</div>`;
 
         animeCharacters.forEach(entry => {
             const characterName = entry.character.name;
@@ -170,7 +212,7 @@ async function getAnimeCharacters(animeId) {
                 const vaLang = va.language;
 
                 vaHTML += `
-                    <div class="d-flex align-items-centerr mt-2">
+                    <div class="d-flex align-items-center mt-2">
                         <img src="${vaImage}" alt="${vaName}" class="me-2 rounded" style="width: 40px; height: 40px; object-fit: cover;">
                         <div>
                         <div><strong>${vaName}</strong></div>
