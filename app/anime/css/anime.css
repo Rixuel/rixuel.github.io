@@ -24,8 +24,8 @@ html, body {
 
 #clear-btn {
     border-left: none;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #clear-btn:hover {
@@ -50,4 +50,18 @@ html, body {
     padding-top: 5px;
     padding-bottom: 5px;
     margin-bottom: 20px;
+}
+
+.custom-top-char-row {
+    border-bottom: 1px solid #555;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.custom-top-char-row img {
+    flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.custom-top-char-name {
+    font-size: 1rem;
 }

@@ -16,7 +16,7 @@
         <h1 class="my-4">Anime Check</h1>
         <div class="position-relative">
             <div class="input-group">
-                <input type="text" id="search" class="form-control bg-dark text-light fs-5 p-2" placeholder="Anime check..." data-bs-theme="dark">
+                <input type="text" id="search" class="form-control bg-dark text-light fs-5 px-3 py-2" placeholder="Anime check..." data-bs-theme="dark">
                 <button id="clear-btn" class="input-group-text btn-outline-dark text-light border-start-0 rounded-end" type="button" data-bs-theme="dark">
                     <i class="bi bi-backspace"></i>
                 </button>
@@ -44,6 +44,27 @@
                 
             <div id="animeCharacters" class="row g-3 mt-3"></div>
 
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="vaModal" tabindex="-1" aria-labelledby="vaModalLabel" aria-hidden="true" data-bs-theme="dark">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="vaModalLabel">Voice Actor</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img id="vaModalImage" src="" alt="" class="rounded mb-3"
+                            style="width: 100px; height: 100px; object-fit: cover;">
+                        <h5 id="vaModalName"></h5>
+                        <p id="vaModalLang" class="text-secondary small mb-0"></p>
+                        <div id="vaModalCharacters" class="mt-2 small"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
     </div>

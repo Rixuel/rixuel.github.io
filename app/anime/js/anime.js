@@ -3,6 +3,7 @@ const suggestions = document.getElementById('suggestions');
 const clearBtn = document.getElementById('clear-btn');
 let debounceTimeout;
 let selectedIndex = -1 // For Up and Down arrow keys
+let activeModalSession = null;
 
 searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim();
@@ -165,9 +166,6 @@ async function getAnimeById(animeId) {
                 </div>
             </div>
         `;
-
-
-        //document.getElementById("animeOutput").innerHTML = dataJSON.data.titles[0].title;
         
     } catch (error) {
         console.error("Error fetching anime data:", error.message);
@@ -206,8 +204,10 @@ async function getAnimeCharacters(animeId) {
 
             // Build voice actors HTML
             let vaHTML = '';
+            // To get every item of "voice_actors": [...]
             voiceActors.forEach(va => {
                 const vaName = va.person.name;
+                const vaMalId = va.person.mal_id;
                 const vaImage = va.person.images.jpg.image_url;
                 const vaLang = va.language;
 
@@ -215,8 +215,13 @@ async function getAnimeCharacters(animeId) {
                     <div class="d-flex align-items-center mt-2">
                         <img src="${vaImage}" alt="${vaName}" class="me-2 rounded" style="width: 40px; height: 40px; object-fit: cover;">
                         <div>
-                        <div><strong>${vaName}</strong></div>
-                        <div class="small">${vaLang}</div>
+                            <div>
+                                <a href="#" class="va-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#vaModal" 
+                                    data-name="${vaName}" data-image="${vaImage}" data-lang="${vaLang}" data-malid="${vaMalId}">
+                                    <strong>${vaName}</strong>
+                                </a>
+                            </div>
+                            <div class="small">${vaLang}</div>
                         </div>
                     </div>
                 `;
@@ -239,3 +244,200 @@ async function getAnimeCharacters(animeId) {
         console.error("Failed to fetch characters:", error);
     }
 }
+
+/*
+    For Modal
+*/
+document.addEventListener('click', function (e) {
+    if (e.target.closest('.va-link')) {
+        const link = e.target.closest('.va-link');
+        const name = link.dataset.name;
+        const malId = link.dataset.malid;
+        const image = link.dataset.image;
+        const lang = link.dataset.lang;
+
+        document.getElementById('vaModalLabel').textContent = `${name} (${malId})`;
+        document.getElementById('vaModalName').textContent = name;
+        document.getElementById('vaModalImage').src = image;
+        document.getElementById('vaModalLang').textContent = `Language dub: ${lang}`;
+
+        // For closing and opening another modal.
+        activeModalSession = Date.now(); // create a new session token
+        const session = activeModalSession; // capture it locally
+
+        getMainCharactersVoicedBy(malId).then(async mainCharacters => {
+            // Fetch favorites in parallel
+            const charactersWithFavorites = [];
+
+            const batchSize = 3; // 3 at a time
+            for (let i = 0; i < mainCharacters.length; i += batchSize) {
+                // modal was changed/closed
+                if (session !== activeModalSession) {
+                    console.log("modal was changed/closed");
+                    return;
+                }
+
+                // slice(start, end) returns a shallow copy of the array from index start (inclusive) to index end (exclusive).
+                // batchSize is how many characters you want to process in one go.
+                // batch = mainCharacters = ['A', 'B', 'C'], after that = ['D', 'E', 'F']
+                const batch = mainCharacters.slice(i, i + batchSize);
+                // Creating a promise for each character in the batch that does some async operation.
+                // Like fetching favorites from the API
+                const batchPromises = batch.map(async char => {
+                    const favorites = await getCharacterFavorites(char.id);
+                    // ...char is a character object.
+                    // You plug favorites to the character object.
+                    // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
+                    // With ...char, favorites is merged at the same level as name, id, etc. from char object.
+                    return { ...char, favorites };
+                });
+
+                // Wait for all the asynchronous operations in the current batch to complete
+                // and it returns their results as an array.
+                const batchResults = await Promise.all(batchPromises);
+                // uses the spread operator (...) to add all items from the batchResults array 
+                // into the charactersWithFavorites array one by one.
+                charactersWithFavorites.push(...batchResults);
+
+                // Update progress UI
+                if (session === activeModalSession) {
+                    document.getElementById("vaModalCharacters").innerHTML = `
+                        <div>Calculating top 10 favorite characters (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})...</div>
+                        <div id="rateLimitMsg" class="text-danger"></div>
+                    `;
+                }
+                await delay(350); // small delay between batches to avoid rate limit
+            }
+
+
+            // final render after all fetched
+            if (session === activeModalSession) {
+                // Sort by favorites descending and take top 10
+                const top10char = charactersWithFavorites
+                    .sort((a, b) => b.favorites - a.favorites)
+                    .slice(0, 10);
+                
+                // Generate HTML
+                const listHTML = top10char.map((char, index) => `
+                        <li class="d-flex align-items-center mb-2 custom-top-char-row">
+                            <div class="me-2 text-center" style="width: 40px;">
+                                <span class="fs-5">${index + 1}</span>
+                            </div>
+                            <img src="${char.image}" alt="${char.name}" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                            <div class="text-start flex-grow-1">
+                                <div><strong class="fs-6">${char.name}</strong> <span class="text-secondary small">(#${char.id})</span></div>
+                                <div class="text-info"><em>${char.animeTitle}</em></div>
+                                <div class="text-warning small">❤ ${char.favorites.toLocaleString()} favorites</div>
+                            </div>
+                        </li>
+                    `)
+                    .join('');
+                document.getElementById('vaModalCharacters').innerHTML = `
+                    <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
+                    <ul class="list-unstyled small">${listHTML}</ul>
+                `;
+            }
+        });
+    }
+});
+
+async function getMainCharactersVoicedBy(vaId) {
+    console.log("Voiced Characters from VA: ", `https://api.jikan.moe/v4/people/${vaId}/voices`);
+    try {
+        const response = await fetch(`https://api.jikan.moe/v4/people/${vaId}/voices`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const dataJSON = await response.json();
+        const allVoices = dataJSON.data || []; // At "data": [{...},{...}]
+
+        // Use a Set to store unique character names
+        const seen = new Set(); // Because we want to avoid duplicates
+        const mainCharacters = [];
+
+        allVoices.forEach(entry => {
+            // Getting characters where the role is Main and the anime is popular
+            if (entry.role === "Main") {
+                const char = {
+                    id: entry.character.mal_id,
+                    name: entry.character.name,
+                    animeTitle: entry.anime.title,
+                    image: entry.character.images?.jpg?.image_url || ""
+                };
+
+                // If the character is not a duplicate, add it.
+                if (!seen.has(char.id)) {
+                    seen.add(char.id);
+                    mainCharacters.push(char);
+                }
+            }
+        });
+
+        //console.log("Main characters:", mainCharacters);
+        return mainCharacters;
+    } catch (error) {
+        console.error("Failed to fetch voice roles:", error.message);
+        return [];
+    }
+}
+
+// Gotta avoid 429 error and try not making too many requests
+const favoritesCache = {};
+async function getCharacterFavorites(malId) {
+    if (favoritesCache[malId]) {
+        return favoritesCache[malId]; // Return cached result if available
+    }
+    //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${malId}`);
+    console.log("Getting Character with favorites...");
+    try {
+        const response = await fetch(`https://api.jikan.moe/v4/characters/${malId}`);
+        // Check for 429 Too Many Requests
+        if (response.status === 429) {
+            const rateLimitMsg = document.getElementById('rateLimitMsg');
+            if (rateLimitMsg) {
+                rateLimitMsg.innerHTML = `
+                    <strong>Rate limit hit. Please slow down and try again shortly.</strong>
+                `;
+            }
+            await delay(2500);
+            return 0;
+        }
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        const fav = data.data.favorites || 0;
+        favoritesCache[malId] = fav; // Store in cache
+        return fav;
+    } catch (error) {
+        const rateLimitMsg = document.getElementById('rateLimitMsg');
+        if (rateLimitMsg) {
+            rateLimitMsg.innerHTML = `
+                <strong>Error:</strong> ${error.message}
+            `;
+        }
+        console.error("Error fetching favorites:", error.message);
+        return 0; // fallback if error occurs
+    }
+}
+
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const vaModal = document.getElementById('vaModal');
+// Fix accessibility warning by blurring the focused element before hiding
+vaModal.addEventListener('hide.bs.modal', () => {
+    // Move focus to body or blur the currently focused element
+    if (document.activeElement && vaModal.contains(document.activeElement)) {
+        document.activeElement.blur();
+    }
+});
+
+// When the bootstrap modal is closed, making sure nothing in the background is still running.
+document.getElementById('vaModal').addEventListener('hidden.bs.modal', () => {
+    activeModalSession = null;
+    document.getElementById('vaModalCharacters').innerHTML = ""; // clear old content
+});
