@@ -288,7 +288,7 @@ async function checkTopCharacters(malId) {
         // Fetch favorites in parallel
         const charactersWithFavorites = [];
 
-        const batchSize = 5; // batchSize number at a time
+        const batchSize = 4; // batchSize number at a time
 
         for (let i = 0; i < mainCharacters.length; i += batchSize) {
             // modal was changed/closed when loading
@@ -421,7 +421,7 @@ async function getMainCharactersVoicedBy(vaId) {
 
 // Gotta avoid 429 error and try not making too many requests
 const favoritesCache = {};
-async function getCharacterFavorites(malId) {
+async function getCharacterFavorites(malId, retry = 2) {
     if (favoritesCache[malId]) {
         return favoritesCache[malId]; // Return cached result if available
     }
@@ -438,6 +438,7 @@ async function getCharacterFavorites(malId) {
                 `;
             }
             await delay(2500);
+            if (retry > 0) return getCharacterFavorites(malId, retry - 1);
             return 0;
         }
         if (!response.ok) {
@@ -449,13 +450,11 @@ async function getCharacterFavorites(malId) {
         favoritesCache[malId] = fav; // Store in cache
         return fav;
     } catch (error) {
-        const rateLimitMsg = document.getElementById('rateLimitMsg');
-        if (rateLimitMsg) {
-            rateLimitMsg.innerHTML = `
-                <strong>Error:</strong> ${error.message}
-            `;
-        }
         console.error("Error fetching favorites:", error.message);
+        if (retry > 0) {
+            await delay(1000);
+            return getCharacterFavorites(malId, retry - 1);
+        }
         return 0; // fallback if error occurs
     }
 }
