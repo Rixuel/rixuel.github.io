@@ -89,15 +89,15 @@ function selectSuggestion(anime) {
     searchInput.value = anime.title;
     suggestions.innerHTML = '';
     // Optional: do something with anime.mal_id
-    console.log("anime.mal_id:", anime.mal_id);
-    console.log("searchInput.value:", searchInput.value);
+    console.log("Anime MAL id:", anime.mal_id);
+    console.log("Search input:", searchInput.value);
     document.getElementById("animeCharacters").innerHTML = ""; // To clear previous characters list
     getAnimeById(anime.mal_id);
     getAnimeCharacters(anime.mal_id);
 }
 
 async function getAnimeById(animeId) {
-    console.log("Anime by Id URL: ", `https://api.jikan.moe/v4/anime/${animeId}`);
+    console.log("Anime by id URL: ", `https://api.jikan.moe/v4/anime/${animeId}`);
     try {
         const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}`);
         if (!response.ok) {
@@ -190,7 +190,7 @@ async function getAnimeCharacters(animeId) {
         const container = document.getElementById("animeCharacters");
 
         // Add title header
-        container.innerHTML = `<div class="fs-3 fs-md-2 fs-lg-1">List of ${totalCharacters} characters</div>`;
+        container.innerHTML = `<div class="fs-3 fs-md-2 fs-lg-1"><i class="bi bi-file-person me-1"></i>List of ${totalCharacters} characters</div>`;
 
         animeCharacters.forEach(entry => {
             const characterName = entry.character.name;
