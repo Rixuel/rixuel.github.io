@@ -109,6 +109,7 @@ async function getAnimeById(animeId) {
         const studios = dataJSON.data?.studios || [];
         const genres = dataJSON.data?.genres || [];
         const themes = dataJSON.data?.themes || [];
+        const airedDates = dataJSON.data?.aired.string || ["N/A"];
         const imageURL = dataJSON.data?.images.jpg.large_image_url;
         //console.log("imageURL: ", imageURL);
         const MALscore = dataJSON.data?.score || ["N/A"];
@@ -152,6 +153,7 @@ async function getAnimeById(animeId) {
         document.getElementById("animeStudios").innerHTML = `Studio: ${studioNames}`;
         document.getElementById("animeGenres").innerHTML = `Genres: ${genreNames}`;
         document.getElementById("animeThemes").innerHTML = `Themes: ${themeNames}`;
+        document.getElementById("animeAiredDates").innerHTML = `Aired: ${airedDates}`;
         document.getElementById("animeStats").innerHTML = `
             <div class="bg-dark text-light my-2 p-2 d-flex flex-wrap gap-2 rounded">
                 <div>
