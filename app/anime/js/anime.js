@@ -256,98 +256,111 @@ document.addEventListener('click', function (e) {
         const image = link.dataset.image;
         const lang = link.dataset.lang;
 
+        // Update modal info
         document.getElementById('vaModalLabel').textContent = `${name} (${malId})`;
         document.getElementById('vaModalName').textContent = name;
         document.getElementById('vaModalImage').src = image;
         document.getElementById('vaModalLang').textContent = `Language dub: ${lang}`;
+        document.getElementById('vaModalCharacters').innerHTML = ""; // Clear any old content
 
-        // For closing and opening another modal.
-        activeModalSession = Date.now(); // create a new session token
-        const session = activeModalSession; // capture it locally
+        // Show the button
+        const topCharButton = document.getElementById('triggerTopCharacters');
+        topCharButton.style.display = "inline-block";
+        topCharButton.onclick = function () {
+            topCharButton.style.display = "none"; // hide it after click
+            checkTopCharacters(malId); // Call your function
+        };
 
-        getMainCharactersVoicedBy(malId).then(async mainCharacters => {
-            // Fetch favorites in parallel
-            const charactersWithFavorites = [];
-
-            const batchSize = 3; // 3 at a time
-            for (let i = 0; i < mainCharacters.length; i += batchSize) {
-                // modal was changed/closed
-                if (session !== activeModalSession) {
-                    console.log("modal was changed/closed");
-                    return;
-                }
-
-                // slice(start, end) returns a shallow copy of the array from index start (inclusive) to index end (exclusive).
-                // batchSize is how many characters you want to process in one go.
-                // batch = mainCharacters = ['A', 'B', 'C'], after that = ['D', 'E', 'F']
-                const batch = mainCharacters.slice(i, i + batchSize);
-                // Creating a promise for each character in the batch that does some async operation.
-                // Like fetching favorites from the API
-                const batchPromises = batch.map(async char => {
-                    try {
-                        const favorites = await getCharacterFavorites(char.id);
-                        // ...char is a character object.
-                        // You plug favorites to the character object.
-                        // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
-                        // With ...char, favorites is merged at the same level as name, id, etc. from char object.
-                        return { ...char, favorites };
-                    } catch (err) {
-                        console.error(`Failed to fetch favorites for ${char.name}:`, err.message);
-                        return { ...char, favorites: 0 };
-                    }
-                });
-
-                // Wait for all the asynchronous operations in the current batch to complete
-                // and it returns their results as an array.
-                const batchResults = await Promise.all(batchPromises);
-                // uses the spread operator (...) to add all items from the batchResults array 
-                // into the charactersWithFavorites array one by one.
-                charactersWithFavorites.push(...batchResults);
-
-                // Update progress UI
-                if (session === activeModalSession) {
-                    document.getElementById("vaModalCharacters").innerHTML = `
-                        <div>
-                            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                            Compiling top 10 favorite characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
-                        </div>
-                        <div id="rateLimitMsg" class="text-danger"></div>
-                    `;
-                }
-                await delay(750); // delay between batches to avoid rate limit
-            }
-
-
-            // final render after all fetched
-            if (session === activeModalSession) {
-                // Sort by favorites descending and take top 10
-                const top10char = charactersWithFavorites
-                    .sort((a, b) => b.favorites - a.favorites)
-                    .slice(0, 10);
-                
-                // Generate HTML
-                const listHTML = top10char.map((char, index) => `
-                        <li class="d-flex align-items-center mb-2 custom-top-char-row">
-                            <div class="me-2 text-center" style="width: 40px;">
-                                <span class="fs-5">${index + 1}</span>
-                            </div>
-                            <img src="${char.image}" alt="${char.name}" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
-                            <div class="text-start flex-grow-1">
-                                <div><strong class="fs-6">${char.name}</strong> <span class="text-secondary small">(#${char.id})</span></div>
-                                <div class="text-info"><em>${char.animeTitle}</em></div>
-                                <div class="text-warning small">❤ ${char.favorites.toLocaleString()} favorites</div>
-                            </div>
-                        </li>
-                    `)
-                    .join('');
-                document.getElementById('vaModalCharacters').innerHTML = `
-                    <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
-                    <ul class="list-unstyled small">${listHTML}</ul>
-                `;
-            }
-        });
     }
 });
+
+async function checkTopCharacters(malId) {
+    // For closing and opening another modal.
+    activeModalSession = Date.now(); // create a new session token
+    const session = activeModalSession; // capture it locally
+
+    getMainCharactersVoicedBy(malId).then(async mainCharacters => {
+        // Fetch favorites in parallel
+        const charactersWithFavorites = [];
+
+        const batchSize = 3; // 3 at a time
+        for (let i = 0; i < mainCharacters.length; i += batchSize) {
+            // modal was changed/closed when loading
+            if (session !== activeModalSession) {
+                console.log("modal was changed/closed when loading");
+                return;
+            }
+
+            // slice(start, end) returns a shallow copy of the array from index start (inclusive) to index end (exclusive).
+            // batchSize is how many characters you want to process in one go.
+            // batch = mainCharacters = ['A', 'B', 'C'], after that = ['D', 'E', 'F']
+            const batch = mainCharacters.slice(i, i + batchSize);
+            // Creating a promise for each character in the batch that does some async operation.
+            // Like fetching favorites from the API
+            const batchPromises = batch.map(async char => {
+                try {
+                    const favorites = await getCharacterFavorites(char.id);
+                    // ...char is a character object.
+                    // You plug favorites to the character object.
+                    // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
+                    // With ...char, favorites is merged at the same level as name, id, etc. from char object.
+                    return { ...char, favorites };
+                } catch (err) {
+                    console.error(`Failed to fetch favorites for ${char.name}:`, err.message);
+                    return { ...char, favorites: 0 };
+                }
+            });
+
+            // Wait for all the asynchronous operations in the current batch to complete
+            // and it returns their results as an array.
+            const batchResults = await Promise.all(batchPromises);
+            // uses the spread operator (...) to add all items from the batchResults array 
+            // into the charactersWithFavorites array one by one.
+            charactersWithFavorites.push(...batchResults);
+
+            // Update progress UI
+            if (session === activeModalSession) {
+                document.getElementById("vaModalCharacters").innerHTML = `
+                    <div>
+                        <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                        Compiling top 10 favorite main characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
+                    </div>
+                    <div id="rateLimitMsg" class="text-danger"></div>
+                `;
+            }
+            await delay(750); // delay between batches to avoid rate limit
+        }
+
+
+        // final render after all fetched
+        if (session === activeModalSession) {
+            // Sort by favorites descending and take top 10
+            const top10char = charactersWithFavorites
+                .sort((a, b) => b.favorites - a.favorites)
+                .slice(0, 10);
+            
+            // Generate HTML
+            const listHTML = top10char.map((char, index) => `
+                    <li class="d-flex align-items-center mb-2 custom-top-char-row">
+                        <div class="me-2 text-center" style="width: 40px;">
+                            <span class="fs-5">${index + 1}</span>
+                        </div>
+                        <img src="${char.image}" alt="${char.name}" class="me-2 rounded" style="width: 50px; height: 50px; object-fit: cover;">
+                        <div class="text-start flex-grow-1">
+                            <div><strong class="fs-6">${char.name}</strong> <span class="text-secondary small">(#${char.id})</span></div>
+                            <div class="text-info"><em>${char.animeTitle}</em></div>
+                            <div class="text-warning small">❤ ${char.favorites.toLocaleString()} favorites</div>
+                        </div>
+                    </li>
+                `)
+                .join('');
+            document.getElementById('vaModalCharacters').innerHTML = `
+                <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
+                <ul class="list-unstyled small">${listHTML}</ul>
+            `;
+        }
+    });
+}
 
 async function getMainCharactersVoicedBy(vaId) {
     console.log("Voiced Characters from VA: ", `https://api.jikan.moe/v4/people/${vaId}/voices`);
@@ -405,7 +418,7 @@ async function getCharacterFavorites(malId) {
             const rateLimitMsg = document.getElementById('rateLimitMsg');
             if (rateLimitMsg) {
                 rateLimitMsg.innerHTML = `
-                    <strong>Jikan API rate limit hit.</strong>
+                    <strong>Jikan API rate limit hit. Progressing slowly...</strong>
                 `;
             }
             await delay(2500);
