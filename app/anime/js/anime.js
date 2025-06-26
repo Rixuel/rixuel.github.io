@@ -284,12 +284,17 @@ document.addEventListener('click', function (e) {
                 // Creating a promise for each character in the batch that does some async operation.
                 // Like fetching favorites from the API
                 const batchPromises = batch.map(async char => {
-                    const favorites = await getCharacterFavorites(char.id);
-                    // ...char is a character object.
-                    // You plug favorites to the character object.
-                    // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
-                    // With ...char, favorites is merged at the same level as name, id, etc. from char object.
-                    return { ...char, favorites };
+                    try {
+                        const favorites = await getCharacterFavorites(char.id);
+                        // ...char is a character object.
+                        // You plug favorites to the character object.
+                        // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
+                        // With ...char, favorites is merged at the same level as name, id, etc. from char object.
+                        return { ...char, favorites };
+                    } catch (err) {
+                        console.error(`Failed to fetch favorites for ${char.name}:`, err.message);
+                        return { ...char, favorites: 0 };
+                    }
                 });
 
                 // Wait for all the asynchronous operations in the current batch to complete
@@ -302,11 +307,12 @@ document.addEventListener('click', function (e) {
                 // Update progress UI
                 if (session === activeModalSession) {
                     document.getElementById("vaModalCharacters").innerHTML = `
+                        <div class="spinner-border spinner-border-sm me-2" role="status"></div>
                         <div>Calculating top 10 favorite characters (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})...</div>
                         <div id="rateLimitMsg" class="text-danger"></div>
                     `;
                 }
-                await delay(350); // small delay between batches to avoid rate limit
+                await delay(750); // delay between batches to avoid rate limit
             }
 
 
