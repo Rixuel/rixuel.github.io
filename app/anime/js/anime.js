@@ -288,7 +288,7 @@ async function checkTopCharacters(malId) {
         // Fetch favorites in parallel
         const charactersWithFavorites = [];
 
-        const batchSize = 4; // batchSize number at a time
+        const batchSize = 1; // batchSize number at a time
 
         for (let i = 0; i < mainCharacters.length; i += batchSize) {
             // modal was changed/closed when loading
@@ -334,7 +334,7 @@ async function checkTopCharacters(malId) {
                     <div id="rateLimitMsg" class="text-danger small mt-1"></div>
                 `;
             }
-            await delay(1000); // delay between batches to avoid rate limit
+            await delay(1200); // delay between batches to avoid rate limit
         }
 
 
