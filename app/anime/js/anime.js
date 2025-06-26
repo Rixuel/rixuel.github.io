@@ -282,11 +282,14 @@ async function checkTopCharacters(malId) {
     activeModalSession = Date.now(); // create a new session token
     const session = activeModalSession; // capture it locally
 
-    getMainCharactersVoicedBy(malId).then(async mainCharacters => {
+    //getMainCharactersVoicedBy(malId).then(async mainCharacters => {
+    try {
+        const mainCharacters = await getMainCharactersVoicedBy(malId);
         // Fetch favorites in parallel
         const charactersWithFavorites = [];
 
-        const batchSize = 3; // 3 at a time
+        const batchSize = 5; // batchSize number at a time
+
         for (let i = 0; i < mainCharacters.length; i += batchSize) {
             // modal was changed/closed when loading
             if (session !== activeModalSession) {
@@ -328,10 +331,10 @@ async function checkTopCharacters(malId) {
                         <div class="spinner-border spinner-border-sm me-2" role="status"></div>
                         Compiling top 10 favorite main characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
                     </div>
-                    <div id="rateLimitMsg" class="text-danger"></div>
+                    <div id="rateLimitMsg" class="text-danger small mt-1"></div>
                 `;
             }
-            await delay(750); // delay between batches to avoid rate limit
+            await delay(1000); // delay between batches to avoid rate limit
         }
 
 
@@ -361,8 +364,18 @@ async function checkTopCharacters(malId) {
                 <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
                 <ul class="list-unstyled small">${listHTML}</ul>
             `;
+
+            // Optional: Clear any rate limit message
+            const rateLimitMsg = document.getElementById('rateLimitMsg');
+            if (rateLimitMsg) rateLimitMsg.innerHTML = "";
         }
-    });
+    } catch (err) {
+        console.error("checkTopCharacters failed:", err);
+        document.getElementById('vaModalCharacters').innerHTML = `
+            <div class="text-danger">An error occurred while loading character data.</div>
+        `;
+    }
+    //});
 }
 
 async function getMainCharactersVoicedBy(vaId) {
