@@ -3,6 +3,14 @@ html, body {
     color: #FFF;
 }
 
+a {
+    color: #00d4ff;
+}
+
+a:hover {
+    color: #67a6ff;
+}
+
 #suggestions {
     position: absolute;
     z-index: 1000;
