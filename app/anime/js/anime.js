@@ -334,7 +334,7 @@ async function checkTopCharacters(malId) {
                     <div id="rateLimitMsg" class="text-danger small mt-1"></div>
                 `;
             }
-            await delay(1200); // delay between batches to avoid rate limit
+            await delay(1000); // delay between batches to avoid rate limit
         }
 
 
