@@ -307,8 +307,10 @@ document.addEventListener('click', function (e) {
                 // Update progress UI
                 if (session === activeModalSession) {
                     document.getElementById("vaModalCharacters").innerHTML = `
-                        <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                        <div>Calculating top 10 favorite characters (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})...</div>
+                        <div>
+                            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                            Compiling top 10 favorite characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
+                        </div>
                         <div id="rateLimitMsg" class="text-danger"></div>
                     `;
                 }
