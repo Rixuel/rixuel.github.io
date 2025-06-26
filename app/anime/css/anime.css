@@ -40,6 +40,14 @@ a:hover {
     background-color: #454545
 }
 
+.breadcrumb {
+    --bs-breadcrumb-divider: '»';
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: red;
+}
+
 /* Hovering with cursor */
 .suggestion-item:hover {
     background-color: #454545 !important;
