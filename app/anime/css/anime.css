@@ -73,3 +73,13 @@ a:hover {
 .custom-top-char-name {
     font-size: 1rem;
 }
+
+.va-modal-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.testborder {
+    border: 1px solid #f00;
+}
