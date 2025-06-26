@@ -403,7 +403,7 @@ async function getCharacterFavorites(malId) {
             const rateLimitMsg = document.getElementById('rateLimitMsg');
             if (rateLimitMsg) {
                 rateLimitMsg.innerHTML = `
-                    <strong>Rate limit hit. Please slow down and try again shortly.</strong>
+                    <strong>Jikan API rate limit hit.</strong>
                 `;
             }
             await delay(2500);
