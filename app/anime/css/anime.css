@@ -40,18 +40,21 @@ a:hover {
     background-color: #454545
 }
 
-.breadcrumb {
-    --bs-breadcrumb-divider: '»';
-}
-
-.breadcrumb-item+.breadcrumb-item::before {
-    color: red;
-}
-
 /* Hovering with cursor */
 .suggestion-item:hover {
     background-color: #454545 !important;
     cursor: pointer;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .custom-suggestion-list {

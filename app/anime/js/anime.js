@@ -231,7 +231,7 @@ async function getAnimeCharacters(animeId) {
 
             // Final character card
             col.innerHTML = `
-                <div class="card bg-dark text-light h-100">
+                <div class="card fade-in bg-dark text-light h-100">
                     <img src="${characterImage}" class="card-img-top" alt="${characterName}" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title custom-card-charname">${characterName}</h5>
@@ -240,12 +240,28 @@ async function getAnimeCharacters(animeId) {
                 </div>
             `;
             container.appendChild(col);
+            // fade in when scrolling into view for that div card .fade-in
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         });
         
     } catch (error) {
         console.error("Failed to fetch characters:", error);
     }
 }
+
+/*
+    Fade-in animations when elements scroll into view
+*/
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // optional: only once
+        }
+    });
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 /*
     For Modal
