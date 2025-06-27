@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <main class="container">
         <h1 class="mt-4">
             <a href="" onclick="location.reload();" class="text-decoration-none text-light" aria-label="Anime Check">Anime Check ✅</a>
         </h1>
@@ -46,7 +46,7 @@
                     <i class="bi bi-backspace"></i>
                 </button>
             </div>
-            <ul id="suggestions" class="list-group"></ul>
+            <ul id="suggestions" class="list-group" aria-live="polite"></ul>
         </div>
 
 
@@ -82,9 +82,9 @@
             </div>
         </div>
 
-    </div>
+    </main>
 
     <script src="../../js/bootstrap.bundle.min.js"></script>
-    <script src="js/anime.js"></script>
+    <script src="js/anime.js" defer></script>
 </body>
 </html>
