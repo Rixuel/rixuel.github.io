@@ -41,6 +41,9 @@
 
         <div class="position-relative">
             <div class="input-group">
+                <button id="settings-btn" class="input-group-text btn-outline-dark" data-bs-toggle="modal" data-bs-target="#settingsModal" aria-label="Settings" data-bs-theme="dark">
+                    <i class="bi bi-gear"></i>
+                </button>
                 <input type="text" id="search" class="form-control bg-dark text-light fs-5 px-3 py-2" placeholder="Search Anime..." data-bs-theme="dark">
                 <button id="clear-btn" class="input-group-text btn-outline-dark text-light border-start-0 rounded-end" type="button" aria-label="Clear search" data-bs-theme="dark">
                     <i class="bi bi-backspace"></i>
@@ -56,7 +59,7 @@
         </div>
 
 
-        <!-- Modal -->
+        <!-- Modal for VA -->
         <div class="modal fade" id="vaModal" tabindex="-1" aria-labelledby="vaModalLabel" aria-hidden="true" data-bs-theme="dark">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content bg-dark text-light">
@@ -78,6 +81,56 @@
                         </div>
                         <div id="vaModalCharacters" class="mt-2 small"></div>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Settings -->
+        <div class="modal fade" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true"
+            data-bs-theme="dark">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark text-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="settingsModalLabel">
+                            <i class="bi bi-gear me-1"></i> Settings
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            When compiling the top 10 main characters
+                            of a voice actor,
+                            the data is saved in the browser local storage
+                            for 7 days. 
+                            This allows for a faster load the second time 
+                            you check the voice actor top 10 main characters.
+                            So no need to reload.
+                        </p>
+                        <p>
+                            If you want to delete these data, click on the button.
+                        </p>
+                        <p>
+                            Note: Jikan API rate limit is 1 request per second.
+                        </p>
+                    </div>
+                    <div class="modal-footer justify-content-end">
+                        <button id="clearCacheBtn" class="btn btn-sm btn-outline-danger">
+                            <i class="bi bi-trash me-1"></i> Clear Local Storage
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Local storage Toast -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+            <div id="clearToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="d-flex">
+                    <div class="toast-body">
+                        Local storage cleared successfully.
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
                 </div>
             </div>
         </div>

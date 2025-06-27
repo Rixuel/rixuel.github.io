@@ -329,17 +329,32 @@ async function checkTopCharacters(vaMalId) {
             // Creating a promise for each character in the batch that does some async operation.
             // Like fetching favorites from the API
             const batchPromises = batch.map(async char => {
-                try {
-                    const favorites = await getCharacterFavorites(char.id);
-                    // ...char is a character object.
-                    // You plug favorites to the character object.
-                    // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
-                    // With ...char, favorites is merged at the same level as name, id, etc. from char object.
-                    return { ...char, favorites };
-                } catch (err) {
-                    console.error(`Failed to fetch favorites for ${char.name}:`, err.message);
-                    return { ...char, favorites: 0 };
+                // In-memory Cache
+                if (favoritesCache[char.id] !== undefined) {
+                    return { ...char, favorites: favoritesCache[char.id] };
                 }
+                // localStorage
+                const stored = localStorage.getItem(`fav_of_character_${char.id}`);
+                if (stored) {
+                    try {
+                        const { value, timestamp } = JSON.parse(stored);
+                        const oneWeek = 1000 * 60 * 60 * 24 * 7;
+                        if (Date.now() - timestamp < oneWeek) {
+                            favoritesCache[char.id] = value;
+                            return { ...char, favorites: value};
+                        }
+                    } catch {
+                        localStorage.removeItem(`fav_of_character_${char.id}`);
+                    }
+                }
+                // Only fetch if not cached
+                await delay(1000); // space API calls manually here
+                const favorites = await getCharacterFavorites(char.id);
+                // ...char is a character object.
+                // You plug favorites to the character object.
+                // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
+                // With ...char, favorites is merged at the same level as name, id, etc. from char object.
+                return { ...char, favorites };
             });
 
             // Wait for all the asynchronous operations in the current batch to complete
@@ -354,12 +369,11 @@ async function checkTopCharacters(vaMalId) {
                 document.getElementById("vaModalCharacters").innerHTML = `
                     <div>
                         <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                        Compiling top 10 favorite main characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
+                        Compiling top 10 main characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
                     </div>
                     <div id="rateLimitMsg" class="text-danger small mt-1"></div>
                 `;
             }
-            await delay(1000); // delay between batches to avoid rate limit
         }
 
 
@@ -448,9 +462,28 @@ async function getMainCharactersVoicedBy(vaId) {
 // Gotta avoid 429 error and try not making too many requests
 const favoritesCache = {};
 async function getCharacterFavorites(charMalId, retry = 2) {
+    // Use in-memory cache first
     if (favoritesCache[charMalId]) {
         return favoritesCache[charMalId]; // Return cached result if available
     }
+
+    // Check localStorage
+    const cached = localStorage.getItem(`fav_of_character_${charMalId}`);
+    if (cached) {
+        try {
+            const { value, timestamp } = JSON.parse(cached);
+            const oneWeek = 1000 * 60 * 60 * 24 * 7;
+            if (Date.now() - timestamp < oneWeek) {
+                favoritesCache[charMalId] = value;
+                return value;
+            } else {
+                localStorage.removeItem(`fav_of_character_${charMalId}`);
+            }
+        } catch {
+            localStorage.removeItem(`fav_of_character_${charMalId}`);
+        }
+    }
+
     //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${charMalId}`);
     console.log("Getting Character with favorites...");
     try {
@@ -473,7 +506,12 @@ async function getCharacterFavorites(charMalId, retry = 2) {
 
         const data = await response.json();
         const fav = data.data.favorites || 0;
-        favoritesCache[charMalId] = fav; // Store in cache
+        // Store in cache
+        favoritesCache[charMalId] = fav;
+        localStorage.setItem(`fav_of_character_${charMalId}`, JSON.stringify({
+            value: fav,
+            timestamp: Date.now()
+        }));
         return fav;
     } catch (error) {
         console.error("Error fetching favorites:", error.message);
@@ -502,4 +540,15 @@ vaModal.addEventListener('hide.bs.modal', () => {
 document.getElementById('vaModal').addEventListener('hidden.bs.modal', () => {
     activeModalSession = null;
     document.getElementById('vaModalCharacters').innerHTML = ""; // clear old content
+});
+
+document.getElementById("clearCacheBtn").addEventListener("click", () => {
+    Object.keys(localStorage).forEach(key => {
+        if (key.startsWith("fav_of_character_")) {
+            localStorage.removeItem(key);
+        }
+    });
+    const toastEl = document.getElementById("clearToast");
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
 });
