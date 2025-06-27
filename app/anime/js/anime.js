@@ -511,6 +511,7 @@ document.getElementById('vaModal').addEventListener('hidden.bs.modal', () => {
     document.getElementById('vaModalCharacters').innerHTML = ""; // clear old content
 });
 
+// Toast for the button Clear Local Storage
 document.getElementById("clearCacheBtn").addEventListener("click", () => {
     Object.keys(localStorage).forEach(key => {
         if (key.startsWith("fav_of_character_")) {
@@ -519,5 +520,23 @@ document.getElementById("clearCacheBtn").addEventListener("click", () => {
     });
     const toastEl = document.getElementById("clearToast");
     const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+});
+
+// Toast for the button Check Local Storage Size
+document.getElementById("checkStorageBtn").addEventListener("click", () => {
+    let totalBytes = 0;
+    for (let key in localStorage) {
+        if (localStorage.hasOwnProperty(key)) {
+            const item = localStorage.getItem(key);
+            totalBytes += key.length + item.length;
+        }
+    }
+    const mb = (totalBytes / (1024 * 1024)).toFixed(2);
+
+    const body = document.getElementById("storageToastBody");
+    body.textContent = `Local Storage usage: ${mb} MB / 5 MB`;
+
+    const toast = new bootstrap.Toast(document.getElementById("storageToast"));
     toast.show();
 });

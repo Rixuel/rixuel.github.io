@@ -107,23 +107,42 @@
                             you check the same voice actor's top 10 main characters.
                         </p>
                         <p>
-                            If you want to delete these data, click on the button.
+                            If you want to delete these data, click "Clear Local Storage".
                         </p>
                         <p>
                             Note: Jikan API rate limit is 1 request per second.
                         </p>
                     </div>
-                    <div class="modal-footer justify-content-end">
-                        <button id="clearCacheBtn" class="btn btn-sm btn-outline-danger">
-                            <i class="bi bi-trash me-1"></i> Clear Local Storage
-                        </button>
+                    <div class="modal-footer justify-content-between">
+                        <div>
+                            <button id="checkStorageBtn" class="btn btn-sm btn-outline-secondary">
+                                <i class="bi bi-database me-1"></i> Check Local Storage Size
+                            </button>
+                        </div>
+                        <div>
+                            <button id="clearCacheBtn" class="btn btn-sm btn-outline-danger">
+                                <i class="bi bi-trash me-1"></i> Clear Local Storage
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Local storage Toast -->
-        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100">
+        <!-- Toasts -->
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100; max-width: 90vw;">
+            <div id="storageToast" class="toast text-bg-dark border-0" role="alert" aria-live="polite" aria-atomic="true">
+                <div class="d-flex">
+                    <div id="storageToastBody" class="toast-body">
+                        <!-- Filled dynamically -->
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 1100; max-width: 90vw;">
             <div id="clearToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
                 <div class="d-flex">
                     <div class="toast-body">
