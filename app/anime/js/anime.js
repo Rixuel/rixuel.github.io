@@ -251,10 +251,9 @@ async function getAnimeCharacters(animeId) {
                 </div>
             `;
             container.appendChild(col);
-            // fade in when scrolling into view for that div card .fade-in
-            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
         });
-        
+        // fade in when scrolling into view for that div card .fade-in
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     } catch (error) {
         console.error("Failed to fetch characters:", error);
     }
