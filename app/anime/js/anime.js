@@ -219,7 +219,7 @@ async function getAnimeCharacters(animeId) {
                         <div>
                             <div>
                                 <a href="#" class="va-link text-decoration-none" data-bs-toggle="modal" data-bs-target="#vaModal" 
-                                    data-name="${vaName}" data-image="${vaImage}" data-lang="${vaLang}" data-malid="${vaMalId}">
+                                    data-name="${vaName}" data-image="${vaImage}" data-lang="${vaLang}" data-vamalid="${vaMalId}">
                                     <strong>${vaName}</strong>
                                 </a>
                             </div>
@@ -254,7 +254,7 @@ document.addEventListener('click', function (e) {
     if (e.target.closest('.va-link')) {
         const link = e.target.closest('.va-link');
         const name = link.dataset.name;
-        const vaMalId = link.dataset.malid;
+        const vaMalId = link.dataset.vamalid;
         const image = link.dataset.image;
         const lang = link.dataset.lang;
 
