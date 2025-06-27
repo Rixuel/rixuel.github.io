@@ -2,8 +2,9 @@ const searchInput = document.getElementById('search');
 const suggestions = document.getElementById('suggestions');
 const clearBtn = document.getElementById('clear-btn');
 let debounceTimeout;
-let selectedIndex = -1 // For Up and Down arrow keys
+let selectedIndex = -1 // For Up and Down arrow keys in suggestion list
 let activeModalSession = null;
+const LOCAL_STORAGE_EXPIRE_TIME = 1000 * 60 * 60 * 24 * 7;
 
 searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim();
@@ -251,9 +252,11 @@ async function getAnimeCharacters(animeId) {
                 </div>
             `;
             container.appendChild(col);
+
+            // fade in when scrolling into view for that div card .fade-in
+            const card = col.querySelector('.fade-in');
+            if (card) observer.observe(card);
         });
-        // fade in when scrolling into view for that div card .fade-in
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     } catch (error) {
         console.error("Failed to fetch characters:", error);
     }
@@ -270,8 +273,6 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
-
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 /*
     For Modal
@@ -312,66 +313,35 @@ async function checkTopCharacters(vaMalId) {
         const mainCharacters = await getMainCharactersVoicedBy(vaMalId);
         // Fetch favorites in parallel
         const charactersWithFavorites = [];
+        const vaModalCharactersProgress = document.getElementById("vaModalCharacters");
+        vaModalCharactersProgress.innerHTML = `
+            <div class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+                <span id="progressCount">Compiling top 10 main characters... (0/${mainCharacters.length})</span>
+            </div>
+            <div id="rateLimitMsg" class="text-danger small mt-1"></div>
+        `;
+        const progressCount = document.getElementById("progressCount");
+        const rateLimitMsg = document.getElementById('rateLimitMsg');
 
-        const batchSize = 1; // batchSize number at a time
-
-        for (let i = 0; i < mainCharacters.length; i += batchSize) {
+        for (const char of mainCharacters) {
             // modal was changed/closed when loading
             if (session !== activeModalSession) {
                 console.log("modal was changed/closed when loading");
                 return;
             }
 
-            // slice(start, end) returns a shallow copy of the array from index start (inclusive) to index end (exclusive).
-            // batchSize is how many characters you want to process in one go.
-            // batch = mainCharacters = ['A', 'B', 'C'], after that = ['D', 'E', 'F']
-            const batch = mainCharacters.slice(i, i + batchSize);
-            // Creating a promise for each character in the batch that does some async operation.
-            // Like fetching favorites from the API
-            const batchPromises = batch.map(async char => {
-                // In-memory Cache
-                if (favoritesCache[char.id] !== undefined) {
-                    return { ...char, favorites: favoritesCache[char.id] };
-                }
-                // localStorage
-                const stored = localStorage.getItem(`fav_of_character_${char.id}`);
-                if (stored) {
-                    try {
-                        const { value, timestamp } = JSON.parse(stored);
-                        const oneWeek = 1000 * 60 * 60 * 24 * 7;
-                        if (Date.now() - timestamp < oneWeek) {
-                            favoritesCache[char.id] = value;
-                            return { ...char, favorites: value};
-                        }
-                    } catch {
-                        localStorage.removeItem(`fav_of_character_${char.id}`);
-                    }
-                }
-                // Only fetch if not cached
-                await delay(1000); // space API calls manually here
-                const favorites = await getCharacterFavorites(char.id);
-                // ...char is a character object.
-                // You plug favorites to the character object.
-                // To preserve all existing properties from char, and adding a new property (favorites) to the new object.
-                // With ...char, favorites is merged at the same level as name, id, etc. from char object.
-                return { ...char, favorites };
-            });
+            // getCharacterFavorites will handle the delay to avoid hitting API limit rate.
+            const favorites = await getCharacterFavorites(char.id);
 
-            // Wait for all the asynchronous operations in the current batch to complete
-            // and it returns their results as an array.
-            const batchResults = await Promise.all(batchPromises);
-            // uses the spread operator (...) to add all items from the batchResults array 
-            // into the charactersWithFavorites array one by one.
-            charactersWithFavorites.push(...batchResults);
+            // You plug "favorites" to the char object.
+            // With "...char", "favorites" is merged at the same level as name, id, etc. from char object.
+            charactersWithFavorites.push({ ...char, favorites });
 
-            // Update progress UI
+            // Progress UI update
             if (session === activeModalSession) {
-                document.getElementById("vaModalCharacters").innerHTML = `
-                    <div>
-                        <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                        Compiling top 10 main characters... (${Math.min(i + batchSize, mainCharacters.length)}/${mainCharacters.length})
-                    </div>
-                    <div id="rateLimitMsg" class="text-danger small mt-1"></div>
+                progressCount.textContent = `
+                    Compiling top 10 main characters... (${charactersWithFavorites.length}/${mainCharacters.length})
                 `;
             }
         }
@@ -401,13 +371,12 @@ async function checkTopCharacters(vaMalId) {
                      </li>
                 `)
                 .join('');
-            document.getElementById('vaModalCharacters').innerHTML = `
+            vaModalCharactersProgress.innerHTML = `
                 <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
                 <ul class="list-unstyled small">${listHTML}</ul>
             `;
 
             // Optional: Clear any rate limit message
-            const rateLimitMsg = document.getElementById('rateLimitMsg');
             if (rateLimitMsg) rateLimitMsg.innerHTML = "";
         }
     } catch (err) {
@@ -463,30 +432,30 @@ async function getMainCharactersVoicedBy(vaId) {
 const favoritesCache = {};
 async function getCharacterFavorites(charMalId, retry = 2) {
     // Use in-memory cache first
-    if (favoritesCache[charMalId]) {
+    if (favoritesCache[charMalId] !== undefined) {
         return favoritesCache[charMalId]; // Return cached result if available
     }
 
     // Check localStorage
-    const cached = localStorage.getItem(`fav_of_character_${charMalId}`);
-    if (cached) {
-        try {
-            const { value, timestamp } = JSON.parse(cached);
-            const oneWeek = 1000 * 60 * 60 * 24 * 7;
-            if (Date.now() - timestamp < oneWeek) {
+    try {
+        const stored = localStorage.getItem(`fav_of_character_${charMalId}`);
+        if (stored) {
+            const { value, timestamp } = JSON.parse(stored);
+            const notExpired = Date.now() - timestamp < LOCAL_STORAGE_EXPIRE_TIME;
+            if (notExpired) {
                 favoritesCache[charMalId] = value;
                 return value;
-            } else {
-                localStorage.removeItem(`fav_of_character_${charMalId}`);
             }
-        } catch {
             localStorage.removeItem(`fav_of_character_${charMalId}`);
         }
+    } catch {
+        localStorage.removeItem(`fav_of_character_${charMalId}`);
     }
 
     //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${charMalId}`);
     console.log("Getting Character with favorites...");
     try {
+        await delay(1000); // To avoid API rate limit
         const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
@@ -496,7 +465,7 @@ async function getCharacterFavorites(charMalId, retry = 2) {
                     <strong>Jikan API rate limit hit. Progressing slowly...</strong>
                 `;
             }
-            await delay(2500);
+            await delay(1100);
             if (retry > 0) return getCharacterFavorites(charMalId, retry - 1);
             return 0;
         }
@@ -504,19 +473,19 @@ async function getCharacterFavorites(charMalId, retry = 2) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
 
-        const data = await response.json();
-        const fav = data.data.favorites || 0;
+        const dataJSON = await response.json();
+        const fav = dataJSON.data.favorites || 0;
         // Store in cache
         favoritesCache[charMalId] = fav;
-        localStorage.setItem(`fav_of_character_${charMalId}`, JSON.stringify({
-            value: fav,
-            timestamp: Date.now()
-        }));
+        // Store in localStorage
+        localStorage.setItem(`fav_of_character_${charMalId}`,
+            JSON.stringify({ value: fav, timestamp: Date.now() })
+        );
         return fav;
     } catch (error) {
         console.error("Error fetching favorites:", error.message);
         if (retry > 0) {
-            await delay(1000);
+            await delay(1100);
             return getCharacterFavorites(charMalId, retry - 1);
         }
         return 0; // fallback if error occurs
