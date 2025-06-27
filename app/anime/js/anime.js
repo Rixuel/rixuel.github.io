@@ -254,12 +254,12 @@ document.addEventListener('click', function (e) {
     if (e.target.closest('.va-link')) {
         const link = e.target.closest('.va-link');
         const name = link.dataset.name;
-        const malId = link.dataset.malid;
+        const vaMalId = link.dataset.malid;
         const image = link.dataset.image;
         const lang = link.dataset.lang;
 
         // Update modal info
-        document.getElementById('vaModalLabel').textContent = `${name} (${malId})`;
+        document.getElementById('vaModalLabel').textContent = `${name} (${vaMalId})`;
         document.getElementById('vaModalName').textContent = name;
         document.getElementById('vaModalImage').src = image;
         document.getElementById("vaModalImageLink").href = image;
@@ -271,19 +271,19 @@ document.addEventListener('click', function (e) {
         topCharButton.style.display = "inline-block";
         topCharButton.onclick = function () {
             topCharButton.style.display = "none"; // hide it after click
-            checkTopCharacters(malId); // Call your function
+            checkTopCharacters(vaMalId); // Call your function
         };
 
     }
 });
 
-async function checkTopCharacters(malId) {
+async function checkTopCharacters(vaMalId) {
     // For closing and opening another modal.
     activeModalSession = Date.now(); // create a new session token
     const session = activeModalSession; // capture it locally
 
     try {
-        const mainCharacters = await getMainCharactersVoicedBy(malId);
+        const mainCharacters = await getMainCharactersVoicedBy(vaMalId);
         // Fetch favorites in parallel
         const charactersWithFavorites = [];
 
@@ -421,14 +421,14 @@ async function getMainCharactersVoicedBy(vaId) {
 
 // Gotta avoid 429 error and try not making too many requests
 const favoritesCache = {};
-async function getCharacterFavorites(malId, retry = 2) {
-    if (favoritesCache[malId]) {
-        return favoritesCache[malId]; // Return cached result if available
+async function getCharacterFavorites(charMalId, retry = 2) {
+    if (favoritesCache[charMalId]) {
+        return favoritesCache[charMalId]; // Return cached result if available
     }
-    //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${malId}`);
+    //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${charMalId}`);
     console.log("Getting Character with favorites...");
     try {
-        const response = await fetch(`https://api.jikan.moe/v4/characters/${malId}`);
+        const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
             const rateLimitMsg = document.getElementById('rateLimitMsg');
@@ -438,7 +438,7 @@ async function getCharacterFavorites(malId, retry = 2) {
                 `;
             }
             await delay(2500);
-            if (retry > 0) return getCharacterFavorites(malId, retry - 1);
+            if (retry > 0) return getCharacterFavorites(charMalId, retry - 1);
             return 0;
         }
         if (!response.ok) {
@@ -447,13 +447,13 @@ async function getCharacterFavorites(malId, retry = 2) {
 
         const data = await response.json();
         const fav = data.data.favorites || 0;
-        favoritesCache[malId] = fav; // Store in cache
+        favoritesCache[charMalId] = fav; // Store in cache
         return fav;
     } catch (error) {
         console.error("Error fetching favorites:", error.message);
         if (retry > 0) {
             await delay(1000);
-            return getCharacterFavorites(malId, retry - 1);
+            return getCharacterFavorites(charMalId, retry - 1);
         }
         return 0; // fallback if error occurs
     }
