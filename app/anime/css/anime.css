@@ -46,6 +46,7 @@ a:hover {
     cursor: pointer;
 }
 
+/* For fade in the character card when scrolling down */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
