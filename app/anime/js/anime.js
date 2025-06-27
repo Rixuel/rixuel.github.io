@@ -282,7 +282,6 @@ async function checkTopCharacters(malId) {
     activeModalSession = Date.now(); // create a new session token
     const session = activeModalSession; // capture it locally
 
-    //getMainCharactersVoicedBy(malId).then(async mainCharacters => {
     try {
         const mainCharacters = await getMainCharactersVoicedBy(malId);
         // Fetch favorites in parallel
@@ -377,7 +376,6 @@ async function checkTopCharacters(malId) {
             <div class="text-danger">An error occurred while loading character data.</div>
         `;
     }
-    //});
 }
 
 async function getMainCharactersVoicedBy(vaId) {
