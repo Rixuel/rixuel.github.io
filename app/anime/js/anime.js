@@ -159,7 +159,7 @@ async function getAnimeById(animeId) {
                         <div class="fs-3 fs-md-2 fs-lg-1">
                             ${englishTitle} <span class="fs-5 fs-md-5 fs-lg-4 text-secondary">(${synonymTitle})</span>
                         </div>
-                        <div class="mt-2">ZStudio: ${studioNames}</div>
+                        <div class="mt-2">Studio: ${studioNames}</div>
                         <div>Genres: ${genreNames}</div>
                         <div>Themes: ${themeNames}</div>
                         <div>Aired: ${airedDates}</div>
