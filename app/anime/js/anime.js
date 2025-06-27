@@ -216,7 +216,7 @@ async function getAnimeCharacters(animeId) {
             col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
 
             // Build voice actors HTML
-            let vaHTML = '';
+            let vaListHTML = "";
             // To get every item of "voice_actors": [...]
             voiceActors.forEach(va => {
                 const vaName = va.person.name;
@@ -224,7 +224,7 @@ async function getAnimeCharacters(animeId) {
                 const vaImage = va.person.images.jpg.image_url;
                 const vaLang = va.language;
 
-                vaHTML += `
+                vaListHTML += `
                     <div class="d-flex align-items-center mt-2">
                         <img src="${vaImage}" alt="${vaName}" class="me-2 rounded" style="width: 40px; height: 40px; object-fit: cover;" loading="lazy">
                         <div>
@@ -246,7 +246,7 @@ async function getAnimeCharacters(animeId) {
                     <img src="${characterImage}" class="card-img-top" alt="${characterName}" loading="lazy">
                     <div class="card-body">
                         <h5 class="card-title custom-card-charname">${characterName}</h5>
-                        <div>${vaHTML}</div>
+                        <div>${vaListHTML}</div>
                     </div>
                 </div>
             `;
