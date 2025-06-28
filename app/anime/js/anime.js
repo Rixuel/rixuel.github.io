@@ -35,7 +35,7 @@ searchInput.addEventListener('input', () => {
                     suggestions.appendChild(li);
                 });
             });
-    }, 300);
+    }, 400);
 });
 
 // Clear button click
