@@ -150,7 +150,9 @@ async function getAnimeById(animeId) {
         const animeDetailsHTML = `
             <div class="row mb-3 align-items-center">
                 <div class="col-md-2">
-                    <img src="${imageURL}" class="img-fluid rounded">
+                    <a href="${imageURL}" target="_blank" rel="noopener noreferrer">
+                        <img src="${imageURL}" class="img-fluid rounded">
+                    </a>
                 </div>
                 <div class="col-md-10 d-flex align-items-center">
                     <div class="w-100">
