@@ -319,7 +319,7 @@ async function checkTopCharacters(vaMalId) {
         vaModalCharactersProgress.innerHTML = `
             <div class="d-flex justify-content-center align-items-center">
                 <div class="spinner-border spinner-border-sm me-2" role="status"></div>
-                <span id="progressCount">Compiling top 10 main characters... (0/${mainCharacters.length})</span>
+                <span id="progressCount">Compiling top 10 main role characters... (0/${mainCharacters.length})</span>
             </div>
             <div id="rateLimitMsg" class="text-danger small mt-1"></div>
         `;
@@ -343,7 +343,7 @@ async function checkTopCharacters(vaMalId) {
             // Progress UI update
             if (session === activeModalSession) {
                 progressCount.textContent = `
-                    Compiling top 10 main characters... (${charactersWithFavorites.length}/${mainCharacters.length})
+                    Compiling top 10 main role characters... (${charactersWithFavorites.length}/${mainCharacters.length})
                 `;
             }
         }
@@ -374,7 +374,7 @@ async function checkTopCharacters(vaMalId) {
                 `)
                 .join('');
             vaModalCharactersProgress.innerHTML = `
-                <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main characters</div>
+                <div class="fs-4 fs-md-3 fs-lg-2 mb-2 text-center text-warning">Top 10 main role characters</div>
                 <ul class="list-unstyled small">${listHTML}</ul>
             `;
 
