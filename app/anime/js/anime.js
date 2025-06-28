@@ -4,7 +4,7 @@ const clearBtn = document.getElementById('clear-btn');
 let debounceTimeout;
 let selectedIndex = -1 // For Up and Down arrow keys in suggestion list
 let activeModalSession = null;
-const LOCAL_STORAGE_EXPIRE_TIME = 1000 * 60 * 60 * 24 * 7;
+const LOCAL_STORAGE_EXPIRE_TIME = 1000 * 60 * 60 * 24 * 365;
 
 searchInput.addEventListener('input', () => {
     const query = searchInput.value.trim();
@@ -348,41 +348,35 @@ async function checkTopCharacters(vaMalId) {
             }
         }
 
-
         // final render after all fetched
         if (session === activeModalSession) {
             // Sort by favorites descending and take top 10
             const top10char = charactersWithFavorites
                 .sort((a, b) => b.favorites - a.favorites)
                 .slice(0, 10);
+
+            // Find the most recent character cache timestamp from localStorage
+            let latestUpdate = 0;
+
+            for (const char of top10char) {
+                const cached = localStorage.getItem(`fav_of_character_${char.id}`);
+                if (cached) {
+                    const { timestamp } = JSON.parse(cached);
+                    if (timestamp > latestUpdate) latestUpdate = timestamp;
+                }
+            }
+
+            // If character list is already cached, get latestUpdate date instead of current date
+            // To show a message like "Updated 4 minutes ago"
+            const updatedAt = latestUpdate || Date.now();
             
             // Generate Top Main Char row HTML
-            const listHTML = top10char.map((char, index) => `
-                    <li class="d-flex align-items-center mb-2 custom-top-char-row">
-                        <div class="me-2 text-center" style="width: 40px; flex-shrink: 0;">
-                            <span class="fs-5">${index + 1}</span>
-                        </div>
-                        <img src="${char.image}" alt="${char.name}" class="me-2 rounded"
-                            style="width: 50px; height: 50px; object-fit: cover; flex-shrink: 0;" loading="lazy">
-
-                        <div class="flex-grow-1 text-start" style="min-width: 0;">
-                            <div><strong class="fs-6 text-break me-1">${char.name}</strong><span class="text-secondary small">(#${char.id})</span></div>
-                            <div class="text-info text-break"><em>${char.animeTitle}</em></div>
-                            <div class="text-warning small">❤ ${char.favorites.toLocaleString()} favorites</div>
-                        </div>
-                     </li>
-                `)
-                .join('');
-            vaModalCharactersProgress.innerHTML = `
-                <div class="fs-5 fs-md-4 fs-lg-3 mb-2 text-center text-warning">
-                    Top 10 main role characters<br>out of ${mainCharacters.length}
-                </div>
-                <ul class="list-unstyled small">${listHTML}</ul>
-            `;
+            renderTopCharacters(top10char, mainCharacters.length, vaMalId, updatedAt);
 
             // Optional: Clear any rate limit message
             if (rateLimitMsg) rateLimitMsg.innerHTML = "";
         }
+        
     } catch (err) {
         console.error("checkTopCharacters failed:", err);
         document.getElementById('vaModalCharacters').innerHTML = `
@@ -482,8 +476,9 @@ async function getCharacterFavorites(charMalId, retry = 2) {
         // Store in cache
         favoritesCache[charMalId] = fav;
         // Store in localStorage
+        const now = activeModalSession || Date.now();
         localStorage.setItem(`fav_of_character_${charMalId}`,
-            JSON.stringify({ value: fav, timestamp: Date.now() })
+            JSON.stringify({ value: fav, timestamp: now })
         );
         return fav;
     } catch (error) {
@@ -494,6 +489,112 @@ async function getCharacterFavorites(charMalId, retry = 2) {
         }
         return 0; // fallback if error occurs
     }
+}
+
+async function updateTopCharacters(vaMalId) {
+    activeModalSession = Date.now(); // new session to avoid overlap
+    const session = activeModalSession;
+    const mainCharacters = await getMainCharactersVoicedBy(vaMalId);
+    const updatedCharacters = [];
+
+    const vaModalCharactersProgress = document.getElementById("vaModalCharacters");
+    vaModalCharactersProgress.innerHTML = `
+        <div class="d-flex justify-content-center align-items-center text-info py-3">
+            <div class="spinner-border spinner-border-sm me-2" role="status"></div>
+            <span id="updateProgress">Updating for Top 10... (0/${mainCharacters.length})</span>
+        </div>
+    `;
+
+    const updateProgress = document.getElementById("updateProgress");
+
+    for (const char of mainCharacters) {
+        if (session !== activeModalSession) {
+            console.log("modal was changed/closed when updating");
+            return;
+        }
+
+        const key = `fav_of_character_${char.id}`;
+        localStorage.removeItem(key);       // remove from localStorage
+        delete favoritesCache[char.id];     // clear in-memory
+
+        const favorites = await getCharacterFavorites(char.id);
+        updatedCharacters.push({ ...char, favorites });
+
+        updateProgress.textContent = `Updating for Top 10... (${updatedCharacters.length}/${mainCharacters.length})`;
+    }
+
+    // Final sorting and render
+    if (session === activeModalSession) {
+        const sorted = updatedCharacters
+            .sort((a, b) => b.favorites - a.favorites)
+            .slice(0, 10);
+            
+        renderTopCharacters(sorted, mainCharacters.length, vaMalId, session);
+    }
+}
+
+// HTML for the char list in VA modal
+function renderTopCharacters(charList, totalCount, vaMalId, updatedAt = Date.now()) {
+    const updatedText = timeAgoText(updatedAt);
+
+    const listHTML = charList.map((char, index) => `
+        <li class="d-flex align-items-center mb-2 custom-top-char-row">
+            <div class="me-2 text-center" style="width: 40px; flex-shrink: 0;">
+                <span class="fs-5">${index + 1}</span>
+            </div>
+            <img src="${char.image}" alt="${char.name}" class="me-2 rounded"
+                style="width: 50px; height: 50px; object-fit: cover; flex-shrink: 0;" loading="lazy">
+
+            <div class="flex-grow-1 text-start" style="min-width: 0;">
+                <div><strong class="fs-6 text-break me-1">${char.name}</strong><span class="text-secondary small">(#${char.id})</span></div>
+                <div class="text-info text-break"><em>${char.animeTitle}</em></div>
+                <div class="text-warning small">❤ ${char.favorites.toLocaleString()} favorites</div>
+            </div>
+        </li>
+    `).join('');
+
+    const container = document.getElementById("vaModalCharacters");
+    container.innerHTML = `
+        <div class="fs-5 fs-md-4 fs-lg-3 mb-2 text-center text-warning">
+            Top 10 main role characters<br>out of ${totalCount}
+        </div>
+        <ul class="list-unstyled small">${listHTML}</ul>
+        <button type="button" id="updateTopCharactersBtn" class="btn btn-sm btn-outline-info d-none">
+            <i class="bi bi-arrow-clockwise me-1"></i> Update Top 10 again?
+        </button>
+        <div class="text-muted small text-center mt-2" title="${new Date(updatedAt).toLocaleString()}">
+            Updated ${updatedText}
+        </div>
+    `;
+
+    // Setting up the "Update" button
+    const updateBtn = document.getElementById('updateTopCharactersBtn');
+    if (updateBtn) {
+        updateBtn.classList.remove('d-none');
+        updateBtn.onclick = () => {
+            updateTopCharacters(vaMalId);
+        };
+    }
+}
+
+function timeAgoText(timestamp) {
+    const diff = Date.now() - timestamp;
+
+    const minutes = Math.floor(diff / 60000);
+    if (minutes < 1) return "Just now";
+    if (minutes < 60) return `${minutes} minute${minutes !== 1 ? 's' : ''} ago`;
+
+    const hours = Math.floor(minutes / 60);
+    if (hours < 24) return `${hours} hour${hours !== 1 ? 's' : ''} ago`;
+
+    const days = Math.floor(hours / 24);
+    if (days < 7) return `${days} day${days !== 1 ? 's' : ''} ago`;
+
+    const weeks = Math.floor(days / 7);
+    if (weeks < 4) return `${weeks} week${weeks !== 1 ? 's' : ''} ago`;
+
+    const months = Math.floor(days / 30);
+    return `${months} month${months !== 1 ? 's' : ''} ago`;
 }
 
 function delay(ms) {
