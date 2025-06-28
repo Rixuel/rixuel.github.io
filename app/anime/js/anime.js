@@ -292,7 +292,7 @@ document.addEventListener('click', function (e) {
         document.getElementById('vaModalName').textContent = name;
         document.getElementById('vaModalImage').src = image;
         document.getElementById("vaModalImageLink").href = image;
-        document.getElementById('vaModalLang').textContent = `Language dub: ${lang}`;
+        document.getElementById('vaModalLang').textContent = `Dub: ${lang}`;
         document.getElementById('vaModalCharacters').innerHTML = ""; // Clear any old content
 
         // Show the button
