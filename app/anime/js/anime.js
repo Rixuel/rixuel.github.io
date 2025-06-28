@@ -535,7 +535,12 @@ document.getElementById("checkStorageBtn").addEventListener("click", () => {
     const mb = (totalBytes / (1024 * 1024)).toFixed(2);
 
     const body = document.getElementById("storageToastBody");
-    body.textContent = `Local Storage usage: ${mb} MB / 5.00 MB`;
+    body.innerHTML = `
+        <div class="d-flex flex-wrap gap-2 align-items-center">
+            <i class="bi bi-hdd"></i>
+            <div>Local Storage usage: </div><div>${mb} MB / 5.00 MB</div>
+        </div>
+    `;
 
     const toast = new bootstrap.Toast(document.getElementById("storageToast"));
     toast.show();
