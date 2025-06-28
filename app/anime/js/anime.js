@@ -216,7 +216,7 @@ async function getAnimeCharacters(animeId) {
             console.log("-------------");*/
 
             const col = document.createElement("div");
-            col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
+            col.className = "col-12 col-sm-6 col-md-4 col-lg-3 mb-3";
 
             // Build voice actors HTML
             let vaListHTML = "";
