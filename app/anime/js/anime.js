@@ -321,10 +321,8 @@ async function checkTopCharacters(vaMalId) {
                 <div class="spinner-border spinner-border-sm me-2" role="status"></div>
                 <span id="progressCount">Compiling top 10 main role characters... (0/${mainCharacters.length})</span>
             </div>
-            <div id="rateLimitMsg" class="text-danger small mt-1"></div>
         `;
         const progressCount = document.getElementById("progressCount");
-        const rateLimitMsg = document.getElementById('rateLimitMsg');
 
         for (const char of mainCharacters) {
             // modal was changed/closed when loading
@@ -372,9 +370,6 @@ async function checkTopCharacters(vaMalId) {
             
             // Generate Top Main Char row HTML
             renderTopCharacters(top10char, mainCharacters.length, vaMalId, updatedAt);
-
-            // Optional: Clear any rate limit message
-            if (rateLimitMsg) rateLimitMsg.innerHTML = "";
         }
         
     } catch (err) {
@@ -457,12 +452,7 @@ async function getCharacterFavorites(charMalId, retry = 2) {
         const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
-            const rateLimitMsg = document.getElementById('rateLimitMsg');
-            if (rateLimitMsg) {
-                rateLimitMsg.innerHTML = `
-                    <strong>Jikan API rate limit hit. Progressing slowly...</strong>
-                `;
-            }
+            showRateLimitToast();
             await delay(1100);
             if (retry > 0) return getCharacterFavorites(charMalId, retry - 1);
             return 0;
@@ -650,3 +640,18 @@ document.getElementById("checkStorageBtn").addEventListener("click", () => {
     const toast = new bootstrap.Toast(document.getElementById("storageToast"));
     toast.show();
 });
+
+// Toast for API Rate limit
+let lastRateLimitToast = 0;
+
+function showRateLimitToast() {
+    const now = Date.now();
+    if (now - lastRateLimitToast > 5000) { // Only show once every 5 seconds
+        lastRateLimitToast = now;
+        const toastRateLimit = document.getElementById("rateLimitToast");
+        if (toastRateLimit) {
+            const toast = new bootstrap.Toast(toastRateLimit);
+            toast.show();
+        }
+    }
+}
