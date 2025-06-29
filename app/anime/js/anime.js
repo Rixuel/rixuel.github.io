@@ -587,11 +587,13 @@ function timeAgoText(timestamp) {
     return `${months} month${months !== 1 ? 's' : ''} ago`;
 }
 
+// Goal is to not hit the API rate limit
 async function throttledFetch(...args) {
     await smartDelay();
     return fetch(...args);
 }
 
+// Goal is to not hit the API rate limit. Need to go a bit faster than await delay(1000)
 const requestTimestamps = [];
 async function smartDelay() {
     const now = Date.now();
@@ -602,8 +604,9 @@ async function smartDelay() {
     }
 
     // Decide delay based on request count
+    // If there are 60+ requests, delay is 1000ms. Otherwise 350ms.
     const delayTime = requestTimestamps.length >= 60 ? 1000 : 350;
-    console.log(`[Delay: ${delayTime}ms] Requests in last 60s: ${requestTimestamps.length} at ${new Date().toLocaleTimeString()}`);
+    //console.log(`[Delay: ${delayTime}ms] Requests in last 60s: ${requestTimestamps.length} at ${new Date().toLocaleTimeString()}`);
     await delay(delayTime);
 
     // Record this request timestamp
