@@ -448,7 +448,7 @@ async function getCharacterFavorites(charMalId, retry = 2) {
     //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${charMalId}`);
     console.log("Getting Character with favorites...");
     try {
-        await delay(1000); // To avoid API rate limit
+        await delay(500); // To avoid API rate limit
         const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
