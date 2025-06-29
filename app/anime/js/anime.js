@@ -100,7 +100,7 @@ function selectSuggestion(anime) {
 async function getAnimeById(animeId) {
     console.log("Anime by id URL: ", `https://api.jikan.moe/v4/anime/${animeId}`);
     try {
-        const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}`);
+        const response = await throttledFetch(`https://api.jikan.moe/v4/anime/${animeId}`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -191,7 +191,7 @@ async function getAnimeById(animeId) {
 async function getAnimeCharacters(animeId) {
     console.log("Anime Characters URL: ", `https://api.jikan.moe/v4/anime/${animeId}/characters`);
     try {
-        const response = await fetch(`https://api.jikan.moe/v4/anime/${animeId}/characters`);
+        const response = await throttledFetch(`https://api.jikan.moe/v4/anime/${animeId}/characters`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -383,7 +383,7 @@ async function checkTopCharacters(vaMalId) {
 async function getMainCharactersVoicedBy(vaId) {
     console.log("Voiced Characters from VA: ", `https://api.jikan.moe/v4/people/${vaId}/voices`);
     try {
-        const response = await fetch(`https://api.jikan.moe/v4/people/${vaId}/voices`);
+        const response = await throttledFetch(`https://api.jikan.moe/v4/people/${vaId}/voices`);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
@@ -450,7 +450,7 @@ async function getCharacterFavorites(charMalId, retry = 2) {
     try {
         //await delay(500); // To avoid API rate limit
         await smartDelay();
-        const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
+        const response = await throttledFetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
             showRateLimitToast();
@@ -588,6 +588,11 @@ function timeAgoText(timestamp) {
     return `${months} month${months !== 1 ? 's' : ''} ago`;
 }
 
+async function throttledFetch(...args) {
+    await smartDelay();
+    return fetch(...args);
+}
+
 const requestTimestamps = [];
 async function smartDelay() {
     const now = Date.now();
@@ -599,7 +604,7 @@ async function smartDelay() {
 
     // Decide delay based on request count
     const delayTime = requestTimestamps.length >= 60 ? 1000 : 350;
-    console.log(`[Delay: ${delayTime}ms] Requests in last 60s: ${requestTimestamps.length}`);
+    console.log(`[Delay: ${delayTime}ms] Requests in last 60s: ${requestTimestamps.length} at ${new Date().toLocaleTimeString()}`);
     await delay(delayTime);
 
     // Record this request timestamp
