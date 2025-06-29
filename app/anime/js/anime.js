@@ -448,7 +448,8 @@ async function getCharacterFavorites(charMalId, retry = 2) {
     //console.log("Characters Info URL: ", `https://api.jikan.moe/v4/characters/${charMalId}`);
     console.log("Getting Character with favorites...");
     try {
-        await delay(500); // To avoid API rate limit
+        //await delay(500); // To avoid API rate limit
+        await smartDelay();
         const response = await fetch(`https://api.jikan.moe/v4/characters/${charMalId}`);
         // Check for 429 Too Many Requests
         if (response.status === 429) {
@@ -585,6 +586,24 @@ function timeAgoText(timestamp) {
 
     const months = Math.floor(days / 30);
     return `${months} month${months !== 1 ? 's' : ''} ago`;
+}
+
+const requestTimestamps = [];
+async function smartDelay() {
+    const now = Date.now();
+
+    // Clean up old timestamps older than 60 seconds
+    while (requestTimestamps.length && now - requestTimestamps[0] > 60000) {
+        requestTimestamps.shift();
+    }
+
+    // Decide delay based on request count
+    const delayTime = requestTimestamps.length >= 60 ? 1000 : 350;
+    console.log(`[Delay: ${delayTime}ms] Requests in last 60s: ${requestTimestamps.length}`);
+    await delay(delayTime);
+
+    // Record this request timestamp
+    requestTimestamps.push(Date.now());
 }
 
 function delay(ms) {
