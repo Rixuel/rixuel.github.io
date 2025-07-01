@@ -36,6 +36,7 @@ function navbar() {
                                 <ul class="dropdown-menu navbar-custom-style">
                                     <li><a class="dropdown-item" href="projects.html">Go to Projects page</a></li>
                                     <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="https://animecheck.github.io/"><i class="bi bi-check-square"></i> Anime Check</a></li>
                                     <li><a class="dropdown-item" href="app/cer"><i class="bi bi-currency-exchange"></i> Cash Exchange Rates</a></li>
                                     <li><a class="dropdown-item" href="app/crypto"><i class="bi bi-code-square"></i> Crypto</a></li>
                                     <li><a class="dropdown-item" href="app/sortlist"><i class="bi bi-list-ol"></i> Sort the List</a></li>
