@@ -1,0 +1,70 @@
+body {
+    background-color: #000;
+    color: #15b500;
+}
+
+body, code {
+    font-family: Consolas;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+a:hover {
+    color: #ccc;
+}
+
+code {
+    color: #BBDDBB;
+    white-space: pre-wrap;     /* allows word wrap */
+    word-break: break-word;
+}
+
+pre {
+    border-left: 2px solid #15b500;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+button, input {
+    background-color: #000;
+    border: 1px solid #aabbcc;
+    border-radius: 4px;
+    color: #ccddee;
+    padding: 8px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+.inputWrap {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.inputWrap > input {
+    flex: 1;
+}
+.inputWrap > button {
+    padding: 8px 32px;
+    margin-left: 8px;
+}
+
+.json-line {
+    line-height: 1.4;
+    padding: 0 10px;
+}
+
+.json-line:hover {
+    background-color: #222;
+    cursor: default;
+    transition: background-color 0.3s ease;
+}
+
+.testborder {
+    border: 1px solid #f00;
+}
